@@ -148,4 +148,13 @@ body {
     @apply w-12 h-0.5 rounded-full mx-auto;
     background: linear-gradient(90deg, transparent, rgb(var(--color-gold)), transparent);
   }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgb(var(--color-border) / 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  html.dark .bg-dot-pattern {
+    background-image: radial-gradient(circle, rgb(var(--color-border) / 0.08) 1px, transparent 1px);
+  }
 }

@@ -15,7 +15,7 @@ const pdfUrl = "https://www.chapellibrary.org/pdf/books/lbcos.pdf";
 export default function ConfesionSection() {
 
   return (
-    <section id="confesion" className="py-16 md:py-24 bg-surface-1">
+    <section id="confesion" className="py-16 md:py-24 bg-surface-1 bg-dot-pattern">
       <div className="max-w-5xl mx-auto px-5">
         <div className="text-center mb-12">
           <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
