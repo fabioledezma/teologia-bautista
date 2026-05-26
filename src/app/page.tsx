@@ -4,6 +4,7 @@ import HerejiasSection from '@/components/HerejiasSection';
 import FacultySection from '@/components/FacultySection';
 import ConfesionSection from '@/components/ConfesionSection';
 import RecursosSection from '@/components/RecursosSection';
+import ChatBot from '@/components/ChatBot';
 
 export default function HomePage() {
   return (
@@ -61,6 +62,8 @@ export default function HomePage() {
       <section id="recursos" className="py-20 px-4 bg-[#0e0e18]">
         <RecursosSection />
       </section>
+
+      <ChatBot />
     </>
   );
 }
