@@ -342,20 +342,20 @@ export default function HistoriaPage() {
   const p = periodos.find((x) => x.id === sel) ?? periodos[1];
 
   return (
-    <div className="min-h-screen bg-[#08080e]">
+    <div className="min-h-screen bg-surface">
       {/* Hero */}
       <section className="relative py-24 md:py-32 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#d4af37]/5 via-transparent to-[#08080e]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#1a1a2e_0%,_#08080e_70%)]" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
+          <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
             Historia de la Iglesia
           </span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-[#ececf5] mt-4 mb-6 leading-tight">
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-text mt-4 mb-6 leading-tight">
             Períodos de la{" "}
-            <span className="text-[#d4af37]">Iglesia Cristiana</span>
+            <span className="text-gold">Iglesia Cristiana</span>
           </h1>
-          <p className="text-[#a8a8c0] text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-text-2 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Un recorrido por la historia de la Iglesia desde una perspectiva bautista reformada.
             Cada período representa un desarrollo clave en la comprensión y preservación del evangelio.
           </p>
@@ -366,7 +366,7 @@ export default function HistoriaPage() {
       <div className="max-w-5xl mx-auto px-4 mb-8">
         <div className="flex items-center justify-center md:justify-between gap-4 flex-wrap">
           <div className="flex items-center gap-3">
-            <span className="text-[10px] uppercase tracking-wider text-[#6e6e88] font-semibold">
+            <span className="text-[10px] uppercase tracking-wider text-text-3 font-semibold">
               Período:
             </span>
             <div className="flex gap-1 flex-wrap">
@@ -376,8 +376,8 @@ export default function HistoriaPage() {
                   onClick={() => setSel(per.id)}
                   className={`text-xs px-3 py-1.5 rounded-full border transition ${
                     sel === per.id
-                      ? "bg-[#d4af37]/10 border-[#d4af37] text-[#d4af37]"
-                      : "border-[#2a2a3e] text-[#a8a8c0] hover:border-[#6e6e88]"
+                      ? "bg-gold/10 border-gold text-gold"
+                      : "border-border text-text-2 hover:border-[#6e6e88]"
                   }`}
                 >
                   {per.label}
@@ -393,8 +393,8 @@ export default function HistoriaPage() {
                 onClick={() => setFormato(f.key)}
                 className={`text-xs px-3 py-1.5 rounded-lg border transition ${
                   formato === f.key
-                    ? "bg-[#d4af37]/10 border-[#d4af37] text-[#d4af37]"
-                    : "border-[#2a2a3e] text-[#6e6e88]"
+                    ? "bg-gold/10 border-gold text-gold"
+                    : "border-border text-text-3"
                 }`}
               >
                 {f.label}
@@ -429,36 +429,36 @@ export default function HistoriaPage() {
                   >
                     {p.tag}
                   </div>
-                  <h2 className="font-serif text-3xl text-[#ececf5]">{p.label}</h2>
-                  <span className="text-sm text-[#6e6e88] font-mono">{p.date}</span>
+                  <h2 className="font-serif text-3xl text-text">{p.label}</h2>
+                  <span className="text-sm text-text-3 font-mono">{p.date}</span>
                 </div>
               </div>
-              <p className="text-[#a8a8c0] text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-text-2 text-sm leading-relaxed">{p.desc}</p>
             </div>
 
             {/* Descripción detallada */}
-            <div className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-2xl p-6 md:p-8 mb-6">
-              <h3 className="font-serif text-lg text-[#ececf5] mb-3">
+            <div className="bg-surface-card border border-border rounded-2xl p-6 md:p-8 mb-6">
+              <h3 className="font-serif text-lg text-text mb-3">
                 Panorama General
               </h3>
-              <p className="text-[#a8a8c0] text-sm leading-relaxed whitespace-pre-line">
+              <p className="text-text-2 text-sm leading-relaxed whitespace-pre-line">
                 {p.detalle}
               </p>
             </div>
 
             {/* Perspectiva reformada */}
-            <div className="bg-[#1a1a2e] border border-[#d4af37]/20 rounded-2xl p-6 md:p-8 mb-6">
-              <h3 className="font-serif text-lg text-[#d4af37] mb-3 flex items-center gap-2">
+            <div className="bg-surface-card border border-gold/20 rounded-2xl p-6 md:p-8 mb-6">
+              <h3 className="font-serif text-lg text-gold mb-3 flex items-center gap-2">
                 <span>✝</span> Perspectiva Bautista Reformada
               </h3>
-              <p className="text-[#a8a8c0] text-sm leading-relaxed">
+              <p className="text-text-2 text-sm leading-relaxed">
                 {p.perspectivaReformada}
               </p>
-              <div className="mt-4 px-4 py-3 bg-[#0e0e18] border border-[#2a2a3e] rounded-xl">
-                <span className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold">
+              <div className="mt-4 px-4 py-3 bg-surface-1 border border-border rounded-xl">
+                <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                   Conexión con la Confesión 1689
                 </span>
-                <p className="text-xs text-[#a8a8c0] mt-1 italic">
+                <p className="text-xs text-text-2 mt-1 italic">
                   {p.confesion}
                 </p>
               </div>
@@ -466,15 +466,15 @@ export default function HistoriaPage() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               {/* Eventos */}
-              <div className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-2xl p-6 md:p-8">
-                <h3 className="font-serif text-lg text-[#ececf5] mb-4 flex items-center gap-2">
+              <div className="bg-surface-card border border-border rounded-2xl p-6 md:p-8">
+                <h3 className="font-serif text-lg text-text mb-4 flex items-center gap-2">
                   <span>📅</span> Eventos Clave
                 </h3>
                 <div className="space-y-0">
                   {p.eventos.map((e, i) => (
                     <div
                       key={i}
-                      className="flex gap-3 py-2.5 border-b border-[#2a2a3e]/50 last:border-0"
+                      className="flex gap-3 py-2.5 border-b border-border/50 last:border-0"
                     >
                       <div className="flex flex-col items-center">
                         <div
@@ -492,10 +492,10 @@ export default function HistoriaPage() {
                         >
                           {e.year}
                         </span>
-                        <p className="text-sm text-[#ececf5] leading-tight mt-0.5">
+                        <p className="text-sm text-text leading-tight mt-0.5">
                           {e.event}
                         </p>
-                        <p className="text-[10px] text-[#6e6e88] mt-0.5 italic">
+                        <p className="text-[10px] text-text-3 mt-0.5 italic">
                           {e.importancia}
                         </p>
                       </div>
@@ -505,15 +505,15 @@ export default function HistoriaPage() {
               </div>
 
               {/* Figuras */}
-              <div className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-2xl p-6 md:p-8">
-                <h3 className="font-serif text-lg text-[#ececf5] mb-4 flex items-center gap-2">
+              <div className="bg-surface-card border border-border rounded-2xl p-6 md:p-8">
+                <h3 className="font-serif text-lg text-text mb-4 flex items-center gap-2">
                   <span>👤</span> Figuras Clave
                 </h3>
                 <div className="space-y-3">
                   {p.figuras.map((f, i) => (
                     <div
                       key={i}
-                      className="flex gap-3 p-3 rounded-xl bg-[#0e0e18] border border-[#2a2a3e]"
+                      className="flex gap-3 p-3 rounded-xl bg-surface-1 border border-border"
                     >
                       <div
                         className="w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0"
@@ -525,8 +525,8 @@ export default function HistoriaPage() {
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color }} />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-[#ececf5]">{f.name}</p>
-                        <p className="text-[11px] text-[#a8a8c0]">{f.role}</p>
+                        <p className="text-sm font-semibold text-text">{f.name}</p>
+                        <p className="text-[11px] text-text-2">{f.role}</p>
                       </div>
                     </div>
                   ))}
@@ -543,7 +543,7 @@ export default function HistoriaPage() {
                 }}
                 className={`text-sm px-4 py-2 rounded-lg border transition flex items-center gap-2 ${
                   periodos.findIndex((x) => x.id === sel) > 0
-                    ? "border-[#2a2a3e] text-[#a8a8c0] hover:border-[#d4af37] hover:text-[#d4af37]"
+                    ? "border-border text-text-2 hover:border-gold hover:text-gold"
                     : "border-transparent text-[#3a3a4e] cursor-not-allowed"
                 }`}
                 disabled={periodos.findIndex((x) => x.id === sel) === 0}
@@ -557,7 +557,7 @@ export default function HistoriaPage() {
                     key={per.id}
                     onClick={() => setSel(per.id)}
                     className={`w-2.5 h-2.5 rounded-full transition ${
-                      sel === per.id ? "bg-[#d4af37]" : "bg-[#2a2a3e] hover:bg-[#6e6e88]"
+                      sel === per.id ? "bg-gold" : "bg-[#2a2a3e] hover:bg-[#6e6e88]"
                     }`}
                   />
                 ))}
@@ -570,7 +570,7 @@ export default function HistoriaPage() {
                 }}
                 className={`text-sm px-4 py-2 rounded-lg border transition flex items-center gap-2 ${
                   periodos.findIndex((x) => x.id === sel) < periodos.length - 1
-                    ? "border-[#2a2a3e] text-[#a8a8c0] hover:border-[#d4af37] hover:text-[#d4af37]"
+                    ? "border-border text-text-2 hover:border-gold hover:text-gold"
                     : "border-transparent text-[#3a3a4e] cursor-not-allowed"
                 }`}
                 disabled={
@@ -592,7 +592,7 @@ export default function HistoriaPage() {
                   setSel(per.id);
                   setFormato("timeline");
                 }}
-                className="group bg-[#1a1a2e] border border-[#2a2a3e] rounded-2xl p-6 text-left hover:border-[#d4af37] transition hover:-translate-y-0.5"
+                className="group bg-surface-card border border-border rounded-2xl p-6 text-left hover:border-gold transition hover:-translate-y-0.5"
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"
@@ -606,14 +606,14 @@ export default function HistoriaPage() {
                 >
                   {per.tag}
                 </div>
-                <h3 className="font-serif text-lg text-[#ececf5] mb-1 group-hover:text-[#d4af37] transition">
+                <h3 className="font-serif text-lg text-text mb-1 group-hover:text-gold transition">
                   {per.label}
                 </h3>
-                <span className="text-xs text-[#6e6e88] font-mono">{per.date}</span>
-                <p className="text-xs text-[#a8a8c0] mt-3 leading-relaxed line-clamp-3">
+                <span className="text-xs text-text-3 font-mono">{per.date}</span>
+                <p className="text-xs text-text-2 mt-3 leading-relaxed line-clamp-3">
                   {per.desc}
                 </p>
-                <span className="inline-flex items-center gap-1 text-[#d4af37] text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
                   Explorar <span>→</span>
                 </span>
               </button>

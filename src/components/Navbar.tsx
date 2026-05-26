@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import FontSizeToggle from './FontSizeToggle';
+import ThemeToggle from './ThemeToggle';
 
 const links = [
   { label: 'Inicio', href: '/' },
@@ -56,14 +57,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#08080e]/80 backdrop-blur-lg border-b border-[#2a2a3e] transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-lg border-b border-border transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-lg md:text-xl font-bold text-[#d4af37] tracking-tight"
+          className="font-serif text-lg md:text-xl font-bold text-gold tracking-tight"
         >
           Teología Accesible
         </Link>
@@ -75,22 +76,23 @@ export default function Navbar() {
               href={link.href}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 isActive(link.href)
-                  ? 'text-[#d4af37] bg-[#d4af37]/10'
-                  : 'text-[#a8a8c0] hover:text-[#ececf5] hover:bg-[#1a1a2e]'
+                  ? 'text-gold bg-gold/10'
+                  : 'text-text-2 hover:text-text hover:bg-surface-card'
               }`}
             >
               {link.label}
             </Link>
           ))}
 
-          <div className="w-px h-5 bg-[#2a2a3e] mx-1" />
+          <div className="w-px h-5 bg-border mx-1" />
           <FontSizeToggle />
+          <ThemeToggle />
         </div>
 
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-[#ececf5] hover:text-[#d4af37] transition-colors"
+          className="md:hidden p-2 text-text hover:text-gold transition-colors"
           aria-label="Menú de navegación"
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,7 +117,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#0e0e18] border-t border-[#2a2a3e]">
+        <div className="md:hidden bg-surface-1 border-t border-border">
           <div className="px-4 py-3 space-y-1">
             {links.map((link) => (
               <Link
@@ -124,8 +126,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? 'text-[#d4af37] bg-[#d4af37]/10'
-                    : 'text-[#a8a8c0] hover:text-[#ececf5] hover:bg-[#1a1a2e]'
+                    ? 'text-gold bg-gold/10'
+                    : 'text-text-2 hover:text-text hover:bg-surface-card'
                 }`}
               >
                 {link.label}

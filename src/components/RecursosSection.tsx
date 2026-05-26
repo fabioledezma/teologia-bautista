@@ -4,13 +4,13 @@ import recursosData from "@/data/recursos";
 
 export default function RecursosSection() {
   return (
-    <section id="recursos" className="py-24 bg-[#0e0e18]">
+    <section id="recursos" className="py-24 bg-surface-1">
       <div className="max-w-5xl mx-auto px-5">
-        <h2 className="font-serif text-3xl md:text-4xl text-center text-[#ececf5]">
+        <h2 className="font-serif text-3xl md:text-4xl text-center text-text">
           Recursos Recomendados
         </h2>
-        <div className="w-12 h-0.5 bg-[#d4af37] mx-auto mt-3 mb-2 rounded" />
-        <p className="text-center text-[#6e6e88] text-sm max-w-xl mx-auto mb-12">
+        <div className="w-12 h-0.5 bg-gold mx-auto mt-3 mb-2 rounded" />
+        <p className="text-center text-text-3 text-sm max-w-xl mx-auto mb-12">
           Obras fundamentales para profundizar en las doctrinas de la
           gracia, seleccionadas en consonancia con la tradición confesional
           de CBTS.
@@ -20,23 +20,23 @@ export default function RecursosSection() {
           {recursosData.map((r, i) => (
             <div
               key={i}
-              className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg p-5 transition hover:border-[#d4af37] hover:-translate-y-0.5"
+              className="bg-surface-card border border-border rounded-lg p-5 transition hover:border-gold hover:-translate-y-0.5"
             >
-              <span className="text-[10px] uppercase tracking-wider text-[#d4af37]">
+              <span className="text-[10px] uppercase tracking-wider text-gold">
                 {r.type}
               </span>
-              <h3 className="text-[#ececf5] font-semibold text-sm mt-1 mb-0.5">
+              <h3 className="text-text font-semibold text-sm mt-1 mb-0.5">
                 {r.title}
               </h3>
-              <p className="text-[#d4af37] text-xs mb-2">{r.author}</p>
-              <p className="text-[#a8a8c0] text-xs leading-relaxed mb-3">
+              <p className="text-gold text-xs mb-2">{r.author}</p>
+              <p className="text-text-2 text-xs leading-relaxed mb-3">
                 {r.desc}
               </p>
               <div className="flex flex-wrap gap-1">
                 {r.tags.map((t) => (
                   <span
                     key={t}
-                    className="text-[10px] text-[#6e6e88] bg-white/[0.04] px-2 py-0.5 rounded"
+                    className="text-[10px] text-text-3 bg-white/[0.04] px-2 py-0.5 rounded"
                   >
                     {t}
                   </span>

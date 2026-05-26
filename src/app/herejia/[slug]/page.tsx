@@ -18,39 +18,39 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Back link */}
         <Link
           href="/#historia"
-          className="inline-flex items-center gap-1 text-[#a8a8c0] text-xs hover:text-[#d4af37] transition mb-6"
+          className="inline-flex items-center gap-1 text-text-2 text-xs hover:text-gold transition mb-6"
         >
           ← Volver a Teología Histórica
         </Link>
 
         {/* Header */}
         <div className="flex items-start gap-4 mb-6">
-          <div className="w-14 h-14 rounded-xl bg-[#d4af37]/10 flex items-center justify-center text-3xl flex-shrink-0">
+          <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-3xl flex-shrink-0">
             {h.icon}
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-1">
-              <span className="text-[10px] uppercase tracking-wider text-[#d4af37] bg-[#d4af37]/10 px-2.5 py-0.5 rounded-full border border-[#d4af37]/20">
+              <span className="text-[10px] uppercase tracking-wider text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/20">
                 {h.era}
               </span>
-              <span className="text-[10px] text-[#6e6e88]">{h.century}</span>
+              <span className="text-[10px] text-text-3">{h.century}</span>
             </div>
-            <h1 className="font-serif text-2xl md:text-3xl text-[#ececf5] leading-tight">
+            <h1 className="font-serif text-2xl md:text-3xl text-text leading-tight">
               {h.title}
             </h1>
-            <p className="text-[#a8a8c0] text-sm mt-1">{h.subtitle}</p>
+            <p className="text-text-2 text-sm mt-1">{h.subtitle}</p>
           </div>
         </div>
 
         {/* Introduction */}
-        <div className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg p-5 mb-8">
-          <p className="text-[#a8a8c0] text-sm leading-relaxed">{c.intro}</p>
+        <div className="bg-surface-card border border-border rounded-lg p-5 mb-8">
+          <p className="text-text-2 text-sm leading-relaxed">{c.intro}</p>
         </div>
 
         {/* Contexto Histórico */}
         <Section title="Contexto Histórico">
           {c.historicalContext.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -67,7 +67,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* What it taught */}
         <Section title="¿Qué enseñaba exactamente?">
           {h.originalTeaching.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -76,7 +76,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* More detailed teaching */}
         <Section title="Desarrollo Histórico de la Doctrina">
           {c.teaching.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -85,7 +85,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Why error */}
         <Section title="¿Por qué fue considerada errónea?">
           {h.whyError.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -94,7 +94,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Refutation */}
         <Section title="Refutación Teológica">
           {c.refutation.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -106,12 +106,12 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
             {c.keyFigures.map((f, i) => (
               <div
                 key={i}
-                className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg p-4"
+                className="bg-surface-card border border-border rounded-lg p-4"
               >
-                <h4 className="text-[#ececf5] font-semibold text-sm mb-1">
+                <h4 className="text-text font-semibold text-sm mb-1">
                   {f.name}
                 </h4>
-                <p className="text-[#a8a8c0] text-xs leading-relaxed">
+                <p className="text-text-2 text-xs leading-relaxed">
                   {f.contribution}
                 </p>
               </div>
@@ -125,7 +125,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
             {h.keyScriptures.map((s, i) => (
               <span
                 key={i}
-                className="text-xs text-[#d4af37] bg-[#d4af37]/5 border border-[#d4af37]/20 px-3 py-1 rounded"
+                className="text-xs text-gold bg-gold/5 border border-gold/20 px-3 py-1 rounded"
               >
                 {s}
               </span>
@@ -133,7 +133,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
           </div>
           <div className="mt-4">
             {c.biblicalDefense.split("\n\n").map((p, i) => (
-              <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+              <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
                 {p.trim()}
               </p>
             ))}
@@ -146,21 +146,21 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
             {c.modernConnections.map((conn, i) => (
               <div
                 key={i}
-                className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg p-4"
+                className="bg-surface-card border border-border rounded-lg p-4"
               >
                 <div className="flex items-start gap-3">
-                  <span className="text-[#d4af37] text-xs font-bold mt-0.5">
+                  <span className="text-gold text-xs font-bold mt-0.5">
                     Hoy
                   </span>
-                  <p className="text-[#ececf5] text-xs leading-relaxed">
+                  <p className="text-text text-xs leading-relaxed">
                     {conn.modern}
                   </p>
                 </div>
                 <div className="flex items-start gap-3 mt-2">
-                  <span className="text-[#6e6e88] text-xs font-bold mt-0.5">
+                  <span className="text-text-3 text-xs font-bold mt-0.5">
                     Raíz
                   </span>
-                  <p className="text-[#a8a8c0] text-xs leading-relaxed">
+                  <p className="text-text-2 text-xs leading-relaxed">
                     {conn.ancient}
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Modern Form */}
         <Section title="¿Cómo se manifiesta hoy?">
           {h.modernForm.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -181,7 +181,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Comparison */}
         <Section title="Postura Histórica vs. Postura Reformada">
           {h.comparison.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -190,7 +190,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Pastoral Application */}
         <Section title="Aplicación Pastoral">
           {h.pastoralApp.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
@@ -199,15 +199,15 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         {/* Conclusion */}
         <Section title="Conclusión">
           {c.conclusion.split("\n\n").map((p, i) => (
-            <p key={i} className="text-[#a8a8c0] text-sm leading-relaxed mb-3 last:mb-0">
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0">
               {p.trim()}
             </p>
           ))}
         </Section>
 
         {/* Related */}
-        <div className="mt-10 p-5 bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg">
-          <h3 className="font-serif text-sm text-[#d4af37] mb-2">
+        <div className="mt-10 p-5 bg-surface-card border border-border rounded-lg">
+          <h3 className="font-serif text-sm text-gold mb-2">
             Sigue explorando
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -218,7 +218,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
                 <Link
                   key={x.slug}
                   href={`/herejia/${x.slug}`}
-                  className="text-xs text-[#a8a8c0] bg-[#d4af37]/5 border border-[#2a2a3e] px-3 py-1 rounded hover:border-[#d4af37] hover:text-[#d4af37] transition"
+                  className="text-xs text-text-2 bg-gold/5 border border-border px-3 py-1 rounded hover:border-gold hover:text-gold transition"
                 >
                   {x.icon} {x.title}
                 </Link>
@@ -226,7 +226,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
           </div>
           <Link
             href="/#historia"
-            className="inline-flex items-center gap-1 text-[#d4af37] text-xs font-semibold mt-4 hover:gap-2 transition-all"
+            className="inline-flex items-center gap-1 text-gold text-xs font-semibold mt-4 hover:gap-2 transition-all"
           >
             ← Ver todas las herejías
           </Link>
@@ -247,7 +247,7 @@ function Section({
 }) {
   return (
     <div className="mb-8">
-      <h2 className="font-serif text-base text-[#d4af37] mb-3 pb-2 border-b border-[#2a2a3e]">
+      <h2 className="font-serif text-base text-gold mb-3 pb-2 border-b border-border">
         {title}
       </h2>
       {children}
@@ -257,11 +257,11 @@ function Section({
 
 function InfoCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg p-4">
-      <span className="text-[10px] uppercase tracking-wider text-[#6e6e88]">
+    <div className="bg-surface-card border border-border rounded-lg p-4">
+      <span className="text-[10px] uppercase tracking-wider text-text-3">
         {label}
       </span>
-      <p className="text-[#ececf5] text-sm font-medium mt-1">{value}</p>
+      <p className="text-text text-sm font-medium mt-1">{value}</p>
     </div>
   );
 }

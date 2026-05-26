@@ -3,8 +3,51 @@
 @tailwind utilities;
 
 @layer base {
-  body { @apply bg-[#08080e] text-[#ececf5] font-sans antialiased; }
-  ::selection { @apply bg-[#d4af37] text-black; }
+  :root {
+    --color-gold: 212 175 55;
+    --color-gold-light: 232 200 106;
+    --color-gold-dark: 184 148 30;
+    --color-gold-dim: 160 136 48;
+    --color-surface: 8 8 14;
+    --color-surface-1: 14 14 24;
+    --color-surface-2: 20 20 31;
+    --color-surface-card: 26 26 46;
+    --color-surface-hover: 34 34 58;
+    --color-text: 236 236 245;
+    --color-text-2: 168 168 192;
+    --color-text-3: 110 110 136;
+    --color-border: 42 42 62;
+    --color-border-2: 58 58 80;
+    --color-bg-body: 8 8 14;
+    --color-text-body: 236 236 245;
+  }
+
+  html.light {
+    --color-gold: 184 148 30;
+    --color-gold-light: 212 175 55;
+    --color-gold-dark: 138 112 21;
+    --color-gold-dim: 196 160 48;
+    --color-surface: 248 248 252;
+    --color-surface-1: 240 240 246;
+    --color-surface-2: 232 232 240;
+    --color-surface-card: 255 255 255;
+    --color-surface-hover: 224 224 234;
+    --color-text: 26 26 46;
+    --color-text-2: 74 74 94;
+    --color-text-3: 110 110 136;
+    --color-border: 212 212 224;
+    --color-border-2: 192 192 208;
+    --color-bg-body: 248 248 252;
+    --color-text-body: 26 26 46;
+  }
+
+  body {
+    background-color: var(--color-bg-body);
+    color: var(--color-text-body);
+    @apply font-sans antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  ::selection { @apply bg-gold text-black; }
 }
 
 @keyframes float {

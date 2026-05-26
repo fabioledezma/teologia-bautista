@@ -74,11 +74,11 @@ export default function TimelineHistorico() {
 
   return (
     <div className="max-w-5xl mx-auto">
-        <h2 className="font-serif text-3xl md:text-4xl text-center text-[#ececf5]">
+        <h2 className="font-serif text-3xl md:text-4xl text-center text-text">
           Períodos Históricos de la Iglesia
         </h2>
-        <div className="w-12 h-0.5 bg-[#d4af37] mx-auto mt-3 mb-2 rounded" />
-        <p className="text-center text-[#6e6e88] text-sm max-w-xl mx-auto mb-16">
+        <div className="w-12 h-0.5 bg-gold mx-auto mt-3 mb-2 rounded" />
+        <p className="text-center text-text-3 text-sm max-w-xl mx-auto mb-16">
           Los períodos formativos de la iglesia primitiva, desde las persecuciones hasta la era imperial
         </p>
 
@@ -88,7 +88,7 @@ export default function TimelineHistorico() {
           <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#2a2a3e] -translate-y-1/2 hidden md:block" />
           <Link
             href="/historia"
-            className="absolute -top-8 right-0 text-[10px] text-[#d4af37] hover:text-[#c4a030] transition flex items-center gap-1 font-semibold"
+            className="absolute -top-8 right-0 text-[10px] text-gold hover:text-[#c4a030] transition flex items-center gap-1 font-semibold"
           >
             Ver historia completa <span>→</span>
           </Link>
@@ -101,8 +101,8 @@ export default function TimelineHistorico() {
                 onClick={() => setSel(periodo.id)}
                 className={`relative z-10 flex md:flex-col items-center gap-3 md:gap-2 px-4 md:px-6 py-4 md:py-6 rounded-xl border transition-all duration-300 text-left md:text-center ${
                   sel === periodo.id
-                    ? "border-[#d4af37] bg-[#d4af37]/10 shadow-lg shadow-[#d4af37]/5"
-                    : "border-[#2a2a3e] bg-[#1a1a2e]/50 hover:border-[#6e6e88] hover:bg-[#1a1a2e]"
+                    ? "border-gold bg-gold/10 shadow-lg shadow-[#d4af37]/5"
+                    : "border-border bg-surface-card/50 hover:border-[#6e6e88] hover:bg-surface-card"
                 }`}
                 style={{
                   flex: sel === periodo.id ? 1.4 : 1,
@@ -130,7 +130,7 @@ export default function TimelineHistorico() {
                   >
                     {periodo.label}
                   </div>
-                  <div className="text-[10px] text-[#6e6e88] mt-0.5">
+                  <div className="text-[10px] text-text-3 mt-0.5">
                     {periodo.date}
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function TimelineHistorico() {
         {/* Selected detail card */}
         <div
           key={p.id}
-          className="bg-[#1a1a2e] border border-[#2a2a3e] rounded-2xl p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500"
+          className="bg-surface-card border border-border rounded-2xl p-6 md:p-8 animate-in fade-in slide-in-from-bottom-4 duration-500"
         >
           <div className="grid md:grid-cols-5 gap-6">
             {/* Left: description + figures */}
@@ -160,21 +160,21 @@ export default function TimelineHistorico() {
                   <div className="w-3 h-3 rounded-full" style={{ backgroundColor: p.color }} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl text-[#ececf5]">{p.label}</h3>
-                  <span className="text-xs text-[#6e6e88]">{p.date}</span>
+                  <h3 className="font-serif text-xl text-text">{p.label}</h3>
+                  <span className="text-xs text-text-3">{p.date}</span>
                 </div>
               </div>
-              <p className="text-[#a8a8c0] text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-text-2 text-sm leading-relaxed">{p.desc}</p>
 
               <div>
-                <span className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold">
+                <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                   Figuras clave
                 </span>
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   {p.figuras.map((f) => (
                     <span
                       key={f}
-                      className="text-xs text-[#a8a8c0] bg-[#0e0e18] border border-[#2a2a3e] px-2.5 py-1 rounded-full"
+                      className="text-xs text-text-2 bg-surface-1 border border-border px-2.5 py-1 rounded-full"
                     >
                       {f}
                     </span>
@@ -184,14 +184,14 @@ export default function TimelineHistorico() {
             </div>
 
             {/* Right: timeline of events */}
-            <div className="md:col-span-2 border-l-2 border-[#2a2a3e] pl-4 space-y-3">
-              <span className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold">
+            <div className="md:col-span-2 border-l-2 border-border pl-4 space-y-3">
+              <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                 Eventos clave
               </span>
               {p.eventos.map((e, i) => (
                 <div
                   key={i}
-                  className="relative pl-3 pb-2 border-l-2 border-transparent hover:border-[#d4af37] transition group"
+                  className="relative pl-3 pb-2 border-l-2 border-transparent hover:border-gold transition group"
                   style={{
                     borderColor: i === 0 ? p.color : undefined,
                   }}
@@ -203,8 +203,8 @@ export default function TimelineHistorico() {
                       backgroundColor: i === 0 ? p.color : "#1a1a2e",
                     }}
                   />
-                  <span className="text-[10px] text-[#6e6e88] font-mono">{e.year}</span>
-                  <p className="text-xs text-[#ececf5] leading-tight mt-0.5 group-hover:text-[#d4af37] transition">
+                  <span className="text-[10px] text-text-3 font-mono">{e.year}</span>
+                  <p className="text-xs text-text leading-tight mt-0.5 group-hover:text-gold transition">
                     {e.event}
                   </p>
                 </div>

@@ -35,7 +35,7 @@ export default function FontSizeToggle() {
   return (
     <button
       onClick={cycle}
-      className="px-2 py-1 rounded-lg text-xs font-medium text-[#a8a8c0] hover:text-[#ececf5] hover:bg-[#1a1a2e] transition font-sans tracking-wide"
+      className="px-2 py-1 rounded-lg text-xs font-medium text-text-2 hover:text-text hover:bg-surface-card transition font-sans tracking-wide"
       title={`Tamaño: ${sizes.find((x) => x.key === current)?.label}`}
     >
       {sizes.find((x) => x.key === current)?.label}

@@ -14,30 +14,42 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#d4af37]/5 via-transparent to-[#08080e] animate-shimmer" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#1a1a2e_0%,_#08080e_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gold/5 via-transparent to-surface animate-shimmer" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-surface-card))_0%,_rgb(var(--color-surface))_70%)]" />
 
         {/* Floating decorative particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-[#d4af37]/30 rounded-full animate-drift" style={{ '--dx': '120px', '--dy': '-80px' } as React.CSSProperties} />
-          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-[#d4af37]/20 rounded-full animate-drift" style={{ animationDelay: '3s', '--dx': '-100px', '--dy': '-120px' } as React.CSSProperties} />
-          <div className="absolute bottom-1/3 left-1/3 w-0.5 h-0.5 bg-[#d4af37]/40 rounded-full animate-drift" style={{ animationDelay: '6s', '--dx': '80px', '--dy': '-60px' } as React.CSSProperties} />
-          <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-[#d4af37]/25 rounded-full animate-drift" style={{ animationDelay: '2s', '--dx': '-60px', '--dy': '-100px' } as React.CSSProperties} />
-          <div className="absolute bottom-1/4 right-1/4 w-0.5 h-0.5 bg-[#d4af37]/35 rounded-full animate-drift" style={{ animationDelay: '8s', '--dx': '140px', '--dy': '-40px' } as React.CSSProperties} />
+          <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-gold/30 rounded-full animate-drift" style={{ '--dx': '120px', '--dy': '-80px' } as React.CSSProperties} />
+          <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-gold/20 rounded-full animate-drift" style={{ animationDelay: '3s', '--dx': '-100px', '--dy': '-120px' } as React.CSSProperties} />
+          <div className="absolute bottom-1/3 left-1/3 w-0.5 h-0.5 bg-gold/40 rounded-full animate-drift" style={{ animationDelay: '6s', '--dx': '80px', '--dy': '-60px' } as React.CSSProperties} />
+          <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-gold/25 rounded-full animate-drift" style={{ animationDelay: '2s', '--dx': '-60px', '--dy': '-100px' } as React.CSSProperties} />
+          <div className="absolute bottom-1/4 right-1/4 w-0.5 h-0.5 bg-gold/35 rounded-full animate-drift" style={{ animationDelay: '8s', '--dx': '140px', '--dy': '-40px' } as React.CSSProperties} />
         </div>
 
         {/* Central glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#d4af37]/3 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/3 rounded-full blur-3xl animate-pulse-glow" />
+
+        {/* Subtle Bible silhouette */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] dark:opacity-[0.04] light:opacity-[0.03]">
+          <svg className="w-[600px] h-[600px] text-gold" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+            <path d="M20 30 L20 180 L100 170 L180 180 L180 30 L100 40 Z" />
+            <path d="M100 40 L100 170" />
+            <path d="M55 65 L100 75 L145 65" />
+            <path d="M55 85 L100 95 L145 85" />
+            <path d="M55 105 L100 115 L145 105" />
+            <path d="M60 20 L100 30 L140 20" strokeWidth="2" />
+          </svg>
+        </div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1
-            className="font-serif text-5xl md:text-7xl font-bold mb-6 text-[#d4af37] leading-tight animate-fade-in-up"
+            className="font-serif text-5xl md:text-7xl font-bold mb-6 text-gold leading-tight animate-fade-in-up"
             style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
           >
             Teología Accesible
           </h1>
           <p
-            className="text-lg md:text-xl text-[#a8a8c0] mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animate-stagger-2"
+            className="text-lg md:text-xl text-text-2 mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animate-stagger-2"
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
             Teología clara, profunda y transformadora para todo cristiano.
@@ -50,13 +62,13 @@ export default function HomePage() {
           >
             <Link
               href="#doctrinas"
-              className="inline-block px-8 py-3 bg-[#d4af37] text-[#08080e] font-semibold rounded-lg hover:bg-[#c4a030] transition-all hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-0.5"
+              className="inline-block px-8 py-3 bg-gold text-surface font-semibold rounded-lg hover:bg-gold-dark transition-all hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-0.5"
             >
               Explorar Doctrinas
             </Link>
             <Link
               href="#confesion"
-              className="inline-block px-8 py-3 border border-[#2a2a3e] text-[#ececf5] font-semibold rounded-lg hover:border-[#d4af37] hover:text-[#d4af37] transition-all hover:-translate-y-0.5"
+              className="inline-block px-8 py-3 border border-border text-text font-semibold rounded-lg hover:border-gold hover:text-gold transition-all hover:-translate-y-0.5"
             >
               La Confesión 1689
             </Link>
@@ -65,15 +77,15 @@ export default function HomePage() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-5 h-8 border-2 border-[#2a2a3e] rounded-full flex justify-center">
-            <div className="w-1 h-2 bg-[#d4af37]/60 rounded-full mt-2 animate-fade-in-up" style={{ animationDuration: '2s', animationIterationCount: 'infinite' }} />
+          <div className="w-5 h-8 border-2 border-border rounded-full flex justify-center">
+            <div className="w-1 h-2 bg-gold/60 rounded-full mt-2 animate-fade-in-up" style={{ animationDuration: '2s', animationIterationCount: 'infinite' }} />
           </div>
         </div>
       </section>
 
       {/* Timeline Histórica */}
       <RevealOnScroll>
-        <section id="timeline" className="py-20 px-4 bg-[#0e0e18]">
+        <section id="timeline" className="py-20 px-4 bg-surface-1">
           <TimelineHistorico />
         </section>
       </RevealOnScroll>
@@ -87,14 +99,14 @@ export default function HomePage() {
 
       {/* Historia - Herejías */}
       <RevealOnScroll>
-        <section id="historia" className="py-20 px-4 bg-[#0e0e18]">
+        <section id="historia" className="py-20 px-4 bg-surface-1">
           <HerejiasSection />
         </section>
       </RevealOnScroll>
 
       {/* Facultad */}
       <RevealOnScroll>
-        <section id="facultad" className="py-20 px-4 bg-[#0e0e18]">
+        <section id="facultad" className="py-20 px-4 bg-surface-1">
           <FacultySection />
         </section>
       </RevealOnScroll>
@@ -108,7 +120,7 @@ export default function HomePage() {
 
       {/* Recursos */}
       <RevealOnScroll>
-        <section id="recursos" className="py-20 px-4 bg-[#0e0e18]">
+        <section id="recursos" className="py-20 px-4 bg-surface-1">
           <RecursosSection />
         </section>
       </RevealOnScroll>
