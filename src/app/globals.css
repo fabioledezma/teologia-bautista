@@ -34,11 +34,11 @@ body {
   }
 
   html.light {
-    --shadow-gold: 0 0 20px rgba(160, 130, 25, 0.2);
-    --color-gold: 160 130 20;
-    --color-gold-light: 190 160 50;
-    --color-gold-dark: 130 100 10;
-    --color-gold-dim: 170 140 35;
+    --shadow-gold: 0 0 20px rgba(150, 120, 25, 0.2);
+    --color-gold: 155 125 25;
+    --color-gold-light: 180 150 45;
+    --color-gold-dark: 125 95 15;
+    --color-gold-dim: 165 135 30;
     --color-surface: 242 242 248;
     --color-surface-1: 234 234 242;
     --color-surface-2: 224 224 234;

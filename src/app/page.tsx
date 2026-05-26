@@ -57,12 +57,12 @@ export default function HomePage() {
             sustancia bíblica.
           </p>
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animate-stagger-3"
+            className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap animate-fade-in-up animate-stagger-3"
             style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
           >
             <Link
               href="#doctrinas"
-              className="inline-block px-8 py-3 bg-gold text-surface font-semibold rounded-lg hover:bg-gold-dark transition-all hover:shadow-[var(--shadow-gold)] hover:-translate-y-0.5"
+              className="inline-block px-8 py-3 bg-gold text-black font-semibold rounded-lg hover:bg-gold-dark transition-all hover:shadow-[var(--shadow-gold)] hover:-translate-y-0.5"
             >
               Explorar Doctrinas
             </Link>
@@ -71,6 +71,12 @@ export default function HomePage() {
               className="inline-block px-8 py-3 border border-border text-text font-semibold rounded-lg hover:border-gold hover:text-gold transition-all hover:-translate-y-0.5"
             >
               La Confesión 1689
+            </Link>
+            <Link
+              href="#historia"
+              className="inline-block px-8 py-3 border border-border text-text font-semibold rounded-lg hover:border-gold hover:text-gold transition-all hover:-translate-y-0.5"
+            >
+              Errores Doctrinales
             </Link>
           </div>
         </div>
