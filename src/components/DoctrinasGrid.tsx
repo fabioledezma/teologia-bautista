@@ -46,7 +46,7 @@ export default function DoctrinasGrid() {
               className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border ${
                 filter === f.key
                   ? "bg-gold text-black border-gold shadow-sm"
-                  : "bg-transparent text-text-2 border-border hover:border-gold hover:text-gold"
+                  : "bg-transparent text-text border-border hover:border-gold hover:text-gold"
               }`}
             >
               {f.label}
@@ -61,7 +61,7 @@ export default function DoctrinasGrid() {
               href={`/doctrina/${d.slug}`}
               className="group block bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold opacity-60 group-hover:opacity-100 transition-opacity" />
+              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="p-5">
                 <div className="flex items-start gap-3 mb-3">
                   <span className="text-lg flex-shrink-0 mt-0.5">{d.icon}</span>
@@ -74,7 +74,7 @@ export default function DoctrinasGrid() {
                     </span>
                   </div>
                 </div>
-                <p className="text-text-2 text-xs leading-relaxed line-clamp-3 break-words">
+                <p className="text-text text-xs leading-relaxed line-clamp-3 break-words">
                   {d.summary}
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-gold text-xs font-semibold mt-3 group-hover:gap-2.5 transition-all">

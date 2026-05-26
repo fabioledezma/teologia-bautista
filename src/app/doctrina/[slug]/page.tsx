@@ -82,7 +82,7 @@ export default async function DoctrinaPage({
       </blockquote>
 
       <Section title="En lenguaje sencillo">
-        <p className="text-text-2 text-sm leading-relaxed break-words">{d.simple}</p>
+        <p className="text-text text-sm leading-relaxed break-words">{d.simple}</p>
       </Section>
 
       {renderDiagram()}
@@ -91,7 +91,7 @@ export default async function DoctrinaPage({
         {d.fondo.split("\n\n").map((p, i) => (
           <p
             key={i}
-            className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+            className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
           >
             {p.trim()}
           </p>
@@ -103,7 +103,7 @@ export default async function DoctrinaPage({
           {d.historia.split("\n\n").map((p, i) => (
             <p
               key={i}
-              className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+              className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
             >
               {p.trim()}
             </p>
@@ -116,7 +116,7 @@ export default async function DoctrinaPage({
           {d.malentendidos.split("\n\n").map((p, i) => (
             <p
               key={i}
-              className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+              className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
             >
               {p.trim()}
             </p>
@@ -124,12 +124,12 @@ export default async function DoctrinaPage({
         </Section>
       )}
 
-      {d.aplicacion && (
-        <Section title="Aplicación práctica">
-          {d.aplicacion.split("\n\n").map((p, i) => (
+      {d.malentendidos && (
+        <Section title="Malentendidos comunes">
+          {d.malentendidos.split("\n\n").map((p, i) => (
             <p
               key={i}
-              className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+              className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
             >
               {p.trim()}
             </p>

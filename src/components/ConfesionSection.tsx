@@ -44,10 +44,10 @@ export default function ConfesionSection() {
               <span className="font-serif text-base text-gold font-bold min-w-[2rem]">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="flex-1 text-text-2 text-xs font-medium group-hover:text-text transition break-words">
+              <span className="flex-1 text-text text-xs font-medium group-hover:text-gold transition break-words">
                 {ch}
               </span>
-              <svg className="w-3.5 h-3.5 text-text-3 group-hover:text-gold transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-3.5 h-3.5 text-text-2 group-hover:text-gold transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>

@@ -27,7 +27,7 @@ export default function RecursosSection() {
               key={i}
               className="group bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="h-1 bg-gradient-to-r from-gold/30 via-gold/50 to-gold/30 opacity-50 group-hover:opacity-100 transition-opacity" />
+              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="p-5">
                 <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                   {r.type}
@@ -38,14 +38,14 @@ export default function RecursosSection() {
                 <p className="text-gold text-xs mb-2 break-words font-medium">
                   {r.author}
                 </p>
-                <p className="text-text-2 text-xs leading-relaxed mb-3 break-words">
+                <p className="text-text text-xs leading-relaxed mb-3 break-words">
                   {r.desc}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {r.tags.map((t) => (
                     <span
                       key={t}
-                      className="text-[10px] text-text-3 bg-surface-hover px-2 py-0.5 rounded"
+                      className="text-[10px] text-text-2 bg-surface-1 border border-border px-2 py-0.5 rounded"
                     >
                       {t}
                     </span>

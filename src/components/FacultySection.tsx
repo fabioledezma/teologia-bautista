@@ -35,13 +35,13 @@ export default function FacultySection() {
               key={f.num}
               className="group bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md relative"
             >
-              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold opacity-40 group-hover:opacity-80 transition-opacity" />
+              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="p-5">
                 <div className="text-2xl mb-3">{f.icon}</div>
                 <h3 className="text-text font-semibold text-sm mb-2 break-words">
                   {f.num}. {f.title}
                 </h3>
-                <p className="text-text-3 text-xs leading-relaxed mb-3 break-words">
+                <p className="text-text-2 text-xs leading-relaxed mb-3 break-words">
                   {f.desc}
                 </p>
                 <div className="flex flex-wrap gap-1.5">

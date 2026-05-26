@@ -50,7 +50,7 @@ export default function HerejiasSection() {
               className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border ${
                 era === e.key
                   ? "bg-gold text-black border-gold shadow-sm"
-                  : "bg-transparent text-text-2 border-border hover:border-gold hover:text-gold"
+                  : "bg-transparent text-text border-border hover:border-gold hover:text-gold"
               }`}
             >
               {e.label}
@@ -65,7 +65,7 @@ export default function HerejiasSection() {
               href={`/herejia/${h.slug}`}
               className="group block bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="h-1 bg-gradient-to-r from-gold/40 via-gold/60 to-gold/40 opacity-70 group-hover:opacity-100 transition-opacity" />
+              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="p-5">
                 <div className="flex items-start gap-3 mb-3">
                   <span className="text-lg flex-shrink-0 mt-0.5">{h.icon}</span>
@@ -78,10 +78,10 @@ export default function HerejiasSection() {
                     </span>
                   </div>
                 </div>
-                <p className="text-text-2 text-xs leading-relaxed line-clamp-2 mb-2 break-words">
+                <p className="text-text text-xs leading-relaxed line-clamp-2 mb-2 break-words">
                   {h.subtitle}
                 </p>
-                <div className="flex items-center gap-2 text-[10px] text-text-3 min-w-0">
+                <div className="flex items-center gap-2 text-[10px] text-text-2 min-w-0">
                   <span className="flex-shrink-0">{h.century}</span>
                   <span className="flex-shrink-0">·</span>
                   <span className="truncate min-w-0">{h.taughtBy}</span>

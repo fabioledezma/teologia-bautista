@@ -47,7 +47,7 @@ export default function HomePage() {
             Teología<span className="text-gold"> Accesible</span>
           </h1>
           <p
-            className="text-base md:text-lg text-text-2 mt-6 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
+            className="text-base md:text-lg text-text mt-6 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up"
             style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
           >
             Teología clara, profunda y transformadora para todo cristiano.

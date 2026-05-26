@@ -75,7 +75,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl border-b border-border transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-surface border-b border-border transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -94,8 +94,8 @@ export default function Navbar() {
               href={link.href}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 isActive(link.href)
-                  ? 'text-gold bg-gold/10 shadow-[inset_0_1px_0_rgb(var(--color-gold)/0.15)]'
-                  : 'text-text-2 hover:text-text hover:bg-surface-card'
+                  ? 'text-gold bg-gold/10'
+                  : 'text-text hover:text-gold'
               }`}
             >
               {link.label}
@@ -135,7 +135,7 @@ export default function Navbar() {
 
       <div
         ref={menuRef}
-        className={`md:hidden bg-surface-1/95 backdrop-blur-xl border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden bg-surface-1 border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -148,7 +148,7 @@ export default function Navbar() {
               className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                 isActive(link.href)
                   ? 'text-gold bg-gold/10'
-                  : 'text-text-2 hover:text-text hover:bg-surface-card'
+                  : 'text-text hover:bg-surface-hover'
               }`}
             >
               {link.label}
