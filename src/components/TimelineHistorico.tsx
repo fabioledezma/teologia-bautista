@@ -85,10 +85,10 @@ export default function TimelineHistorico() {
         {/* Timeline visual - horizontal bars */}
         <div className="relative mb-14">
           {/* Base line */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#2a2a3e] -translate-y-1/2 hidden md:block" />
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 hidden md:block" />
           <Link
             href="/historia"
-            className="absolute -top-8 right-0 text-[10px] text-gold hover:text-[#c4a030] transition flex items-center gap-1 font-semibold"
+            className="absolute -top-8 right-0 text-[10px] text-gold hover:text-gold-dark transition flex items-center gap-1 font-semibold"
           >
             Ver historia completa <span>→</span>
           </Link>
@@ -101,8 +101,8 @@ export default function TimelineHistorico() {
                 onClick={() => setSel(periodo.id)}
                 className={`relative z-10 flex md:flex-col items-center gap-3 md:gap-2 px-4 md:px-6 py-4 md:py-6 rounded-xl border transition-all duration-300 text-left md:text-center ${
                   sel === periodo.id
-                    ? "border-gold bg-gold/10 shadow-lg shadow-[#d4af37]/5"
-                    : "border-border bg-surface-card/50 hover:border-[#6e6e88] hover:bg-surface-card"
+                    ? "border-gold bg-gold/10 shadow-[var(--shadow-gold)]"
+                    : "border-border bg-surface-card/50 hover:border-text-3 hover:bg-surface-card"
                 }`}
                 style={{
                   flex: sel === periodo.id ? 1.4 : 1,
@@ -110,14 +110,14 @@ export default function TimelineHistorico() {
               >
                 {/* Line connector */}
                 {i > 0 && (
-                  <div className="hidden md:block absolute left-0 top-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#2a2a3e]" />
+                  <div className="hidden md:block absolute left-0 top-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-border" />
                 )}
 
                 {/* Icon circle */}
                 <div
                   className="w-3 h-3 rounded-full flex-shrink-0 border-2 transition-all duration-300"
                   style={{
-                    borderColor: sel === periodo.id ? periodo.color : "#2a2a3e",
+                    borderColor: sel === periodo.id ? periodo.color : "var(--color-border)",
                     backgroundColor:
                       sel === periodo.id ? periodo.color : "transparent",
                   }}
@@ -126,7 +126,7 @@ export default function TimelineHistorico() {
                 <div className="min-w-0">
                   <div
                     className="text-sm font-bold"
-                    style={{ color: sel === periodo.id ? periodo.color : "#a8a8c0" }}
+                    style={{ color: sel === periodo.id ? periodo.color : "var(--color-text-2)" }}
                   >
                     {periodo.label}
                   </div>
@@ -137,7 +137,7 @@ export default function TimelineHistorico() {
 
                 {/* Active indicator arrow */}
                 {sel === periodo.id && (
-                  <div className="hidden md:block absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-[#d4af37]" />
+                  <div className="hidden md:block absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-gold" />
                 )}
               </button>
             ))}
@@ -200,7 +200,7 @@ export default function TimelineHistorico() {
                     className="absolute -left-[9px] top-1 w-[6px] h-[6px] rounded-full border-2"
                     style={{
                       borderColor: p.color,
-                      backgroundColor: i === 0 ? p.color : "#1a1a2e",
+                      backgroundColor: i === 0 ? p.color : "var(--color-surface-card)",
                     }}
                   />
                   <span className="text-[10px] text-text-3 font-mono">{e.year}</span>
