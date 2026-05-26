@@ -14,26 +14,6 @@ body {
 
 @layer base {
   :root {
-    --color-gold: 212 175 55;
-    --color-gold-light: 232 200 106;
-    --color-gold-dark: 184 148 30;
-    --color-gold-dim: 160 136 48;
-    --color-surface: 8 8 14;
-    --color-surface-1: 14 14 24;
-    --color-surface-2: 20 20 31;
-    --color-surface-card: 26 26 46;
-    --color-surface-hover: 34 34 58;
-    --color-text: 236 236 245;
-    --color-text-2: 168 168 192;
-    --color-text-3: 110 110 136;
-    --color-border: 42 42 62;
-    --color-border-2: 58 58 80;
-    --color-bg-body: 8 8 14;
-    --color-text-body: 236 236 245;
-    --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.3);
-  }
-
-  html.light {
     --shadow-gold: 0 0 20px rgba(150, 120, 25, 0.2);
     --color-gold: 155 125 25;
     --color-gold-light: 180 150 45;
@@ -51,6 +31,26 @@ body {
     --color-border-2: 176 176 194;
     --color-bg-body: 242 242 248;
     --color-text-body: 20 20 36;
+  }
+
+  html.dark {
+    --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.3);
+    --color-gold: 212 175 55;
+    --color-gold-light: 232 200 106;
+    --color-gold-dark: 184 148 30;
+    --color-gold-dim: 160 136 48;
+    --color-surface: 8 8 14;
+    --color-surface-1: 14 14 24;
+    --color-surface-2: 20 20 31;
+    --color-surface-card: 26 26 46;
+    --color-surface-hover: 34 34 58;
+    --color-text: 236 236 245;
+    --color-text-2: 168 168 192;
+    --color-text-3: 110 110 136;
+    --color-border: 42 42 62;
+    --color-border-2: 58 58 80;
+    --color-bg-body: 8 8 14;
+    --color-text-body: 236 236 245;
   }
 
   body {

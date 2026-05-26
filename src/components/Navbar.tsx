@@ -20,6 +20,7 @@ export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const menuRef = useRef<HTMLDivElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +54,12 @@ export default function Navbar() {
   useEffect(() => {
     if (!isOpen) return;
     const handleClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target as Node) &&
+        btnRef.current &&
+        !btnRef.current.contains(e.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -103,6 +109,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
+          ref={btnRef}
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 -mr-2 text-text hover:text-gold transition-colors active:scale-90"
           aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
