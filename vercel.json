@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/doctrina/(.*)", "dest": "/doctrina/[slug].html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
