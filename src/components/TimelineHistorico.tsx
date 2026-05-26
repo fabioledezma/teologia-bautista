@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface Periodo {
   id: string;
@@ -85,6 +86,12 @@ export default function TimelineHistorico() {
         <div className="relative mb-14">
           {/* Base line */}
           <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-[#2a2a3e] -translate-y-1/2 hidden md:block" />
+          <Link
+            href="/historia"
+            className="absolute -top-8 right-0 text-[10px] text-[#d4af37] hover:text-[#c4a030] transition flex items-center gap-1 font-semibold"
+          >
+            Ver historia completa <span>→</span>
+          </Link>
 
           {/* Nodes */}
           <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center gap-4 md:gap-0 relative">

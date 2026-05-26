@@ -6,7 +6,7 @@ import Link from 'next/link';
 const links = [
   { label: 'Inicio', href: '/' },
   { label: 'Doctrinas', href: '/#doctrinas' },
-  { label: 'Historia', href: '/#historia' },
+  { label: 'Historia', href: '/historia' },
   { label: 'MDiv', href: '/#facultad' },
   { label: 'Confesión 1689', href: '/#confesion' },
   { label: 'Recursos', href: '/#recursos' },
