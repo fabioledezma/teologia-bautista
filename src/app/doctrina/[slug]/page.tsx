@@ -7,12 +7,13 @@ export async function generateStaticParams() {
   return doctrinas.map((d) => ({ slug: d.slug }));
 }
 
-export default function DoctrinaPage({
+export default async function DoctrinaPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const d = doctrinas.find((x) => x.slug === params.slug);
+  const { slug } = await params;
+  const d = doctrinas.find((x) => x.slug === slug);
   if (!d) notFound();
 
   const renderDiagram = () => {

@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return herejias.map((h) => ({ slug: h.slug }));
 }
 
-export default function HerejiaPage({ params }: { params: { slug: string } }) {
-  const h = herejias.find((x) => x.slug === params.slug);
+export default async function HerejiaPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const h = herejias.find((x) => x.slug === slug);
   if (!h) notFound();
   const c = h.content;
 
