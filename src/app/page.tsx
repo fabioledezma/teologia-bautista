@@ -5,6 +5,7 @@ import FacultySection from '@/components/FacultySection';
 import ConfesionSection from '@/components/ConfesionSection';
 import RecursosSection from '@/components/RecursosSection';
 import ChatBot from '@/components/ChatBot';
+import TimelineHistorico from '@/components/TimelineHistorico';
 
 export default function HomePage() {
   return (
@@ -36,6 +37,11 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      {/* Timeline Histórica */}
+      <section id="timeline" className="py-20 px-4 bg-[#0e0e18]">
+        <TimelineHistorico />
       </section>
 
       {/* Doctrinas */}
