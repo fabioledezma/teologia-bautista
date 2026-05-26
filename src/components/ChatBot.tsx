@@ -201,7 +201,7 @@ export default function ChatBot() {
               </svg>
             </button>
             <p className="text-sm text-text leading-relaxed break-words">
-              ¿Quieres ayuda para navegar? Te guío por las doctrinas y herejías.
+              ¡Hola! ¿En qué puedo ayudarte? Puedo guiarte por las doctrinas, las herejías, o llevarte a cualquier sección del sitio.
             </p>
             <button
               onClick={handleOpen}
