@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import doctrinas from "@/data/doctrinas";
 
@@ -24,24 +24,28 @@ export default function DoctrinasGrid() {
   return (
     <section id="doctrinas" className="py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-5">
-        <h2 className="font-serif text-3xl md:text-4xl text-center text-text">
-          Doctrinas Esenciales
-        </h2>
-        <div className="w-12 h-0.5 bg-gold mx-auto mt-3 mb-2 rounded" />
-        <p className="text-center text-text-3 text-sm max-w-xl mx-auto mb-12">
-          28 doctrinas que forman el núcleo de la fe bautista reformada,
-          explicadas con profundidad teológica y lenguaje accesible para todo
-          cristiano.
-        </p>
+        <div className="text-center mb-12">
+          <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+            Doctrina
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+            Doctrinas Esenciales
+          </h2>
+          <div className="section-title-line mt-3 mb-3" />
+          <p className="text-text-3 text-sm max-w-xl mx-auto">
+            28 doctrinas que forman el núcleo de la fe bautista reformada,
+            explicadas con profundidad teológica y lenguaje accesible.
+          </p>
+        </div>
 
         <div className="flex justify-center gap-2 mb-10 flex-wrap">
           {filters.map((f) => (
             <button
               key={f.key}
               onClick={() => setFilter(f.key)}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition border ${
+              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border ${
                 filter === f.key
-                  ? "bg-gold text-black border-gold"
+                  ? "bg-gold text-black border-gold shadow-sm"
                   : "bg-transparent text-text-2 border-border hover:border-gold hover:text-gold"
               }`}
             >
@@ -55,26 +59,31 @@ export default function DoctrinasGrid() {
             <Link
               key={d.slug}
               href={`/doctrina/${d.slug}`}
-              className="group block bg-surface-card border border-border rounded-lg p-6 transition hover:border-gold hover:-translate-y-0.5"
+              className="group block bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-1 h-8 rounded-full bg-gold/40 flex-shrink-0" />
-
-                <div className="min-w-0">
-                  <h3 className="text-text font-semibold text-sm leading-tight break-words">
-                    {d.title}
-                  </h3>
-                  <span className="text-[10px] uppercase tracking-wide text-gold bg-gold/10 px-2 py-0.5 rounded">
-                    {d.tag}
-                  </span>
+              <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold opacity-60 group-hover:opacity-100 transition-opacity" />
+              <div className="p-5">
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="text-lg flex-shrink-0 mt-0.5">{d.icon}</span>
+                  <div className="min-w-0">
+                    <h3 className="text-text font-semibold text-sm leading-tight break-words">
+                      {d.title}
+                    </h3>
+                    <span className="text-[10px] uppercase tracking-wide text-gold bg-gold/10 px-2 py-0.5 rounded inline-block mt-1">
+                      {d.tag}
+                    </span>
+                  </div>
                 </div>
+                <p className="text-text-2 text-xs leading-relaxed line-clamp-3 break-words">
+                  {d.summary}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-gold text-xs font-semibold mt-3 group-hover:gap-2.5 transition-all">
+                  Leer más
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </div>
-              <p className="text-text-2 text-xs leading-relaxed line-clamp-3 break-words">
-                {d.summary}
-              </p>
-              <span className="inline-flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
-                Leer más <span>→</span>
-              </span>
             </Link>
           ))}
         </div>

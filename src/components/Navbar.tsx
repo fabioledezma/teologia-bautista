@@ -75,14 +75,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-lg border-b border-border transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl border-b border-border transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 h-14 md:h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-base sm:text-lg md:text-xl font-bold text-gold tracking-tight"
+          className="font-serif text-base sm:text-lg md:text-xl font-bold text-gold tracking-tight hover:text-gold-light transition-colors"
         >
           Teología Accesible
         </Link>
@@ -92,9 +92,9 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 isActive(link.href)
-                  ? 'text-gold bg-gold/10'
+                  ? 'text-gold bg-gold/10 shadow-[inset_0_1px_0_rgb(var(--color-gold)/0.15)]'
                   : 'text-text-2 hover:text-text hover:bg-surface-card'
               }`}
             >
@@ -102,12 +102,11 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <div className="w-px h-5 bg-border mx-1" />
+          <div className="w-px h-5 bg-border mx-2" />
           <FontSizeToggle />
           <ThemeToggle />
         </div>
 
-        {/* Mobile hamburger */}
         <button
           ref={btnRef}
           onClick={() => setIsOpen(!isOpen)}
@@ -134,10 +133,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         ref={menuRef}
-        className={`md:hidden bg-surface-1 border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden bg-surface-1/95 backdrop-blur-xl border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

@@ -345,17 +345,23 @@ export default function HistoriaPage() {
     <div className="min-h-screen bg-surface">
       {/* Hero */}
       <section className="relative py-24 md:py-32 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gold/5 via-transparent to-surface" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-surface-card))_0%,_rgb(var(--color-surface))_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.04] via-transparent to-accent/[0.03]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-surface-card)/0.8)_0%,_transparent_70%)]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] max-w-full rounded-full opacity-20"
+          style={{
+            background: 'radial-gradient(circle, rgb(var(--color-gold) / 0.08) 0%, transparent 70%)',
+          }}
+        />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/20 text-gold text-[11px] font-semibold uppercase tracking-[2px] mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-glow" />
             Historia de la Iglesia
-          </span>
+          </div>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-text mt-4 mb-6 leading-tight">
             Períodos de la{" "}
             <span className="text-gold">Iglesia Cristiana</span>
           </h1>
-          <p className="text-text-2 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-text-2 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-text">
             Un recorrido por la historia de la Iglesia desde una perspectiva bautista reformada.
             Cada período representa un desarrollo clave en la comprensión y preservación del evangelio.
           </p>
@@ -433,7 +439,7 @@ export default function HistoriaPage() {
                   <span className="text-sm text-text-3 font-mono">{p.date}</span>
                 </div>
               </div>
-              <p className="text-text-2 text-sm leading-relaxed break-words">{p.desc}</p>
+              <p className="text-text-2 text-sm leading-relaxed break-words font-text">{p.desc}</p>
             </div>
 
             {/* Descripción detallada */}
@@ -441,7 +447,7 @@ export default function HistoriaPage() {
               <h3 className="font-serif text-lg text-text mb-3 break-words">
                 Panorama General
               </h3>
-              <p className="text-text-2 text-sm leading-relaxed whitespace-pre-line break-words">
+              <p className="text-text-2 text-sm leading-relaxed whitespace-pre-line break-words font-text">
                 {p.detalle}
               </p>
             </div>
@@ -451,7 +457,7 @@ export default function HistoriaPage() {
               <h3 className="font-serif text-lg text-gold mb-3 flex items-center gap-2">
                 <span>✝</span> Perspectiva Bautista Reformada
               </h3>
-              <p className="text-text-2 text-sm leading-relaxed break-words">
+              <p className="text-text-2 text-sm leading-relaxed break-words font-text">
                 {p.perspectivaReformada}
               </p>
               <div className="mt-4 px-4 py-3 bg-surface-1 border border-border rounded-xl">

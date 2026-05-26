@@ -12,6 +12,10 @@ const config: Config = {
           dark: "rgb(var(--color-gold-dark) / <alpha-value>)",
           dim: "rgb(var(--color-gold-dim) / <alpha-value>)",
         },
+        accent: {
+          DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
+          light: "rgb(var(--color-accent-light) / <alpha-value>)",
+        },
         surface: {
           DEFAULT: "rgb(var(--color-surface) / <alpha-value>)",
           1: "rgb(var(--color-surface-1) / <alpha-value>)",

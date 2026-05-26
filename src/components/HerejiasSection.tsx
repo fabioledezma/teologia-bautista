@@ -25,7 +25,7 @@ export default function HerejiasSection() {
   );
 
   return (
-    <section id="historia" className="py-16 md:py-24">
+    <section id="historia" className="py-16 md:py-24 bg-surface-1">
       <div className="max-w-5xl mx-auto px-5">
         <div className="text-center mb-12">
           <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
@@ -34,12 +34,11 @@ export default function HerejiasSection() {
           <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
             Historia de los Errores Doctrinales
           </h2>
-          <div className="w-12 h-0.5 bg-gold mx-auto mt-3 mb-3 rounded" />
+          <div className="section-title-line mt-3 mb-3" />
           <p className="text-text-3 text-sm max-w-2xl mx-auto">
             Muchas ideas que circulan en iglesias modernas tienen raíces en
-            herejías antiguas. Esta sección rastrea su origen histórico, su
-            refutación bíblica y su manifestación contemporánea, para que el
-            pueblo de Dios discierna con la Escritura.
+            herejías antiguas. Rastreamos su origen histórico, su refutación
+            bíblica y su manifestación contemporánea.
           </p>
         </div>
 
@@ -48,9 +47,9 @@ export default function HerejiasSection() {
             <button
               key={e.key}
               onClick={() => setEra(e.key)}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition border ${
+              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border ${
                 era === e.key
-                  ? "bg-gold text-black border-gold"
+                  ? "bg-gold text-black border-gold shadow-sm"
                   : "bg-transparent text-text-2 border-border hover:border-gold hover:text-gold"
               }`}
             >
@@ -64,36 +63,41 @@ export default function HerejiasSection() {
             <Link
               key={h.slug}
               href={`/herejia/${h.slug}`}
-              className="group block bg-surface-card border border-border rounded-lg p-5 transition hover:border-gold hover:-translate-y-0.5"
+              className="group block bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
-              <div className="flex items-start gap-3 mb-3">
-                <div className="w-1 h-8 rounded-full bg-gold/30 flex-shrink-0" />
-
-                <div className="min-w-0">
-                  <h3 className="text-text font-semibold text-sm leading-tight break-words">
-                    {h.title}
-                  </h3>
-                  <span className="text-[10px] uppercase tracking-wide text-gold bg-gold/10 px-2 py-0.5 rounded">
-                    {h.era}
-                  </span>
+              <div className="h-1 bg-gradient-to-r from-gold/40 via-gold/60 to-gold/40 opacity-70 group-hover:opacity-100 transition-opacity" />
+              <div className="p-5">
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="text-lg flex-shrink-0 mt-0.5">{h.icon}</span>
+                  <div className="min-w-0">
+                    <h3 className="text-text font-semibold text-sm leading-tight break-words">
+                      {h.title}
+                    </h3>
+                    <span className="text-[10px] uppercase tracking-wide text-gold bg-gold/10 px-2 py-0.5 rounded inline-block mt-1">
+                      {h.era}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <p className="text-text-2 text-xs leading-relaxed line-clamp-2 mb-2 break-words">
-                {h.subtitle}
-              </p>
-              <div className="flex items-center gap-2 text-[10px] text-text-3 min-w-0">
-                <span className="flex-shrink-0">{h.century}</span>
-                <span className="flex-shrink-0">·</span>
-                <span className="truncate min-w-0">{h.taughtBy}</span>
-              </div>
-              <div className="flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
-                Estudio completo <span>→</span>
+                <p className="text-text-2 text-xs leading-relaxed line-clamp-2 mb-2 break-words">
+                  {h.subtitle}
+                </p>
+                <div className="flex items-center gap-2 text-[10px] text-text-3 min-w-0">
+                  <span className="flex-shrink-0">{h.century}</span>
+                  <span className="flex-shrink-0">·</span>
+                  <span className="truncate min-w-0">{h.taughtBy}</span>
+                </div>
+                <div className="inline-flex items-center gap-1.5 text-gold text-xs font-semibold mt-3 group-hover:gap-2.5 transition-all">
+                  Estudio completo
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="mt-10 p-5 bg-surface-card border border-border rounded-lg">
+        <div className="mt-10 p-5 bg-surface-card border border-border rounded-xl">
           <p className="text-text-3 text-xs leading-relaxed">
             <strong className="text-text-2">Nota importante:</strong>{" "}
             Esta sección no busca atacar personas o denominaciones, sino
@@ -102,8 +106,8 @@ export default function HerejiasSection() {
             hoy bajo nombres diferentes, a menudo sostenidas por personas
             sinceras que desconocen su origen. Como dijo Agustín:{" "}
             <em className="text-text-2">
-              "En lo esencial, unidad; en lo no esencial, libertad; en todo,
-              caridad."
+              &ldquo;En lo esencial, unidad; en lo no esencial, libertad; en todo,
+              caridad.&rdquo;
             </em>
           </p>
         </div>

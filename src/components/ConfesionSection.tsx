@@ -15,17 +15,20 @@ const pdfUrl = "https://www.chapellibrary.org/pdf/books/lbcos.pdf";
 export default function ConfesionSection() {
 
   return (
-    <section id="confesion" className="py-16 md:py-24">
+    <section id="confesion" className="py-16 md:py-24 bg-surface-1">
       <div className="max-w-5xl mx-auto px-5">
         <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl text-text">
+          <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+            Confesional
+          </span>
+          <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
             Confesión Bautista de Fe de 1689
           </h2>
-          <div className="w-12 h-0.5 bg-gold mx-auto mt-3 mb-2 rounded" />
+          <div className="section-title-line mt-3 mb-3" />
           <p className="text-text-3 text-sm max-w-xl mx-auto">
             Fundamento doctrinal histórico de las iglesias bautistas reformadas.
             32 capítulos que exponen sistemáticamente la fe cristiana desde una
-            perspectiva confesional. Haz clic en cada capítulo para abrirlo en el PDF original.
+            perspectiva confesional.
           </p>
         </div>
 
@@ -36,7 +39,7 @@ export default function ConfesionSection() {
               href={`${pdfUrl}#page=${pdfPages[i]}`}
               target="_blank"
               rel="noopener"
-              className="flex items-center gap-3 bg-surface-card border border-border rounded-lg p-3 text-left transition hover:border-gold hover:bg-surface-hover group"
+              className="group flex items-center gap-3 bg-surface-card border border-border rounded-lg p-3 text-left transition-all duration-200 hover:border-gold hover:bg-surface-hover hover:-translate-y-0.5 hover:shadow-sm"
             >
               <span className="font-serif text-base text-gold font-bold min-w-[2rem]">
                 {String(i + 1).padStart(2, "0")}
@@ -44,7 +47,7 @@ export default function ConfesionSection() {
               <span className="flex-1 text-text-2 text-xs font-medium group-hover:text-text transition break-words">
                 {ch}
               </span>
-              <svg className="w-3.5 h-3.5 text-text-3 group-hover:text-gold transition flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-3.5 h-3.5 text-text-3 group-hover:text-gold transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
@@ -52,9 +55,16 @@ export default function ConfesionSection() {
         </div>
 
         <div className="mt-10 bg-surface-card border border-border rounded-xl p-6 md:p-8">
-          <h3 className="font-serif text-lg text-gold mb-2 break-words">
-            Seminario Teológico Bautista Covenant (CBTS)
-          </h3>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
+              <svg className="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h3 className="font-serif text-lg text-gold">
+              Seminario Teológico Bautista Covenant (CBTS)
+            </h3>
+          </div>
           <p className="text-text-2 text-sm leading-relaxed mb-4 break-words">
             CBTS existe para preparar pastores y líderes para la iglesia local,
             firmemente arraigados en la Confesión Bautista de Fe de 1689 y
@@ -67,17 +77,23 @@ export default function ConfesionSection() {
               href="https://cbtseminary.org"
               target="_blank"
               rel="noopener"
-              className="text-gold text-sm font-semibold hover:underline"
+              className="inline-flex items-center gap-1.5 text-gold text-sm font-semibold hover:underline"
             >
-              cbtseminary.org →
+              cbtseminary.org
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
             <a
               href="https://cbtsespanol.org"
               target="_blank"
               rel="noopener"
-              className="text-gold text-sm font-semibold hover:underline"
+              className="inline-flex items-center gap-1.5 text-gold text-sm font-semibold hover:underline"
             >
-              cbtsespanol.org →
+              cbtsespanol.org
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
           </div>
           <p className="text-text-3 text-xs italic break-words">
