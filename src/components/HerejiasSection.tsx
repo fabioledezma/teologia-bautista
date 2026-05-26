@@ -81,10 +81,10 @@ export default function HerejiasSection() {
               <p className="text-text-2 text-xs leading-relaxed line-clamp-2 mb-2 break-words">
                 {h.subtitle}
               </p>
-              <div className="flex items-center gap-2 text-[10px] text-text-3">
-                <span>{h.century}</span>
-                <span>·</span>
-                <span className="truncate">{h.taughtBy}</span>
+              <div className="flex items-center gap-2 text-[10px] text-text-3 min-w-0">
+                <span className="flex-shrink-0">{h.century}</span>
+                <span className="flex-shrink-0">·</span>
+                <span className="truncate min-w-0">{h.taughtBy}</span>
               </div>
               <div className="flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
                 Estudio completo <span>→</span>
