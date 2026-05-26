@@ -85,44 +85,32 @@ export default function HomePage() {
 
       {/* Timeline Histórica */}
       <RevealOnScroll>
-        <section id="timeline" className="py-20 px-4 bg-surface-1">
-          <TimelineHistorico />
-        </section>
+        <TimelineHistorico />
       </RevealOnScroll>
 
       {/* Doctrinas */}
       <RevealOnScroll>
-        <section id="doctrinas" className="py-20 px-4">
-          <DoctrinasGrid />
-        </section>
+        <DoctrinasGrid />
       </RevealOnScroll>
 
       {/* Historia - Herejías */}
       <RevealOnScroll>
-        <section id="historia" className="py-20 px-4 bg-surface-1">
-          <HerejiasSection />
-        </section>
+        <HerejiasSection />
       </RevealOnScroll>
 
       {/* Facultad */}
       <RevealOnScroll>
-        <section id="facultad" className="py-20 px-4 bg-surface-1">
-          <FacultySection />
-        </section>
+        <FacultySection />
       </RevealOnScroll>
 
       {/* Confesión */}
       <RevealOnScroll>
-        <section id="confesion" className="py-20 px-4">
-          <ConfesionSection />
-        </section>
+        <ConfesionSection />
       </RevealOnScroll>
 
       {/* Recursos */}
       <RevealOnScroll>
-        <section id="recursos" className="py-20 px-4 bg-surface-1">
-          <RecursosSection />
-        </section>
+        <RecursosSection />
       </RevealOnScroll>
 
       <ChatBot />

@@ -13,7 +13,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
   const c = h.content;
 
   return (
-    <main className="pt-24 pb-16 min-h-screen">
+    <main className="pt-20 md:pt-24 pb-16 min-h-screen">
       <div className="max-w-3xl mx-auto px-5">
         {/* Back link */}
         <Link

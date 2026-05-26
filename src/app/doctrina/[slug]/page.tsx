@@ -34,7 +34,7 @@ export default async function DoctrinaPage({
   };
 
   return (
-    <article className="max-w-3xl mx-auto px-5 pt-8 pb-16">
+    <article className="max-w-3xl mx-auto px-5 pt-4 md:pt-8 pb-16">
       {/* Back */}
       <Link
         href="/"

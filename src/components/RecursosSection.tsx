@@ -4,7 +4,7 @@ import recursosData from "@/data/recursos";
 
 export default function RecursosSection() {
   return (
-    <section id="recursos" className="py-24 bg-surface-1">
+    <section id="recursos" className="py-16 md:py-24 bg-surface-1">
       <div className="max-w-5xl mx-auto px-5">
         <h2 className="font-serif text-3xl md:text-4xl text-center text-text">
           Recursos Recomendados

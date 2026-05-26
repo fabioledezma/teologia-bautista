@@ -22,7 +22,7 @@ export default function DoctrinasGrid() {
       : doctrinas.filter((d) => d.filter === filter);
 
   return (
-    <section id="doctrinas" className="py-24">
+    <section id="doctrinas" className="py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-5">
         <h2 className="font-serif text-3xl md:text-4xl text-center text-text">
           Doctrinas Esenciales

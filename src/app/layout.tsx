@@ -47,7 +47,7 @@ export default function RootLayout({
           __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light')}catch(e){}})()`
         }} />
       </head>
-      <body className={`min-h-screen flex flex-col ${playfair.variable} ${inter.variable} ${crimson.variable}`}>
+      <body className={`min-h-screen flex flex-col overflow-x-hidden ${playfair.variable} ${inter.variable} ${crimson.variable}`}>
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />

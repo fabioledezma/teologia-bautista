@@ -351,11 +351,11 @@ export default function HistoriaPage() {
           <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
             Historia de la Iglesia
           </span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-text mt-4 mb-6 leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-text mt-4 mb-6 leading-tight">
             Períodos de la{" "}
             <span className="text-gold">Iglesia Cristiana</span>
           </h1>
-          <p className="text-text-2 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-text-2 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Un recorrido por la historia de la Iglesia desde una perspectiva bautista reformada.
             Cada período representa un desarrollo clave en la comprensión y preservación del evangelio.
           </p>

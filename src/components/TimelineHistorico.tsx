@@ -73,7 +73,8 @@ export default function TimelineHistorico() {
   const p = periodos.find((x) => x.id === sel) ?? periodos[0];
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <section id="timeline" className="py-16 md:py-24 bg-surface-1">
+    <div className="max-w-5xl mx-auto px-5">
         <h2 className="font-serif text-3xl md:text-4xl text-center text-text">
           Períodos Históricos de la Iglesia
         </h2>
@@ -213,5 +214,6 @@ export default function TimelineHistorico() {
           </div>
         </div>
     </div>
+    </section>
   );
 }

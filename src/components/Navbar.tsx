@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import FontSizeToggle from './FontSizeToggle';
 import ThemeToggle from './ThemeToggle';
@@ -19,6 +19,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +50,17 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [isOpen]);
+
   const isActive = (href: string) => {
     const id = href.replace('/#', '');
     if (href === '/') return activeSection === '';
@@ -61,7 +73,7 @@ export default function Navbar() {
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 h-14 md:h-16 flex items-center justify-between">
         <Link
           href="/"
           className="font-serif text-base sm:text-lg md:text-xl font-bold text-gold tracking-tight"
@@ -92,8 +104,8 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-text hover:text-gold transition-colors"
-          aria-label="Menú de navegación"
+          className="md:hidden p-2 -mr-2 text-text hover:text-gold transition-colors active:scale-90"
+          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {isOpen ? (
@@ -116,30 +128,36 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-surface-1 border-t border-border">
-          <div className="px-4 py-3 space-y-1">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isActive(link.href)
-                    ? 'text-gold bg-gold/10'
-                    : 'text-text-2 hover:text-text hover:bg-surface-card'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="flex items-center gap-2 pt-2 border-t border-border mt-2">
-              <FontSizeToggle />
-              <ThemeToggle />
-            </div>
+      <div
+        ref={menuRef}
+        className={`md:hidden bg-surface-1 border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-4 py-3 space-y-0.5">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                isActive(link.href)
+                  ? 'text-gold bg-gold/10'
+                  : 'text-text-2 hover:text-text hover:bg-surface-card'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="flex items-center gap-3 px-4 pt-3 pb-1 border-t border-border mt-3">
+            <span className="text-[10px] uppercase tracking-wider text-text-3 font-medium">
+              Apariencia
+            </span>
+            <FontSizeToggle />
+            <ThemeToggle />
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

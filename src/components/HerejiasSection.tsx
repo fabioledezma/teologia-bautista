@@ -25,7 +25,7 @@ export default function HerejiasSection() {
   );
 
   return (
-    <section className="py-24">
+    <section id="historia" className="py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-5">
         <div className="text-center mb-12">
           <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
