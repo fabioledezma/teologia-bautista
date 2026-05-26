@@ -28,7 +28,7 @@ export default function RecursosSection() {
               <h3 className="text-text font-semibold text-sm mt-1 mb-0.5 break-words">
                 {r.title}
               </h3>
-              <p className="text-gold text-xs mb-2">{r.author}</p>
+              <p className="text-gold text-xs mb-2 break-words">{r.author}</p>
               <p className="text-text-2 text-xs leading-relaxed mb-3 break-words">
                 {r.desc}
               </p>

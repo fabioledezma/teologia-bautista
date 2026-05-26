@@ -149,7 +149,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="flex items-center gap-3 px-4 pt-3 pb-1 border-t border-border mt-3">
+          <div className="flex items-center gap-3 px-4 pt-3 pb-1 border-t border-border mt-3 flex-wrap">
             <span className="text-[10px] uppercase tracking-wider text-text-3 font-medium">
               Apariencia
             </span>

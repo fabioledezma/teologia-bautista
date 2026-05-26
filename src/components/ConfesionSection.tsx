@@ -52,7 +52,7 @@ export default function ConfesionSection() {
         </div>
 
         <div className="mt-10 bg-surface-card border border-border rounded-xl p-6 md:p-8">
-          <h3 className="font-serif text-lg text-gold mb-2">
+          <h3 className="font-serif text-lg text-gold mb-2 break-words">
             Seminario Teológico Bautista Covenant (CBTS)
           </h3>
           <p className="text-text-2 text-sm leading-relaxed mb-4 break-words">
@@ -80,7 +80,7 @@ export default function ConfesionSection() {
               cbtsespanol.org →
             </a>
           </div>
-          <p className="text-text-3 text-xs italic">
+          <p className="text-text-3 text-xs italic break-words">
             Este sitio está{" "}
             <strong className="text-text-2 not-italic">
               en alianza con los principios doctrinales de CBTS

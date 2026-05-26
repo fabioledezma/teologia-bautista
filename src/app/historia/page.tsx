@@ -458,7 +458,7 @@ export default function HistoriaPage() {
                 <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                   Conexión con la Confesión 1689
                 </span>
-                <p className="text-xs text-text-2 mt-1 italic">
+                <p className="text-xs text-text-2 mt-1 italic break-words">
                   {p.confesion}
                 </p>
               </div>
@@ -492,10 +492,10 @@ export default function HistoriaPage() {
                         >
                           {e.year}
                         </span>
-                        <p className="text-sm text-text leading-tight mt-0.5">
+                        <p className="text-sm text-text leading-tight mt-0.5 break-words">
                           {e.event}
                         </p>
-                        <p className="text-[10px] text-text-3 mt-0.5 italic">
+                        <p className="text-[10px] text-text-3 mt-0.5 italic break-words">
                           {e.importancia}
                         </p>
                       </div>
@@ -525,8 +525,8 @@ export default function HistoriaPage() {
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color }} />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-text">{f.name}</p>
-                        <p className="text-[11px] text-text-2">{f.role}</p>
+                        <p className="text-sm font-semibold text-text break-words">{f.name}</p>
+                        <p className="text-[11px] text-text-2 break-words">{f.role}</p>
                       </div>
                     </div>
                   ))}
@@ -606,11 +606,11 @@ export default function HistoriaPage() {
                 >
                   {per.tag}
                 </div>
-                <h3 className="font-serif text-lg text-text mb-1 group-hover:text-gold transition">
+                <h3 className="font-serif text-lg text-text mb-1 group-hover:text-gold transition break-words">
                   {per.label}
                 </h3>
                 <span className="text-xs text-text-3 font-mono">{per.date}</span>
-                <p className="text-xs text-text-2 mt-3 leading-relaxed line-clamp-3">
+                <p className="text-xs text-text-2 mt-3 leading-relaxed line-clamp-3 break-words">
                   {per.desc}
                 </p>
                 <span className="inline-flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
