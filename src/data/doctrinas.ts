@@ -49,7 +49,7 @@ const doctrinas: Doctrina[] = [
       "Hechos 17:11",
       "1 Tesalonicenses 5:21",
     ],
-    relacionadas: ["inspiracion-escritura", "hermeneutica"],
+    relacionadas: [],
     svg: "solas",
   },
   {
@@ -83,7 +83,7 @@ const doctrinas: Doctrina[] = [
       "1 Corintios 8:6",
       "Juan 14:16-17",
     ],
-    relacionadas: ["cristologia", "pneumatologia"],
+    relacionadas: [],
     svg: "trinity",
   },
   {
@@ -117,7 +117,7 @@ const doctrinas: Doctrina[] = [
       "Daniel 4:34-35",
       "Génesis 50:20",
     ],
-    relacionadas: ["eleccion-incondicional", "providencia"],
+    relacionadas: ["eleccion-incondicional"],
   },
   {
     slug: "depravacion-total",
@@ -230,7 +230,6 @@ const doctrinas: Doctrina[] = [
     ],
     relacionadas: [
       "eleccion-incondicional",
-      "cristologia",
       "justificacion-por-fe",
     ],
     svg: "tulip",
@@ -342,7 +341,7 @@ const doctrinas: Doctrina[] = [
       "Filipenses 3:8-9",
       "Efesios 2:8-9",
     ],
-    relacionadas: ["regeneracion", "santificacion", "fe-salvadora"],
+    relacionadas: ["regeneracion", "santificacion"],
     svg: "solas",
   },
   {
@@ -447,7 +446,7 @@ const doctrinas: Doctrina[] = [
       "Hechos 16:14-15",
       "Colosenses 2:12",
     ],
-    relacionadas: ["cena-del-senor", "iglesia", "disciplina-iglesia"],
+    relacionadas: ["cena-del-senor", "iglesia"],
   },
   {
     slug: "cena-del-senor",
@@ -480,7 +479,7 @@ const doctrinas: Doctrina[] = [
       "Hechos 20:7",
       "Apocalipsis 19:9",
     ],
-    relacionadas: ["bautismo-del-creyente", "iglesia", "disciplina-iglesia"],
+    relacionadas: ["bautismo-del-creyente", "iglesia"],
   },
   {
     slug: "iglesia",
@@ -516,7 +515,6 @@ const doctrinas: Doctrina[] = [
     relacionadas: [
       "bautismo-del-creyente",
       "cena-del-senor",
-      "disciplina-iglesia",
     ],
   },
 ];
