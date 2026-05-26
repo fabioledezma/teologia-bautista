@@ -9,12 +9,12 @@ const explorarLinks = [
 ];
 
 const doctrinasLinks = [
-  { label: 'TULIP', href: '/doctrina/tulip' },
-  { label: 'Trinidad', href: '/doctrina/trinidad' },
-  { label: 'Ordo Salutis', href: '/doctrina/ordo-salutis' },
-  { label: 'Las 5 Solas', href: '/doctrina/las-5-solas' },
-  { label: 'Elección', href: '/doctrina/eleccion' },
-  { label: 'Justificación', href: '/doctrina/justificacion' },
+  { label: 'TULIP', href: '/doctrina/depravacion-total' },
+  { label: 'Trinidad', href: '/doctrina/la-trinidad' },
+  { label: 'Ordo Salutis', href: '/doctrina/regeneracion' },
+  { label: 'Las 5 Solas', href: '/doctrina/sola-scriptura' },
+  { label: 'Elección', href: '/doctrina/eleccion-incondicional' },
+  { label: 'Justificación', href: '/doctrina/justificacion-por-fe' },
 ];
 
 export default function Footer() {
@@ -25,12 +25,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-serif text-xl font-bold text-[#d4af37] mb-4">
-              ✝ Teología Bautista Reformada
+              ✝ Teología Accesible
             </h3>
             <p className="text-[#a8a8c0] text-sm leading-relaxed">
-              Explorando las doctrinas de la gracia desde una perspectiva
-              bautista reformada, en alianza con los principios doctrinales de
-              la Confesión Bautista de Fe de 1689.
+              Teología clara y profunda para todo cristiano. Exploramos las
+              doctrinas esenciales de la fe desde una perspectiva bautista
+              reformada, en alianza con la Confesión Bautista de Fe de 1689.
             </p>
           </div>
 

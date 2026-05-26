@@ -65,7 +65,7 @@ export default function Navbar() {
           href="/"
           className="font-serif text-lg md:text-xl font-bold text-[#d4af37] tracking-tight"
         >
-          Teología Bautista Reformada
+          Teología Accesible
         </Link>
 
         <div className="hidden md:flex items-center gap-1">

@@ -22,14 +22,14 @@ const crimson = Crimson_Text({
 });
 
 export const metadata: Metadata = {
-  title: 'Teología Bautista Reformada',
+  title: 'Teología Accesible',
   description:
-    'Explorando las doctrinas de la gracia desde una perspectiva bautista reformada. Teología sistemática, historia, y recursos para la edificación de la iglesia.',
+    'Teología clara y profunda para todo cristiano. Doctrinas esenciales explicadas de forma sencilla, desde una perspectiva bautista reformada.',
   openGraph: {
-    title: 'Teología Bautista Reformada',
+    title: 'Teología Accesible',
     description:
-      'Explorando las doctrinas de la gracia desde una perspectiva bautista reformada.',
-    siteName: 'Teología Bautista Reformada',
+      'Teología clara y profunda para todo cristiano. Doctrinas esenciales explicadas de forma sencilla.',
+    siteName: 'Teología Accesible',
     locale: 'es_ES',
     type: 'website',
   },

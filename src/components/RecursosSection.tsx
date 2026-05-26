@@ -11,8 +11,8 @@ export default function RecursosSection() {
         </h2>
         <div className="w-12 h-0.5 bg-[#d4af37] mx-auto mt-3 mb-2 rounded" />
         <p className="text-center text-[#6e6e88] text-sm max-w-xl mx-auto mb-12">
-          Obras que todo estudiante de teología bautista reformada debería
-          conocer, seleccionadas en consonancia con la tradición confesional
+          Obras fundamentales para profundizar en las doctrinas de la
+          gracia, seleccionadas en consonancia con la tradición confesional
           de CBTS.
         </p>
 
