@@ -345,8 +345,8 @@ export default function HistoriaPage() {
     <div className="min-h-screen bg-surface">
       {/* Hero */}
       <section className="relative py-24 md:py-32 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#d4af37]/5 via-transparent to-[#08080e]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_#1a1a2e_0%,_#08080e_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gold/5 via-transparent to-surface" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-surface-card))_0%,_rgb(var(--color-surface))_70%)]" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <span className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">
             Historia de la Iglesia
@@ -377,7 +377,7 @@ export default function HistoriaPage() {
                   className={`text-xs px-3 py-1.5 rounded-full border transition ${
                     sel === per.id
                       ? "bg-gold/10 border-gold text-gold"
-                      : "border-border text-text-2 hover:border-[#6e6e88]"
+                      : "border-border text-text-2 hover:border-text-3"
                   }`}
                 >
                   {per.label}
@@ -482,7 +482,7 @@ export default function HistoriaPage() {
                           style={{ backgroundColor: p.color }}
                         />
                         {i < p.eventos.length - 1 && (
-                          <div className="w-px flex-1 bg-[#2a2a3e] my-0.5" />
+                          <div className="w-px flex-1 bg-border my-0.5" />
                         )}
                       </div>
                       <div className="min-w-0">
@@ -544,7 +544,7 @@ export default function HistoriaPage() {
                 className={`text-sm px-4 py-2 rounded-lg border transition flex items-center gap-2 ${
                   periodos.findIndex((x) => x.id === sel) > 0
                     ? "border-border text-text-2 hover:border-gold hover:text-gold"
-                    : "border-transparent text-[#3a3a4e] cursor-not-allowed"
+                    : "border-transparent text-border-2 cursor-not-allowed"
                 }`}
                 disabled={periodos.findIndex((x) => x.id === sel) === 0}
               >
@@ -557,7 +557,7 @@ export default function HistoriaPage() {
                     key={per.id}
                     onClick={() => setSel(per.id)}
                     className={`w-2.5 h-2.5 rounded-full transition ${
-                      sel === per.id ? "bg-gold" : "bg-[#2a2a3e] hover:bg-[#6e6e88]"
+                       sel === per.id ? "bg-gold" : "bg-border hover:bg-text-3"
                     }`}
                   />
                 ))}
@@ -571,7 +571,7 @@ export default function HistoriaPage() {
                 className={`text-sm px-4 py-2 rounded-lg border transition flex items-center gap-2 ${
                   periodos.findIndex((x) => x.id === sel) < periodos.length - 1
                     ? "border-border text-text-2 hover:border-gold hover:text-gold"
-                    : "border-transparent text-[#3a3a4e] cursor-not-allowed"
+                    : "border-transparent text-border-2 cursor-not-allowed"
                 }`}
                 disabled={
                   periodos.findIndex((x) => x.id === sel) === periodos.length - 1

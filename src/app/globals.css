@@ -20,9 +20,11 @@
     --color-border-2: 58 58 80;
     --color-bg-body: 8 8 14;
     --color-text-body: 236 236 245;
+    --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.3);
   }
 
   html.light {
+    --shadow-gold: 0 0 30px rgba(184, 148, 30, 0.2);
     --color-gold: 184 148 30;
     --color-gold-light: 212 175 55;
     --color-gold-dark: 138 112 21;

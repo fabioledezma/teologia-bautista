@@ -194,7 +194,7 @@ export default function ChatBot() {
           <div className="bg-surface-card border border-gold/30 rounded-2xl p-4 shadow-2xl max-w-xs relative mb-3">
             <button
               onClick={() => setShowGreeting(false)}
-              className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#2a2a3e] text-text-2 text-xs flex items-center justify-center hover:bg-gold hover:text-black transition"
+              className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-border text-text-2 text-xs flex items-center justify-center hover:bg-gold hover:text-black transition"
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />

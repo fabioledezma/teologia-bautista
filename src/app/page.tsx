@@ -62,7 +62,7 @@ export default function HomePage() {
           >
             <Link
               href="#doctrinas"
-              className="inline-block px-8 py-3 bg-gold text-surface font-semibold rounded-lg hover:bg-gold-dark transition-all hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:-translate-y-0.5"
+              className="inline-block px-8 py-3 bg-gold text-surface font-semibold rounded-lg hover:bg-gold-dark transition-all hover:shadow-[var(--shadow-gold)] hover:-translate-y-0.5"
             >
               Explorar Doctrinas
             </Link>
