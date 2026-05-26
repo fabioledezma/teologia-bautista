@@ -29,7 +29,7 @@ export default function ConfesionSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 min-w-0">
           {confessionChapters.map((ch, i) => (
             <a
               key={i}
@@ -41,7 +41,7 @@ export default function ConfesionSection() {
               <span className="font-serif text-base text-gold font-bold min-w-[2rem]">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="flex-1 text-text-2 text-xs font-medium group-hover:text-text transition">
+              <span className="flex-1 text-text-2 text-xs font-medium group-hover:text-text transition break-words">
                 {ch}
               </span>
               <svg className="w-3.5 h-3.5 text-text-3 group-hover:text-gold transition flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -55,7 +55,7 @@ export default function ConfesionSection() {
           <h3 className="font-serif text-lg text-gold mb-2">
             Seminario Teológico Bautista Covenant (CBTS)
           </h3>
-          <p className="text-text-2 text-sm leading-relaxed mb-4">
+          <p className="text-text-2 text-sm leading-relaxed mb-4 break-words">
             CBTS existe para preparar pastores y líderes para la iglesia local,
             firmemente arraigados en la Confesión Bautista de Fe de 1689 y
             comprometidos con la teología reformada confesional. Ofrece

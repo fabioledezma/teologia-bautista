@@ -27,11 +27,11 @@ export default function HomePage() {
         </div>
 
         {/* Central glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-gold/3 rounded-full blur-2xl md:blur-3xl animate-pulse-glow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] max-w-full bg-gold/3 rounded-full blur-2xl md:blur-3xl animate-pulse-glow" />
 
         {/* Subtle Bible silhouette */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04] dark:opacity-[0.04] light:opacity-[0.03]">
-          <svg className="w-[250px] h-[250px] md:w-[600px] md:h-[600px] text-gold" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <svg className="w-[250px] h-[250px] md:w-[600px] md:h-[600px] max-w-full text-gold" viewBox="0 0 200 200" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
             <path d="M20 30 L20 180 L100 170 L180 180 L180 30 L100 40 Z" />
             <path d="M100 40 L100 170" />
             <path d="M55 65 L100 75 L145 65" />

@@ -24,7 +24,7 @@ export default function FacultySection() {
           , en alianza con sus principios doctrinales confesionales.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 min-w-0">
           {facultadData.map((f) => (
             <div
               key={f.num}
@@ -34,10 +34,10 @@ export default function FacultySection() {
                 {f.num}
               </span>
               <div className="text-2xl mb-3">{f.icon}</div>
-              <h3 className="text-text font-semibold text-sm mb-2">
+              <h3 className="text-text font-semibold text-sm mb-2 break-words">
                 {f.num}. {f.title}
               </h3>
-              <p className="text-text-3 text-xs leading-relaxed mb-3">
+              <p className="text-text-3 text-xs leading-relaxed mb-3 break-words">
                 {f.desc}
               </p>
               <div className="flex flex-wrap gap-1.5">

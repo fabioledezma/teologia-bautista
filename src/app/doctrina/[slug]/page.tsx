@@ -61,7 +61,7 @@ export default async function DoctrinaPage({
 
       {/* Key verse */}
       <blockquote className="border-l-4 border-gold bg-surface-card rounded-r-xl px-6 py-5 mb-10">
-        <p className="text-base text-text italic leading-relaxed">
+        <p className="text-base text-text italic leading-relaxed break-words">
           &ldquo;{d.keyVerse.text}&rdquo;
         </p>
         <footer className="mt-3 text-xs text-text-2">
@@ -74,7 +74,7 @@ export default async function DoctrinaPage({
         <h2 className="font-serif text-base text-gold mb-3 pb-2 border-b border-border">
           En lenguaje sencillo
         </h2>
-        <p className="text-text-2 text-sm leading-relaxed">{d.simple}</p>
+        <p className="text-text-2 text-sm leading-relaxed break-words">{d.simple}</p>
       </section>
 
       {/* Diagram */}
@@ -88,7 +88,7 @@ export default async function DoctrinaPage({
         {d.fondo.split("\n\n").map((p, i) => (
           <p
             key={i}
-            className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0"
+            className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words"
           >
             {p.trim()}
           </p>

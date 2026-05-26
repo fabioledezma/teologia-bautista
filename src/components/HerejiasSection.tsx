@@ -59,7 +59,7 @@ export default function HerejiasSection() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4 min-w-0">
           {filtered.map((h: Herejia) => (
             <Link
               key={h.slug}
@@ -70,7 +70,7 @@ export default function HerejiasSection() {
                 <div className="w-1 h-8 rounded-full bg-gold/30 flex-shrink-0" />
 
                 <div className="min-w-0">
-                  <h3 className="text-text font-semibold text-sm leading-tight">
+                  <h3 className="text-text font-semibold text-sm leading-tight break-words">
                     {h.title}
                   </h3>
                   <span className="text-[10px] uppercase tracking-wide text-gold bg-gold/10 px-2 py-0.5 rounded">
@@ -78,7 +78,7 @@ export default function HerejiasSection() {
                   </span>
                 </div>
               </div>
-              <p className="text-text-2 text-xs leading-relaxed line-clamp-2 mb-2">
+              <p className="text-text-2 text-xs leading-relaxed line-clamp-2 mb-2 break-words">
                 {h.subtitle}
               </p>
               <div className="flex items-center gap-2 text-[10px] text-text-3">

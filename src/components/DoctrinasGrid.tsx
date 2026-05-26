@@ -50,7 +50,7 @@ export default function DoctrinasGrid() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-w-0">
           {items.map((d) => (
             <Link
               key={d.slug}
@@ -61,7 +61,7 @@ export default function DoctrinasGrid() {
                 <div className="w-1 h-8 rounded-full bg-gold/40 flex-shrink-0" />
 
                 <div className="min-w-0">
-                  <h3 className="text-text font-semibold text-sm leading-tight">
+                  <h3 className="text-text font-semibold text-sm leading-tight break-words">
                     {d.title}
                   </h3>
                   <span className="text-[10px] uppercase tracking-wide text-gold bg-gold/10 px-2 py-0.5 rounded">
@@ -69,7 +69,7 @@ export default function DoctrinasGrid() {
                   </span>
                 </div>
               </div>
-              <p className="text-text-2 text-xs leading-relaxed line-clamp-3">
+              <p className="text-text-2 text-xs leading-relaxed line-clamp-3 break-words">
                 {d.summary}
               </p>
               <span className="inline-flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">

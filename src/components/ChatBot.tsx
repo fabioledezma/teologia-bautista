@@ -200,7 +200,7 @@ export default function ChatBot() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <p className="text-sm text-text leading-relaxed">
+            <p className="text-sm text-text leading-relaxed break-words">
               ¿Quieres ayuda para navegar? Te guío por las doctrinas y herejías.
             </p>
             <button

@@ -27,7 +27,7 @@ export default function Footer() {
             <h3 className="font-serif text-xl font-bold text-gold mb-4">
               ✝ Teología Accesible
             </h3>
-            <p className="text-text-2 text-sm leading-relaxed">
+            <p className="text-text-2 text-sm leading-relaxed break-words">
               Teología clara y profunda para todo cristiano. Exploramos las
               doctrinas esenciales de la fe desde una perspectiva bautista
               reformada, en alianza con la Confesión Bautista de Fe de 1689.

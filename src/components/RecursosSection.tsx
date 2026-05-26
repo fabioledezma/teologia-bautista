@@ -16,7 +16,7 @@ export default function RecursosSection() {
           de CBTS.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-w-0">
           {recursosData.map((r, i) => (
             <div
               key={i}
@@ -25,11 +25,11 @@ export default function RecursosSection() {
               <span className="text-[10px] uppercase tracking-wider text-gold">
                 {r.type}
               </span>
-              <h3 className="text-text font-semibold text-sm mt-1 mb-0.5">
+              <h3 className="text-text font-semibold text-sm mt-1 mb-0.5 break-words">
                 {r.title}
               </h3>
               <p className="text-gold text-xs mb-2">{r.author}</p>
-              <p className="text-text-2 text-xs leading-relaxed mb-3">
+              <p className="text-text-2 text-xs leading-relaxed mb-3 break-words">
                 {r.desc}
               </p>
               <div className="flex flex-wrap gap-1">

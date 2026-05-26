@@ -429,19 +429,19 @@ export default function HistoriaPage() {
                   >
                     {p.tag}
                   </div>
-                  <h2 className="font-serif text-3xl text-text">{p.label}</h2>
+                  <h2 className="font-serif text-3xl text-text break-words">{p.label}</h2>
                   <span className="text-sm text-text-3 font-mono">{p.date}</span>
                 </div>
               </div>
-              <p className="text-text-2 text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-text-2 text-sm leading-relaxed break-words">{p.desc}</p>
             </div>
 
             {/* Descripción detallada */}
             <div className="bg-surface-card border border-border rounded-2xl p-6 md:p-8 mb-6">
-              <h3 className="font-serif text-lg text-text mb-3">
+              <h3 className="font-serif text-lg text-text mb-3 break-words">
                 Panorama General
               </h3>
-              <p className="text-text-2 text-sm leading-relaxed whitespace-pre-line">
+              <p className="text-text-2 text-sm leading-relaxed whitespace-pre-line break-words">
                 {p.detalle}
               </p>
             </div>
@@ -451,7 +451,7 @@ export default function HistoriaPage() {
               <h3 className="font-serif text-lg text-gold mb-3 flex items-center gap-2">
                 <span>✝</span> Perspectiva Bautista Reformada
               </h3>
-              <p className="text-text-2 text-sm leading-relaxed">
+              <p className="text-text-2 text-sm leading-relaxed break-words">
                 {p.perspectivaReformada}
               </p>
               <div className="mt-4 px-4 py-3 bg-surface-1 border border-border rounded-xl">

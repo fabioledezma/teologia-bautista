@@ -165,7 +165,7 @@ export default function TimelineHistorico() {
                   <span className="text-xs text-text-3">{p.date}</span>
                 </div>
               </div>
-              <p className="text-text-2 text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-text-2 text-sm leading-relaxed break-words">{p.desc}</p>
 
               <div>
                 <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
@@ -205,7 +205,7 @@ export default function TimelineHistorico() {
                     }}
                   />
                   <span className="text-[10px] text-text-3 font-mono">{e.year}</span>
-                  <p className="text-xs text-text leading-tight mt-0.5 group-hover:text-gold transition">
+                  <p className="text-xs text-text leading-tight mt-0.5 group-hover:text-gold transition break-words">
                     {e.event}
                   </p>
                 </div>
