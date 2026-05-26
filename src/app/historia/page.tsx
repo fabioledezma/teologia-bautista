@@ -380,7 +380,7 @@ export default function HistoriaPage() {
                       : "border-[#2a2a3e] text-[#a8a8c0] hover:border-[#6e6e88]"
                   }`}
                 >
-                  {per.icon} {per.label}
+                  {per.label}
                 </button>
               ))}
             </div>
@@ -416,7 +416,12 @@ export default function HistoriaPage() {
               }}
             >
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-5xl">{p.icon}</span>
+                                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 border-2"
+                  style={{ borderColor: p.color }}
+                >
+                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: p.color }} />
+                </div>
                 <div>
                   <div
                     className="text-[10px] uppercase tracking-wider font-semibold"
@@ -517,7 +522,7 @@ export default function HistoriaPage() {
                           color: p.color,
                         }}
                       >
-                        {p.icon}
+                        <div className="w-2 h-2 rounded-full" style={{ backgroundColor: p.color }} />
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-[#ececf5]">{f.name}</p>
@@ -593,7 +598,7 @@ export default function HistoriaPage() {
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4"
                   style={{ backgroundColor: `${per.color}20` }}
                 >
-                  {per.icon}
+                  <div className="w-4 h-4 rounded-full" style={{ backgroundColor: per.color }} />
                 </div>
                 <div
                   className="text-[10px] uppercase tracking-wider font-semibold mb-1"

@@ -22,13 +22,13 @@ type Step = {
 
 const steps: Record<string, Step> = {
   inicio: {
-    text: "¡Bienvenido! Soy tu guía de estudio. ¿Qué área te gustaría explorar?",
+    text: "¿Qué área te gustaría explorar?",
     options: [
-      { label: "Doctrinas Esenciales", action: "menu-doctrinas", icon: "📖" },
-      { label: "Herejías Históricas", action: "menu-herejias", icon: "⚔️" },
-      { label: "Confesión 1689", action: "ir-confesion", icon: "📜" },
-      { label: "Facultad CBTS", action: "ir-facultad", icon: "🎓" },
-      { label: "Ver todo el sitio", action: "scroll-site", icon: "🔍" },
+      { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
+      { label: "Herejías Históricas", action: "menu-herejias" },
+      { label: "Confesión 1689", action: "ir-confesion" },
+      { label: "Facultad CBTS", action: "ir-facultad" },
+      { label: "Ver todo el sitio", action: "scroll-site" },
     ],
   },
   "menu-doctrinas": {
@@ -98,7 +98,7 @@ export default function ChatBot() {
         ...prev,
         {
           from: "user",
-          text: `📖 ${label}`,
+          text: label,
         },
         {
           from: "bot",
@@ -125,7 +125,7 @@ export default function ChatBot() {
       const eras = [...new Set(herejias.map((h) => h.era))];
       setHistory((prev) => [
         ...prev,
-        { from: "user", text: "⚔️ Herejías Históricas" },
+        { from: "user", text: "Herejías Históricas" },
         {
           from: "bot",
           text: "Elige una era histórica:",
@@ -169,7 +169,7 @@ export default function ChatBot() {
     if (action === "volver-inicio") {
       setHistory((prev) => [
         ...prev,
-        { from: "user", text: "← Volver al inicio" },
+        { from: "user", text: "Volver al inicio" },
         { from: "bot", text: steps["inicio"].text, options: steps["inicio"].options },
       ]);
       setCurrent("inicio");
@@ -196,10 +196,12 @@ export default function ChatBot() {
               onClick={() => setShowGreeting(false)}
               className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#2a2a3e] text-[#a8a8c0] text-xs flex items-center justify-center hover:bg-[#d4af37] hover:text-black transition"
             >
-              ✕
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
             <p className="text-sm text-[#ececf5] leading-relaxed">
-              👋 ¿Quieres ayuda para navegar? Te guío por las doctrinas y herejías.
+              ¿Quieres ayuda para navegar? Te guío por las doctrinas y herejías.
             </p>
             <button
               onClick={handleOpen}
@@ -214,10 +216,12 @@ export default function ChatBot() {
       {!open && !showGreeting && (
         <button
           onClick={handleOpen}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#d4af37] text-black text-2xl shadow-xl hover:bg-[#c4a030] transition hover:scale-105 active:scale-95"
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#d4af37] text-black shadow-xl hover:bg-[#c4a030] transition hover:scale-105 active:scale-95 flex items-center justify-center"
           aria-label="Abrir guía"
         >
-          💬
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
         </button>
       )}
 
@@ -226,7 +230,9 @@ export default function ChatBot() {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-[#2a2a3e] bg-[#1a1a2e] rounded-t-2xl">
             <div className="flex items-center gap-2">
-              <span className="text-lg">📚</span>
+              <svg className="w-4 h-4 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
               <span className="text-sm font-semibold text-[#ececf5]">Guía de Estudio</span>
             </div>
             <button
@@ -234,7 +240,9 @@ export default function ChatBot() {
               className="text-[#a8a8c0] hover:text-[#ececf5] transition text-lg leading-none"
               aria-label="Cerrar"
             >
-              ✕
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
 
@@ -257,9 +265,8 @@ export default function ChatBot() {
                       <button
                         key={opt.action}
                         onClick={() => goTo(opt.action)}
-                        className="w-full text-left text-sm px-3.5 py-2.5 rounded-xl bg-[#1a1a2e] text-[#ececf5] border border-[#2a2a3e] hover:border-[#d4af37] hover:text-[#d4af37] transition flex items-center gap-2"
+                        className="w-full text-left text-sm px-3.5 py-2.5 rounded-xl bg-[#1a1a2e] text-[#ececf5] border border-[#2a2a3e] hover:border-[#d4af37] hover:text-[#d4af37] transition"
                       >
-                        {opt.icon && <span>{opt.icon}</span>}
                         <span>{opt.label}</span>
                       </button>
                     ))}
@@ -268,7 +275,7 @@ export default function ChatBot() {
                         onClick={() => goTo("volver-inicio")}
                         className="w-full text-left text-xs px-3.5 py-2 rounded-xl bg-transparent text-[#6e6e88] border border-dashed border-[#2a2a3e] hover:text-[#d4af37] hover:border-[#d4af37] transition"
                       >
-                        ← Volver al inicio
+                        Volver al inicio
                       </button>
                     )}
                   </div>

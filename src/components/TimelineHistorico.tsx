@@ -115,15 +115,13 @@ export default function TimelineHistorico() {
 
                 {/* Icon circle */}
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-xl flex-shrink-0 border-2 transition-all duration-300"
+                  className="w-3 h-3 rounded-full flex-shrink-0 border-2 transition-all duration-300"
                   style={{
                     borderColor: sel === periodo.id ? periodo.color : "#2a2a3e",
                     backgroundColor:
-                      sel === periodo.id ? `${periodo.color}20` : "transparent",
+                      sel === periodo.id ? periodo.color : "transparent",
                   }}
-                >
-                  {periodo.icon}
-                </div>
+                />
 
                 <div className="min-w-0">
                   <div
@@ -155,7 +153,12 @@ export default function TimelineHistorico() {
             {/* Left: description + figures */}
             <div className="md:col-span-3 space-y-4">
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-3xl">{p.icon}</span>
+                <div
+                  className="w-10 h-10 rounded-full border-2 flex items-center justify-center flex-shrink-0"
+                  style={{ borderColor: p.color }}
+                >
+                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: p.color }} />
+                </div>
                 <div>
                   <h3 className="font-serif text-xl text-[#ececf5]">{p.label}</h3>
                   <span className="text-xs text-[#6e6e88]">{p.date}</span>

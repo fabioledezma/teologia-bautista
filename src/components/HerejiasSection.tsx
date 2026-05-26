@@ -67,9 +67,8 @@ export default function HerejiasSection() {
               className="group block bg-[#1a1a2e] border border-[#2a2a3e] rounded-lg p-5 transition hover:border-[#d4af37] hover:-translate-y-0.5"
             >
               <div className="flex items-start gap-3 mb-3">
-                <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center text-lg flex-shrink-0">
-                  {h.icon}
-                </div>
+                <div className="w-1 h-8 rounded-full bg-[#d4af37]/30 flex-shrink-0" />
+
                 <div className="min-w-0">
                   <h3 className="text-[#ececf5] font-semibold text-sm leading-tight">
                     {h.title}

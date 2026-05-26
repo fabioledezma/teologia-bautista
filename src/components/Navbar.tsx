@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import FontSizeToggle from './FontSizeToggle';
 
 const links = [
   { label: 'Inicio', href: '/' },
@@ -64,10 +65,9 @@ export default function Navbar() {
           href="/"
           className="font-serif text-lg md:text-xl font-bold text-[#d4af37] tracking-tight"
         >
-          ✝ Teología Bautista Reformada
+          Teología Bautista Reformada
         </Link>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-1">
           {links.map((link) => (
             <Link
@@ -82,6 +82,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          <div className="w-px h-5 bg-[#2a2a3e] mx-1" />
+          <FontSizeToggle />
         </div>
 
         {/* Mobile hamburger */}
