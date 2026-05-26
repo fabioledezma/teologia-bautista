@@ -201,7 +201,7 @@ export default function ChatBot() {
               </svg>
             </button>
             <p className="text-sm text-text leading-relaxed break-words">
-              ¡Hola! ¿En qué puedo ayudarte? Puedo guiarte por las doctrinas, las herejías, o llevarte a cualquier sección del sitio.
+              Si tienes preguntas sobre doctrinas, herejías o historia cristiana, puedo ayudarte a encontrar respuestas.
             </p>
             <button
               onClick={handleOpen}
