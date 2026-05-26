@@ -64,7 +64,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-lg md:text-xl font-bold text-gold tracking-tight"
+          className="font-serif text-base sm:text-lg md:text-xl font-bold text-gold tracking-tight"
         >
           Teología Accesible
         </Link>
@@ -133,6 +133,10 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="flex items-center gap-2 pt-2 border-t border-border mt-2">
+              <FontSizeToggle />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}

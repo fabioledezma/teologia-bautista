@@ -36,7 +36,7 @@ export default function RecursosSection() {
                 {r.tags.map((t) => (
                   <span
                     key={t}
-                    className="text-[10px] text-text-3 bg-white/[0.04] px-2 py-0.5 rounded"
+                    className="text-[10px] text-text-3 bg-surface-hover px-2 py-0.5 rounded"
                   >
                     {t}
                   </span>
