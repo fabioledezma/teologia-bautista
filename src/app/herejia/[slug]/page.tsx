@@ -68,6 +68,14 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
           <p className="text-text-2 text-sm leading-relaxed break-words">{c.intro}</p>
         </div>
 
+        <Section title="¿Qué enseñaba exactamente?">
+          {h.originalTeaching.split("\n\n").map((p, i) => (
+            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
+              {p.trim()}
+            </p>
+          ))}
+        </Section>
+
         <Section title="Contexto Histórico">
           {c.historicalContext.split("\n\n").map((p, i) => (
             <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
@@ -82,14 +90,6 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
           <InfoCard label="Refutado por" value={h.refutedBy} />
           <InfoCard label="Concilios / Documentos" value={h.councils} />
         </div>
-
-        <Section title="¿Qué enseñaba exactamente?">
-          {h.originalTeaching.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
-          ))}
-        </Section>
 
         <Section title="Desarrollo Histórico de la Doctrina">
           {c.teaching.split("\n\n").map((p, i) => (
