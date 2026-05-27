@@ -45,7 +45,7 @@ export default function RecursosSection() {
                   {r.tags.map((t) => (
                     <span
                       key={t}
-                      className="text-[10px] text-text-2 bg-surface-1 border border-border px-2 py-0.5 rounded"
+                      className="text-[10px] text-gold bg-gold/10 border border-gold/20 px-2 py-0.5 rounded"
                     >
                       {t}
                     </span>
