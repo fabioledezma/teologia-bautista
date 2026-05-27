@@ -25,7 +25,7 @@ export default function FacultySection() {
             >
               Covenant Baptist Theological Seminary
             </a>
-            , en alianza con sus principios doctrinales confesionales.
+            , tomando en cuenta su estructura curricular confesional.
           </p>
         </div>
 
