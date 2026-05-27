@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { herejias } from "@/data/herejias";
 import GlossaryText from "@/components/GlossaryText";
+import TextToSpeech from "@/components/TextToSpeech";
 
 export function generateStaticParams() {
   return herejias.map((h) => ({ slug: h.slug }));
@@ -34,6 +35,19 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
   if (!h) notFound();
   const c = h.content;
 
+  const sections = [
+    { title: "¿Qué enseñaba exactamente?", content: h.originalTeaching },
+    { title: "Contexto Histórico", content: c.historicalContext },
+    { title: "Desarrollo Histórico de la Doctrina", content: c.teaching },
+    { title: "Refutación Bíblica", content: c.refutation },
+    { title: "Defensa Bíblica", content: c.biblicalDefense },
+    { title: "¿Por qué es un error?", content: h.whyError },
+    { title: "Forma Moderna", content: h.modernForm },
+    { title: "Comparación Doctrinal", content: h.comparison },
+    { title: "Aplicación Pastoral", content: h.pastoralApp },
+    { title: "Conclusión", content: c.conclusion },
+  ]
+
   return (
     <main className="pt-20 md:pt-24 pb-16 min-h-screen">
       <div className="max-w-3xl mx-auto px-5">
@@ -64,6 +78,8 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
             <p className="text-text-2 text-sm mt-1">{h.subtitle}</p>
           </div>
         </div>
+
+        <TextToSpeech sections={sections} />
 
         <div className="bg-surface-card border border-border rounded-xl p-5 mb-8">
           <GlossaryText className="text-text-2 text-sm leading-relaxed break-words" text={c.intro} />

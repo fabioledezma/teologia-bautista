@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import patristica from "@/data/patristica";
 import { svgMap } from "@/components/Diagramas";
 import GlossaryText from "@/components/GlossaryText";
+import TextToSpeech from "@/components/TextToSpeech";
 
 export function generateStaticParams() {
   return patristica.map((s) => ({ slug: s.slug }));
@@ -23,6 +24,12 @@ export default async function PatristicaDetailPage({
 
   const svgFn = svgMap[sec.diagram];
   const diagramHtml = svgFn ? svgFn() : null;
+
+  const sections = [
+    { title: "En términos simples", content: sec.simple },
+    { title: "Más a fondo", content: sec.fondo },
+    { title: "Perspectiva Confesional", content: sec.perspectivaReformada },
+  ]
 
   return (
     <main className="min-h-screen bg-surface">
@@ -51,6 +58,8 @@ export default async function PatristicaDetailPage({
           </h1>
           <p className="text-text text-sm mt-2">{sec.subtitle}</p>
         </div>
+
+        <TextToSpeech sections={sections} />
 
         <div className="space-y-10">
           <section>

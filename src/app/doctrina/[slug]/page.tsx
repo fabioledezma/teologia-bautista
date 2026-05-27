@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import doctrinas from "@/data/doctrinas";
 import { svgMap } from "@/components/Diagramas";
 import GlossaryText from "@/components/GlossaryText";
+import TextToSpeech from "@/components/TextToSpeech";
 
 export async function generateStaticParams() {
   return doctrinas.map((d) => ({ slug: d.slug }));
@@ -43,6 +44,13 @@ export default async function DoctrinaPage({
     );
   };
 
+  const sections = [
+    { title: "En lenguaje sencillo", content: d.simple },
+    { title: "Más a fondo", content: d.fondo },
+    ...(d.historia ? [{ title: "Contexto histórico", content: d.historia }] : []),
+    ...(d.malentendidos ? [{ title: "Malentendidos comunes", content: d.malentendidos }] : []),
+  ]
+
   return (
     <article className="max-w-3xl mx-auto px-5 pt-4 md:pt-8 pb-16">
       <Link
@@ -68,6 +76,8 @@ export default async function DoctrinaPage({
           {d.title}
         </h1>
       </header>
+
+      <TextToSpeech sections={sections} />
 
       <blockquote className="relative border-l-4 border-gold bg-surface-card rounded-r-xl px-6 py-5 mb-10">
         <svg className="absolute top-3 left-3 w-6 h-6 text-gold/15" fill="currentColor" viewBox="0 0 24 24">

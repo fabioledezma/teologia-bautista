@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import teologiaHistorica from "@/data/teologia-historica";
 import { svgMap } from "@/components/Diagramas";
 import GlossaryText from "@/components/GlossaryText";
+import TextToSpeech from "@/components/TextToSpeech";
 
 export function generateStaticParams() {
   return teologiaHistorica.map((s) => ({ slug: s.slug }));
@@ -23,6 +24,19 @@ export default async function THDetailPage({
 
   const svgFn = svgMap[mod.diagram];
   const diagramHtml = svgFn ? svgFn() : null;
+
+  const sections = [
+    { title: "Introducción", content: mod.introduccion },
+    { title: "Contexto Histórico", content: mod.contextHistorico },
+    { title: "Problema Teológico", content: mod.problemaTeologico },
+    { title: "Enseñanza de la Iglesia", content: mod.ensenanzaIglesia },
+    { title: "Error o Herejía", content: mod.errorHerejia },
+    { title: "Respuesta de la Iglesia", content: mod.respuestaIglesia },
+    { title: "Base Bíblica", content: mod.baseBiblical },
+    { title: "Perspectiva Confesional", content: mod.explicacionConfesional },
+    { title: "Aplicación Práctica", content: mod.aplicacionPractica },
+    { title: "Resumen", content: mod.resumen },
+  ]
 
   return (
     <main className="min-h-screen bg-surface">
@@ -51,6 +65,8 @@ export default async function THDetailPage({
           </h1>
           <p className="text-text text-sm mt-2">{mod.subtitle}</p>
         </div>
+
+        <TextToSpeech sections={sections} />
 
         <div className="space-y-10">
           {/* 1. Introducción */}

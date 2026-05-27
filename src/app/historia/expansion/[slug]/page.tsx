@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import expansion from "@/data/expansion";
 import { svgMap } from "@/components/Diagramas";
 import GlossaryText from "@/components/GlossaryText";
+import TextToSpeech from "@/components/TextToSpeech";
 
 export function generateStaticParams() {
   return expansion.map((s) => ({ slug: s.slug }));
@@ -18,6 +19,12 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
 
   const svgFn = svgMap[sec.diagram];
   const diagramHtml = svgFn ? svgFn() : null;
+
+  const sections = [
+    { title: "En términos simples", content: sec.simple },
+    { title: "Más a fondo", content: sec.fondo },
+    { title: "Perspectiva Bautista Reformada", content: sec.perspectivaReformada },
+  ]
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -41,6 +48,8 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
             <p className="text-text-2 text-sm mt-1">{sec.subtitle}</p>
           </div>
         </div>
+
+        <TextToSpeech sections={sections} />
 
         {/* Para todos */}
         <section className="mb-10">

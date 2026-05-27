@@ -4,6 +4,7 @@ import hermeneutica from "@/data/hermeneutica";
 import { svgMap } from "@/components/Diagramas";
 import GlossaryText from "@/components/GlossaryText";
 import VerseCompare from "@/components/VerseCompare";
+import TextToSpeech from "@/components/TextToSpeech";
 
 export async function generateStaticParams() {
   return hermeneutica.map((h) => ({ slug: h.slug }));
@@ -48,6 +49,12 @@ export default async function HermeneuticaPage({
   const prev = curIdx > 0 ? allModules[curIdx - 1] : null;
   const next = curIdx < allModules.length - 1 ? allModules[curIdx + 1] : null;
 
+  const sections = [
+    { title: "En lenguaje sencillo", content: h.simple },
+    { title: "Más a fondo", content: h.fondo },
+    { title: "Perspectiva reformada", content: h.perspectivaReformada },
+  ]
+
   return (
     <article className="max-w-3xl mx-auto px-5 pt-4 md:pt-8 pb-16">
       <Link
@@ -71,6 +78,8 @@ export default async function HermeneuticaPage({
         </h1>
         <p className="text-text-2 text-sm font-text">{h.subtitle}</p>
       </header>
+
+      <TextToSpeech sections={sections} />
 
       <Section title="En lenguaje sencillo">
         <GlossaryText className="text-text text-sm leading-relaxed break-words" text={h.simple} />
