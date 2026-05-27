@@ -56,7 +56,6 @@ export default async function DoctrinaPage({
 
       <header className="mb-8">
         <div className="flex items-center gap-3 mb-3">
-          <span className="text-3xl">{d.icon}</span>
           <span className="text-[10px] uppercase tracking-wider text-gold bg-gold/10 px-2.5 py-1 rounded-full">
             {d.tag}
           </span>
@@ -178,7 +177,7 @@ export default async function DoctrinaPage({
                   href={`/doctrina/${slug}`}
                   className="text-xs text-text-2 bg-surface-card border border-border px-3 py-1.5 rounded hover:border-gold hover:text-gold transition"
                 >
-                  {rel.icon} {rel.title}
+                  {rel.title}
                 </Link>
               );
             })}

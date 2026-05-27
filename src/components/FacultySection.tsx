@@ -37,7 +37,9 @@ export default function FacultySection() {
             >
               <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="p-5">
-                <div className="text-2xl mb-3">{f.icon}</div>
+                <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-sm font-bold text-gold mb-3">
+                  {f.num}
+                </div>
                 <h3 className="text-text font-semibold text-sm mb-2 break-words">
                   {f.num}. {f.title}
                 </h3>

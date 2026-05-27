@@ -64,7 +64,9 @@ export default function DoctrinasGrid() {
               <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="p-5">
                 <div className="flex items-start gap-3 mb-3">
-                  <span className="text-lg flex-shrink-0 mt-0.5">{d.icon}</span>
+                  <span className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center text-xs font-bold text-gold flex-shrink-0">
+                    {d.title.charAt(0)}
+                  </span>
                   <div className="min-w-0">
                     <h3 className="text-text font-semibold text-sm leading-tight break-words">
                       {d.title}

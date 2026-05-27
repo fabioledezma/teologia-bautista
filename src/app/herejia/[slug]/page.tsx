@@ -47,8 +47,8 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         </Link>
 
         <div className="flex items-start gap-4 mb-8">
-          <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-3xl flex-shrink-0">
-            {h.icon}
+          <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center text-lg font-bold text-gold flex-shrink-0">
+            {h.title.charAt(0)}
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-1">
