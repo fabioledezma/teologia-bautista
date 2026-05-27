@@ -18,50 +18,32 @@ body {
     --color-gold: 175 140 30;
     --color-gold-light: 205 170 55;
     --color-gold-dark: 140 110 20;
-    --color-gold-dim: 150 125 45;
-    --color-accent: 50 65 130;
-    --color-accent-light: 70 90 165;
-    --color-surface: 250 250 252;
-    --color-surface-1: 244 244 250;
-    --color-surface-2: 236 236 244;
+    --color-surface: 255 255 255;
+    --color-surface-1: 255 255 255;
     --color-surface-card: 255 255 255;
-    --color-surface-hover: 238 238 246;
-    --color-text: 10 10 26;
-    --color-text-2: 45 45 70;
-    --color-text-3: 90 90 118;
-    --color-border: 196 196 214;
-    --color-border-2: 176 176 198;
-    --color-bg-body: 250 250 252;
-    --color-text-body: 10 10 26;
-    --shadow-gold: 0 0 20px rgba(155, 125, 25, 0.12);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.09);
+    --color-surface-hover: 245 245 245;
+    --color-text: 0 0 0;
+    --color-border: 210 210 210;
+    --color-bg-body: 255 255 255;
+    --color-text-body: 0 0 0;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
   }
 
   html.dark {
-    --color-gold: 220 190 65;
-    --color-gold-light: 240 210 95;
-    --color-gold-dark: 195 160 40;
-    --color-gold-dim: 180 155 70;
-    --color-accent: 85 105 200;
-    --color-accent-light: 110 130 220;
-    --color-surface: 20 20 42;
-    --color-surface-1: 28 28 52;
-    --color-surface-2: 36 36 60;
-    --color-surface-card: 40 40 66;
-    --color-surface-hover: 50 50 78;
-    --color-text: 248 248 255;
-    --color-text-2: 215 215 235;
-    --color-text-3: 172 172 196;
-    --color-border: 62 62 92;
-    --color-border-2: 78 78 110;
-    --color-bg-body: 20 20 42;
-    --color-text-body: 248 248 255;
-    --shadow-gold: 0 0 30px rgba(195, 160, 40, 0.2);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 14px rgba(0,0,0,0.35);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+    --color-gold: 215 180 55;
+    --color-gold-light: 235 205 90;
+    --color-gold-dark: 190 155 35;
+    --color-surface: 0 0 0;
+    --color-surface-1: 0 0 0;
+    --color-surface-card: 0 0 0;
+    --color-surface-hover: 18 18 18;
+    --color-text: 255 255 255;
+    --color-border: 60 60 60;
+    --color-bg-body: 0 0 0;
+    --color-text-body: 255 255 255;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
   }
 
   body {
@@ -91,7 +73,7 @@ body {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(var(--color-text-3));
+    background: rgb(var(--color-text));
   }
 }
 

@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.04] via-transparent to-accent/[0.03] animate-shimmer" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gold/[0.04] via-transparent to-gold/[0.04] animate-shimmer" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-surface-card)/0.8)_0%,_transparent_70%)]" />
 
         {/* Gold radial glow */}
