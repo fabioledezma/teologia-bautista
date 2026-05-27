@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import doctrinas from "@/data/doctrinas";
 import { herejias } from "@/data/herejias";
 import confessionChapters from "@/data/confesion";
+import expansion from "@/data/expansion";
 
 type Option = { label: string; action: string };
 
@@ -59,6 +60,7 @@ export default function ChatBot() {
   const inicioOptions: Option[] = [
     { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
     { label: "Errores Doctrinales", action: "menu-herejias" },
+    { label: "Expansión de la Iglesia", action: "menu-expansion" },
     { label: "Confesión 1689", action: "menu-confesion" },
     { label: "Recursos Recomendados", action: "menu-recursos" },
     { label: "Facultad CBTS", action: "ir-facultad" },
@@ -196,6 +198,23 @@ export default function ChatBot() {
         ],
         action
       );
+      return;
+    }
+
+    // --- Menu: Expansión de la Iglesia ---
+    if (action === "menu-expansion") {
+      pushBot(
+        "La expansión de la iglesia primitiva en 6 secciones. Elige una:",
+        expansion.map((s, i) => ({ label: `${i + 1}. ${s.title}`, action: `ir-expansion-${s.slug}` })),
+        action
+      );
+      return;
+    }
+
+    if (action.startsWith("ir-expansion-")) {
+      const slug = action.replace("ir-expansion-", "");
+      setOpen(false);
+      router.push(`/historia/expansion/${slug}`);
       return;
     }
 

@@ -9,6 +9,7 @@ const links = [
   { label: 'Inicio', href: '/' },
   { label: 'Doctrinas', href: '/#doctrinas' },
   { label: 'Historia', href: '/historia' },
+  { label: 'Expansión', href: '/historia/expansion' },
   { label: 'MDiv', href: '/#facultad' },
   { label: 'Confesión 1689', href: '/#confesion' },
   { label: 'Recursos', href: '/#recursos' },

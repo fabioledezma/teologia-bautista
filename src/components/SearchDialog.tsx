@@ -7,6 +7,7 @@ import { herejias } from "@/data/herejias";
 import confessionChapters from "@/data/confesion";
 import recursos from "@/data/recursos";
 import facultadAreas from "@/data/facultad";
+import expansion from "@/data/expansion";
 
 type SearchEntry = {
   title: string;
@@ -42,6 +43,11 @@ function buildIndex(): SearchEntry[] {
   for (const f of facultadAreas) {
     const keywords = [f.title, f.desc, ...f.topics].filter(Boolean).join(" ").toLowerCase();
     index.push({ title: `${f.num}. ${f.title}`, route: `/#facultad`, type: "Facultad CBTS", excerpt: f.desc, keywords });
+  }
+
+  for (const e of expansion) {
+    const keywords = [e.title, e.subtitle, e.simple, e.fondo, e.perspectivaReformada].filter(Boolean).join(" ").toLowerCase();
+    index.push({ title: e.title, route: `/historia/expansion/${e.slug}`, type: "Expansión", excerpt: e.subtitle, keywords });
   }
 
   return index;
