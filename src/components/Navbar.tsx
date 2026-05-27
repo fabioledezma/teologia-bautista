@@ -8,7 +8,7 @@ import SearchDialog from './SearchDialog';
 const links = [
   { label: 'Inicio', href: '/' },
   { label: 'Doctrinas', href: '/#doctrinas' },
-  { label: 'Errores Doctrinales', href: '/#errores' },
+  { label: 'Errores/Herejías', href: '/#errores' },
   { label: 'Historia', href: '/historia' },
   { label: 'Interpretación', href: '/hermeneutica' },
   { label: 'MDiv', href: '/#facultad' },

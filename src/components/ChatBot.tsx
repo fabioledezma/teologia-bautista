@@ -61,7 +61,7 @@ export default function ChatBot() {
 
   const inicioOptions: Option[] = [
     { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
-    { label: "Errores Doctrinales", action: "menu-herejias" },
+    { label: "Errores/Herejías", action: "menu-herejias" },
     { label: "Expansión de la Iglesia", action: "menu-expansion" },
     { label: "Patrística y Padres Apostólicos", action: "menu-patristica" },
     { label: "Teología Histórica", action: "menu-teologia-historica" },
@@ -290,7 +290,7 @@ export default function ChatBot() {
               </svg>
             </button>
             <p className="text-sm text-text leading-relaxed break-words">
-              Si tienes preguntas sobre doctrinas, errores doctrinales o historia cristiana, puedo ayudarte a encontrar respuestas.
+              Si tienes preguntas sobre doctrinas, errores/herejías o historia cristiana, puedo ayudarte a encontrar respuestas.
             </p>
             <button
               onClick={handleOpen}

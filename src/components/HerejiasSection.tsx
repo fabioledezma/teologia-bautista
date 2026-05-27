@@ -32,7 +32,7 @@ export default function HerejiasSection() {
             Teología Histórica
           </span>
           <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
-            Historia de los Errores Doctrinales
+            Historia de los Errores/Herejías
           </h2>
           <div className="section-title-line mt-3 mb-3" />
           <p className="text-text-3 text-sm max-w-2xl mx-auto">
@@ -103,7 +103,7 @@ export default function HerejiasSection() {
           <p className="text-text-3 text-xs leading-relaxed">
             <strong className="text-text-2">Nota importante:</strong>{" "}
             Esta sección no busca atacar personas o denominaciones, sino
-            rastrear raíces históricas de errores doctrinales para equipar al
+            rastrear raíces históricas de errores/herejías para equipar al
             pueblo de Dios con discernimiento. Muchas de estas ideas persisten
             hoy bajo nombres diferentes, a menudo sostenidas por personas
             sinceras que desconocen su origen. Como dijo Agustín:{" "}

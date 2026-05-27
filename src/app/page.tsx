@@ -49,7 +49,7 @@ export default function HomePage() {
               href="#errores"
               className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gold text-gold font-semibold rounded-xl hover:bg-gold hover:text-black transition-all"
             >
-              Errores Doctrinales
+              Errores/Herejías
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
