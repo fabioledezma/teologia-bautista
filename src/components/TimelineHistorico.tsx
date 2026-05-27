@@ -103,7 +103,7 @@ export default function TimelineHistorico() {
                 className={`relative z-10 flex md:flex-col items-center gap-3 md:gap-2 px-4 md:px-6 py-4 md:py-6 rounded-xl border transition-all duration-300 text-left md:text-center ${
                   sel === periodo.id
                     ? "border-gold bg-gold/10 shadow-[var(--shadow-gold)]"
-                    : "border-border bg-surface-card/50 hover:border-text-3 hover:bg-surface-card"
+                    : "border-border bg-surface-card/50 hover:border-gold/50 hover:bg-surface-card"
                 }`}
                 style={{
                   flex: sel === periodo.id ? 1.4 : 1,
@@ -127,7 +127,7 @@ export default function TimelineHistorico() {
                 <div className="min-w-0">
                   <div
                     className="text-sm font-bold"
-                    style={{ color: sel === periodo.id ? periodo.color : "var(--color-text-2)" }}
+                    style={{ color: sel === periodo.id ? periodo.color : "var(--color-text)" }}
                   >
                     {periodo.label}
                   </div>

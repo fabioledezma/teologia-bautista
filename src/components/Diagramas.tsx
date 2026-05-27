@@ -1,8 +1,8 @@
 const C = 'var(--color-surface-card)';
 const G = 'var(--color-gold)';
 const T = 'var(--color-text)';
-const T2 = 'var(--color-text-2)';
-const T3 = 'var(--color-text-3)';
+const T2 = 'var(--color-text)';
+const T3 = 'var(--color-text)';
 const B = 'var(--color-border)';
 
 export function svgTULIP() {

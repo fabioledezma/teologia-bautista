@@ -383,7 +383,7 @@ export default function HistoriaPage() {
                   className={`text-xs px-3 py-1.5 rounded-full border transition ${
                     sel === per.id
                       ? "bg-gold/10 border-gold text-gold"
-                      : "border-border text-text-2 hover:border-text-3"
+                      : "border-border text-text hover:border-gold/50"
                   }`}
                 >
                   {per.label}
@@ -400,7 +400,7 @@ export default function HistoriaPage() {
                 className={`text-xs px-3 py-1.5 rounded-lg border transition ${
                   formato === f.key
                     ? "bg-gold/10 border-gold text-gold"
-                    : "border-border text-text-3"
+                    : "border-border text-text"
                 }`}
               >
                 {f.label}
@@ -504,7 +504,7 @@ export default function HistoriaPage() {
                         <span
                           className="text-[10px] font-mono font-semibold"
                           style={{ color: p.color }}
-                        >
+              >
                           {e.year}
                         </span>
                         <p className="text-sm text-text leading-tight mt-0.5 break-words">
@@ -562,8 +562,8 @@ export default function HistoriaPage() {
                 }}
                 className={`text-sm px-4 py-2 rounded-lg border transition flex items-center gap-2 ${
                   periodos.findIndex((x) => x.id === sel) > 0
-                    ? "border-border text-text-2 hover:border-gold hover:text-gold"
-                    : "border-transparent text-border-2 cursor-not-allowed"
+                    ? "border-border text-text hover:border-gold hover:text-gold"
+                    : "border-transparent text-text/40 cursor-not-allowed"
                 }`}
                 disabled={periodos.findIndex((x) => x.id === sel) === 0}
               >
@@ -576,7 +576,7 @@ export default function HistoriaPage() {
                     key={per.id}
                     onClick={() => setSel(per.id)}
                     className={`w-2.5 h-2.5 rounded-full transition ${
-                       sel === per.id ? "bg-gold" : "bg-border hover:bg-text-3"
+                       sel === per.id ? "bg-gold" : "bg-border hover:bg-gold/30"
                     }`}
                   />
                 ))}
@@ -589,8 +589,8 @@ export default function HistoriaPage() {
                 }}
                 className={`text-sm px-4 py-2 rounded-lg border transition flex items-center gap-2 ${
                   periodos.findIndex((x) => x.id === sel) < periodos.length - 1
-                    ? "border-border text-text-2 hover:border-gold hover:text-gold"
-                    : "border-transparent text-border-2 cursor-not-allowed"
+                    ? "border-border text-text hover:border-gold hover:text-gold"
+                    : "border-transparent text-text/40 cursor-not-allowed"
                 }`}
                 disabled={
                   periodos.findIndex((x) => x.id === sel) === periodos.length - 1
