@@ -17,7 +17,7 @@ const hermeneutica: HermeneuticaSection[] = [
   {
     slug: "introduccion",
     number: 1,
-    icon: "❤️",
+    icon: "",
     title: "El Corazón de la Interpretación",
     subtitle: "Por qué estudiar la Biblia correctamente es un acto de amor y humildad",
     simple: `Muchos creyentes aman sinceramente al Señor. Leen su Biblia con hambre espiritual, oran con fervor y desean agradar a Dios. Y eso es hermoso. Pero amar la Palabra de Dios también implica aprender a escucharla correctamente. Porque podemos leer la Biblia durante años y aún así malinterpretar lo que Dios quiso decir.
@@ -55,7 +55,7 @@ La Biblia tiene un significado. Dios quiso decir algo específico. Nuestra tarea
   {
     slug: "contexto",
     number: 2,
-    icon: "🔍",
+    icon: "",
     title: "El Contexto lo Cambia Todo",
     subtitle: "Por qué no podemos sacar versículos de su hogar natural",
     simple: `Imagina que escuchas solo la mitad de una conversación telefónica. Alguien dice: "Sí, tráelo mañana sin falta". ¿Qué significa? No lo sabes. Podría ser un medicamento, un documento, una herramienta. Sin el contexto, la frase puede significar cualquier cosa.
@@ -102,7 +102,7 @@ Para los reformados, el contexto no es opcional. Es parte esencial de una interp
   {
     slug: "errores-comunes",
     number: 3,
-    icon: "⚠️",
+    icon: "",
     title: "Errores Comunes al Leer la Biblia",
     subtitle: "Ejemplos prácticos de malas interpretaciones y cómo corregirlas",
     simple: `A veces, sin darnos cuenta, leemos la Biblia de maneras que no son correctas. No lo hacemos por malicia, sino porque nunca nos enseñaron de otra forma. Veamos algunos errores comunes con ejemplos concretos.
@@ -173,7 +173,7 @@ La Confesión 1689 (Cap. 1, párr. 1) afirma que la Escritura es "la única regl
   {
     slug: "significado-real",
     number: 4,
-    icon: "📖",
+    icon: "",
     title: "¿Qué Significa Realmente Este Versículo?",
     subtitle: "Aprendiendo a leer el contexto antes de aplicar",
     simple: `Una de las herramientas más poderosas que puedes aprender es preguntarte: "¿Qué quiso decir el autor original a sus lectores originales?" Antes de preguntar "¿Qué significa esto para mí?", debemos preguntar "¿Qué significó esto para ellos?"
@@ -205,7 +205,7 @@ Como dice la Confesión 1689 (Cap. 1, párr. 9): "El juez supremo... es la Santa
   {
     slug: "guia-practica",
     number: 5,
-    icon: "🧭",
+    icon: "",
     title: "Guía Práctica para Interpretar la Biblia",
     subtitle: "Preguntas simples que transformarán tu lectura bíblica",
     simple: `Ahora que hemos visto la importancia del contexto, aquí tienes una guía práctica y sencilla que puedes usar cada vez que leas un pasaje de la Biblia. No necesitas ser un erudito. Solo necesitas un corazón humilde y estas preguntas:
@@ -254,7 +254,7 @@ La tradición reformada nos ha legado el principio de la analogía de la fe: int
   {
     slug: "espiritu-santo",
     number: 6,
-    icon: "🕊️",
+    icon: "",
     title: "El Espíritu Santo y la Palabra",
     subtitle: "Cómo el Espíritu obra a través de la Escritura, no aparte de ella",
     simple: `Necesitamos al Espíritu Santo para entender la Biblia. Jesús prometió que el Espíritu nos guiaría a toda la verdad (Juan 16:13). Sin Él, la Biblia es un libro cerrado. Pero el Espíritu no nos da "nuevas revelaciones" que contradigan la Escritura. Su obra es iluminar nuestra mente para entender lo que ya está escrito.
@@ -281,7 +281,7 @@ Los reformados rechazamos tanto el racionalismo (que dice que la razón humana b
   {
     slug: "comparacion",
     number: 7,
-    icon: "⚖️",
+    icon: "",
     title: "Comparación: Mala vs. Sana Interpretación",
     subtitle: "Tablas visuales para aprender a distinguir",
     simple: `A veces la mejor manera de aprender es viendo lado a lado lo correcto y lo incorrecto. Aquí tienes una comparación clara entre prácticas dañinas y prácticas saludables de interpretación bíblica.
@@ -324,7 +324,7 @@ La sana interpretación no es un lujo para teólogos. Es una necesidad para todo
   {
     slug: "conclusion",
     number: 8,
-    icon: "🌟",
+    icon: "",
     title: "Llamado a Amar la Verdad",
     subtitle: "Una invitación pastoral a crecer en el conocimiento de Dios",
     simple: `Hemos recorrido juntos un camino hermoso. Hemos aprendido que la Biblia es la Palabra de Dios, que fue escrita en contextos reales, que debemos leerla con cuidado, y que el Espíritu Santo nos ayuda a entenderla.

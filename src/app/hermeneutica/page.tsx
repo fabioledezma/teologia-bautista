@@ -59,18 +59,13 @@ export default function HermeneuticaPage() {
               >
                 <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
                 <div className="p-5">
-                  <div className="flex items-start gap-3 mb-3">
-                    <span className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-lg font-bold text-gold flex-shrink-0">
-                      {mod.icon}
-                    </span>
-                    <div className="min-w-0">
+                  <div className="mb-3">
                       <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                         Módulo {mod.number}
                       </span>
                       <h3 className="text-text font-serif font-semibold text-sm leading-tight break-words mt-0.5">
                         {mod.title}
                       </h3>
-                    </div>
                   </div>
                   <p className="text-text-2 text-xs leading-relaxed line-clamp-2 break-words">
                     {mod.subtitle}

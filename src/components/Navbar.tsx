@@ -10,7 +10,7 @@ const links = [
   { label: 'Doctrinas', href: '/#doctrinas' },
   { label: 'Errores Doctrinales', href: '/#errores' },
   { label: 'Historia', href: '/historia' },
-  { label: 'Hermenéutica', href: '/hermeneutica' },
+  { label: 'Interpretación', href: '/hermeneutica' },
   { label: 'MDiv', href: '/#facultad' },
   { label: 'Confesión 1689', href: '/#confesion' },
   { label: 'Recursos', href: '/#recursos' },
