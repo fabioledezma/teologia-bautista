@@ -58,7 +58,7 @@ export default function ChatBot() {
 
   const inicioOptions: Option[] = [
     { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
-    { label: "Herejías Históricas", action: "menu-herejias" },
+    { label: "Errores Doctrinales", action: "menu-herejias" },
     { label: "Confesión 1689", action: "menu-confesion" },
     { label: "Recursos Recomendados", action: "menu-recursos" },
     { label: "Facultad CBTS", action: "ir-facultad" },
@@ -160,7 +160,7 @@ export default function ChatBot() {
         { from: "user", text: era },
         {
           from: "bot",
-          text: `Herejías del período ${era}:`,
+          text: `Errores del período ${era}:`,
           options: items.map((h) => ({ label: `${h.title} (s. ${h.century})`, action: `ir-herejia-${h.slug}` })),
         },
       ]);
