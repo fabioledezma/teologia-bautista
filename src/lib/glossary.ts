@@ -29,23 +29,11 @@ export const glossary: GlossaryEntry[] = [
     definition: "Acto legal de Dios por el cual declara justo al pecador que cree en Cristo. No es un proceso interno, sino una declaración forense: Dios nos declara justos basado en la justicia de Cristo imputada (atribuida) a nosotros.",
   },
   {
-    term: "Justificación",
-    definition: "Acto legal de Dios por el cual declara justo al pecador que cree en Cristo. No es un proceso interno, sino una declaración forense: Dios nos declara justos basado en la justicia de Cristo imputada (atribuida) a nosotros.",
-  },
-  {
     term: "santificación",
     definition: "Proceso por el cual Dios transforma progresivamente al creyente para que sea más parecido a Cristo en su carácter. Es obra del Espíritu Santo, pero requiere la cooperación activa del cristiano.",
   },
   {
-    term: "Santificación",
-    definition: "Proceso por el cual Dios transforma progresivamente al creyente para que sea más parecido a Cristo en su carácter. Es obra del Espíritu Santo, pero requiere la cooperación activa del cristiano.",
-  },
-  {
     term: "regeneración",
-    definition: "Acto soberano de Dios por el cual imparte vida espiritual a un alma muerta en pecado. Es el 'nuevo nacimiento' del que habla Jesús en Juan 3. La regeneración precede a la fe y la hace posible.",
-  },
-  {
-    term: "Regeneración",
     definition: "Acto soberano de Dios por el cual imparte vida espiritual a un alma muerta en pecado. Es el 'nuevo nacimiento' del que habla Jesús en Juan 3. La regeneración precede a la fe y la hace posible.",
   },
   {
@@ -138,10 +126,6 @@ export const glossary: GlossaryEntry[] = [
   },
   {
     term: "cristología",
-    definition: "Rama de la teología que estudia la persona y obra de Jesucristo: su divinidad, su humanidad, la unión de ambas naturalezas, y su obra como profeta, sacerdote y rey.",
-  },
-  {
-    term: "Cristología",
     definition: "Rama de la teología que estudia la persona y obra de Jesucristo: su divinidad, su humanidad, la unión de ambas naturalezas, y su obra como profeta, sacerdote y rey.",
   },
   {
@@ -269,15 +253,7 @@ export const glossary: GlossaryEntry[] = [
     definition: "Movimiento del siglo XVI que buscó restaurar el evangelio bíblico y reformar la iglesia. Sus líderes principales fueron Lutero, Calvino y Zuinglio. Estableció los principios de sola Scriptura, sola fide, sola gratia, solo Christus y soli Deo gloria.",
   },
   {
-    term: "Reforma",
-    definition: "Movimiento del siglo XVI que buscó restaurar el evangelio bíblico y reformar la iglesia. Sus líderes principales fueron Lutero, Calvino y Zuinglio. Estableció los principios de sola Scriptura, sola fide, sola gratia, solo Christus y soli Deo gloria.",
-  },
-  {
     term: "puritano",
-    definition: "Movimiento dentro del protestantismo inglés (siglos XVI-XVII) que buscaba 'purificar' la Iglesia de Inglaterra de elementos católicos romanos. Eran conocidos por su énfasis en la predicación bíblica, la vida santa y la teología reformada.",
-  },
-  {
-    term: "Puritano",
     definition: "Movimiento dentro del protestantismo inglés (siglos XVI-XVII) que buscaba 'purificar' la Iglesia de Inglaterra de elementos católicos romanos. Eran conocidos por su énfasis en la predicación bíblica, la vida santa y la teología reformada.",
   },
   {
@@ -303,10 +279,6 @@ export const glossary: GlossaryEntry[] = [
   {
     term: "arrianismo",
     definition: "Del nombre 'Arrio', herejía del siglo IV que enseñaba que Jesucristo no es Dios eterno, sino la primera y más excelsa criatura de Dios. 'Hubo un tiempo en que el Hijo no era', decía Arrio. Fue condenado en el Concilio de Nicea (325 d.C.).",
-  },
-  {
-    term: "Arrianismo",
-    definition: "Herejía del siglo IV que enseñaba que Jesucristo no es Dios eterno, sino la primera y más excelsa criatura de Dios. Fue condenado en el Concilio de Nicea (325 d.C.).",
   },
   {
     term: "Logos",
