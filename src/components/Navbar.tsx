@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import FontSizeToggle from './FontSizeToggle';
-import ThemeToggle from './ThemeToggle';
 
 const links = [
   { label: 'Inicio', href: '/' },
@@ -104,7 +103,6 @@ export default function Navbar() {
 
           <div className="w-px h-5 bg-border mx-2" />
           <FontSizeToggle />
-          <ThemeToggle />
         </div>
 
         <button
@@ -159,7 +157,6 @@ export default function Navbar() {
               Apariencia
             </span>
             <FontSizeToggle />
-            <ThemeToggle />
           </div>
         </div>
       </div>

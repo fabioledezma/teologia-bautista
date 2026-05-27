@@ -41,12 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{
-          __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`
-        }} />
-      </head>
+    <html lang="es" className="scroll-smooth">
+      <head />
       <body className={`min-h-screen flex flex-col overflow-x-hidden bg-bg-body text-text-body ${playfair.variable} ${inter.variable} ${crimson.variable}`}>
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
