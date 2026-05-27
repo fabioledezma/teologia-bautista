@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 
 const sizes = [
-  { key: "normal", label: "A", scale: "100%" },
-  { key: "large", label: "A+", scale: "112.5%" },
-  { key: "xlarge", label: "A++", scale: "125%" },
+  { key: "large", label: "A", scale: "112.5%" },
+  { key: "xlarge", label: "A+", scale: "125%" },
+  { key: "xxlarge", label: "A++", scale: "140%" },
+  { key: "xxxlarge", label: "A+++", scale: "160%" },
 ];
 
 export default function FontSizeToggle() {
