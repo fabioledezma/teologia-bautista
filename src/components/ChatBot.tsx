@@ -6,6 +6,8 @@ import doctrinas from "@/data/doctrinas";
 import { herejias } from "@/data/herejias";
 import confessionChapters from "@/data/confesion";
 import expansion from "@/data/expansion";
+import patristica from "@/data/patristica";
+import teologiaHistorica from "@/data/teologia-historica";
 
 type Option = { label: string; action: string };
 
@@ -61,6 +63,8 @@ export default function ChatBot() {
     { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
     { label: "Errores Doctrinales", action: "menu-herejias" },
     { label: "Expansión de la Iglesia", action: "menu-expansion" },
+    { label: "Patrística y Padres Apostólicos", action: "menu-patristica" },
+    { label: "Teología Histórica", action: "menu-teologia-historica" },
     { label: "Confesión 1689", action: "menu-confesion" },
     { label: "Recursos Recomendados", action: "menu-recursos" },
     { label: "Facultad CBTS", action: "ir-facultad" },
@@ -215,6 +219,40 @@ export default function ChatBot() {
       const slug = action.replace("ir-expansion-", "");
       setOpen(false);
       router.push(`/historia/expansion/${slug}`);
+      return;
+    }
+
+    // --- Menu: Patrística ---
+    if (action === "menu-patristica") {
+      pushBot(
+        "La Patrística y los Padres Apostólicos en 6 secciones. Elige una:",
+        patristica.map((s, i) => ({ label: `${i + 1}. ${s.title}`, action: `ir-patristica-${s.slug}` })),
+        action
+      );
+      return;
+    }
+
+    if (action.startsWith("ir-patristica-")) {
+      const slug = action.replace("ir-patristica-", "");
+      setOpen(false);
+      router.push(`/historia/patristica/${slug}`);
+      return;
+    }
+
+    // --- Menu: Teología Histórica ---
+    if (action === "menu-teologia-historica") {
+      pushBot(
+        "La Teología Histórica en 8 módulos. Elige uno:",
+        teologiaHistorica.map((s, i) => ({ label: `${i + 1}. ${s.title}`, action: `ir-th-${s.slug}` })),
+        action
+      );
+      return;
+    }
+
+    if (action.startsWith("ir-th-")) {
+      const slug = action.replace("ir-th-", "");
+      setOpen(false);
+      router.push(`/historia/teologia-historica/${slug}`);
       return;
     }
 

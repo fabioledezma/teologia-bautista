@@ -421,6 +421,674 @@ export function svgExpansionIglesia() {
   </svg>`;
 }
 
+// --- Patristica diagrams ---
+
+export function svgQueEsPatristica() {
+  return `<svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="380" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">La Patrística en la Historia de la Iglesia</text>
+    <g font-family="sans-serif" font-size="12">
+      <line x1="50" y1="80" x2="550" y2="80" stroke="#D2D2D2" stroke-width="2"/>
+      <text x="90" y="70" text-anchor="middle" fill="#000000" font-size="11">Nuevo Testamento</text>
+      <text x="90" y="95" text-anchor="middle" fill="#000000" font-size="10">(30–100 d.C.)</text>
+      <polygon points="80,75 90,68 100,75" fill="#D2D2D2"/>
+      <rect x="160" y="58" width="280" height="45" rx="8" fill="none" stroke="#AF8C1E" stroke-width="2"/>
+      <text x="300" y="75" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Patrística (100–451 d.C.)</text>
+      <text x="300" y="92" text-anchor="middle" fill="#000000" font-size="10">Padres Apostólicos → Apologistas → Concilios Ecuménicos</text>
+      <polygon points="440,75 450,68 460,75" fill="#D2D2D2"/>
+      <text x="510" y="70" text-anchor="middle" fill="#000000" font-size="11">Edad Media</text>
+      <text x="510" y="95" text-anchor="middle" fill="#000000" font-size="10">(451–1500 d.C.)</text>
+
+      <rect x="50" y="125" width="155" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="127" y="148" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Definición Doctrinal</text>
+      <text x="65" y="168" fill="#000000">• Canon del NT</text>
+      <text x="65" y="186" fill="#000000">• Trinidad (Nicea 325)</text>
+      <text x="65" y="204" fill="#000000">• Cristología (Calcedonia 451)</text>
+      <text x="65" y="218" fill="#000000">• Credos ecuménicos</text>
+
+      <rect x="225" y="125" width="155" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="302" y="148" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Defensa de la Fe</text>
+      <text x="240" y="168" fill="#000000">• Apologías al Imperio</text>
+      <text x="240" y="186" fill="#000000">• Refutación de herejías</text>
+      <text x="240" y="204" fill="#000000">• Martirio y testimonio</text>
+      <text x="240" y="218" fill="#000000">• Regla de fe</text>
+
+      <rect x="400" y="125" width="155" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="477" y="148" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Organización</text>
+      <text x="415" y="168" fill="#000000">• Ancianos → Obispos</text>
+      <text x="415" y="186" fill="#000000">• Concilios locales</text>
+      <text x="415" y="204" fill="#000000">• Liturgia y adoración</text>
+      <text x="415" y="218" fill="#000000">• Disciplina eclesiástica</text>
+
+      <rect x="100" y="250" width="400" height="70" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="272" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">La Patrística sentó las bases de toda la teología cristiana posterior</text>
+      <text x="300" y="294" text-anchor="middle" fill="#000000" font-size="11">Los padres no son infalibles, pero son testigos irremplazables de la fe apostólica.</text>
+
+      <rect x="150" y="335" width="300" height="30" rx="4" fill="#AF8C1E" opacity="0.15" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="300" y="353" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="11">Período clave para entender el cristianismo histórico</text>
+    </g>
+  </svg>`;
+}
+
+export function svgPadresApostolicos() {
+  return `<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="420" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Los Padres Apostólicos y sus Escritos</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="55" width="170" height="155" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="78" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Clemente de Roma</text>
+      <text x="50" y="98" fill="#000000">✝ c. 96–99 d.C.</text>
+      <text x="50" y="118" fill="#000000">• 1 Clemente (c. 96)</text>
+      <text x="50" y="138" fill="#000000">• Interviene en Corinto</text>
+      <text x="50" y="158" fill="#000000">• Afirma orden de presbíteros</text>
+      <text x="50" y="178" fill="#000000">• No reclama autoridad papal</text>
+      <text x="50" y="198" fill="#000000">• Usa lenguaje del AT</text>
+
+      <rect x="215" y="55" width="170" height="155" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="78" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Ignacio de Antioquía</text>
+      <text x="235" y="98" fill="#000000">✝ c. 107 d.C.</text>
+      <text x="235" y="118" fill="#000000">• 7 cartas camino al martirio</text>
+      <text x="235" y="138" fill="#000000">• Enfatiza al obispo</text>
+      <text x="235" y="158" fill="#000000">• Combate el docetismo</text>
+      <text x="235" y="178" fill="#000000">• "Donde está el obispo..."</text>
+      <text x="235" y="198" fill="#000000">• Anhela el martirio</text>
+
+      <rect x="400" y="55" width="170" height="155" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="485" y="78" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Policarpo de Esmirna</text>
+      <text x="420" y="98" fill="#000000">✝ c. 155 d.C.</text>
+      <text x="420" y="118" fill="#000000">• Discípulo de Juan</text>
+      <text x="420" y="138" fill="#000000">• Carta a los Filipenses</text>
+      <text x="420" y="158" fill="#000000">• Martirio ejemplar</text>
+      <text x="420" y="178" fill="#000000">• "86 años le sirvo..."</text>
+      <text x="420" y="198" fill="#000000">• Quemado vivo</text>
+
+      <rect x="30" y="230" width="170" height="155" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="115" y="253" text-anchor="middle" fill="#AF8C1E" font-weight="bold">La Didaché</text>
+      <text x="50" y="273" fill="#000000">• Manual de iglesia (c. 100)</text>
+      <text x="50" y="293" fill="#000000">• Bautismo por inmersión</text>
+      <text x="50" y="313" fill="#000000">• Cena del Señor semanal</text>
+      <text x="50" y="333" fill="#000000">• Profetas y maestros</text>
+      <text x="50" y="353" fill="#000000">• Dos caminos (vida/muerte)</text>
+      <text x="50" y="373" fill="#000000">• Anónimo</text>
+
+      <rect x="215" y="230" width="170" height="155" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="300" y="253" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Pastor de Hermas</text>
+      <text x="235" y="273" fill="#000000">• Escrito apocalíptico</text>
+      <text x="235" y="293" fill="#000000">• Arrepentimiento post-bautismo</text>
+      <text x="235" y="313" fill="#000000">• Parábolas y visiones</text>
+      <text x="235" y="333" fill="#000000">• Muy popular s. II</text>
+      <text x="235" y="353" fill="#000000">• Incluido en algunos códices</text>
+      <text x="235" y="373" fill="#000000">• c. 140 d.C.</text>
+
+      <rect x="400" y="230" width="170" height="155" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="485" y="253" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Papías de Hierápolis</text>
+      <text x="420" y="273" fill="#000000">• Exposición de los Oráculos</text>
+      <text x="420" y="293" fill="#000000">• Discípulo de Juan</text>
+      <text x="420" y="313" fill="#000000">• Preservó tradiciones</text>
+      <text x="420" y="333" fill="#000000">• Mateo: palabras hebreas</text>
+      <text x="420" y="353" fill="#000000">• Marcos: intérprete de Pedro</text>
+      <text x="420" y="373" fill="#000000">• Premilenialista</text>
+
+      <text x="300" y="410" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">"Ochenta y seis años le he servido, y ningún mal me ha hecho" — Policarpo</text>
+    </g>
+  </svg>`;
+}
+
+export function svgEscritosPatristicos() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Géneros Literarios de la Literatura Patrística</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="25" y="50" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="110" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Cartas</text>
+      <text x="40" y="90" fill="#000000">• 1 Clemente, Ignacio, Policarpo</text>
+      <text x="40" y="108" fill="#000000">• Correspondencia de Cipriano</text>
+      <text x="40" y="126" fill="#000000">• Instrucción y consejo pastoral</text>
+
+      <rect x="215" y="50" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Apologías</text>
+      <text x="230" y="90" fill="#000000">• Justino Mártir, Atenágoras</text>
+      <text x="230" y="108" fill="#000000">• Defensa ante el Imperio</text>
+      <text x="230" y="126" fill="#000000">• Responden acusaciones</text>
+
+      <rect x="405" y="50" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="490" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Tratados</text>
+      <text x="420" y="90" fill="#000000">• Ireneo: Contra Herejías</text>
+      <text x="420" y="108" fill="#000000">• Tertuliano: varias obras</text>
+      <text x="420" y="126" fill="#000000">• Refutación doctrinal</text>
+
+      <rect x="25" y="160" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="110" y="182" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Comentarios</text>
+      <text x="40" y="200" fill="#000000">• Orígenes: Hexapla, Comentarios</text>
+      <text x="40" y="218" fill="#000000">• Crisóstomo: Homilías</text>
+      <text x="40" y="236" fill="#000000">• Interpretación bíblica</text>
+
+      <rect x="215" y="160" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="182" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Historias</text>
+      <text x="230" y="200" fill="#000000">• Eusebio: Hist. Eclesiástica</text>
+      <text x="230" y="218" fill="#000000">• Hechos de mártires</text>
+      <text x="230" y="236" fill="#000000">• Preserva documentos antiguos</text>
+
+      <rect x="405" y="160" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="490" y="182" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Homilías</text>
+      <text x="420" y="200" fill="#000000">• 2 Clemente (c. 150)</text>
+      <text x="420" y="218" fill="#000000">• Predicación expositiva</text>
+      <text x="420" y="236" fill="#000000">• Primera homilía conservada</text>
+
+      <rect x="100" y="275" width="400" height="55" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="296" text-anchor="middle" fill="#000000" font-weight="bold">Los escritos patrísticos no son Escritura, pero son testigos de cómo la iglesia primitiva la entendía.</text>
+      <text x="300" y="316" text-anchor="middle" fill="#000000" font-size="11">Deben leerse con discernimiento, evaluándolos siempre por la Biblia.</text>
+
+      <rect x="100" y="345" width="400" height="40" rx="4" fill="#AF8C1E" opacity="0.15" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="300" y="360" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">La literatura patrística es el eslabón entre el Nuevo Testamento y la teología posterior.</text>
+      <text x="300" y="376" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">Sin ella, no tendríamos el canon del NT ni los credos históricos.</text>
+    </g>
+  </svg>`;
+}
+
+export function svgCaracterGeneral() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Carácter General del Período Patrístico</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="50" width="260" height="145" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="160" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Transiciones Históricas</text>
+      <text x="50" y="92" fill="#000000">1. Secta judía → Iglesia gentil</text>
+      <text x="50" y="112" fill="#000000">2. Fe perseguida → Religión legalizada</text>
+      <text x="50" y="132" fill="#000000">3. Tradición oral → Escritos definidos</text>
+      <text x="50" y="152" fill="#000000">4. Diversidad local → Unidad imperial</text>
+      <text x="50" y="172" fill="#000000">5. Carismas → Oficios eclesiásticos</text>
+
+      <rect x="310" y="50" width="260" height="145" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="440" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Tensiones Teológicas</text>
+      <text x="330" y="92" fill="#000000">1. Escritura vs. Tradición</text>
+      <text x="330" y="112" fill="#000000">2. Gracia vs. Libre albedrío</text>
+      <text x="330" y="132" fill="#000000">3. Fe vs. Obras</text>
+      <text x="330" y="152" fill="#000000">4. Iglesia visible vs. Invisible</text>
+      <text x="330" y="172" fill="#000000">5. Autoridad local vs. Central</text>
+
+      <rect x="30" y="215" width="260" height="145" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="160" y="237" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Escuelas Teológicas</text>
+      <text x="50" y="257" fill="#AF8C1E" font-weight="bold">Alejandrina</text>
+      <text x="50" y="277" fill="#000000">• Interpretación alegórica</text>
+      <text x="50" y="297" fill="#000000">• Énfasis en la deidad de Cristo</text>
+      <text x="50" y="317" fill="#000000">• Clemente, Orígenes, Atanasio</text>
+      <text x="50" y="342" fill="#AF8C1E" font-weight="bold">Antiochena</text>
+      <text x="50" y="355" fill="#000000">• Interpretación literal</text>
+      <text x="160" y="277" fill="#000000">• Énfasis en la humanidad de Cristo</text>
+      <text x="160" y="342" fill="#000000">• Crisóstomo, Teodoro, Diodoro</text>
+
+      <rect x="310" y="215" width="260" height="145" rx="8" fill="none" stroke="#000000" stroke-width="1.5"/>
+      <text x="440" y="237" text-anchor="middle" fill="#000000" font-weight="bold">Logros Duraderos</text>
+      <text x="330" y="257" fill="#000000">• Canon del Nuevo Testamento</text>
+      <text x="330" y="277" fill="#000000">• Credo Niceno (325)</text>
+      <text x="330" y="297" fill="#000000">• Credo de Calcedonia (451)</text>
+      <text x="330" y="317" fill="#000000">• Liturgia cristiana básica</text>
+      <text x="330" y="337" fill="#000000">• Principio de sola Scriptura</text>
+      <text x="330" y="352" fill="#000000">• Teología trinitaria</text>
+
+      <rect x="200" y="375" width="200" height="20" rx="4" fill="#AF8C1E" opacity="0.15"/>
+      <text x="300" y="389" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">La Patrística: cimientos de la fe cristiana</text>
+    </g>
+  </svg>`;
+}
+
+export function svgSignificadoDoctrinal() {
+  return `<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="420" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Doctrinas Centrales en la Patrística</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="50" width="170" height="145" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Trinidad</text>
+      <text x="50" y="92" fill="#000000">• Tertuliano: "una sustancia, tres personas"</text>
+      <text x="50" y="112" fill="#000000">• Atanasio: homousios</text>
+      <text x="50" y="132" fill="#000000">• Capadocios: tres hipóstasis</text>
+      <text x="50" y="152" fill="#000000">• Nicea (325): Contra Arrio</text>
+      <text x="50" y="175" fill="#000000">• Padre, Hijo, Espíritu = un Dios</text>
+
+      <rect x="215" y="50" width="170" height="145" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Cristología</text>
+      <text x="235" y="92" fill="#000000">• Verdadero Dios y verdadero hombre</text>
+      <text x="235" y="112" fill="#000000">• Contra docetismo</text>
+      <text x="235" y="132" fill="#000000">• Contra arrianismo</text>
+      <text x="235" y="152" fill="#000000">• Contra apolinarismo</text>
+      <text x="235" y="175" fill="#000000">• Calcedonia (451): dos naturalezas</text>
+
+      <rect x="400" y="50" width="170" height="145" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="485" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Soteriología</text>
+      <text x="420" y="92" fill="#000000">• Ireneo: recapitulación</text>
+      <text x="420" y="112" fill="#000000">• Agustín: gracia vs. Pelagio</text>
+      <text x="420" y="132" fill="#000000">• Salvación por gracia</text>
+      <text x="420" y="152" fill="#000000">• Fe y obras (tensión)</text>
+      <text x="420" y="175" fill="#000000">• Expiación vicaria</text>
+
+      <rect x="30" y="215" width="170" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="237" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Escrituras</text>
+      <text x="50" y="257" fill="#000000">• Inspiración divina</text>
+      <text x="50" y="277" fill="#000000">• Canon del NT (Atanasio 367)</text>
+      <text x="50" y="297" fill="#000000">• Autoridad suprema (en teoría)</text>
+
+      <rect x="215" y="215" width="170" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="237" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Iglesia</text>
+      <text x="235" y="257" fill="#000000">• Cuerpo de Cristo</text>
+      <text x="235" y="277" fill="#000000">• Unidad y catolicidad</text>
+      <text x="235" y="297" fill="#000000">• Sacramento del bautismo y Cena</text>
+
+      <rect x="400" y="215" width="170" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="485" y="237" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Escatología</text>
+      <text x="420" y="257" fill="#000000">• Resurrección corporal</text>
+      <text x="420" y="277" fill="#000000">• Premilenialismo temprano</text>
+      <text x="420" y="297" fill="#000000">• Amilenialismo (Agustín)</text>
+
+      <rect x="100" y="340" width="400" height="65" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="360" text-anchor="middle" fill="#000000" font-weight="bold">Las definiciones doctrinales de la Patrística son presupuestas tanto por católicos como por protestantes.</text>
+      <text x="300" y="380" text-anchor="middle" fill="#000000" font-size="11">La Reforma afirmó la cristología y trinitología patrística mientras corregía la soteriología.</text>
+      <text x="300" y="395" text-anchor="middle" fill="#000000" font-size="11">Agustín es el padre teológico de la Reforma.</text>
+
+      <rect x="200" y="410" width="200" height="20" rx="4" fill="#AF8C1E" opacity="0.15"/>
+      <text x="300" y="424" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">Doctrina bíblica definida por la iglesia</text>
+    </g>
+  </svg>`;
+}
+
+export function svgGobiernoEclesiastico() {
+  return `<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="420" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Evolución del Gobierno Eclesiástico en la Patrística</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="50" width="250" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="155" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Modelo del Nuevo Testamento</text>
+      <text x="50" y="92" fill="#000000">• Ancianos (presbíteros) = Obispos (epíscopos)</text>
+      <text x="50" y="112" fill="#000000">• Gobierno plural en cada iglesia</text>
+      <text x="50" y="132" fill="#000000">• Elegidos por la congregación</text>
+      <text x="50" y="145" fill="#000000">• Apóstoles: autoridad supra-local temporal</text>
+
+      <rect x="320" y="50" width="250" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="445" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Padres Apostólicos (95–160 d.C.)</text>
+      <text x="340" y="92" fill="#000000">• Clemente: presbíteros y obispos</text>
+      <text x="340" y="112" fill="#000000">• Didaché: profetas + obispos locales</text>
+      <text x="340" y="132" fill="#000000">• Ignacio: obispo monárquico incipiente</text>
+
+      <line x1="155" y1="150" x2="445" y2="150" stroke="#D2D2D2" stroke-width="1.5"/>
+      <polygon points="440,146 450,150 440,154" fill="#D2D2D2"/>
+
+      <rect x="30" y="170" width="250" height="95" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="155" y="192" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Siglo II–III</text>
+      <text x="50" y="212" fill="#000000">• Ireneo: sucesión apostólica</text>
+      <text x="50" y="232" fill="#000000">• Cipriano: obispo = unidad</text>
+      <text x="50" y="252" fill="#000000">• Obispo monárquico se generaliza</text>
+
+      <rect x="320" y="170" width="250" height="95" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="445" y="192" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Siglo IV–V</text>
+      <text x="340" y="212" fill="#000000">• Nicea (325): metropolitanos</text>
+      <text x="340" y="232" fill="#000000">• Jerarquía de patriarcas</text>
+      <text x="340" y="252" fill="#000000">• Roma busca primacía</text>
+
+      <line x1="155" y1="265" x2="445" y2="265" stroke="#D2D2D2" stroke-width="1.5"/>
+      <polygon points="440,261 450,265 440,269" fill="#D2D2D2"/>
+
+      <rect x="100" y="285" width="400" height="60" rx="8" fill="none" stroke="#000000" stroke-width="1.5"/>
+      <text x="300" y="307" text-anchor="middle" fill="#000000" font-weight="bold">Desarrollo: Ancianos plurales → Obispo monárquico → Jerarquía metropolitana</text>
+      <text x="300" y="327" text-anchor="middle" fill="#000000" font-size="11">Este desarrollo fue una adaptación a las estructuras políticas del Imperio, no un mandato bíblico.</text>
+
+      <rect x="100" y="360" width="400" height="45" rx="8" fill="#AF8C1E" opacity="0.15" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="300" y="380" text-anchor="middle" fill="#AF8C1E" font-size="12" font-weight="bold">La Reforma restauró el modelo bíblico: ancianos plurales, congregaciones autónomas.</text>
+      <text x="300" y="396" text-anchor="middle" fill="#AF8C1E" font-size="11">"Uno es vuestro Maestro, y todos vosotros sois hermanos" (Mateo 23:8)</text>
+    </g>
+  </svg>`;
+}
+
+// --- Teología Histórica diagrams ---
+
+export function svgProlegomenosTH() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">La Teología Histórica y las Disciplinas Teológicas</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="200" y="55" width="200" height="45" rx="8" fill="none" stroke="#AF8C1E" stroke-width="2"/>
+      <text x="300" y="82" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="14">Teología Histórica</text>
+      <line x1="300" y1="100" x2="300" y2="120" stroke="#D2D2D2" stroke-width="2"/>
+      <polygon points="294,118 300,128 306,118" fill="#D2D2D2"/>
+      <text x="300" y="145" text-anchor="middle" fill="#000000" font-size="11">Estudia el desarrollo de la doctrina</text>
+      <text x="300" y="162" text-anchor="middle" fill="#000000" font-size="11">a través de la historia de la iglesia</text>
+      <rect x="30" y="190" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="212" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Exégesis Bíblica</text>
+      <text x="45" y="232" fill="#000000">• Qué dice el texto bíblico</text>
+      <text x="45" y="250" fill="#000000">• En su contexto original</text>
+      <text x="45" y="268" fill="#000000">• Idiomas originales</text>
+      <rect x="215" y="190" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="212" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Teología Sistemática</text>
+      <text x="230" y="232" fill="#000000">• Organiza la doctrina</text>
+      <text x="230" y="250" fill="#000000">• Relaciona temas</text>
+      <text x="230" y="268" fill="#000000">• Formula confesionalmente</text>
+      <rect x="400" y="190" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="485" y="212" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Teología Práctica</text>
+      <text x="415" y="232" fill="#000000">• Predicación</text>
+      <text x="415" y="250" fill="#000000">• Discipulado</text>
+      <text x="415" y="268" fill="#000000">• Consejería</text>
+      <line x1="200" y1="235" x2="215" y2="235" stroke="#D2D2D2" stroke-width="1.5"/>
+      <line x1="385" y1="235" x2="400" y2="235" stroke="#D2D2D2" stroke-width="1.5"/>
+      <text x="110" y="235" text-anchor="middle" fill="#D2D2D2" font-size="15">⟷</text>
+      <text x="490" y="235" text-anchor="middle" fill="#D2D2D2" font-size="15">⟷</text>
+      <rect x="80" y="305" width="440" height="75" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="328" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">La Teología Histórica conecta las tres disciplinas</text>
+      <text x="300" y="348" text-anchor="middle" fill="#000000" font-size="11">Muestra cómo la iglesia ha entendido la Escritura (exégesis),</text>
+      <text x="300" y="365" text-anchor="middle" fill="#000000" font-size="11">formulado su enseñanza (sistemática) y aplicado la verdad (práctica)</text>
+    </g>
+  </svg>`;
+}
+
+export function svgIglesiaPrimitivaTH() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Línea de Tiempo de la Iglesia Primitiva (30–100 d.C.)</text>
+    <g font-family="sans-serif" font-size="12">
+      <line x1="60" y1="85" x2="540" y2="85" stroke="#AF8C1E" stroke-width="2"/>
+      <circle cx="80" cy="85" r="6" fill="#AF8C1E"/>
+      <text x="80" y="68" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="10">30</text>
+      <text x="80" y="108" text-anchor="middle" fill="#000000" font-size="10">Pentecostés</text>
+      <circle cx="155" cy="85" r="5" fill="#D2D2D2"/>
+      <text x="155" y="68" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="10">44</text>
+      <text x="155" y="108" text-anchor="middle" fill="#000000" font-size="10">Santiago mártir</text>
+      <circle cx="230" cy="85" r="5" fill="#D2D2D2"/>
+      <text x="230" y="68" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="10">49</text>
+      <text x="230" y="108" text-anchor="middle" fill="#000000" font-size="10">Concilio Jerusalén</text>
+      <circle cx="310" cy="85" r="6" fill="#AF8C1E"/>
+      <text x="310" y="68" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="10">64</text>
+      <text x="310" y="108" text-anchor="middle" fill="#000000" font-size="10">Pedro y Pablo mártires</text>
+      <circle cx="390" cy="85" r="5" fill="#D2D2D2"/>
+      <text x="390" y="68" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="10">70</text>
+      <text x="390" y="108" text-anchor="middle" fill="#000000" font-size="10">Caída de Jerusalén</text>
+      <circle cx="470" cy="85" r="5" fill="#D2D2D2"/>
+      <text x="470" y="68" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="10">95</text>
+      <text x="470" y="108" text-anchor="middle" fill="#000000" font-size="10">Juan en Patmos</text>
+      <circle cx="520" cy="85" r="5" fill="#D2D2D2"/>
+      <text x="520" y="68" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="10">100</text>
+      <text x="520" y="108" text-anchor="middle" fill="#000000" font-size="10">Muere Juan</text>
+      <rect x="50" y="140" width="240" height="110" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="170" y="162" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Fundamentos Apostólicos</text>
+      <text x="65" y="182" fill="#000000">• Predicación del evangelio</text>
+      <text x="65" y="200" fill="#000000">• Bautismo y Cena del Señor</text>
+      <text x="65" y="218" fill="#000000">• Ancianos y diáconos</text>
+      <text x="65" y="236" fill="#000000">• Cartas apostólicas</text>
+      <rect x="310" y="140" width="240" height="110" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="430" y="162" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Desafíos Tempranos</text>
+      <text x="325" y="182" fill="#000000">• Judaizantes (Gálatas)</text>
+      <text x="325" y="200" fill="#000000">• Gnosticismo incipiente</text>
+      <text x="325" y="218" fill="#000000">• Persecución romana</text>
+      <text x="325" y="236" fill="#000000">• Divisiones internas</text>
+      <rect x="100" y="275" width="400" height="55" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="296" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">Expansión: Jerusalén → Judea → Samaria → Antioquía → Asia → Roma</text>
+      <text x="300" y="316" text-anchor="middle" fill="#000000" font-size="11">"Me seréis testigos en Jerusalén, en toda Judea y Samaria, y hasta lo último de la tierra" (Hechos 1:8)</text>
+      <rect x="100" y="345" width="400" height="40" rx="4" fill="#AF8C1E" opacity="0.15" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="300" y="360" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">La iglesia primitiva estableció el patrón de doctrina y vida para todas las generaciones</text>
+      <text x="300" y="376" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">Su ejemplo: fidelidad al evangelio, amor fraternal, misión al mundo</text>
+    </g>
+  </svg>`;
+}
+
+export function svgCanonTH() {
+  return `<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="420" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Formación del Canon del Nuevo Testamento</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="50" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Escritos Apostólicos</text>
+      <text x="45" y="92" fill="#000000">• Cartas de Pablo (50–67)</text>
+      <text x="45" y="110" fill="#000000">• Evangelios (65–95)</text>
+      <text x="45" y="128" fill="#000000">• Escritos de Juan (90–95)</text>
+      <polygon points="200,95 210,90 200,85" fill="#D2D2D2"/>
+      <rect x="215" y="50" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Reconocimiento Temprano</text>
+      <text x="230" y="92" fill="#000000">• Pedro reconoce a Pablo (2 Pe 3:16)</text>
+      <text x="230" y="110" fill="#000000">• Uso en iglesias locales</text>
+      <text x="230" y="128" fill="#000000">• Lectura litúrgica</text>
+      <polygon points="385,95 395,90 385,85" fill="#D2D2D2"/>
+      <rect x="400" y="50" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="485" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Respuesta a Herejías</text>
+      <text x="415" y="92" fill="#000000">• Marción (140): canon limitado</text>
+      <text x="415" y="110" fill="#000000">• Ireneo: 4 evangelios</text>
+      <text x="415" y="128" fill="#000000">• Canon Muratoriano (170)</text>
+      <rect x="30" y="160" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="182" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Listas Canónicas</text>
+      <text x="45" y="202" fill="#000000">• Orígenes (c. 240)</text>
+      <text x="45" y="220" fill="#000000">• Eusebio (c. 324)</text>
+      <text x="45" y="238" fill="#000000">• Atanasio 39 (367) — 27 libros</text>
+      <polygon points="200,205 210,200 200,195" fill="#D2D2D2"/>
+      <rect x="215" y="160" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="182" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Concilios</text>
+      <text x="230" y="202" fill="#000000">• Hipona (393)</text>
+      <text x="230" y="220" fill="#000000">• Cartago (397)</text>
+      <text x="230" y="238" fill="#000000">• Ratifican 27 libros</text>
+      <polygon points="385,205 395,200 385,195" fill="#D2D2D2"/>
+      <rect x="400" y="160" width="170" height="90" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="485" y="182" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Canon Cerrado</text>
+      <text x="415" y="202" fill="#000000">• 27 libros reconocidos</text>
+      <text x="415" y="220" fill="#000000">• No hay nueva revelación</text>
+      <text x="415" y="238" fill="#000000">• Escritura = única autoridad</text>
+      <rect x="100" y="275" width="400" height="60" rx="8" fill="none" stroke="#000000" stroke-width="1.5"/>
+      <text x="300" y="297" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">Criterios de Canonicidad</text>
+      <text x="120" y="318" fill="#000000">Autoría apostólica</text>
+      <text x="260" y="318" fill="#000000">Contenido doctrinal</text>
+      <text x="400" y="318" fill="#000000">Uso universal</text>
+      <rect x="100" y="355" width="400" height="50" rx="8" fill="none" stroke="#D2D2D2" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="375" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">La iglesia no creó el canon — lo reconoció bajo la guía del Espíritu Santo</text>
+      <text x="300" y="393" text-anchor="middle" fill="#000000" font-size="11">"Toda la Escritura es inspirada por Dios" (2 Timoteo 3:16)</text>
+    </g>
+  </svg>`;
+}
+
+export function svgTrinidadTH() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">El Desarrollo de la Doctrina Trinitaria</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="25" y="50" width="260" height="130" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="155" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="14">Base Bíblica</text>
+      <line x1="40" y1="80" x2="270" y2="80" stroke="#D2D2D2" stroke-width="1"/>
+      <text x="40" y="100" fill="#000000">• Monoteísmo: "Jehová uno es" (Dt 6:4)</text>
+      <text x="40" y="118" fill="#000000">• Deidad del Hijo: Juan 1:1; 20:28</text>
+      <text x="40" y="136" fill="#000000">• Deidad del Espíritu: Hechos 5:3-4</text>
+      <text x="40" y="154" fill="#000000">• Fórmula trinitaria: Mateo 28:19</text>
+      <rect x="315" y="50" width="260" height="130" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="445" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="14">Herejías</text>
+      <line x1="330" y1="80" x2="560" y2="80" stroke="#D2D2D2" stroke-width="1"/>
+      <text x="330" y="100" fill="#000000">• Modalismo (Sabelio): modos, no personas</text>
+      <text x="330" y="118" fill="#000000">• Arrianismo (Arrio): Hijo = criatura</text>
+      <text x="330" y="136" fill="#000000">• Subordinacionismo: inferior en esencia</text>
+      <text x="330" y="154" fill="#000000">• Macedonismo: Espíritu = criatura</text>
+      <line x1="155" y1="180" x2="445" y2="180" stroke="#D2D2D2" stroke-width="1.5"/>
+      <polygon points="440,176 450,180 440,184" fill="#D2D2D2"/>
+      <rect x="80" y="195" width="440" height="45" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="215" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="14">Formulación Ortodoxa</text>
+      <text x="300" y="232" text-anchor="middle" fill="#000000" font-size="11">Tertuliano → Nicea (325) → Capadocios → Constantinopla (381)</text>
+      <rect x="80" y="260" width="200" height="55" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="180" y="282" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">Unidad de Esencia</text>
+      <text x="180" y="300" text-anchor="middle" fill="#000000" font-size="11">Un solo Dios (ousia)</text>
+      <rect x="320" y="260" width="200" height="55" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="420" y="282" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">Tres Personas</text>
+      <text x="420" y="300" text-anchor="middle" fill="#000000" font-size="11">Padre, Hijo, Espíritu (hypostasis)</text>
+      <rect x="120" y="335" width="360" height="50" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="352" text-anchor="middle" fill="#000000" font-weight="bold" font-size="12">"Lo que el Padre es, eso es el Hijo, y eso el Espíritu Santo"</text>
+      <text x="300" y="370" text-anchor="middle" fill="#000000" font-size="11">Confesión 1689, Cap. 2 — Afirma la Trinidad en los términos de Nicea y Constantinopla</text>
+    </g>
+  </svg>`;
+}
+
+export function svgCristologiaTH() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Concilios Cristológicos y Definiciones</text>
+    <g font-family="sans-serif" font-size="11">
+      <line x1="60" y1="75" x2="540" y2="75" stroke="#D2D2D2" stroke-width="2"/>
+      <polygon points="112,75 120,68 128,75" fill="#AF8C1E"/>
+      <rect x="75" y="50" width="90" height="22" rx="4" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="120" y="64" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="10">Nicea 325</text>
+      <text x="120" y="105" text-anchor="middle" fill="#000000" font-size="9">Deidad de Cristo</text>
+      <text x="120" y="117" text-anchor="middle" fill="#000000" font-size="9">Homousios</text>
+      <polygon points="245,75 253,68 261,75" fill="#AF8C1E"/>
+      <rect x="208" y="50" width="90" height="22" rx="4" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="253" y="64" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="10">Constantinopla 381</text>
+      <text x="253" y="105" text-anchor="middle" fill="#000000" font-size="9">Deidad del Espíritu</text>
+      <polygon points="365,75 373,68 381,75" fill="#AF8C1E"/>
+      <rect x="328" y="50" width="90" height="22" rx="4" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="373" y="64" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="10">Éfeso 431</text>
+      <text x="373" y="105" text-anchor="middle" fill="#000000" font-size="9">Theotokos</text>
+      <polygon points="485,75 493,68 501,75" fill="#AF8C1E"/>
+      <rect x="448" y="50" width="90" height="22" rx="4" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="493" y="64" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="10">Calcedonia 451</text>
+      <text x="493" y="105" text-anchor="middle" fill="#000000" font-size="9">Dos naturalezas</text>
+      <rect x="25" y="135" width="260" height="105" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="155" y="157" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Herejías Cristológicas</text>
+      <text x="40" y="177" fill="#000000">• Docetismo: solo apariencia humana</text>
+      <text x="40" y="195" fill="#000000">• Apolinarismo: sin mente humana</text>
+      <text x="40" y="213" fill="#000000">• Nestorianismo: dos personas separadas</text>
+      <text x="40" y="228" fill="#000000">• Eutiquianismo: naturalezas mezcladas</text>
+      <rect x="305" y="135" width="270" height="105" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="440" y="157" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Definición de Calcedonia</text>
+      <text x="320" y="177" fill="#000000">Una persona, dos naturalezas:</text>
+      <text x="320" y="195" fill="#000000">• Sin confusión (no mezcladas)</text>
+      <text x="320" y="213" fill="#000000">• Sin cambio (cada naturaleza intacta)</text>
+      <text x="320" y="228" fill="#000000">• Sin división (una persona)</text>
+      <text x="320" y="240" fill="#000000">• Sin separación (unidos para siempre)</text>
+      <rect x="100" y="260" width="400" height="55" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="280" text-anchor="middle" fill="#000000" font-weight="bold" font-size="12">Verdadero Dios + Verdadero Hombre = Un Solo Cristo</text>
+      <text x="300" y="298" text-anchor="middle" fill="#000000" font-size="11">"Dos naturalezas enteras, perfectas y distintas" — Confesión 1689, Cap. 8</text>
+      <rect x="100" y="335" width="400" height="50" rx="8" fill="#AF8C1E" opacity="0.15" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="300" y="355" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">La cristología ortodoxa es necesaria para la salvación</text>
+      <text x="300" y="373" text-anchor="middle" fill="#000000" font-size="10">Solo un Salvador que es Dios-hombre puede mediar entre Dios y los hombres</text>
+    </g>
+  </svg>`;
+}
+
+export function svgGraciaTH() {
+  return `<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">Pelagianismo vs. Agustinianismo</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="25" y="55" width="270" height="150" rx="8" fill="none" stroke="#D2D2D2" stroke-width="1.5"/>
+      <text x="160" y="78" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="14">Pelagio (c. 354–418)</text>
+      <line x1="40" y1="86" x2="280" y2="86" stroke="#D2D2D2" stroke-width="1"/>
+      <text x="40" y="106" fill="#000000">• No hay pecado original</text>
+      <text x="40" y="124" fill="#000000">• Libre albedrío suficiente</text>
+      <text x="40" y="142" fill="#000000">• Gracia = ayuda externa</text>
+      <text x="40" y="160" fill="#000000">• Salvación por esfuerzo moral</text>
+      <text x="40" y="178" fill="#000000">• "Si debo, puedo"</text>
+      <rect x="305" y="55" width="270" height="150" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="440" y="78" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="14">Agustín (354–430)</text>
+      <line x1="320" y1="86" x2="560" y2="86" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="320" y="106" fill="#000000">• Pecado original universal</text>
+      <text x="320" y="124" fill="#000000">• Voluntad esclavizada al pecado</text>
+      <text x="320" y="142" fill="#000000">• Gracia = poder transformador</text>
+      <text x="320" y="160" fill="#000000">• Salvación por gracia soberana</text>
+      <text x="320" y="178" fill="#000000">• "La gracia es necesaria para todo"</text>
+      <line x1="160" y1="205" x2="440" y2="205" stroke="#D2D2D2" stroke-width="1.5"/>
+      <text x="300" y="218" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">El Concilio de Cartago (418) condenó a Pelagio</text>
+      <rect x="60" y="235" width="220" height="70" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="170" y="257" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">Semipelagianismo (c. 430)</text>
+      <text x="75" y="277" fill="#000000" font-size="11">"El hombre inicia la fe,</text>
+      <text x="75" y="293" fill="#000000" font-size="11">Dios la completa"</text>
+      <rect x="320" y="235" width="220" height="70" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="430" y="257" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">Concilio de Orange (529)</text>
+      <text x="335" y="277" fill="#000000" font-size="11">"La gracia es necesaria</text>
+      <text x="335" y="293" fill="#000000" font-size="11">para el inicio de la fe"</text>
+      <rect x="80" y="325" width="440" height="60" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="346" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">La Reforma recuperó a Agustín contra el pelagianismo</text>
+      <text x="300" y="364" text-anchor="middle" fill="#000000" font-size="11">Lutero: "La voluntad esclavizada" | Calvino: Institución de la religión cristiana</text>
+      <text x="300" y="378" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">Confesión 1689: capítulos 6, 9, 10, 17 — totalmente agustinianos</text>
+    </g>
+  </svg>`;
+}
+
+export function svgEdadMediaTH() {
+  return `<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="420" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">La Edad Media: Corrupción y Preservación</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="25" y="50" width="270" height="135" rx="8" fill="none" stroke="#D2D2D2" stroke-width="1.5"/>
+      <text x="160" y="72" text-anchor="middle" fill="#D2D2D2" font-weight="bold" font-size="14">Corrupción Doctrinal</text>
+      <line x1="40" y1="80" x2="280" y2="80" stroke="#D2D2D2" stroke-width="1"/>
+      <text x="40" y="100" fill="#000000">• Supremacía papal</text>
+      <text x="40" y="118" fill="#000000">• Transubstanciación</text>
+      <text x="40" y="136" fill="#000000">• Misa como sacrificio</text>
+      <text x="40" y="154" fill="#000000">• Indulgencias</text>
+      <text x="40" y="172" fill="#000000">• Siete sacramentos</text>
+      <rect x="305" y="50" width="270" height="135" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="440" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="14">Preservación de la Verdad</text>
+      <line x1="320" y1="80" x2="560" y2="80" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="320" y="100" fill="#000000">• Valdenses (c. 1170)</text>
+      <text x="320" y="118" fill="#000000">• Wycliffe (1324–1384)</text>
+      <text x="320" y="136" fill="#000000">• Lolardos</text>
+      <text x="320" y="154" fill="#000000">• Juan Hus (1372–1415)</text>
+      <text x="320" y="172" fill="#000000">• Husitas</text>
+      <line x1="160" y1="185" x2="440" y2="185" stroke="#D2D2D2" stroke-width="1.5"/>
+      <rect x="60" y="200" width="200" height="80" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="160" y="222" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">Preparación Providencial</text>
+      <text x="75" y="242" fill="#000000">• Imprenta (Gutenberg, 1455)</text>
+      <text x="75" y="260" fill="#000000">• Caída de Constantinopla (1453)</text>
+      <text x="75" y="278" fill="#000000">• Renacimiento</text>
+      <rect x="340" y="200" width="200" height="80" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="440" y="222" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="12">Lo que Preservaron</text>
+      <text x="355" y="242" fill="#000000">• Biblia en lengua vernácula</text>
+      <text x="355" y="260" fill="#000000">• Autoridad de la Escritura</text>
+      <text x="355" y="278" fill="#000000">• Evangelio de la gracia</text>
+      <rect x="100" y="305" width="400" height="50" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="325" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">Dios nunca dejó a su pueblo sin testimonio</text>
+      <text x="300" y="342" text-anchor="middle" fill="#000000" font-size="11">"Edificaré mi iglesia, y las puertas del Hades no prevalecerán contra ella" (Mateo 16:18)</text>
+      <rect x="100" y="370" width="400" height="40" rx="4" fill="#AF8C1E" opacity="0.15" stroke="#AF8C1E" stroke-width="1"/>
+      <text x="300" y="386" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">Los valdenses, wyclifitas y husitas fueron la "Reforma antes de la Reforma"</text>
+      <text x="300" y="402" text-anchor="middle" fill="#AF8C1E" font-size="11" font-weight="bold">Su sangre fue semilla de la Reforma del siglo XVI</text>
+    </g>
+  </svg>`;
+}
+
+export function svgReformaTH() {
+  return `<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="420" fill="#FFFFFF" rx="12"/>
+    <text x="300" y="30" text-anchor="middle" fill="#AF8C1E" font-family="serif" font-size="18" font-weight="bold">La Reforma Protestante y las 5 Solas</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="50" width="170" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="115" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Lutero</text>
+      <text x="45" y="92" fill="#000000">• 95 Tesis (1517)</text>
+      <text x="45" y="110" fill="#000000">• Justificación por fe</text>
+      <text x="45" y="128" fill="#000000">• Biblia en alemán</text>
+      <text x="45" y="143" fill="#000000">• Worms (1521)</text>
+      <polygon points="200,100 210,95 200,90" fill="#D2D2D2"/>
+      <rect x="215" y="50" width="170" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5"/>
+      <text x="300" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Calvino</text>
+      <text x="230" y="92" fill="#000000">• Institutos (1536)</text>
+      <text x="230" y="110" fill="#000000">• Gracia soberana</text>
+      <text x="230" y="128" fill="#000000">• Ginebra</text>
+      <text x="230" y="143" fill="#000000">• Teología del pacto</text>
+      <polygon points="385,100 395,95 385,90" fill="#D2D2D2"/>
+      <rect x="400" y="50" width="170" height="100" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="485" y="72" text-anchor="middle" fill="#AF8C1E" font-weight="bold">Reforma Radical</text>
+      <text x="415" y="92" fill="#000000">• Bautismo creyente</text>
+      <text x="415" y="110" fill="#000000">• Separación iglesia-estado</text>
+      <text x="415" y="128" fill="#000000">• Autonomía local</text>
+      <text x="415" y="143" fill="#000000">• Libertad conciencia</text>
+      <rect x="35" y="175" width="530" height="90" rx="8" fill="none" stroke="#000000" stroke-width="1.5"/>
+      <text x="300" y="197" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="15">Las 5 Solas de la Reforma</text>
+      <text x="50" y="220" fill="#AF8C1E" font-weight="bold">Sola Scriptura</text>
+      <text x="50" y="238" fill="#000000" font-size="11">La Biblia, única autoridad</text>
+      <text x="158" y="220" fill="#AF8C1E" font-weight="bold">Sola Fide</text>
+      <text x="158" y="238" fill="#000000" font-size="11">Justificación solo por fe</text>
+      <text x="266" y="220" fill="#AF8C1E" font-weight="bold">Sola Gratia</text>
+      <text x="266" y="238" fill="#000000" font-size="11">Salvación por pura gracia</text>
+      <text x="374" y="220" fill="#AF8C1E" font-weight="bold">Solo Christus</text>
+      <text x="374" y="238" fill="#000000" font-size="11">Cristo, único mediador</text>
+      <text x="482" y="220" fill="#AF8C1E" font-weight="bold">Soli Deo Gloria</text>
+      <text x="482" y="238" fill="#000000" font-size="11">Gloria solo a Dios</text>
+      <rect x="60" y="280" width="480" height="60" rx="8" fill="none" stroke="#AF8C1E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="300" y="302" text-anchor="middle" fill="#AF8C1E" font-weight="bold" font-size="13">Herencia Bautista Reformada</text>
+      <text x="300" y="322" text-anchor="middle" fill="#000000" font-size="11">Teología reformada (Calvino) + Eclesiología bautista (Anabautistas)</text>
+      <rect x="80" y="355" width="440" height="50" rx="8" fill="none" stroke="#000000" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="300" y="375" text-anchor="middle" fill="#000000" font-weight="bold" font-size="13">La Reforma restauró el evangelio bíblico después de siglos de oscuridad</text>
+      <text x="300" y="393" text-anchor="middle" fill="#000000" font-size="11">"Justificados, pues, por la fe, tenemos paz para con Dios por medio de nuestro Señor Jesucristo" (Romanos 5:1)</text>
+    </g>
+  </svg>`;
+}
+
 export const svgMap: Record<string, () => string> = {
   tulip: svgTULIP,
   trinity: svgTrinity,
@@ -432,4 +1100,18 @@ export const svgMap: Record<string, () => string> = {
   "movimientos-filosoficos": svgMovFilosoficos,
   "clima-moral": svgClimaMor,
   "expansion-iglesia": svgExpansionIglesia,
+  "que-es-patristica": svgQueEsPatristica,
+  "padres-apostolicos": svgPadresApostolicos,
+  "escritos-patristicos": svgEscritosPatristicos,
+  "caracter-general": svgCaracterGeneral,
+  "significado-doctrinal": svgSignificadoDoctrinal,
+  "gobierno-eclesiastico": svgGobiernoEclesiastico,
+  "prolegomenos-th": svgProlegomenosTH,
+  "iglesia-primitiva-th": svgIglesiaPrimitivaTH,
+  "canon-biblico-th": svgCanonTH,
+  "trinidad-th": svgTrinidadTH,
+  "cristologia-th": svgCristologiaTH,
+  "gracia-th": svgGraciaTH,
+  "edad-media-th": svgEdadMediaTH,
+  "reforma-th": svgReformaTH,
 };

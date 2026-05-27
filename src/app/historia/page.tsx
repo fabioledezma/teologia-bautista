@@ -368,6 +368,58 @@ export default function HistoriaPage() {
         </div>
       </section>
 
+      {/* Enlace a Teología Histórica */}
+      <div className="max-w-5xl mx-auto px-4 mb-4">
+        <Link
+          href="/historia/teologia-historica"
+          className="group block bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+        >
+          <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
+          <div className="p-5 flex items-center justify-between">
+            <div>
+              <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-2 py-0.5 rounded inline-block mb-1">
+                Estudio Especial
+              </span>
+              <h2 className="font-serif text-lg text-text group-hover:text-gold transition-colors">
+                Teología Histórica
+              </h2>
+              <p className="text-xs text-text-2 mt-1">
+                Desarrollo de la doctrina cristiana: canon, Trinidad, cristología, gracia y Reforma
+              </p>
+            </div>
+            <svg className="w-5 h-5 text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </Link>
+      </div>
+
+      {/* Enlace a Patrística */}
+      <div className="max-w-5xl mx-auto px-4 mb-6">
+        <Link
+          href="/historia/patristica"
+          className="group block bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+        >
+          <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
+          <div className="p-5 flex items-center justify-between">
+            <div>
+              <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-2 py-0.5 rounded inline-block mb-1">
+                Estudio Especial
+              </span>
+              <h2 className="font-serif text-lg text-text group-hover:text-gold transition-colors">
+                La Patrística y los Padres Apostólicos
+              </h2>
+              <p className="text-xs text-text-2 mt-1">
+                Escritos, carácter doctrinal y gobierno eclesiástico del cristianismo primitivo
+              </p>
+            </div>
+            <svg className="w-5 h-5 text-gold flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </Link>
+      </div>
+
       {/* Formato toggle */}
       <div className="max-w-5xl mx-auto px-4 mb-8">
         <div className="flex items-center justify-center md:justify-between gap-4 flex-wrap">

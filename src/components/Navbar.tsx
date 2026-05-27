@@ -10,7 +10,10 @@ const links = [
   { label: 'Doctrinas', href: '/#doctrinas' },
   { label: 'Historia', href: '/historia' },
   { label: 'Expansión', href: '/historia/expansion' },
+  { label: 'Patrística', href: '/historia/patristica' },
+  { label: 'T. Histórica', href: '/historia/teologia-historica' },
   { label: 'MDiv', href: '/#facultad' },
+  { label: 'Errores Doctrinales', href: '/#errores' },
   { label: 'Confesión 1689', href: '/#confesion' },
   { label: 'Recursos', href: '/#recursos' },
 ];
@@ -34,7 +37,7 @@ export default function Navbar() {
       }
       setLastScrollY(currentScrollY);
 
-      const sections = ['doctrinas', 'historia', 'facultad', 'confesion', 'recursos'];
+      const sections = ['doctrinas', 'errores', 'historia', 'facultad', 'confesion', 'recursos'];
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {

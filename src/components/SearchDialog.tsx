@@ -8,6 +8,8 @@ import confessionChapters from "@/data/confesion";
 import recursos from "@/data/recursos";
 import facultadAreas from "@/data/facultad";
 import expansion from "@/data/expansion";
+import patristica from "@/data/patristica";
+import teologiaHistorica from "@/data/teologia-historica";
 
 type SearchEntry = {
   title: string;
@@ -48,6 +50,16 @@ function buildIndex(): SearchEntry[] {
   for (const e of expansion) {
     const keywords = [e.title, e.subtitle, e.simple, e.fondo, e.perspectivaReformada].filter(Boolean).join(" ").toLowerCase();
     index.push({ title: e.title, route: `/historia/expansion/${e.slug}`, type: "Expansión", excerpt: e.subtitle, keywords });
+  }
+
+  for (const p of patristica) {
+    const keywords = [p.title, p.subtitle, p.simple, p.fondo, p.perspectivaReformada].filter(Boolean).join(" ").toLowerCase();
+    index.push({ title: p.title, route: `/historia/patristica/${p.slug}`, type: "Patrística", excerpt: p.subtitle, keywords });
+  }
+
+  for (const t of teologiaHistorica) {
+    const keywords = [t.title, t.subtitle, t.introduccion, t.contextHistorico, t.problemaTeologico, t.resumen].filter(Boolean).join(" ").toLowerCase();
+    index.push({ title: t.title, route: `/historia/teologia-historica/${t.slug}`, type: "Teología Histórica", excerpt: t.subtitle, keywords });
   }
 
   return index;
