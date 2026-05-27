@@ -123,19 +123,6 @@ export default async function DoctrinaPage({
         </Section>
       )}
 
-      {d.malentendidos && (
-        <Section title="Malentendidos comunes">
-          {d.malentendidos.split("\n\n").map((p, i) => (
-            <p
-              key={i}
-              className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
-            >
-              {p.trim()}
-            </p>
-          ))}
-        </Section>
-      )}
-
       {d.confesion && (
         <Section title="La Confesión 1689">
           <div className="bg-surface-card border border-border rounded-xl p-5">
