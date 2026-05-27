@@ -12,9 +12,11 @@ export default function HomePage() {
       {/* Hero */}
       <section className="min-h-[90vh] flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/20 text-gold text-[11px] font-semibold uppercase tracking-[2px] mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold" />
-            Teología Bautista Reformada
+          <div className="flex justify-center mb-8">
+            <svg className="w-10 h-10 text-gold/60" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+              <path d="M24 4v40M4 24h40" />
+              <circle cx="24" cy="24" r="20" strokeWidth="1" />
+            </svg>
           </div>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-text leading-[1.1]">
             Teología<span className="text-gold"> Accesible</span>
