@@ -56,7 +56,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-border/50 flex flex-col items-center gap-2">
+          <div className="mt-10 pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6">
             <Link
               href="/historia/expansion"
               className="inline-flex items-center gap-2 text-xs text-text-2 hover:text-gold transition"
