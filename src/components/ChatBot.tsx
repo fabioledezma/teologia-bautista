@@ -4,41 +4,29 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import doctrinas from "@/data/doctrinas";
 import { herejias } from "@/data/herejias";
+import confessionChapters from "@/data/confesion";
 
-type Option = { label: string; action: string; icon?: string };
+type Option = { label: string; action: string };
 
-const filters = [
+const doctrinaFilters = [
   { key: "all", label: "Todas" },
   { key: "escritura", label: "Escritura" },
   { key: "dios", label: "Dios" },
   { key: "salvacion", label: "Salvación" },
   { key: "iglesia", label: "Iglesia" },
+  { key: "escatologia", label: "Escatología" },
 ];
 
-type Step = {
-  text: string;
-  options?: Option[];
+const pdfPages: Record<number, number> = {
+  0: 8, 1: 11, 2: 12, 3: 13, 4: 14,
+  5: 16, 6: 17, 7: 17, 8: 20, 9: 21,
+  10: 22, 11: 23, 12: 23, 13: 24, 14: 25,
+  15: 26, 16: 27, 17: 28, 18: 30, 19: 31,
+  20: 32, 21: 33, 22: 35, 23: 36, 24: 37,
+  25: 37, 26: 40, 27: 41, 28: 42, 29: 39,
+  30: 44, 31: 45, 32: 45,
 };
-
-const steps: Record<string, Step> = {
-  inicio: {
-    text: "¿Qué área te gustaría explorar?",
-    options: [
-      { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
-      { label: "Herejías Históricas", action: "menu-herejias" },
-      { label: "Confesión 1689", action: "ir-confesion" },
-      { label: "Facultad CBTS", action: "ir-facultad" },
-      { label: "Ver todo el sitio", action: "scroll-site" },
-    ],
-  },
-  "menu-doctrinas": {
-    text: "Elige una categoría de doctrinas:",
-    options: filters.map((f) => ({
-      label: f.label,
-      action: `doctrinas-${f.key}`,
-    })),
-  },
-};
+const pdfUrl = "https://www.chapellibrary.org/pdf/books/lbcos.pdf";
 
 function getDoctrinasByFilter(key: string) {
   return key === "all" ? doctrinas : doctrinas.filter((d) => d.filter === key);
@@ -47,7 +35,7 @@ function getDoctrinasByFilter(key: string) {
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
   const [history, setHistory] = useState<{ from: string; text: string; options?: Option[] }[]>([]);
-  const [current, setCurrent] = useState("inicio");
+  const [stepStack, setStepStack] = useState<string[]>(["inicio"]);
   const [showGreeting, setShowGreeting] = useState(true);
   const router = useRouter();
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -64,78 +52,103 @@ export default function ChatBot() {
   const handleOpen = () => {
     setOpen(true);
     if (history.length === 0) {
-      const s = steps["inicio"];
-      setHistory([{ from: "bot", text: s.text, options: s.options }]);
+      setHistory([{ from: "bot", text: "¿Qué área te gustaría explorar?", options: inicioOptions }]);
     }
+  };
+
+  const inicioOptions: Option[] = [
+    { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
+    { label: "Herejías Históricas", action: "menu-herejias" },
+    { label: "Confesión 1689", action: "menu-confesion" },
+    { label: "Recursos Recomendados", action: "menu-recursos" },
+    { label: "Facultad CBTS", action: "ir-facultad" },
+    { label: "Historia de la Iglesia", action: "ir-historia" },
+  ];
+
+  const pushBot = (text: string, options: Option[], nextStep: string) => {
+    setHistory((prev) => [...prev, { from: "bot", text, options }]);
+    setStepStack((prev) => [...prev, nextStep]);
   };
 
   const goTo = (action: string) => {
     setShowGreeting(false);
     sessionStorage.setItem("chatbot-greeting", "1");
 
-    if (action === "scroll-site") {
-      setOpen(false);
-      return;
-    }
-
+    // --- Scroll / navigate actions ---
     if (action === "ir-confesion") {
       setOpen(false);
       router.push("/#confesion");
       return;
     }
-
     if (action === "ir-facultad") {
       setOpen(false);
       router.push("/#facultad");
+      return;
+    }
+    if (action === "ir-recursos") {
+      setOpen(false);
+      router.push("/#recursos");
+      return;
+    }
+    if (action === "ir-historia") {
+      setOpen(false);
+      router.push("/historia");
+      return;
+    }
+
+    // --- Doctrina navigation ---
+    if (action.startsWith("ir-doctrina-")) {
+      setOpen(false);
+      router.push(`/doctrina/${action.replace("ir-doctrina-", "")}`);
+      return;
+    }
+
+    // --- Herejia navigation ---
+    if (action.startsWith("ir-herejia-")) {
+      setOpen(false);
+      router.push(`/herejia/${action.replace("ir-herejia-", "")}`);
+      return;
+    }
+
+    // --- Back ---
+    if (action === "volver") {
+      const prev = stepStack.slice(0, -1);
+      const currentStep = prev[prev.length - 1] || "inicio";
+      const s = stepContent(currentStep);
+      if (s) {
+        setHistory((prevH) => [...prevH, { from: "user", text: "Volver" }, { from: "bot", text: s.text, options: s.options }]);
+        setStepStack(prev);
+      }
+      return;
+    }
+
+    // --- Menu: Doctrinas ---
+    if (action === "menu-doctrinas") {
+      pushBot("Elige una categoría de doctrinas:", doctrinaFilters.map((f) => ({ label: f.label, action: `doctrinas-${f.key}` })), action);
       return;
     }
 
     if (action.startsWith("doctrinas-")) {
       const filterKey = action.replace("doctrinas-", "");
       const items = getDoctrinasByFilter(filterKey);
-      const label = filters.find((f) => f.key === filterKey)?.label || "Todas";
+      const label = doctrinaFilters.find((f) => f.key === filterKey)?.label || "Todas";
       setHistory((prev) => [
         ...prev,
-        {
-          from: "user",
-          text: label,
-        },
+        { from: "user", text: label },
         {
           from: "bot",
-          text: `Estas son las doctrinas en "${label}":`,
-          options: items.map((d) => ({
-            icon: d.icon,
-            label: d.title,
-            action: `ir-doctrina-${d.slug}`,
-          })),
+          text: `Doctrinas en "${label}":`,
+          options: items.map((d) => ({ label: d.title, action: `ir-doctrina-${d.slug}` })),
         },
       ]);
-      setCurrent("list-doctrinas");
+      setStepStack((prev) => [...prev, `list-doctrinas-${filterKey}`]);
       return;
     }
 
-    if (action.startsWith("ir-doctrina-")) {
-      const slug = action.replace("ir-doctrina-", "");
-      setOpen(false);
-      router.push(`/doctrina/${slug}`);
-      return;
-    }
-
+    // --- Menu: Herejías ---
     if (action === "menu-herejias") {
       const eras = [...new Set(herejias.map((h) => h.era))];
-      setHistory((prev) => [
-        ...prev,
-        { from: "user", text: "Herejías Históricas" },
-        {
-          from: "bot",
-          text: "Elige una era histórica:",
-          options: eras.map((era) => ({
-            label: era,
-            action: `herejias-era-${era}`,
-          })),
-        },
-      ]);
-      setCurrent("menu-herejias");
+      pushBot("Elige una era histórica:", eras.map((era) => ({ label: era, action: `herejias-era-${era}` })), action);
       return;
     }
 
@@ -148,44 +161,63 @@ export default function ChatBot() {
         {
           from: "bot",
           text: `Herejías del período ${era}:`,
-          options: items.map((h) => ({
-            icon: h.icon,
-            label: `${h.title} (s. ${h.century})`,
-            action: `ir-herejia-${h.slug}`,
-          })),
+          options: items.map((h) => ({ label: `${h.title} (s. ${h.century})`, action: `ir-herejia-${h.slug}` })),
         },
       ]);
-      setCurrent("list-herejias");
+      setStepStack((prev) => [...prev, `list-herejias-${era}`]);
       return;
     }
 
-    if (action.startsWith("ir-herejia-")) {
-      const slug = action.replace("ir-herejia-", "");
+    // --- Menu: Confesión 1689 (show chapters) ---
+    if (action === "menu-confesion") {
+      pushBot(
+        "La Confesión Bautista de Fe de 1689 tiene 32 capítulos. Elige uno para leerlo:",
+        confessionChapters.map((ch, i) => ({ label: `${i + 1}. ${ch}`, action: `confesion-cap-${i}` })),
+        action
+      );
+      return;
+    }
+
+    if (action.startsWith("confesion-cap-")) {
+      const idx = parseInt(action.replace("confesion-cap-", ""), 10);
       setOpen(false);
-      router.push(`/herejia/${slug}`);
+      window.open(`${pdfUrl}#page=${pdfPages[idx]}`, "_blank", "noopener");
       return;
     }
 
-    if (action === "volver-inicio") {
+    // --- Menu: Recursos ---
+    if (action === "menu-recursos") {
+      pushBot(
+        "Recursos recomendados para profundizar en las doctrinas de la gracia:",
+        [
+          { label: "Ir a la sección Recursos", action: "ir-recursos" },
+          { label: "Libros recomendados", action: "recursos-libros" },
+          { label: "Recursos en línea", action: "recursos-web" },
+        ],
+        action
+      );
+      return;
+    }
+
+    // --- Volver al inicio ---
+    if (action === "inicio") {
       setHistory((prev) => [
         ...prev,
         { from: "user", text: "Volver al inicio" },
-        { from: "bot", text: steps["inicio"].text, options: steps["inicio"].options },
+        { from: "bot", text: "¿Qué área te gustaría explorar?", options: inicioOptions },
       ]);
-      setCurrent("inicio");
+      setStepStack(["inicio"]);
       return;
     }
-
-    const s = steps[action];
-    if (s) {
-      setHistory((prev) => [
-        ...prev,
-        { from: "user", text: s.text },
-        { from: "bot", text: s.text, options: s.options },
-      ]);
-      setCurrent(action);
-    }
   };
+
+  function stepContent(step: string): { text: string; options: Option[] } | null {
+    if (step === "inicio") return { text: "¿Qué área te gustaría explorar?", options: inicioOptions };
+    return null;
+  }
+
+  const currentStep = stepStack[stepStack.length - 1];
+  const canGoBack = stepStack.length > 1;
 
   return (
     <>
@@ -227,7 +259,6 @@ export default function ChatBot() {
 
       {open && (
         <div className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-6rem)] bg-surface-1 border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 fade-in duration-300">
-          {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-surface-card rounded-t-2xl">
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -246,7 +277,6 @@ export default function ChatBot() {
             </button>
           </div>
 
-          {/* Messages */}
           <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3 scrollbar-thin">
             {history.map((msg, i) => (
               <div key={i}>
@@ -267,17 +297,9 @@ export default function ChatBot() {
                         onClick={() => goTo(opt.action)}
                         className="w-full text-left text-sm px-3.5 py-2.5 rounded-xl bg-surface-card text-text border border-border hover:border-gold hover:text-gold transition"
                       >
-                        <span>{opt.label}</span>
+                        {opt.label}
                       </button>
                     ))}
-                    {current !== "inicio" && (
-                      <button
-                        onClick={() => goTo("volver-inicio")}
-                        className="w-full text-left text-xs px-3.5 py-2 rounded-xl bg-transparent text-text-3 border border-dashed border-border hover:text-gold hover:border-gold transition"
-                      >
-                        Volver al inicio
-                      </button>
-                    )}
                   </div>
                 )}
               </div>
@@ -285,11 +307,26 @@ export default function ChatBot() {
             <div ref={bottomRef} />
           </div>
 
-          {/* Footer */}
-          <div className="px-4 py-2 border-t border-border bg-surface-card rounded-b-2xl">
-            <p className="text-[10px] text-text-3 text-center">
-              Guía basada en el contenido del sitio — sin conexión a internet
-            </p>
+          <div className="px-4 py-2 border-t border-border bg-surface-card rounded-b-2xl flex items-center justify-between">
+            {canGoBack ? (
+              <button
+                onClick={() => goTo("volver")}
+                className="text-xs text-text-3 hover:text-gold transition flex items-center gap-1"
+              >
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver
+              </button>
+            ) : <div />}
+            {currentStep !== "inicio" && (
+              <button
+                onClick={() => goTo("inicio")}
+                className="text-xs text-text-3 hover:text-gold transition"
+              >
+                Inicio
+              </button>
+            )}
           </div>
         </div>
       )}
