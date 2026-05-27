@@ -46,7 +46,7 @@ export default function HomePage() {
               La Confesión 1689
             </Link>
             <Link
-              href="#historia"
+              href="#errores"
               className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-gold text-gold font-semibold rounded-xl hover:bg-gold hover:text-black transition-all"
             >
               Errores Doctrinales
