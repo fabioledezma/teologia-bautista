@@ -5,7 +5,6 @@ import FacultySection from '@/components/FacultySection';
 import ConfesionSection from '@/components/ConfesionSection';
 import RecursosSection from '@/components/RecursosSection';
 import ChatBot from '@/components/ChatBot';
-import RevealOnScroll from '@/components/RevealOnScroll';
 
 export default function HomePage() {
   return (
@@ -95,25 +94,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <RevealOnScroll>
-        <DoctrinasGrid />
-      </RevealOnScroll>
+      <DoctrinasGrid />
 
-      <RevealOnScroll>
-        <HerejiasSection />
-      </RevealOnScroll>
+      <HerejiasSection />
 
-      <RevealOnScroll>
-        <FacultySection />
-      </RevealOnScroll>
+      <FacultySection />
 
-      <RevealOnScroll>
-        <ConfesionSection />
-      </RevealOnScroll>
+      <ConfesionSection />
 
-      <RevealOnScroll>
-        <RecursosSection />
-      </RevealOnScroll>
+      <RecursosSection />
 
       <ChatBot />
     </>

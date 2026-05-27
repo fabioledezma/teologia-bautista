@@ -40,28 +40,28 @@ body {
   }
 
   html.dark {
-    --color-gold: 215 180 55;
-    --color-gold-light: 235 205 90;
-    --color-gold-dark: 190 155 35;
-    --color-gold-dim: 170 145 60;
-    --color-accent: 75 95 185;
-    --color-accent-light: 100 120 210;
-    --color-surface: 10 10 22;
-    --color-surface-1: 18 18 34;
-    --color-surface-2: 26 26 46;
-    --color-surface-card: 30 30 54;
-    --color-surface-hover: 40 40 68;
-    --color-text: 245 245 252;
-    --color-text-2: 208 208 226;
-    --color-text-3: 160 160 182;
-    --color-border: 52 52 80;
-    --color-border-2: 66 66 96;
-    --color-bg-body: 10 10 22;
-    --color-text-body: 245 245 252;
-    --shadow-gold: 0 0 30px rgba(190, 155, 35, 0.18);
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.25);
-    --shadow-md: 0 4px 14px rgba(0,0,0,0.3);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.35);
+    --color-gold: 220 190 65;
+    --color-gold-light: 240 210 95;
+    --color-gold-dark: 195 160 40;
+    --color-gold-dim: 180 155 70;
+    --color-accent: 85 105 200;
+    --color-accent-light: 110 130 220;
+    --color-surface: 20 20 42;
+    --color-surface-1: 28 28 52;
+    --color-surface-2: 36 36 60;
+    --color-surface-card: 40 40 66;
+    --color-surface-hover: 50 50 78;
+    --color-text: 248 248 255;
+    --color-text-2: 215 215 235;
+    --color-text-3: 172 172 196;
+    --color-border: 62 62 92;
+    --color-border-2: 78 78 110;
+    --color-bg-body: 20 20 42;
+    --color-text-body: 248 248 255;
+    --shadow-gold: 0 0 30px rgba(195, 160, 40, 0.2);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-md: 0 4px 14px rgba(0,0,0,0.35);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
   }
 
   body {
