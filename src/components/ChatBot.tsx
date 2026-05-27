@@ -233,7 +233,7 @@ export default function ChatBot() {
               </svg>
             </button>
             <p className="text-sm text-text leading-relaxed break-words">
-              Si tienes preguntas sobre doctrinas, herejías o historia cristiana, puedo ayudarte a encontrar respuestas.
+              Si tienes preguntas sobre doctrinas, errores doctrinales o historia cristiana, puedo ayudarte a encontrar respuestas.
             </p>
             <button
               onClick={handleOpen}
