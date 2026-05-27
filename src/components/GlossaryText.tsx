@@ -8,12 +8,18 @@ interface Props {
   className?: string;
 }
 
+interface ActivePopover {
+  term: string;
+  definition: string;
+  rect: DOMRect;
+}
+
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 export default function GlossaryText({ text, className = "" }: Props) {
-  const [activeTerm, setActiveTerm] = useState<string | null>(null);
+  const [active, setActive] = useState<ActivePopover | null>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
 
   const sorted = [...glossary].sort((a, b) => b.term.length - a.term.length);
@@ -50,18 +56,65 @@ export default function GlossaryText({ text, className = "" }: Props) {
   const handleClickOutside = useCallback(
     (e: MouseEvent) => {
       if (popoverRef.current && !popoverRef.current.contains(e.target as Node)) {
-        setActiveTerm(null);
+        setActive(null);
       }
     },
     []
   );
 
   useEffect(() => {
-    if (activeTerm) {
+    if (active) {
       document.addEventListener("mousedown", handleClickOutside);
       return () => document.removeEventListener("mousedown", handleClickOutside);
     }
-  }, [activeTerm, handleClickOutside]);
+  }, [active, handleClickOutside]);
+
+  const handleTermClick = (term: string, definition: string, e: React.MouseEvent<HTMLButtonElement>) => {
+    if (active && active.term === term) {
+      setActive(null);
+      return;
+    }
+    const rect = e.currentTarget.getBoundingClientRect();
+    setActive({ term, definition, rect });
+  };
+
+  const calcPosition = (): React.CSSProperties => {
+    if (!active) return { display: "none" };
+    const { rect } = active;
+    const gap = 8;
+    const popoverW = Math.min(320, window.innerWidth - 24);
+    const popoverH = 200;
+
+    let top: number;
+    let left: number;
+
+    const spaceAbove = rect.top;
+    const spaceBelow = window.innerHeight - rect.bottom;
+
+    if (spaceBelow >= popoverH || spaceBelow >= spaceAbove) {
+      top = rect.bottom + gap;
+    } else {
+      top = rect.top - popoverH - gap;
+    }
+
+    left = rect.left + rect.width / 2 - popoverW / 2;
+    if (left < 12) left = 12;
+    if (left + popoverW > window.innerWidth - 12) {
+      left = window.innerWidth - popoverW - 12;
+    }
+
+    const arrowTop = spaceBelow >= popoverH || spaceBelow >= spaceAbove
+      ? rect.bottom + gap
+      : rect.top - gap;
+
+    return {
+      position: "fixed",
+      top: `${top}px`,
+      left: `${left}px`,
+      width: `${popoverW}px`,
+      zIndex: 9999,
+    };
+  };
 
   return (
     <span className={`${className} block`}>
@@ -69,40 +122,39 @@ export default function GlossaryText({ text, className = "" }: Props) {
         if (!part.isTerm) {
           return <span key={i}>{part.text}</span>;
         }
-        const isActive = activeTerm === part.text;
+        const isActive = active?.term === part.text;
         return (
           <span key={i} className="relative inline">
             <button
               type="button"
-              onClick={() => setActiveTerm(isActive ? null : part.text)}
+              onClick={(e) => handleTermClick(part.text!, part.definition!, e)}
               className="inline text-inherit font-inherit cursor-help border-b border-dotted border-gold/60 hover:border-gold transition-colors"
               style={{ background: "none", padding: 0, font: "inherit", color: "inherit" }}
             >
               {part.text}
             </button>
-            {isActive && part.definition && (
-              <div
-                ref={popoverRef}
-                className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 p-3 rounded-xl bg-surface-card border border-gold/30 shadow-lg text-xs text-text leading-relaxed"
-                style={{ pointerEvents: "auto" }}
-              >
-                <div className="font-semibold text-gold mb-1 text-[11px] uppercase tracking-wider">
-                  {part.text}
-                </div>
-                <p className="text-text-2">{part.definition}</p>
-                <div
-                  className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0"
-                  style={{
-                    borderLeft: "6px solid transparent",
-                    borderRight: "6px solid transparent",
-                    borderTop: "6px solid rgb(var(--color-gold) / 0.3)",
-                  }}
-                />
-              </div>
-            )}
           </span>
         );
       })}
+
+      {active && (
+        <>
+          <div
+            className="fixed inset-0 z-40"
+            onClick={() => setActive(null)}
+          />
+          <div
+            ref={popoverRef}
+            style={calcPosition()}
+            className="p-3.5 rounded-xl bg-surface-card border border-gold/30 shadow-lg text-xs text-text leading-relaxed"
+          >
+            <div className="font-semibold text-gold mb-1.5 text-[11px] uppercase tracking-wider">
+              {active.term}
+            </div>
+            <p className="text-text-2">{active.definition}</p>
+          </div>
+        </>
+      )}
     </span>
   );
 }
