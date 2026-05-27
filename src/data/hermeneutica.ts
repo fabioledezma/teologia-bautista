@@ -33,7 +33,7 @@ La Biblia es la voz de Dios. Merece ser escuchada con atención, con reverencia 
 En esta sección vamos a aprender juntos, con paciencia y con alegría, cómo leer la Biblia de una manera que honre a Dios y nos edifique verdaderamente. No para volvernos teólogos arrogantes, sino para amar más a Dios y entender mejor su mensaje.`,
     fondo: `La historia de la iglesia nos muestra que muchos errores doctrinales nacieron no de mala intención, sino de una lectura descuidada de la Escritura. Personas sinceras, con amor por Dios, llegaron a conclusiones equivocadas porque ignoraron el contexto, la cultura o el propósito original del texto.
 
-Pensemos en esto: si recibes una carta de alguien que amas, no la lees saltando de una línea a otra. Lees la carta completa. Tratas de entender qué quiere decirte. Consideras la situación en que fue escrita. Lees entre líneas con cariño. Así debemos leer la Biblia.
+Pensemos en esto: cuando leemos un documento importante, no saltamos de una línea a otra sin orden. Leemos el documento completo. Tratamos de entender qué quiso comunicar el autor. Consideramos la situación en que fue escrito. Así debemos leer la Biblia.
 
 La Reforma Protestante nos enseñó que la Escritura se interpreta a sí misma (analogía de la fe). Esto significa que un pasaje oscuro debe ser entendido a la luz de pasajes claros. Que ninguna doctrina debe basarse en un solo versículo aislado. Que toda la Biblia apunta a Cristo.
 
@@ -62,7 +62,7 @@ La Biblia tiene un significado. Dios quiso decir algo específico. Nuestra tarea
 
 Algo similar ocurre cuando sacamos un versículo de la Biblia sin considerar lo que está antes y después.
 
-La Biblia no es una colección de frases sueltas. Es una historia. Es un mensaje. Es una carta de amor de Dios a la humanidad que se desarrolla a lo largo de siglos. Cada versículo tiene un hogar: un libro, un capítulo, un contexto histórico y cultural.
+La Biblia no es una colección de frases sueltas. Es la revelación progresiva de Dios a la humanidad, que se desarrolla a lo largo de siglos. Cada versículo tiene un hogar: un libro, un capítulo, un contexto histórico y cultural.
 
 Cuando respetamos ese hogar, entendemos mejor lo que Dios quiso decir. Cuando ignoramos el contexto, podemos hacer que la Biblia diga prácticamente cualquier cosa.
 

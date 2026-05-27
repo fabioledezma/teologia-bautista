@@ -19,8 +19,9 @@ export default function HermeneuticaPage() {
           </h1>
           <p className="text-text-2 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-text">
             Una guía pastoral, humilde y profunda para interpretar correctamente
-            la Palabra de Dios. No necesitas ser un erudito. Solo necesitas un
-            corazón dispuesto a aprender.
+            la Palabra de Dios, y la guía esencial del Espíritu Santo. No
+            necesitas ser un erudito. Solo necesitas un corazón dispuesto a
+            aprender.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <Link
