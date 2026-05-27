@@ -1089,6 +1089,275 @@ export function svgReformaTH() {
   </svg>`;
 }
 
+function svgHermeneuticaIntro() {
+  return `<svg viewBox="0 0 540 380" xmlns="http://www.w3.org/2000/svg">
+    <rect width="540" height="380" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="18" font-weight="bold">📖 La Biblia: Una Carta de Amor en Contexto</text>
+    <g font-family="sans-serif" font-size="13">
+      <rect x="40" y="60" width="460" height="55" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="82" fill="${G}" font-weight="bold">✉️  Dios escribi\u00f3 una carta</text>
+      <text x="60" y="102" fill="${T2}" font-size="12">A trav\u00e9s de autores humanos, en un tiempo real, a personas reales.</text>
+
+      <rect x="40" y="130" width="460" height="55" rx="8" fill="none" stroke="#E53E3E" stroke-width="1.5"/>
+      <text x="60" y="152" fill="#E53E3E" font-weight="bold">✂️  No podemos recortar frases sueltas</text>
+      <text x="60" y="172" fill="${T2}" font-size="12">Sacar un verso de su contexto es como leer solo una l\u00ednea de una carta.</text>
+
+      <rect x="40" y="200" width="460" height="55" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="222" fill="${G}" font-weight="bold">🔍  Hay que leer la carta completa</text>
+      <text x="60" y="242" fill="${T2}" font-size="12">Contexto hist\u00f3rico, cultural, literario y teol\u00f3gico.</text>
+
+      <rect x="40" y="270" width="460" height="55" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="292" fill="${G}" font-weight="bold">❤️  Solo entonces entenderemos el mensaje</text>
+      <text x="60" y="312" fill="${T2}" font-size="12">La meta no es tener raz\u00f3n, sino conocer a Dios y ser transformados.</text>
+
+      <text x="270" y="352" text-anchor="middle" fill="${T3}" font-size="11" font-style="italic">"Un texto fuera de contexto se convierte en un pretexto"</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaContexto() {
+  return `<svg viewBox="0 0 540 420" xmlns="http://www.w3.org/2000/svg">
+    <rect width="540" height="420" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="18" font-weight="bold">🔍 Los 5 Niveles del Contexto</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="40" y="55" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="73" fill="${G}" font-weight="bold">1. Contexto inmediato</text>
+      <text x="60" y="90" fill="${T2}">Lo que est\u00e1 antes y despu\u00e9s del vers\u00edculo (lee todo el cap\u00edtulo)</text>
+
+      <rect x="40" y="110" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="128" fill="${G}" font-weight="bold">2. Contexto del libro</text>
+      <text x="60" y="145" fill="${T2}">\u00bfA qui\u00e9n se escribi\u00f3? \u00bfPor qu\u00e9? \u00bfQu\u00e9 problema aborda?</text>
+
+      <rect x="40" y="165" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="183" fill="${G}" font-weight="bold">3. Contexto hist\u00f3rico</text>
+      <text x="60" y="200" fill="${T2}">\u00bfQu\u00e9 estaba pasando en el mundo en ese momento?</text>
+
+      <rect x="40" y="220" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="238" fill="${G}" font-weight="bold">4. Contexto cultural</text>
+      <text x="60" y="255" fill="${T2}">Costumbres, creencias y pr\u00e1cticas de la \u00e9poca</text>
+
+      <rect x="40" y="275" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="293" fill="${G}" font-weight="bold">5. Contexto de toda la Biblia</text>
+      <text x="60" y="310" fill="${T2}">\u00bfC\u00f3mo se relaciona este pasaje con el resto de la Escritura?</text>
+
+      <rect x="80" y="340" width="380" height="50" rx="8" fill="none" stroke="#E53E3E" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="270" y="358" text-anchor="middle" fill="#E53E3E" font-weight="bold">Peligro de ignorar el contexto</text>
+      <text x="270" y="375" text-anchor="middle" fill="${T2}" font-size="11">Manipulaci\u00f3n · Falsas doctrinas · Culpa falsa · Promesas falsas · Abuso espiritual</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaErrores() {
+  return `<svg viewBox="0 0 540 450" xmlns="http://www.w3.org/2000/svg">
+    <rect width="540" height="450" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="16" font-weight="bold">⚠️  C\u00f3mo NO interpretar la Biblia  vs  C\u00f3mo S\u00cd interpretar</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="55" width="480" height="55" rx="8" fill="none" stroke="#E53E3E" stroke-width="1.5"/>
+      <text x="50" y="75" fill="#E53E3E" font-weight="bold">❌  Mala pr\u00e1ctica</text>
+      <text x="50" y="95" fill="${T2}">Vers\u00edculo aislado  →  Opini\u00f3n personal  →  Doctrina inventada</text>
+      <text x="50" y="105" fill="${T3}" font-size="10">("Yo creo que esto significa...")</text>
+
+      <rect x="30" y="125" width="480" height="55" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="50" y="145" fill="${G}" font-weight="bold">✅  Buena pr\u00e1ctica</text>
+      <text x="50" y="165" fill="${T2}">Texto  →  Contexto  →  Autor  →  Audiencia  →  Toda la Biblia  →  Aplicaci\u00f3n</text>
+      <text x="50" y="175" fill="${T3}" font-size="10">("\u00bfQu\u00e9 quiso decir el autor a sus lectores originales?")</text>
+
+      <rect x="30" y="200" width="480" height="55" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="50" y="220" fill="${G}" font-weight="bold">📐  Pir\u00e1mide de Interpretaci\u00f3n B\u00edblica</text>
+      <text x="270" y="250" text-anchor="middle" fill="${G}" font-weight="bold">Toda la Biblia</text>
+      <polygon points="210,260 330,260 340,270 200,270" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="270" y="285" text-anchor="middle" fill="${T}" font-weight="bold">El Libro Completo</text>
+      <polygon points="230,295 310,295 320,305 220,305" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="270" y="320" text-anchor="middle" fill="${T}" font-weight="bold">El Cap\u00edtulo</text>
+      <polygon points="250,330 290,330 300,340 240,340" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="270" y="358" text-anchor="middle" fill="${T}" font-weight="bold">El Vers\u00edculo</text>
+      <line x1="270" y1="365" x2="270" y2="380" stroke="${G}" stroke-width="1"/>
+      <polygon points="266,378 270,388 274,378" fill="${G}"/>
+
+      <rect x="100" y="395" width="340" height="35" rx="6" fill="none" stroke="#E53E3E" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="270" y="418" text-anchor="middle" fill="#E53E3E" font-size="11" font-weight="bold">Un vers\u00edculo sin contexto no es fundamento para una doctrina</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaSignificado() {
+  return `<svg viewBox="0 0 540 320" xmlns="www.w3.org/2000/svg">
+    <rect width="540" height="320" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="17" font-weight="bold">📖  Preguntas para Interpretar Correctamente</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="55" width="230" height="50" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="145" y="73" text-anchor="middle" fill="${G}" font-weight="bold">\u00bfQui\u00e9n habla?</text>
+      <text x="145" y="92" text-anchor="middle" fill="${T2}">Autor y su contexto</text>
+
+      <rect x="280" y="55" width="230" height="50" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="395" y="73" text-anchor="middle" fill="${G}" font-weight="bold">\u00bfA qui\u00e9n le habla?</text>
+      <text x="395" y="92" text-anchor="middle" fill="${T2}">Audiencia original</text>
+
+      <rect x="30" y="120" width="230" height="50" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="145" y="138" text-anchor="middle" fill="${G}" font-weight="bold">\u00bfPor qu\u00e9 lo dice?</text>
+      <text x="145" y="157" text-anchor="middle" fill="${T2}">Prop\u00f3sito y circunstancias</text>
+
+      <rect x="280" y="120" width="230" height="50" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="395" y="138" text-anchor="middle" fill="${G}" font-weight="bold">\u00bfQu\u00e9 dice antes/despu\u00e9s?</text>
+      <text x="395" y="157" text-anchor="middle" fill="${T2}">Contexto inmediato</text>
+
+      <rect x="30" y="185" width="230" height="50" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="145" y="203" text-anchor="middle" fill="${G}" font-weight="bold">\u00bfQu\u00e9 ense\u00f1a toda la Biblia?</text>
+      <text x="145" y="222" text-anchor="middle" fill="${T2}">Analog\u00eda de la fe</text>
+
+      <rect x="280" y="185" width="230" height="50" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="395" y="203" text-anchor="middle" fill="${G}" font-weight="bold">\u00bfC\u00f3mo apunta a Cristo?</text>
+      <text x="395" y="222" text-anchor="middle" fill="${T2}">Hermen\u00e9utica cristoc\u00e9ntrica</text>
+
+      <text x="270" y="280" text-anchor="middle" fill="${G}" font-weight="bold" font-size="13">El significado es UNO. La aplicaci\u00f3n puede variar. La imposici\u00f3n es peligrosa.</text>
+      <text x="270" y="303" text-anchor="middle" fill="${T3}" font-size="11">\u00bfQu\u00e9 signific\u00f3 para ellos? \u2192 \u00bfQu\u00e9 significa para nosotros?</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaGuia() {
+  return `<svg viewBox="0 0 540 380" xmlns="www.w3.org/2000/svg">
+    <rect width="540" height="380" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="17" font-weight="bold">🧭  Gu\u00eda Pr\u00e1ctica de 8 Pasos</text>
+    <g font-family="sans-serif" font-size="12">
+      <text x="50" y="65" fill="${G}" font-weight="bold">1.</text>
+      <text x="70" y="65" fill="${T}">\u00bfQui\u00e9n est\u00e1 hablando? (Dios, profeta, ap\u00f3stol, salmista...)</text>
+
+      <text x="50" y="92" fill="${G}" font-weight="bold">2.</text>
+      <text x="70" y="92" fill="${T}">\u00bfA qui\u00e9n le habla? (Israel, iglesia, persona espec\u00edfica...)</text>
+
+      <text x="50" y="119" fill="${G}" font-weight="bold">3.</text>
+      <text x="70" y="119" fill="${T}">\u00bfEn qu\u00e9 circunstancias? (Guerra, paz, persecuci\u00f3n, exilio...)</text>
+
+      <text x="50" y="146" fill="${G}" font-weight="bold">4.</text>
+      <text x="70" y="146" fill="${T}">\u00bfQu\u00e9 dice antes y despu\u00e9s? (Lee al menos el cap\u00edtulo)</text>
+
+      <text x="50" y="173" fill="${G}" font-weight="bold">5.</text>
+      <text x="70" y="173" fill="${T}">\u00bfQu\u00e9 signific\u00f3 para los primeros oyentes?</text>
+
+      <text x="50" y="200" fill="${G}" font-weight="bold">6.</text>
+      <text x="70" y="200" fill="${T}">\u00bfQu\u00e9 principio eterno puedo aprender?</text>
+
+      <text x="50" y="227" fill="${G}" font-weight="bold">7.</text>
+      <text x="70" y="227" fill="${T}">\u00bfC\u00f3mo se relaciona con Cristo y el evangelio?</text>
+
+      <text x="50" y="254" fill="${G}" font-weight="bold">8.</text>
+      <text x="70" y="254" fill="${T}">\u00bfQu\u00e9 debo creer, sentir o hacer en respuesta?</text>
+
+      <rect x="50" y="275" width="440" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <text x="270" y="295" text-anchor="middle" fill="${G}" font-weight="bold">Ejemplo: Filipenses 4:13</text>
+      <text x="270" y="312" text-anchor="middle" fill="${T2}" font-size="11">Pablo preso hablando de contentamiento, no de lograr metas personales</text>
+
+      <rect x="50" y="330" width="440" height="35" rx="6" fill="none" stroke="#E53E3E" stroke-width="1"/>
+      <text x="270" y="353" text-anchor="middle" fill="#E53E3E" font-size="11" font-style="italic">Copia estas 8 preguntas y \u00fasalas al leer tu Biblia</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaEspiritu() {
+  return `<svg viewBox="0 0 540 280" xmlns="www.w3.org/2000/svg">
+    <rect width="540" height="280" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="17" font-weight="bold">🕊️  El Equilibrio B\u00edblico: Palabra + Esp\u00edritu</text>
+    <g font-family="sans-serif" font-size="12">
+      <rect x="30" y="55" width="220" height="80" rx="8" fill="none" stroke="#E53E3E" stroke-width="1.5"/>
+      <text x="140" y="75" text-anchor="middle" fill="#E53E3E" font-weight="bold">❌  Extremo 1: Solo el Esp\u00edritu</text>
+      <text x="140" y="95" text-anchor="middle" fill="${T2}" font-size="11">"Dios me revel\u00f3..."</text>
+      <text x="140" y="112" text-anchor="middle" fill="${T2}" font-size="11">Sin estudio, sin contexto</text>
+      <text x="140" y="127" text-anchor="middle" fill="${T3}" font-size="10">(Subjetivismo)</text>
+
+      <rect x="290" y="55" width="220" height="80" rx="8" fill="none" stroke="#E53E3E" stroke-width="1.5"/>
+      <text x="400" y="75" text-anchor="middle" fill="#E53E3E" font-weight="bold">❌  Extremo 2: Solo estudio</text>
+      <text x="400" y="95" text-anchor="middle" fill="${T2}" font-size="11">"An\u00e1lisis cr\u00edtico..."</text>
+      <text x="400" y="112" text-anchor="middle" fill="${T2}" font-size="11">Sin oraci\u00f3n, sin dependencia</text>
+      <text x="400" y="127" text-anchor="middle" fill="${T3}" font-size="10">(Racionalismo)</text>
+
+      <rect x="80" y="155" width="380" height="55" rx="8" fill="none" stroke="${G}" stroke-width="2"/>
+      <text x="270" y="175" text-anchor="middle" fill="${G}" font-weight="bold">✅  El equilibrio reformado</text>
+      <text x="270" y="195" text-anchor="middle" fill="${T2}">Palabra + Esp\u00edritu · Estudio + Oracion · Mente + Coraz\u00f3n</text>
+
+      <text x="270" y="245" text-anchor="middle" fill="${T3}" font-size="11" font-style="italic">"El Esp\u00edritu Santo ilumina la Palabra, no reemplaza la Palabra"</text>
+      <text x="270" y="263" text-anchor="middle" fill="${T3}" font-size="11" font-style="italic">"Sin el Esp\u00edritu no podemos entender; sin la Palabra no tenemos qu\u00e9 entender"</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaComparacion() {
+  return `<svg viewBox="0 0 540 380" xmlns="www.w3.org/2000/svg">
+    <rect width="540" height="380" fill="${C}" rx="12"/>
+    <text x="270" y="35" text-anchor="middle" fill="${G}" font-family="serif" font-size="16" font-weight="bold">⚖️  Mala Interpretaci\u00f3n  vs  Interpretaci\u00f3n Sana</text>
+    <g font-family="sans-serif" font-size="11">
+      <rect x="30" y="55" width="230" height="25" rx="4" fill="#E53E3E10" stroke="#E53E3E" stroke-width="1"/>
+      <text x="145" y="71" text-anchor="middle" fill="#E53E3E" font-weight="bold">Mala pr\u00e1ctica</text>
+
+      <rect x="280" y="55" width="230" height="25" rx="4" fill="${G}10" stroke="${G}" stroke-width="1"/>
+      <text x="395" y="71" text-anchor="middle" fill="${G}" font-weight="bold">Interpretaci\u00f3n sana</text>
+
+      <rect x="30" y="90" width="230" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="0.5"/>
+      <text x="145" y="108" text-anchor="middle" fill="${T}">Sacar vers\u00edculo aislado</text>
+
+      <rect x="280" y="90" width="230" height="30" rx="4" fill="none" stroke="${G}" stroke-width="0.5"/>
+      <text x="395" y="108" text-anchor="middle" fill="${T}">Leer el contexto completo</text>
+
+      <rect x="30" y="125" width="230" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="0.5"/>
+      <text x="145" y="143" text-anchor="middle" fill="${T}">Buscar solo emociones</text>
+
+      <rect x="280" y="125" width="230" height="30" rx="4" fill="none" stroke="${G}" stroke-width="0.5"/>
+      <text x="395" y="143" text-anchor="middle" fill="${T}">Buscar el significado original</text>
+
+      <rect x="30" y="160" width="230" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="0.5"/>
+      <text x="145" y="178" text-anchor="middle" fill="${T}">"Dios me dijo" sin Biblia</text>
+
+      <rect x="280" y="160" width="230" height="30" rx="4" fill="none" stroke="${G}" stroke-width="0.5"/>
+      <text x="395" y="178" text-anchor="middle" fill="${T}">Examinar todo con la Escritura</text>
+
+      <rect x="30" y="195" width="230" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="0.5"/>
+      <text x="145" y="213" text-anchor="middle" fill="${T}">Ignorar historia y cultura</text>
+
+      <rect x="280" y="195" width="230" height="30" rx="4" fill="none" stroke="${G}" stroke-width="0.5"/>
+      <text x="395" y="213" text-anchor="middle" fill="${T}">Considerar el contexto original</text>
+
+      <rect x="30" y="230" width="230" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="0.5"/>
+      <text x="145" y="248" text-anchor="middle" fill="${T}">Imponer mis ideas al texto</text>
+
+      <rect x="280" y="230" width="230" height="30" rx="4" fill="none" stroke="${G}" stroke-width="0.5"/>
+      <text x="395" y="248" text-anchor="middle" fill="${T}">Dejar que el texto me hable</text>
+
+      <rect x="30" y="265" width="230" height="30" rx="4" fill="none" stroke="#E53E3E" stroke-width="0.5"/>
+      <text x="145" y="283" text-anchor="middle" fill="${T}">Una doctrina de 1 vers\u00edculo</text>
+
+      <rect x="280" y="265" width="230" height="30" rx="4" fill="none" stroke="${G}" stroke-width="0.5"/>
+      <text x="395" y="283" text-anchor="middle" fill="${T}">Consejo completo de Dios</text>
+
+      <text x="270" y="335" text-anchor="middle" fill="${G}" font-weight="bold" font-size="13">La diferencia est\u00e1 en los frutos</text>
+      <text x="270" y="355" text-anchor="middle" fill="${T2}" font-size="11">Fruto malo: Confusi\u00f3n, divisi\u00f3n, manipulación</text>
+      <text x="270" y="370" text-anchor="middle" fill="${T2}" font-size="11">Fruto bueno: Fe s\u00f3lida, unidad, amor a la verdad</text>
+    </g>
+  </svg>`;
+}
+
+function svgHermeneuticaConclusion() {
+  return `<svg viewBox="0 0 540 300" xmlns="www.w3.org/2000/svg">
+    <rect width="540" height="300" fill="${C}" rx="12"/>
+    <text x="270" y="40" text-anchor="middle" fill="${G}" font-family="serif" font-size="18" font-weight="bold">🌟  La Meta Final de Toda Interpretaci\u00f3n</text>
+    <g font-family="sans-serif" font-size="13">
+      <rect x="40" y="60" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="82" fill="${G}" font-weight="bold">📖  No es tener raz\u00f3n</text>
+      <text x="60" y="98" fill="${T2}" font-size="12">Es conocer a Dios y ser transformado por \u00c9l</text>
+
+      <rect x="40" y="115" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="137" fill="${G}" font-weight="bold">❤️  No es saber m\u00e1s</text>
+      <text x="60" y="153" fill="${T2}" font-size="12">Es amar m\u00e1s a Cristo y a su iglesia</text>
+
+      <rect x="40" y="170" width="460" height="45" rx="8" fill="none" stroke="${G}" stroke-width="1.5"/>
+      <text x="60" y="192" fill="${G}" font-weight="bold">🛡️  No es sentirnos superiores</text>
+      <text x="60" y="208" fill="${T2}" font-size="12">Es protegernos del error y caminar en la verdad</text>
+
+      <text x="270" y="260" text-anchor="middle" fill="${G}" font-weight="bold" font-size="14">"L\u00e1mpara es a mis pies tu palabra, y lumbrera a mi camino"</text>
+      <text x="270" y="283" text-anchor="middle" fill="${T3}" font-size="12">Salmo 119:105</text>
+    </g>
+  </svg>`;
+}
+
 export const svgMap: Record<string, () => string> = {
   tulip: svgTULIP,
   trinity: svgTrinity,
@@ -1114,4 +1383,12 @@ export const svgMap: Record<string, () => string> = {
   "gracia-th": svgGraciaTH,
   "edad-media-th": svgEdadMediaTH,
   "reforma-th": svgReformaTH,
+  "hermeneutica-intro": svgHermeneuticaIntro,
+  "hermeneutica-contexto": svgHermeneuticaContexto,
+  "hermeneutica-errores": svgHermeneuticaErrores,
+  "hermeneutica-significado": svgHermeneuticaSignificado,
+  "hermeneutica-guia": svgHermeneuticaGuia,
+  "hermeneutica-espiritu": svgHermeneuticaEspiritu,
+  "hermeneutica-comparacion": svgHermeneuticaComparacion,
+  "hermeneutica-conclusion": svgHermeneuticaConclusion,
 };
