@@ -9,13 +9,15 @@ const sizes = [
 ];
 
 export default function FontSizeToggle() {
-  const [current, setCurrent] = useState("normal");
+  const [current, setCurrent] = useState("large");
 
   useEffect(() => {
     const saved = localStorage.getItem("font-size");
     if (saved) {
       setCurrent(saved);
       applySize(saved);
+    } else {
+      applySize("large");
     }
   }, []);
 
