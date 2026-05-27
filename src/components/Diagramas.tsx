@@ -1,9 +1,9 @@
-const C = 'var(--color-surface-card)';
-const G = 'var(--color-gold)';
-const T = 'var(--color-text)';
-const T2 = 'var(--color-text)';
-const T3 = 'var(--color-text)';
-const B = 'var(--color-border)';
+const C = '#FFFFFF';
+const G = '#AF8C1E';
+const T = '#000000';
+const T2 = '#000000';
+const T3 = '#000000';
+const B = '#D2D2D2';
 
 export function svgTULIP() {
   return `<svg viewBox="0 0 540 580" xmlns="http://www.w3.org/2000/svg">
