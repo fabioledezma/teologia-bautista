@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import FontSizeToggle from './FontSizeToggle';
+import SearchDialog from './SearchDialog';
 
 const links = [
   { label: 'Inicio', href: '/' },
@@ -102,6 +103,7 @@ export default function Navbar() {
           ))}
 
           <div className="w-px h-5 bg-border mx-2" />
+          <SearchDialog />
           <FontSizeToggle />
         </div>
 
