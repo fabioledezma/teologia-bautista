@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import GlossaryText from "@/components/GlossaryText";
 
 interface Evento {
   year: string;
@@ -491,7 +492,7 @@ export default function HistoriaPage() {
                   <span className="text-sm text-text-3 font-mono">{p.date}</span>
                 </div>
               </div>
-              <p className="text-text-2 text-sm leading-relaxed break-words font-text">{p.desc}</p>
+              <GlossaryText className="text-text-2 text-sm leading-relaxed break-words font-text" text={p.desc} />
             </div>
 
             {/* Descripción detallada */}
@@ -499,9 +500,7 @@ export default function HistoriaPage() {
               <h3 className="font-serif text-lg text-text mb-3 break-words">
                 Panorama General
               </h3>
-              <p className="text-text-2 text-sm leading-relaxed whitespace-pre-line break-words font-text">
-                {p.detalle}
-              </p>
+              <GlossaryText className="text-text-2 text-sm leading-relaxed whitespace-pre-line break-words font-text" text={p.detalle} />
             </div>
 
             {/* Perspectiva reformada */}
@@ -512,16 +511,12 @@ export default function HistoriaPage() {
                 </svg>
                 Perspectiva Bautista Reformada
               </h3>
-              <p className="text-text-2 text-sm leading-relaxed break-words font-text">
-                {p.perspectivaReformada}
-              </p>
+              <GlossaryText className="text-text-2 text-sm leading-relaxed break-words font-text" text={p.perspectivaReformada} />
               <div className="mt-4 px-4 py-3 bg-surface-1 border border-border rounded-xl">
                 <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                   Conexión con la Confesión 1689
                 </span>
-                <p className="text-xs text-text-2 mt-1 italic break-words">
-                  {p.confesion}
-                </p>
+                <GlossaryText className="text-xs text-text-2 mt-1 italic break-words" text={p.confesion} />
               </div>
             </div>
 
@@ -681,9 +676,7 @@ export default function HistoriaPage() {
                   {per.label}
                 </h3>
                 <span className="text-xs text-text-3 font-mono">{per.date}</span>
-                <p className="text-xs text-text-2 mt-3 leading-relaxed line-clamp-3 break-words">
-                  {per.desc}
-                </p>
+                <GlossaryText className="text-xs text-text-2 mt-3 leading-relaxed line-clamp-3 break-words" text={per.desc} />
                 <span className="inline-flex items-center gap-1 text-gold text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
                   Explorar <span>→</span>
                 </span>

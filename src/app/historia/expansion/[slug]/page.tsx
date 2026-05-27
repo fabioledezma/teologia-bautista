@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import expansion from "@/data/expansion";
 import { svgMap } from "@/components/Diagramas";
+import GlossaryText from "@/components/GlossaryText";
 
 export function generateStaticParams() {
   return expansion.map((s) => ({ slug: s.slug }));
@@ -48,9 +49,7 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
             <h2 className="font-serif text-base text-gold">En términos simples</h2>
           </div>
           {sec.simple.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </section>
 
@@ -75,9 +74,7 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
             <h2 className="font-serif text-base text-gold">Más a fondo</h2>
           </div>
           {sec.fondo.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </section>
 
@@ -91,9 +88,7 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
               Perspectiva Bautista Reformada
             </h3>
             {sec.perspectivaReformada.split("\n\n").map((p, i) => (
-              <p key={i} className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-                {p.trim()}
-              </p>
+              <GlossaryText key={i} className="block text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
             ))}
           </div>
         </section>

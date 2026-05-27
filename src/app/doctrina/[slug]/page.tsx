@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import doctrinas from "@/data/doctrinas";
 import { svgMap } from "@/components/Diagramas";
+import GlossaryText from "@/components/GlossaryText";
 
 export async function generateStaticParams() {
   return doctrinas.map((d) => ({ slug: d.slug }));
@@ -81,31 +82,29 @@ export default async function DoctrinaPage({
       </blockquote>
 
       <Section title="En lenguaje sencillo">
-        <p className="text-text text-sm leading-relaxed break-words">{d.simple}</p>
+        <GlossaryText className="text-text text-sm leading-relaxed break-words" text={d.simple} />
       </Section>
 
       {renderDiagram()}
 
       <Section title="Más a fondo">
         {d.fondo.split("\n\n").map((p, i) => (
-          <p
+          <GlossaryText
             key={i}
-            className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
-          >
-            {p.trim()}
-          </p>
+            className="block text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+            text={p.trim()}
+          />
         ))}
       </Section>
 
       {d.historia && (
         <Section title="Contexto histórico">
           {d.historia.split("\n\n").map((p, i) => (
-            <p
+            <GlossaryText
               key={i}
-              className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
-            >
-              {p.trim()}
-            </p>
+              className="block text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+              text={p.trim()}
+            />
           ))}
         </Section>
       )}
@@ -113,12 +112,11 @@ export default async function DoctrinaPage({
       {d.malentendidos && (
         <Section title="Malentendidos comunes">
           {d.malentendidos.split("\n\n").map((p, i) => (
-            <p
+            <GlossaryText
               key={i}
-              className="text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
-            >
-              {p.trim()}
-            </p>
+              className="block text-text text-sm leading-relaxed mb-3 last:mb-0 break-words font-text"
+              text={p.trim()}
+            />
           ))}
         </Section>
       )}

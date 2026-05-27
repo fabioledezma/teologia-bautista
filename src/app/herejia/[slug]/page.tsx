@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { herejias } from "@/data/herejias";
+import GlossaryText from "@/components/GlossaryText";
 
 export function generateStaticParams() {
   return herejias.map((h) => ({ slug: h.slug }));
@@ -65,22 +66,18 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
         </div>
 
         <div className="bg-surface-card border border-border rounded-xl p-5 mb-8">
-          <p className="text-text-2 text-sm leading-relaxed break-words">{c.intro}</p>
+          <GlossaryText className="text-text-2 text-sm leading-relaxed break-words" text={c.intro} />
         </div>
 
         <Section title="¿Qué enseñaba exactamente?">
           {h.originalTeaching.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
         <Section title="Contexto Histórico">
           {c.historicalContext.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
@@ -93,9 +90,7 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
 
         <Section title="Desarrollo Histórico de la Doctrina">
           {c.teaching.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
@@ -114,17 +109,13 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
 
         <Section title="Refutación Bíblica">
           {c.refutation.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
         <Section title="Defensa Bíblica">
           {c.biblicalDefense.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
@@ -145,17 +136,13 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
 
         <Section title="¿Por qué es un error?">
           {h.whyError.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
         <Section title="Forma Moderna">
           {h.modernForm.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
@@ -185,25 +172,19 @@ export default async function HerejiaPage({ params }: { params: Promise<{ slug: 
 
         <Section title="Comparación Doctrinal">
           {h.comparison.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
         <Section title="Aplicación Pastoral">
           {h.pastoralApp.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
 
         <Section title="Conclusión">
           {c.conclusion.split("\n\n").map((p, i) => (
-            <p key={i} className="text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text">
-              {p.trim()}
-            </p>
+            <GlossaryText key={i} className="block text-text-2 text-sm leading-relaxed mb-3 last:mb-0 break-words font-text" text={p.trim()} />
           ))}
         </Section>
       </div>

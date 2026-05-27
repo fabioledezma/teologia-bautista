@@ -287,9 +287,9 @@ export const herejias: Herejia[] = [
     }
   },
   {
-    slug: "arianismo",
+    slug: "arrianismo",
     icon: "✝️",
-    title: "Arianismo",
+    title: "Arrianismo",
     subtitle: "La negación de la divinidad de Cristo",
     era: "Patrística",
     taughtBy: "Arrio (c. 256–336 d.C.), Eusebio de Nicomedia (m. 341 d.C.), Aecio (m. 367 d.C.), Eunomio (c. 335–394 d.C.)",

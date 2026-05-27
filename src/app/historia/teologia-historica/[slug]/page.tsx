@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import teologiaHistorica from "@/data/teologia-historica";
 import { svgMap } from "@/components/Diagramas";
+import GlossaryText from "@/components/GlossaryText";
 
 export function generateStaticParams() {
   return teologiaHistorica.map((s) => ({ slug: s.slug }));
@@ -58,7 +59,7 @@ export default async function THDetailPage({
               Introducción
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.introduccion}
+              <GlossaryText text={mod.introduccion} />
             </div>
           </section>
 
@@ -68,7 +69,7 @@ export default async function THDetailPage({
               Contexto Histórico
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.contextHistorico}
+              <GlossaryText text={mod.contextHistorico} />
             </div>
           </section>
 
@@ -78,7 +79,7 @@ export default async function THDetailPage({
               Problema Teológico
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.problemaTeologico}
+              <GlossaryText text={mod.problemaTeologico} />
             </div>
           </section>
 
@@ -88,7 +89,7 @@ export default async function THDetailPage({
               Enseñanza de la Iglesia
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.ensenanzaIglesia}
+              <GlossaryText text={mod.ensenanzaIglesia} />
             </div>
           </section>
 
@@ -111,7 +112,7 @@ export default async function THDetailPage({
               Error o Herejía
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.errorHerejia}
+              <GlossaryText text={mod.errorHerejia} />
             </div>
           </section>
 
@@ -121,7 +122,7 @@ export default async function THDetailPage({
               Respuesta de la Iglesia
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.respuestaIglesia}
+              <GlossaryText text={mod.respuestaIglesia} />
             </div>
           </section>
 
@@ -131,7 +132,7 @@ export default async function THDetailPage({
               Base Bíblica
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.baseBiblical}
+              <GlossaryText text={mod.baseBiblical} />
             </div>
           </section>
 
@@ -141,7 +142,7 @@ export default async function THDetailPage({
               Perspectiva Confesional (1689)
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.explicacionConfesional}
+              <GlossaryText text={mod.explicacionConfesional} />
             </div>
           </section>
 
@@ -151,7 +152,7 @@ export default async function THDetailPage({
               Aplicación Práctica
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.aplicacionPractica}
+              <GlossaryText text={mod.aplicacionPractica} />
             </div>
           </section>
 
@@ -161,7 +162,7 @@ export default async function THDetailPage({
               Resumen
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {mod.resumen}
+              <GlossaryText text={mod.resumen} />
             </div>
           </section>
 

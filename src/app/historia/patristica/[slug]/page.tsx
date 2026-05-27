@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import patristica from "@/data/patristica";
 import { svgMap } from "@/components/Diagramas";
+import GlossaryText from "@/components/GlossaryText";
 
 export function generateStaticParams() {
   return patristica.map((s) => ({ slug: s.slug }));
@@ -57,7 +58,7 @@ export default async function PatristicaDetailPage({
               En términos simples
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {sec.simple}
+              <GlossaryText text={sec.simple} />
             </div>
           </section>
 
@@ -78,7 +79,7 @@ export default async function PatristicaDetailPage({
               Más a fondo
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {sec.fondo}
+              <GlossaryText text={sec.fondo} />
             </div>
           </section>
 
@@ -87,7 +88,7 @@ export default async function PatristicaDetailPage({
               Perspectiva Confesional
             </span>
             <div className="text-sm text-text leading-relaxed whitespace-pre-line">
-              {sec.perspectivaReformada}
+              <GlossaryText text={sec.perspectivaReformada} />
             </div>
           </section>
         </div>
