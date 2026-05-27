@@ -8,12 +8,9 @@ import SearchDialog from './SearchDialog';
 const links = [
   { label: 'Inicio', href: '/' },
   { label: 'Doctrinas', href: '/#doctrinas' },
-  { label: 'Historia', href: '/historia' },
-  { label: 'Expansión', href: '/historia/expansion' },
-  { label: 'Patrística', href: '/historia/patristica' },
-  { label: 'T. Histórica', href: '/historia/teologia-historica' },
-  { label: 'MDiv', href: '/#facultad' },
   { label: 'Errores Doctrinales', href: '/#errores' },
+  { label: 'Historia', href: '/historia' },
+  { label: 'MDiv', href: '/#facultad' },
   { label: 'Confesión 1689', href: '/#confesion' },
   { label: 'Recursos', href: '/#recursos' },
 ];
