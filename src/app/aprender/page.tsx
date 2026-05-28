@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import escuelaData from '@/data/escuela';
 import historiaRedencion from '@/data/historia-redencion';
+import versiculosMalInterpretados from '@/data/versiculos-mal-interpretados';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -201,6 +202,80 @@ export default function AprenderPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Corrección Pastoral
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Versículos mal interpretados
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-2xl mx-auto">
+              Algunos de los versículos más conocidos son también los más
+              malinterpretados. Aquí los examinamos pastoralmente: sin burla,
+              con fidelidad al texto y aplicación correcta.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5 min-w-0">
+            {versiculosMalInterpretados.map((v) => (
+              <div key={v.id} className="bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md">
+                <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
+                <div className="p-5">
+                  <h3 className="text-text font-semibold text-base mb-1">
+                    {v.pasaje}
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {v.citas.map((ref) => (
+                      <span key={ref} className="text-[10px] text-gold bg-gold/10 border border-gold/20 px-2 py-0.5 rounded">
+                        {ref}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-xs font-semibold text-gold uppercase tracking-wider">
+                        Lo que muchos piensan
+                      </span>
+                      <p className="text-text text-sm leading-relaxed mt-0.5">
+                        {v.loQueMuchosPiensan}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-xs font-semibold text-gold uppercase tracking-wider">
+                        Contexto real
+                      </span>
+                      <p className="text-text text-sm leading-relaxed mt-0.5">
+                        {v.contextoReal}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-xs font-semibold text-gold uppercase tracking-wider">
+                        Significado real
+                      </span>
+                      <p className="text-text text-sm leading-relaxed mt-0.5">
+                        {v.significadoReal}
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-xs font-semibold text-gold uppercase tracking-wider">
+                        Aplicación correcta
+                      </span>
+                      <p className="text-text text-sm leading-relaxed mt-0.5">
+                        {v.aplicacionCorrecta}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
