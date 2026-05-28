@@ -221,9 +221,10 @@ export default function AprenderPage() {
           </h1>
           <div className="mx-auto w-16 h-px bg-gold/50 my-5" />
           <p className="text-text-2 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            No es un seminario. Es un lugar para sentarse a aprender la sana
-            doctrina con calma, orden y reverencia. Desde el que empieza desde
-            cero hasta el que lleva años, todos encuentran aquí alimento sólido.
+            Es una guía para ayudarte a conocer la sana doctrina con orden y
+            reverencia. No pretende abarcar todos los temas teológicos, pero sí
+            los más puntuales que edifican la vida espiritual y contribuyen al
+            avance del reino de Dios.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
