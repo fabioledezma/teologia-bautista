@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import { niveles, type Question } from "@/data/test";
+import GlossaryText from "@/components/GlossaryText";
 
 type Phase = "inicio" | "jugando" | "resultado";
 type AnswerMap = Record<number, number[]>;
@@ -61,6 +62,7 @@ export default function TestPage() {
   const [animateIn, setAnimateIn] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
   const resultRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (showConfetti) {
@@ -98,6 +100,9 @@ export default function TestPage() {
     setIsCorrect(correct);
     setShowExplanation(true);
     setAnswers((prev) => ({ ...prev, [q.id]: selected }));
+    setTimeout(() => {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
   };
 
   const nextQuestion = () => {
@@ -327,6 +332,7 @@ export default function TestPage() {
 
         {/* Question card */}
         <div
+          ref={cardRef}
           className={`transition-all duration-300 ${
             animateIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
@@ -350,7 +356,7 @@ export default function TestPage() {
 
               {/* Question text */}
               <h2 className="font-serif text-xl md:text-2xl text-text leading-snug mb-6">
-                {q.question}
+                <GlossaryText text={q.question} />
               </h2>
 
               {/* Options */}
@@ -390,7 +396,7 @@ export default function TestPage() {
                             {isSelected || isCorrectOption || isWrongOption ? "✓" : String.fromCharCode(65 + idx)}
                           </span>
                         )}
-                        <span className="text-text text-sm leading-relaxed">{opt}</span>
+                        <span className="text-text text-sm leading-relaxed"><GlossaryText text={opt} /></span>
                       </span>
                     </button>
                   );
@@ -435,7 +441,7 @@ export default function TestPage() {
                   {/* Explanation */}
                   <div className="bg-surface-1 border border-border rounded-xl p-5">
                     <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">Explicación</span>
-                    <p className="text-text text-sm leading-relaxed mt-1">{q.explanation}</p>
+                    <p className="text-text text-sm leading-relaxed mt-1"><GlossaryText text={q.explanation} /></p>
                     {q.escritura && (
                       <p className="text-text-3 text-xs mt-2 italic">
                         Referencia: {q.escritura}
