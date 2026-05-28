@@ -13,6 +13,8 @@ import mapasData from '@/data/mapas';
 import conexionesData from '@/data/conexiones';
 import temasTransversalesData from '@/data/temas-transversales';
 import promesasData from '@/data/promesas';
+import GlossaryText from '@/components/GlossaryText';
+import TextToSpeech from '@/components/TextToSpeech';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -24,13 +26,18 @@ function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number
     { id: 'errores', label: 'Errores Comunes', content: tema.errores },
   ];
 
+  const ttsSections = layers.map(l => ({ title: l.label, content: l.content }));
+
   return (
     <div className="bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
       <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
       <div className="p-5">
-        <h3 className="text-text font-semibold text-base mb-3">
-          {tema.title}
-        </h3>
+        <div className="flex items-center justify-between gap-2 mb-3">
+          <h3 className="text-text font-semibold text-base">
+            {tema.title}
+          </h3>
+          <TextToSpeech sections={ttsSections} />
+        </div>
 
         <div className="space-y-1.5">
           {layers.map((layer) => (
@@ -62,7 +69,7 @@ function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number
                 }`}
               >
                 <div className="px-3.5 py-3 bg-surface border border-border/60 rounded-lg text-text text-sm leading-relaxed">
-                  {layer.content}
+                  <GlossaryText text={layer.content} />
                 </div>
               </div>
             </div>
@@ -107,9 +114,7 @@ function CatecismoItem({ entry }: { entry: (typeof catecismoData)[number] }) {
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}>
         <div className="px-4 pb-4 pt-0 border-t border-border/50">
-          <p className="text-text text-sm leading-relaxed mt-3">
-            {entry.respuesta}
-          </p>
+          <GlossaryText className="text-text text-sm leading-relaxed mt-3" text={entry.respuesta} />
           <div className="flex items-center gap-1.5 mt-2">
             <svg className="w-3 h-3 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -149,16 +154,12 @@ function DevocionalCard({ devocional }: { devocional: (typeof devocionalesData)[
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}>
         <div className="px-5 pb-5 pt-0 border-t border-border/50">
-          <p className="text-text text-xs leading-relaxed mt-3">
-            {devocional.meditacion}
-          </p>
+          <GlossaryText className="text-text text-xs leading-relaxed mt-3" text={devocional.meditacion} />
           <div className="mt-3 p-3 bg-gold/5 border border-gold/10 rounded-lg">
             <span className="text-[10px] uppercase tracking-wider text-gold font-semibold block mb-1">
               Oración
             </span>
-            <p className="text-text text-xs leading-relaxed italic">
-              {devocional.oracion}
-            </p>
+            <GlossaryText className="text-text text-xs leading-relaxed italic" text={devocional.oracion} />
           </div>
         </div>
       </div>
@@ -354,33 +355,25 @@ export default function AprenderPage() {
                       <span className="text-xs font-semibold text-gold uppercase tracking-wider">
                         Lo que muchos piensan
                       </span>
-                      <p className="text-text text-sm leading-relaxed mt-0.5">
-                        {v.loQueMuchosPiensan}
-                      </p>
+                      <GlossaryText className="text-text text-sm leading-relaxed mt-0.5" text={v.loQueMuchosPiensan} />
                     </div>
                     <div>
                       <span className="text-xs font-semibold text-gold uppercase tracking-wider">
                         Contexto real
                       </span>
-                      <p className="text-text text-sm leading-relaxed mt-0.5">
-                        {v.contextoReal}
-                      </p>
+                      <GlossaryText className="text-text text-sm leading-relaxed mt-0.5" text={v.contextoReal} />
                     </div>
                     <div>
                       <span className="text-xs font-semibold text-gold uppercase tracking-wider">
                         Significado real
                       </span>
-                      <p className="text-text text-sm leading-relaxed mt-0.5">
-                        {v.significadoReal}
-                      </p>
+                      <GlossaryText className="text-text text-sm leading-relaxed mt-0.5" text={v.significadoReal} />
                     </div>
                     <div>
                       <span className="text-xs font-semibold text-gold uppercase tracking-wider">
                         Aplicación correcta
                       </span>
-                      <p className="text-text text-sm leading-relaxed mt-0.5">
-                        {v.aplicacionCorrecta}
-                      </p>
+                      <GlossaryText className="text-text text-sm leading-relaxed mt-0.5" text={v.aplicacionCorrecta} />
                     </div>
                   </div>
                 </div>
@@ -419,9 +412,7 @@ export default function AprenderPage() {
                     <span className="text-[10px] text-gold uppercase tracking-wider">
                       {punto.base}
                     </span>
-                    <p className="text-text-2 text-xs leading-relaxed mt-2">
-                      {punto.explicacion}
-                    </p>
+                    <GlossaryText className="text-text-2 text-xs leading-relaxed mt-2" text={punto.explicacion} />
                     <div className="flex items-center gap-1.5 mt-2">
                       <svg className="w-3 h-3 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -477,9 +468,7 @@ export default function AprenderPage() {
                   <h3 className="text-text font-semibold text-sm mb-2">
                     {area.titulo}
                   </h3>
-                  <p className="text-text-2 text-xs leading-relaxed mb-3">
-                    {area.descripcion}
-                  </p>
+                  <GlossaryText className="text-text-2 text-xs leading-relaxed mb-3" text={area.descripcion} />
 
                   <div className="mb-3">
                     <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
@@ -499,18 +488,14 @@ export default function AprenderPage() {
                     <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                       Fundamento bíblico
                     </span>
-                    <p className="text-text text-xs leading-relaxed mt-0.5">
-                      {area.fundamento}
-                    </p>
+                    <GlossaryText className="text-text text-xs leading-relaxed mt-0.5" text={area.fundamento} />
                   </div>
 
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
                       Actitud pastoral
                     </span>
-                    <p className="text-text text-xs leading-relaxed mt-0.5 italic">
-                      {area.actitud}
-                    </p>
+                    <GlossaryText className="text-text text-xs leading-relaxed mt-0.5 italic" text={area.actitud} />
                   </div>
                 </div>
               </div>
