@@ -5,6 +5,7 @@ import FacultySection from '@/components/FacultySection';
 import ConfesionSection from '@/components/ConfesionSection';
 import RecursosSection from '@/components/RecursosSection';
 import ChatBot from '@/components/ChatBot';
+import EscuelaBanner from '@/components/EscuelaBanner';
 
 export default function HomePage() {
   return (
@@ -89,6 +90,8 @@ export default function HomePage() {
       </section>
 
       <DoctrinasGrid />
+
+      <EscuelaBanner />
 
       <ConfesionSection />
 

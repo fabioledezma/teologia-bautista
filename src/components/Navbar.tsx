@@ -8,6 +8,7 @@ import SearchDialog from './SearchDialog';
 const links = [
   { label: 'Inicio', href: '/' },
   { label: 'Doctrinas', href: '/#doctrinas' },
+  { label: 'Escuela', href: '/aprender' },
   { label: 'Confesión 1689', href: '/#confesion' },
   { label: 'Errores/Herejías', href: '/#errores' },
   { label: 'Historia', href: '/historia' },
@@ -35,7 +36,7 @@ export default function Navbar() {
       }
       setLastScrollY(currentScrollY);
 
-      const sections = ['doctrinas', 'confesion', 'errores', 'historia', 'facultad', 'recursos'];
+      const sections = ['doctrinas', 'aprender', 'confesion', 'errores', 'historia', 'facultad', 'recursos'];
       for (const id of sections) {
         const el = document.getElementById(id);
         if (el) {
