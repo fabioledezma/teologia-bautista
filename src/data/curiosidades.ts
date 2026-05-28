@@ -32,7 +32,7 @@ export const curiosidades: Curiosidad[] = [
   {
     icono: "🦛",
     texto:
-      "La Biblia describe a 'Behemot' en Job 40:15-24 con cola como cedro y huesos como bronce. Muchos teólogos reformados (como Matthew Henry) lo identifican como un dinosaurio. Ningún animal conocido tiene una cola descrita como un cedro.",
+      "La Biblia describe a 'Behemot' en Job 40:15-24 con cola como cedro y huesos como bronce. Algunos comentaristas reformados (como Matthew Henry) lo identificaban como un elefante o hipopótamo, no como un dinosaurio — el término 'dinosaurio' no existía en el siglo XVII. La descripción poética sigue siendo un enigma que solo Dios conoce.",
   },
   {
     icono: "🧓",
@@ -87,7 +87,7 @@ export const curiosidades: Curiosidad[] = [
   {
     icono: "☘️",
     texto:
-      "San Patricio no era irlandés. Nació en Britania, fue secuestrado por piratas irlandeses a los 16 años, escapó, y luego regresó voluntariamente para predicar el evangelio a la misma gente que lo esclavizó.",
+      "Patricio de Irlanda no era irlandés. Nació en Britania, fue secuestrado por piratas irlandeses a los 16 años, escapó, y luego regresó voluntariamente para predicar el evangelio a la misma gente que lo esclavizó.",
   },
   {
     icono: "📖",
@@ -123,5 +123,130 @@ export const curiosidades: Curiosidad[] = [
     icono: "🎙️",
     texto:
       "Charles Spurgeon predicó a más de 10 millones de personas en su vida sin radio ni televisión. A los 20 años ya era el predicador más popular de Londres. Se estima que predicó ~3.600 sermones, todos publicados y aún leídos hoy.",
+  },
+  {
+    icono: "📜",
+    texto:
+      "La Estela de Tel Dan (siglo IX a.C.) menciona la 'Casa de David' — la primera evidencia arqueológica fuera de la Biblia de la dinastía del rey David, confirmando que David no fue un mito inventado siglos después como algunos críticos afirman.",
+  },
+  {
+    icono: "🧱",
+    texto:
+      "La Piedra Moabita (Mesha Stele, 840 a.C.) registra la rebelión de Mesa, rey de Moab, contra Israel. Confirma el relato de 2 Reyes 3 y menciona al 'Dios de Israel' y al rey Omri. Es uno de los hallazgos arqueológicos más importantes del Antiguo Testamento.",
+  },
+  {
+    icono: "🪨",
+    texto:
+      "La Piedra de Pilato (descubierta en 1961 en Cesarea) confirmó la existencia histórica de Poncio Pilato como prefecto de Judea. La inscripción dice: 'Tiberieum Pontius Pilatus'. Hasta su descubrimiento, algunos escépticos dudaban de que Pilato fuera una figura histórica real.",
+  },
+  {
+    icono: "⚰️",
+    texto:
+      "El osario de Caifás (descubierto en 1990) contenía los huesos del sumo sacerdote Caifás, el mismo que presidió el juicio de Jesús (Mateo 26). La inscripción dice 'José, hijo de Caifás' y la evidencia arqueológica coincide con el período neotestamentario.",
+  },
+  {
+    icono: "🌴",
+    texto:
+      "El nombre 'Belén' significa 'casa de pan' en hebreo. Es apropiado que Jesús, el 'Pan de Vida', naciera allí. Además, la profecía de Miqueas 5:2 la menciona como la ciudad más pequeña de Judá, pero de donde saldría el gobernante de Israel.",
+  },
+  {
+    icono: "✡️",
+    texto:
+      "David tuvo un grupo de guerreros de élite llamados 'los valientes de David' (2 Samuel 23). Entre ellos, Josab-Basebet mató a 800 hombres en una batalla, Eleazar luchó hasta que su mano se quedó pegada a la espada, y Benaía mató a un león en un foso en día de nieve.",
+  },
+  {
+    icono: "🏛️",
+    texto:
+      "El estanque de Betesda tenía cinco pórticos (Juan 5:2). Durante excavaciones en el siglo XIX, los arqueólogos descubrieron exactamente eso: un estanque con cinco columnatas, justo como el Evangelio lo describe, confirmando la precisión histórica de Juan.",
+  },
+  {
+    icono: "🕊️",
+    texto:
+      "Hay más de 300 profecías mesiánicas en el Antiguo Testamento, todas cumplidas en Jesucristo. Solo de Su nacimiento: de la simiente de la mujer (Gn 3:15), de la tribu de Judá (Gn 49:10), de la casa de David (2 S 7:12-13), nacido de una virgen (Is 7:14), en Belén (Miq 5:2).",
+  },
+  {
+    icono: "📚",
+    texto:
+      "Los Rollos del Mar Muerto (descubiertos en 1947) incluyen el Gran Rollo de Isaías — 54 columnas del texto de Isaías, 1.000 años más antiguo que cualquier manuscrito hebreo conocido hasta entonces. Es 95% idéntico al texto medieval, demostrando la increíble fidelidad de la transmisión textual.",
+  },
+  {
+    icono: "⚱️",
+    texto:
+      "El Arca del Pacto desapareció tras la destrucción de Jerusalén por Babilonia en 586 a.C. Jeremías 3:16 profetiza que en el Nuevo Pacto ni siquiera se mencionará el Arca. Hebreos 9:4 la describe en el tabernáculo, pero desde el exilio en adelante, la Biblia guarda silencio sobre su paradero.",
+  },
+  {
+    icono: "📖",
+    texto:
+      "La palabra 'Calvario' solo aparece una vez en la Reina-Valera (Lucas 23:33). Viene del latín calvaria ('cráneo'), que traduce el griego kranion. El nombre hebreo es Gólgota, que también significa 'cráneo' — probablemente por la forma del monte donde crucificaron a Jesús.",
+  },
+  {
+    icono: "🛐",
+    texto:
+      "El Catecismo de Heidelberg (1563) está dividido en 52 'Días del Señor' — uno para cada domingo del año. Fue diseñado para ser predicado semanalmente. Su primera pregunta: '¿Cuál es tu único consuelo en la vida y en la muerte?' Respuesta: 'Que soy de Jesucristo'.",
+  },
+  {
+    icono: "⛓️",
+    texto:
+      "Juan Knox, el reformador escocés, fue esclavo en galeras francesas durante 19 meses tras ser capturado. Atado al remo, predijo que liberaría a Escocia. Años después, lideró la Reforma escocesa y escribió su obra más famosa: 'El primer toque de trompeta contra el monstruoso regimiento de mujeres'.",
+  },
+  {
+    icono: "📕",
+    texto:
+      "La Biblia de Ginebra (1560) tenía notas marginales que enfurecieron al rey Jacobo I porque desafiaban el derecho divino de los reyes. Una nota en Éxodo 1:19 decía que las parteras hebreas 'desobedecieron al rey por temor a Dios' — lo que Jacobo consideraba peligroso para su autoridad.",
+  },
+  {
+    icono: "🎓",
+    texto:
+      "Harvard College fue fundado en 1636 principalmente para capacitar ministros puritanos. Su lema original era 'Veritas Christo et Ecclesiae' (Verdad para Cristo y la Iglesia). De sus primeros 500 graduados, más de la mitad se hicieron pastores.",
+  },
+  {
+    icono: "⚔️",
+    texto:
+      "Los Cánones de Dort (1618-1619) fueron escritos por un sínodo internacional con delegados de toda Europa para responder a los cinco puntos del arminianismo. Dieron origen a los conocidos 'Cinco Puntos del Calvinismo' (TULIP), aunque el acrónimo es del siglo XX.",
+  },
+  {
+    icono: "🔔",
+    texto:
+      "La palabra 'bautizar' NO es una traducción, sino una transliteración del griego baptizō. Los reformadores deliberadamente NO la tradujeron para que la iglesia católica no pudiera redefinirla. En alemán, Lutero usó taufen (sumergir), no una transliteración.",
+  },
+  {
+    icono: "📖",
+    texto:
+      "El libro de Ester nunca menciona explícitamente a Dios. Sin embargo, la providencia divina está tejida en cada detalle: desde el momento preciso en que Ester llega al trono hasta el insomnio del rey que salva a los judíos. Es el ejemplo clásico de la providencia detrás del escenario.",
+  },
+  {
+    icono: "👑",
+    texto:
+      "La Biblia no dice cuántos 'reyes magos' visitaron a Jesús. Mateo 2 menciona tres regalos (oro, incienso y mirra), pero no especifica cuántos hombres los trajeron. La tradición de tres magos surgió siglos después, asumiendo un mago por regalo.",
+  },
+  {
+    icono: "🏃",
+    texto:
+      "El apóstol Tomás llevó el evangelio hasta la India según la tradición más antigua de la iglesia. Hoy existe una comunidad cristiana llamada 'Mar Thoma' (Santo Tomás) que data del siglo I. La iglesia en India es tan antigua como cualquier otra fuera de Jerusalén.",
+  },
+  {
+    icono: "☀️",
+    texto:
+      "El Salmo 119 tiene 176 versículos — el capítulo más largo de la Biblia. Está estructurado como un acróstico alfabético: 22 secciones de 8 versículos cada una, cada sección comenzando con una letra del alfabeto hebreo. Todo el salmo exalta la Palabra de Dios.",
+  },
+  {
+    icono: "🕯️",
+    texto:
+      "Juan Hus (c. 1372-1415), precursor de la Reforma, fue quemado en la hoguera por sus enseñanzas. Mientras ardía, predijo: 'Hoy queman a un ganso [Hus significa 'ganso' en checo], pero dentro de cien años se levantará un cisne'. Exactamente 102 años después, Lutero clavó las 95 tesis.",
+  },
+  {
+    icono: "🌍",
+    texto:
+      "La Biblia fue escrita por ~40 autores en 3 continentes (Asia, África, Europa) a lo largo de ~1.500 años, en 3 idiomas (hebreo, arameo, griego). A pesar de esta diversidad, cuenta una sola historia coherente: la redención de un pueblo por Dios a través de Cristo.",
+  },
+  {
+    icono: "⛪",
+    texto:
+      "La Primera Confesión Bautista de Londres (1644) fue firmada originalmente por solo 7 iglesias. Para 1646, 15 iglesias la habían suscrito. Defendía el bautismo del creyente, el gobierno congregacional y la teología reformada — estableciendo la identidad bautista particular.",
+  },
+  {
+    icono: "🎵",
+    texto:
+      "Benjamín Keach (1640-1704), pastor bautista particular, introdujo el canto de himnos en las iglesias bautistas. Esto fue tan controversial que casi provoca un cisma. Keach escribió himnos y defendió su uso bíblico desde Efesios 5:19 y Colosenses 3:16.",
   },
 ]
