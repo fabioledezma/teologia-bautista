@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import escuelaData from '@/data/escuela';
+import historiaRedencion from '@/data/historia-redencion';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -136,6 +137,73 @@ export default function AprenderPage() {
           </div>
         </div>
       ))}
+
+      <section className="py-16 md:py-24 bg-surface-1">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-14">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Historia de la Redención
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              La Biblia como una sola historia
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-2xl mx-auto">
+              La Biblia no es una colección de frases sueltas ni de historias
+              inconexas. Es una sola historia: la revelación progresiva de Dios
+              que culmina en Jesucristo. Desde la creación hasta la nueva
+              creación, todo apunta a Él.
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gold/20 -translate-x-1/2 hidden md:block" />
+
+            <div className="space-y-12">
+              {historiaRedencion.map((etapa, i) => (
+                <div key={etapa.id} className="relative md:grid md:grid-cols-2 gap-8 md:gap-12">
+                  <div className={`${i % 2 === 0 ? 'md:text-right md:pr-8' : 'md:col-start-2 md:pl-8'}`}>
+                    <div className="inline-flex items-center gap-2 mb-2">
+                      <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/20">
+                        {etapa.periodo}
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-xl md:text-2xl text-text mb-2">
+                      {etapa.titulo}
+                    </h3>
+                    <p className="text-text-2 text-sm leading-relaxed">
+                      {etapa.resumen}
+                    </p>
+                  </div>
+
+                  <div className={`mt-4 md:mt-0 ${i % 2 === 0 ? 'md:pl-8' : 'md:col-start-1 md:row-start-1 md:text-right md:pr-8'}`}>
+                    <div className="bg-surface-card border border-border rounded-xl p-5">
+                      <div className="flex items-center gap-2 mb-2">
+                        <svg className="w-4 h-4 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <span className="text-xs font-semibold text-gold uppercase tracking-wider">
+                          Cumplido en Cristo
+                        </span>
+                      </div>
+                      <p className="text-text text-sm leading-relaxed">
+                        {etapa.cumpleCristo}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5 mt-3">
+                        {etapa.escrituras.map((ref) => (
+                          <span key={ref} className="text-[10px] text-gold bg-gold/10 border border-gold/20 px-2 py-0.5 rounded">
+                            {ref}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-20 bg-surface-1 bg-dot-pattern">
         <div className="max-w-3xl mx-auto px-5 text-center">
