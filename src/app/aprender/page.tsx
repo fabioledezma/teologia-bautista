@@ -5,6 +5,7 @@ import escuelaData from '@/data/escuela';
 import historiaRedencion from '@/data/historia-redencion';
 import versiculosMalInterpretados from '@/data/versiculos-mal-interpretados';
 import areasDiscernimiento from '@/data/discernimiento';
+import catecismoData from '@/data/catecismo';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -59,6 +60,55 @@ function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CatecismoItem({ entry }: { entry: (typeof catecismoData)[number] }) {
+  const [open, setOpen] = useState(false);
+
+  const temaColors: Record<string, string> = {
+    Dios: 'bg-amber-900/20 text-amber-600 border-amber-800/20',
+    Escritura: 'bg-blue-900/20 text-blue-400 border-blue-800/20',
+    Hombre: 'bg-red-900/20 text-red-400 border-red-800/20',
+    Cristo: 'bg-gold/10 text-gold border-gold/20',
+    Salvación: 'bg-emerald-900/20 text-emerald-400 border-emerald-800/20',
+    Iglesia: 'bg-purple-900/20 text-purple-400 border-purple-800/20',
+    'Vida cristiana': 'bg-teal-900/20 text-teal-400 border-teal-800/20',
+    'Últimas cosas': 'bg-orange-900/20 text-orange-400 border-orange-800/20',
+  };
+
+  return (
+    <div className="bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-200">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center gap-3 p-4 text-left"
+      >
+        <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-gold/10 flex items-center justify-center">
+          <svg className={`w-3.5 h-3.5 text-gold transition-transform duration-200 ${open ? 'rotate-45' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+          </svg>
+        </span>
+        <span className="flex-1 text-text text-sm font-medium leading-snug">
+          {entry.pregunta}
+        </span>
+        <span className={`text-[10px] px-2 py-0.5 rounded-full border ${temaColors[entry.tema] || 'bg-gold/10 text-gold border-gold/20'}`}>
+          {entry.tema}
+        </span>
+      </button>
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}>
+        <div className="px-4 pb-4 pt-0 border-t border-border/50">
+          <p className="text-text text-sm leading-relaxed mt-3">
+            {entry.respuesta}
+          </p>
+          <div className="flex items-center gap-1.5 mt-2">
+            <svg className="w-3 h-3 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span className="text-[11px] text-text-3">{entry.escritura}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -343,6 +393,31 @@ export default function AprenderPage() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Catecismo
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Catecismo Bautista Confesional
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              Preguntas y respuestas basadas en el Catecismo Bautista de 1693
+              (Keach). Una herramienta pedagógica para aprender doctrina de
+              manera progresiva y ordenada.
+            </p>
+          </div>
+
+          <div className="space-y-3 max-w-3xl mx-auto min-w-0">
+            {catecismoData.map((entry) => (
+              <CatecismoItem key={entry.id} entry={entry} />
             ))}
           </div>
         </div>
