@@ -14,6 +14,7 @@ const links = [
   { label: 'Historia', href: '/historia' },
   { label: 'Interpretación', href: '/hermeneutica' },
   { label: 'Test', href: '/test' },
+  { label: 'Test Avanzado', href: '/test/avanzado' },
   { label: 'Recursos', href: '/#recursos' },
   { label: 'MDiv', href: '/#facultad' },
 ];
