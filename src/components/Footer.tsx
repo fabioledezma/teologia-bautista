@@ -76,18 +76,18 @@ export default function Footer() {
         <div className="mt-10 sm:mt-14 lg:mt-16 pt-6 sm:pt-8 border-t border-border relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
           <p className="text-xs sm:text-sm text-text-3 text-center leading-relaxed">
-            En alianza con los principios doctrinales de{' '}
+            Tomando en cuenta algunos materiales de{' '}
             <a
               href="https://cbtseminary.org"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-2 hover:text-gold transition-colors underline underline-offset-2 whitespace-nowrap"
             >
-              Covenant Baptist Theological Seminary
+              Covenant Baptist Theological Seminary (CBTS)
             </a>
           </p>
           <p className="text-xs sm:text-sm text-text-3 text-center mt-1.5 sm:mt-2">
-            Soli Deo Gloria &mdash; &copy; 2026 &mdash; En alianza con CBTS
+            Soli Deo Gloria &mdash; &copy; 2026 &mdash; Tomando en cuenta algunos materiales de CBTS
           </p>
         </div>
       </div>
