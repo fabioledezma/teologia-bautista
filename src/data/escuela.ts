@@ -30,7 +30,7 @@ const escuelaData: NivelEscuela[] = [
         title: "¿Qué es la Biblia?",
 
         simple:
-          "La Biblia es la Palabra de Dios escrita. Es el libro donde Dios habla a los seres humanos. No es un libro cualquiera: fue inspirada por Dios mismo, lo que significa que cada palabra fue guiada por Él para enseñarnos quién es, qué ha hecho y cómo debemos vivir.",
+          "La Biblia es la Palabra de Dios escrita. Es el libro donde Dios habla a Su pueblo. No es un libro cualquiera: fue inspirada por Dios mismo, lo que significa que cada palabra fue guiada por Él para enseñarnos quién es, qué ha hecho y cómo debemos vivir.",
         fondo:
           "La Biblia es la revelación especial de Dios. La iglesia siempre ha creído que la Escritura es inspirada verbal y plenariamente (2 Ti 3:16-17), inerrante en sus manuscritos originales, y suficiente para toda fe y práctica. No necesita ser aumentada por tradiciones humanas, revelaciones privadas o experiencias subjetivas. La Reforma recuperó esta verdad bajo el principio de *Sola Scriptura*: la Escritura es la autoridad máxima y final para el creyente y la iglesia.",
         aplicacion:
