@@ -130,18 +130,119 @@ const escuelaData: NivelEscuela[] = [
         errores:
           "Algunos enseñan que Cristo murió por todos sin excepción, pero no todos se salvan (universalismo hipotético o arminianismo). Otros niegan que la muerte de Cristo fue un pago por el pecado, diciendo que fue solo un ejemplo de amor (Socinianismo). Otros enseñan que la expiación fue limitada solo en su aplicación, no en su diseño. También está el error de la teoría del rescate a Satanás.",
       },
+  {
+    id: "que-es-arrepentimiento",
+    title: "¿Qué es el arrepentimiento?",
+    icon: "💔",
+    simple:
+      "Arrepentimiento no es solo sentir tristeza por haber pecado. Es un cambio de mente y de corazón que lleva a cambiar de dirección. Es apartarse del pecado y volverse a Dios. No es simplemente 'pedir perdón', sino abandonar el pecado y correr hacia Cristo.",
+    fondo:
+      "El arrepentimiento es un don de Dios (Hch 11:18; 2 Ti 2:25) que obra en el creyente junto con la fe. No es una obra que anteceda a la gracia, sino parte de la misma obra de gracia. El arrepentimiento genuino incluye: convicción de pecado (darse cuenta de la ofensa contra Dios), contrición (tristeza según Dios, 2 Co 7:10), confesión (nombrar el pecado específicamente), y conversión (abandonar activamente el pecado y buscar la justicia). No es un evento único, sino una actitud continua en la vida del creyente. El arrepentimiento no es 'propósito de enmienda' por fuerzas propias, sino un volverse a Dios confiando en Su gracia.",
+    aplicacion:
+      "Examina tu vida regularmente. ¿Hay pecados que toleras? ¿Áreas que no has rendido a Dios? El arrepentimiento no es una vez al año, sino el aire que respira el cristiano: cada día reconoces tu pecado y corres a Cristo. No te arrepientas solo por miedo al castigo, sino porque has ofendido a un Dios santo y amoroso. El verdadero arrepentimiento trae frutos: restitución, cambios concretos, odio al pecado.",
+    errores:
+      "Algunos enseñan que el arrepentimiento no es necesario para la salvación, solo 'creer' (easy-believism). Otros lo confunden con prometer no pecar más por fuerzas propias. También está el error del 'arrepentimiento' meramente emocional: llorar sin cambiar. El legalismo enseña que hay que arrepentirse para ser aceptado; el evangelio enseña que nos arrepentimos porque ya somos aceptados en Cristo.",
+  },
+    ],
+  },
+  {
+    id: "leer-la-biblia",
+    nivel: 2,
+    title: "Aprender a Leer la Biblia",
+    subtitle: "Cómo interpretar correctamente la Escritura",
+    descripcion:
+      "Muchos errores doctrinales nacen de leer mal la Biblia. Este nivel te enseña a interpretar correctamente: entender el contexto, distinguir entre descripción y mandato, dejar que la Escritura se interprete a sí misma, y evitar las trampas hermenéuticas más comunes. Aquí es donde el crecimiento real comienza.",
+    temas: [
       {
-        id: "que-es-arrepentimiento",
-        title: "¿Qué es el arrepentimiento?",
-        icon: "💔",
+        id: "que-es-contexto",
+        title: "¿Qué es el contexto y por qué importa?",
+        icon: "📐",
         simple:
-          "Arrepentimiento no es solo sentir tristeza por haber pecado. Es un cambio de mente y de corazón que lleva a cambiar de dirección. Es apartarse del pecado y volverse a Dios. No es simplemente 'pedir perdón', sino abandonar el pecado y correr hacia Cristo.",
+          "Contexto es todo lo que rodea a un versículo: quién lo escribió, a quién, por qué, en qué situación, y qué dice antes y después. Sacar un versículo de su contexto es como tomar una frase suelta de una carta sin saber de qué habla la carta entera. El contexto es la regla más básica de la interpretación bíblica.",
         fondo:
-          "El arrepentimiento es un don de Dios (Hch 11:18; 2 Ti 2:25) que obra en el creyente junto con la fe. No es una obra que anteceda a la gracia, sino parte de la misma obra de gracia. El arrepentimiento genuino incluye: convicción de pecado (darse cuenta de la ofensa contra Dios), contrición (tristeza según Dios, 2 Co 7:10), confesión (nombrar el pecado específicamente), y conversión (abandonar activamente el pecado y buscar la justicia). No es un evento único, sino una actitud continua en la vida del creyente. El arrepentimiento no es 'propósito de enmienda' por fuerzas propias, sino un volverse a Dios confiando en Su gracia.",
+          "El principio reformado de la *Scriptura sui ipsius interpres* (la Escritura se interpreta a sí misma) requiere que ningún pasaje se interprete aisladamente. Hay tres niveles de contexto: inmediato (versículos alrededor del pasaje), literario (el libro completo y su género), e histórico (circunstancias del autor y la audiencia original). Ignorar el contexto es la puerta de entrada a casi todas las herejías. Como dice el proverbio: 'Un texto fuera de contexto es un pretexto para el error'.",
         aplicacion:
-          "Examina tu vida regularmente. ¿Hay pecados que toleras? ¿Áreas que no has rendido a Dios? El arrepentimiento no es una vez al año, sino el aire que respira el cristiano: cada día reconoces tu pecado y corres a Cristo. No te arrepientas solo por miedo al castigo, sino porque has ofendido a un Dios santo y amoroso. El verdadero arrepentimiento trae frutos: restitución, cambios concretos, odio al pecado.",
+          "Antes de interpretar un versículo, lee todo el capítulo. Pregunta: ¿Quién habla? ¿A quién? ¿Por qué? ¿Qué dice el pasaje completo? No construyas una doctrina sobre un solo versículo aislado. Usa una Biblia de estudio y mira las referencias cruzadas. Si una interpretación contradice el resto de la Escritura, está mal.",
         errores:
-          "Algunos enseñan que el arrepentimiento no es necesario para la salvación, solo 'creer' (easy-believism). Otros lo confunden con prometer no pecar más por fuerzas propias. También está el error del 'arrepentimiento' meramente emocional: llorar sin cambiar. El legalismo enseña que hay que arrepentirse para ser aceptado; el evangelio enseña que nos arrepentimos porque ya somos aceptados en Cristo.",
+          "El error más común es citar versículos sueltos sin considerar su contexto, como usar Jeremías 29:11 ('planes de bien') fuera de su contexto de exilio, o Filipenses 4:13 ('todo lo puedo') sin el 'en Cristo que me fortalece'. Otros ignoran el género literario: leer poesía como si fuera ley, o profecía como si fuera historia.",
+      },
+      {
+        id: "como-leer-capitulo",
+        title: "Cómo leer un capítulo bíblico",
+        icon: "📖",
+        simple:
+          "Un capítulo bíblico no es una colección de versículos sueltos, sino una unidad de pensamiento. Para entenderlo bien, léelo completo de una vez, identifica el tema principal, nota las conexiones entre versículos, y pregúntate qué enseña sobre Dios, el hombre y la salvación.",
+        fondo:
+          "Los capítulos y versículos son divisiones posteriores (el NT fue dividido en versículos en el siglo XVI), no inspiradas. Por eso es crucial leer párrafos enteros, no versículos sueltos. Cada pasaje tiene una estructura: problema-solución, promesa-exhortación, doctrina-aplicación. Para leer bien: 1) lee el pasaje completo, 2) identifica el género (narrativa, poesía, epístola, profecía), 3) busca el argumento del autor, 4) pregúntate cómo este pasaje apunta a Cristo (Lc 24:27).",
+        aplicacion:
+          "Cuando leas un capítulo, no te detengas en medio. Léelo de corrido. Luego vuelve y subraya las ideas principales. Pregunta: ¿Qué aprendo de Dios? ¿Qué aprendo de mí? ¿Hay un mandato a obedecer? ¿Una promesa que creer? ¿Un pecado que evitar? ¿Cristo está presente aquí?",
+        errores:
+          "Muchos leen la Biblia en 'devocionales' de un versículo al día, sin conexión con el pasaje completo, y terminan con interpretaciones fragmentadas. Otros leen buscando solo lo que 'les habla' personalmente en lugar de buscar lo que el autor quiso decir. También está el error de leer todo como si fuera un manual de instrucciones, ignorando que la Biblia es principalmente historia de redención.",
+      },
+      {
+        id: "como-interpretar-versiculo",
+        title: "Cómo interpretar un versículo correctamente",
+        icon: "🔍",
+        simple:
+          "Para interpretar un versículo correctamente: 1) léelo en su pasaje completo, 2) considera quién lo escribió y a quién, 3) mira cómo se usa en el resto de la Escritura, 4) busca el significado claro y natural, y 5) aplica el principio de que la Escritura no se contradice a sí misma.",
+        fondo:
+          "La interpretación bíblica fiel sigue el método histórico-gramatical: buscar el significado que el autor quiso comunicar a su audiencia original, usando las reglas normales del lenguaje y la gramática. Esto se opone al método alegórico (buscar significados ocultos) y al existencial (lo que significa 'para mí'). El significado de un texto es uno (lo que el autor quiso decir), aunque la aplicación puede ser múltiple. El sentido literal es el sentido natural, considerando figuras retóricas, símiles y metáforas como lo que son.",
+        aplicacion:
+          "Antes de preguntar '¿qué significa esto para mí?', pregúntate '¿qué quiso decir el autor?' Usa una buena traducción (no paráfrasis) y compárala con otra. Si un versículo te parece confuso, busca en qué otros pasajes se habla del mismo tema. La Escritura aclara a la Escritura.",
+        errores:
+          "El error más común es la interpretación alegórica: buscar significados espirituales ocultos donde no los hay. Otro error es la interpretación subjetiva: 'Dios me dijo' o 'esto significa para mí' sin base en el texto. También está el error de ignorar el género literario: leer una parábola como si fuera historia literal, o un salmo como si fuera doctrina sistemática.",
+      },
+      {
+        id: "analogia-de-la-fe",
+        title: "La Biblia se interpreta a sí misma",
+        icon: "⛓️",
+        simple:
+          "Este principio significa que ningún pasaje de la Biblia debe interpretarse de manera que contradiga a otro pasaje. La Escritura es coherente porque tiene un solo Autor: Dios. Cuando un pasaje es difícil de entender, debemos buscar luz en otros pasajes más claros que hablen del mismo tema.",
+        fondo:
+          "La *Analogía de la Fe* (o *Analogía Scripturae*) es el principio reformado de que la Escritura es su propio intérprete. Esto se basa en la unidad y coherencia de la Biblia por su origen divino. Los pasajes claros iluminan a los oscuros; los didácticos (enseñanza directa) interpretan a los narrativos; el NT interpreta y cumple el AT. Por ejemplo: cómo entender el bautismo en el AT debe ser interpretado a la luz del NT. Este principio evita que construyamos doctrinas sobre pasajes aislados o difíciles.",
+        aplicacion:
+          "Cuando leas un pasaje difícil, busca lo que otros pasajes más claros enseñan sobre el mismo tema. Usa referencias cruzadas. Por ejemplo, si lees Santiago 2:24 ('justificado por obras'), compáralo con Romanos 3:28 ('justificado por fe'). No se contradicen, sino que se complementan: Pablo habla de la base de la justificación, Santiago de la evidencia. No construyas una doctrina completa a partir de un solo pasaje.",
+        errores:
+          "El error más común es aislar versículos para probar una doctrina ignorando lo que el resto de la Escritura enseña. También está el error de dar más peso a la experiencia personal, tradición o razón humana que a la Escritura misma. Otro error es forzar un pasaje para que encaje con nuestras ideas preconcebidas en lugar de dejar que la Escritura nos corrija.",
+      },
+      {
+        id: "descripcion-vs-mandato",
+        title: "Descripción vs Mandato",
+        icon: "⚠️",
+        simple:
+          "No todo lo que la Biblia *describe* es algo que la Biblia *manda*. La Biblia registra muchas cosas: pecados, errores, malas decisiones, pero no todas son ejemplos a seguir. Debemos distinguir entre lo que la Biblia prescribe (ordena) y lo que meramente describe (registra).",
+        fondo:
+          "Este es un principio hermenéutico fundamental: la Biblia contiene tanto prescripciones (mandatos, enseñanzas directas) como descripciones (narrativas históricas, registros de lo que personas hicieron). Las narrativas del AT, por ejemplo, registran fielmente los hechos sin necesariamente aprobarlos. David tuvo múltiples esposas, pero eso no significa que Dios lo apruebe. La iglesia primitiva compartía sus bienes (Hch 2:44-45), pero no es un mandato para todas las iglesias. Cómo distinguir: si un acto es prescrito o aprobado explícitamente en la enseñanza directa de la Escritura, es normativo. Si solo es registrado, debemos buscar enseñanza explícita antes de hacerlo norma.",
+        aplicacion:
+          "Cuando leas una narrativa bíblica, pregúntate: ¿Esto es algo que Dios manda o algo que la Biblia simplemente registra? No asumas que porque algo pasó en la Biblia, debe pasar en tu vida. Por ejemplo: Hechos 2 registra el don de lenguas en Pentecostés, pero no todo cristiano debe hablar en lenguas. Busca la enseñanza didáctica (epístolas) para entender cómo aplicar las narrativas.",
+        errores:
+          "Hay dos errores opuestos: 1) tomar toda descripción como mandato (ej: 'los apóstoles echaron suertes, así que nosotros también debemos'), y 2) ignorar las narrativas como si no tuvieran valor doctrinal (son 'para nuestra enseñanza', Ro 15:4). Otro error es imponer prácticas culturales del siglo I como si fueran mandatos transculturales, sin considerar el contexto.",
+      },
+      {
+        id: "como-evitar-falsas-doctrinas",
+        title: "Cómo evitar falsas doctrinas",
+        icon: "🛡️",
+        simple:
+          "La mejor defensa contra el error es conocer bien la verdad. Cuando conoces la sana doctrina, reconoces la falsa con más facilidad. También necesitas: 1) estar firmemente arraigado en la Escritura, 2) conocer la historia de la iglesia para no repetir errores pasados, 3) estar en comunidad con creyentes maduros, y 4) examinarlo todo a la luz de la Palabra.",
+        fondo:
+          "Las falsas doctrinas no suelen llegar como herejías obvias, sino como 'pequeños desvíos' que gradualmente alejan de la verdad (2 Ti 4:3-4). Se caracterizan por: exaltar la experiencia sobre la Escritura, añadir requisitos humanos a la salvación, negar aspectos centrales del evangelio, o desviar el enfoque de Cristo a otra cosa. El antídoto no es solo saber lo que es falso, sino estar saturado de la verdad. Los bereanos son nuestro modelo: recibían la palabra con toda solicitud, escudriñando las Escrituras diariamente para verificar si lo que oían era correcto (Hch 17:11). La sana doctrina no es opcional; Pablo mandó a Timoteo que 'retuviera la forma de las sanas palabras' (2 Ti 1:13).",
+        aplicacion:
+          "Examina todo lo que oyes y lees a la luz de la Escritura, no de tus emociones. Sospecha de enseñanzas que: 1) prometen prosperidad terrenal, 2) enfatizan experiencias sobre la Palabra, 3) añaden requisitos humanos a la salvación, 4) niegan la soberanía de Dios, o 5) minimizan el pecado o la santidad. Conéctate con una iglesia local fiel donde se predique la sana doctrina.",
+        errores:
+          "Algunos caen en el error opuesto: volverse tan escépticos que ven herejía en todo y se aíslan. Otros, confiados en su propio entendimiento, piensan que no pueden ser engañados (1 Co 10:12). También está el error de depender exclusivamente de líderes o maestros sin examinar por uno mismo las Escrituras.",
+      },
+      {
+        id: "metodo-correcto",
+        title: "Método correcto vs incorrecto",
+        icon: "⚖️",
+        simple:
+          "El método incorrecto comienza con un versículo aislado, le añade una opinión personal y construye una doctrina. El método correcto comienza con el texto en su contexto, considera el autor, la audiencia y toda la Escritura, y luego aplica correctamente. La diferencia es entre interpretar la Biblia o imponer nuestras ideas en ella.",
+        fondo:
+          "El método incorrecto (eiségesis) consiste en leer nuestras ideas *dentro* del texto. El método correcto (exégesis) consiste en extraer *del* texto lo que el autor quiso decir. El proceso correcto es: texto → contexto histórico → género literario → argumento del autor → comparación con otras Escrituras → principio teológico → aplicación. El proceso incorrecto es: idea preconcebida → búsqueda de versículos de apoyo → interpretación forzada → doctrina distorsionada. La Reforma Protestante recuperó la exégesis histórica-gramatical sobre la alegoría medieval.",
+        aplicacion:
+          "Cada vez que leas la Biblia, pregúntate: '¿Estoy dejando que el texto me hable o estoy buscando versículos que apoyen lo que ya pienso?' Sé honesto. Si la Biblia contradice tu opinión, cambia tu opinión, no ignores la Biblia. Usa herramientas como concordancias, comentarios confiables y Biblias de estudio. Estudia en comunidad, no en aislamiento.",
+        errores:
+          "El error más común es la eiségesis: encontrar en la Biblia lo que ya decidiste creer. Otro error es el 'proof-texting' (usar versículos sueltos como prueba) sin considerar el contexto. También está el error de espiritualizar todo: convertir pasajes históricos en alegorías (como Orígenes y la escuela alejandrina). El orgullo intelectual también es un peligro: estudiar para 'saber más' en lugar de para conocer más a Dios.",
       },
     ],
   },
