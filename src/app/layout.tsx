@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Crimson_Text } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CuriosidadBanner from '@/components/CuriosidadBanner';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -45,7 +46,8 @@ export default function RootLayout({
       <head />
       <body className={`min-h-screen flex flex-col overflow-x-hidden bg-bg-body text-text-body ${playfair.variable} ${inter.variable} ${crimson.variable}`}>
         <Navbar />
-        <main className="flex-1 pt-16">{children}</main>
+        <CuriosidadBanner />
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
