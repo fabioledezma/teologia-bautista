@@ -221,13 +221,9 @@ export default function AprenderPage() {
           </h1>
           <div className="mx-auto w-16 h-px bg-gold/50 my-5" />
           <p className="text-text-2 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            Un lugar donde alguien puede entrar confundido, hambriento de Dios,
-            y salir entendiendo mejor quién es Dios, qué dice Su Palabra y cómo
-            vivir para Su gloria.
-          </p>
-          <p className="text-text-2 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mt-3">
-            Y al mismo tiempo, un lugar donde alguien con años estudiando
-            todavía encuentre profundidad, orden, reverencia y riqueza bíblica.
+            No es un seminario. Es un lugar para sentarse a aprender la sana
+            doctrina con calma, orden y reverencia. Desde el que empieza desde
+            cero hasta el que lleva años, todos encuentran aquí alimento sólido.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
