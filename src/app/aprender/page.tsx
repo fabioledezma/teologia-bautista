@@ -6,6 +6,7 @@ import historiaRedencion from '@/data/historia-redencion';
 import versiculosMalInterpretados from '@/data/versiculos-mal-interpretados';
 import areasDiscernimiento from '@/data/discernimiento';
 import catecismoData from '@/data/catecismo';
+import bibliotecaData from '@/data/biblioteca';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -147,6 +148,17 @@ function NivelSection({ nivel }: { nivel: (typeof escuelaData)[number] }) {
 }
 
 export default function AprenderPage() {
+  const [filtroNivel, setFiltroNivel] = useState<string>('todos');
+  const [filtroTema, setFiltroTema] = useState<string>('todos');
+
+  const temas = [...new Set(bibliotecaData.map((r) => r.tema))].sort();
+
+  const recursosFiltrados = bibliotecaData.filter((r) => {
+    if (filtroNivel !== 'todos' && r.nivel !== filtroNivel) return false;
+    if (filtroTema !== 'todos' && r.tema !== filtroTema) return false;
+    return true;
+  });
+
   return (
     <>
       <section className="py-20 md:py-28 bg-surface-1 border-b border-border">
@@ -420,6 +432,124 @@ export default function AprenderPage() {
               <CatecismoItem key={entry.id} entry={entry} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-surface-1 bg-dot-pattern">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Biblioteca
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Biblioteca recomendada
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              Recursos seleccionados por nivel y tema para profundizar en el
+              estudio de la sana doctrina.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center mb-8">
+            {['todos', 'basico', 'intermedio', 'avanzado'].map((n) => (
+              <button
+                key={n}
+                onClick={() => setFiltroNivel(n)}
+                className={`text-xs px-3 py-1.5 rounded-full border transition-all duration-200 ${
+                  filtroNivel === n
+                    ? 'bg-gold text-black border-gold font-semibold'
+                    : 'bg-surface-card text-text-3 border-border hover:border-gold/40 hover:text-text'
+                }`}
+              >
+                {n === 'todos'
+                  ? 'Todos los niveles'
+                  : n.charAt(0).toUpperCase() + n.slice(1)}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center mb-10">
+            <button
+              onClick={() => setFiltroTema('todos')}
+              className={`text-xs px-3 py-1 rounded-full border transition-all duration-200 ${
+                filtroTema === 'todos'
+                  ? 'bg-gold text-black border-gold font-semibold'
+                  : 'bg-surface-card text-text-3 border-border hover:border-gold/40 hover:text-text'
+              }`}
+            >
+              Todos los temas
+            </button>
+            {temas.map((t) => (
+              <button
+                key={t}
+                onClick={() => setFiltroTema(t)}
+                className={`text-xs px-3 py-1 rounded-full border transition-all duration-200 ${
+                  filtroTema === t
+                    ? 'bg-gold text-black border-gold font-semibold'
+                    : 'bg-surface-card text-text-3 border-border hover:border-gold/40 hover:text-text'
+                }`}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 min-w-0">
+            {recursosFiltrados.map((r, i) => (
+              <div
+                key={i}
+                className="bg-surface-card border border-border rounded-xl p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <span
+                    className={`text-[10px] px-2 py-0.5 rounded-full border ${
+                      r.nivel === 'basico'
+                        ? 'border-emerald-800/20 text-emerald-400 bg-emerald-900/20'
+                        : r.nivel === 'intermedio'
+                          ? 'border-amber-800/20 text-amber-400 bg-amber-900/20'
+                          : 'border-red-800/20 text-red-400 bg-red-900/20'
+                    }`}
+                  >
+                    {r.nivel}
+                  </span>
+                  <span className="text-[10px] text-text-4 uppercase tracking-wider">
+                    {r.tipo}
+                  </span>
+                </div>
+                <h3 className="text-text text-sm font-semibold leading-snug mb-1">
+                  {r.titulo}
+                </h3>
+                <p className="text-text-3 text-xs mb-2">{r.autor}</p>
+                {r.notas && (
+                  <p className="text-text-2 text-xs leading-relaxed">
+                    {r.notas}
+                  </p>
+                )}
+                <div className="flex items-center justify-between gap-2 mt-3 pt-3 border-t border-border/50">
+                  <span className="text-[10px] text-text-4 uppercase tracking-wider">
+                    {r.tema}
+                  </span>
+                  {r.url && (
+                    <a
+                      href={r.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] text-gold hover:text-gold-light transition-colors"
+                    >
+                      Visitar
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {recursosFiltrados.length === 0 && (
+            <p className="text-center text-text-3 text-sm">
+              No hay recursos con esos filtros.
+            </p>
+          )}
         </div>
       </section>
 
