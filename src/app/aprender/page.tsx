@@ -4,6 +4,7 @@ import { useState } from 'react';
 import escuelaData from '@/data/escuela';
 import historiaRedencion from '@/data/historia-redencion';
 import versiculosMalInterpretados from '@/data/versiculos-mal-interpretados';
+import areasDiscernimiento from '@/data/discernimiento';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -272,6 +273,73 @@ export default function AprenderPage() {
                         {v.aplicacionCorrecta}
                       </p>
                     </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-surface-1 bg-dot-pattern">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Discernimiento
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Señales de alerta y sana doctrina
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-2xl mx-auto">
+              No se trata de tener una actitud polémica ni de buscar herejías
+              en todo. Se trata de conocer la verdad para reconocer el error,
+              amar a Dios correctamente y ayudar a otros con sabiduría pastoral.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 min-w-0">
+            {areasDiscernimiento.map((area) => (
+              <div key={area.id} className="bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
+                <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
+                <div className="p-5">
+                  <h3 className="text-text font-semibold text-sm mb-2">
+                    {area.titulo}
+                  </h3>
+                  <p className="text-text-2 text-xs leading-relaxed mb-3">
+                    {area.descripcion}
+                  </p>
+
+                  <div className="mb-3">
+                    <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
+                      Señales de alerta
+                    </span>
+                    <ul className="mt-1 space-y-1">
+                      {area.senales.map((s, i) => (
+                        <li key={i} className="text-text text-xs leading-relaxed flex items-start gap-1.5">
+                          <span className="text-gold mt-0.5 flex-shrink-0">&bull;</span>
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-3">
+                    <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
+                      Fundamento bíblico
+                    </span>
+                    <p className="text-text text-xs leading-relaxed mt-0.5">
+                      {area.fundamento}
+                    </p>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">
+                      Actitud pastoral
+                    </span>
+                    <p className="text-text text-xs leading-relaxed mt-0.5 italic">
+                      {area.actitud}
+                    </p>
                   </div>
                 </div>
               </div>
