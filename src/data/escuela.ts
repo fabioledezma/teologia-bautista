@@ -246,6 +246,107 @@ const escuelaData: NivelEscuela[] = [
       },
     ],
   },
+  {
+    id: "doctrinas-fundamentales",
+    nivel: 3,
+    title: "Doctrinas Fundamentales",
+    subtitle: "Conectando cada doctrina con toda la Escritura",
+    descripcion:
+      "Aquí las doctrinas se conectan entre sí y con toda la Escritura, desde Génesis hasta Apocalipsis. Cada tema está organizado siguiendo el orden pedagógico de la teología sistemática, mostrando cómo cada doctrina fluye de la anterior y apunta a Cristo.",
+    temas: [
+      {
+        id: "doctrina-de-la-escritura",
+        title: "Doctrina de la Escritura",
+        icon: "📜",
+        simple:
+          "La Biblia es la Palabra de Dios escrita. Es inspirada por Dios, inerrante en sus originales, suficiente para toda fe y práctica, clara en lo que enseña para la salvación, y ha sido preservada por Dios para Su iglesia. Es la autoridad máxima y final para todo lo que creemos y hacemos.",
+        fondo:
+          "La bibliología reformada confiesa que la Escritura es inspirada verbal y plenariamente (2 Ti 3:16-17; 2 P 1:20-21). Esto significa que cada palabra fue guiada por el Espíritu Santo, no solo las ideas. Es inerrante: no contiene error en sus manuscritos originales porque es Palabra de Dios. Es suficiente: no necesita ser aumentada por tradiciones, revelaciones privadas o experiencias (Ap 22:18-19). Es clara (*perspicuidad*): lo esencial para la salvación está al alcance de todo creyente. Es autoritativa: la última palabra en toda controversia. Dios la ha preservado milagrosamente a través de la historia. Desde el AT (Sal 19:7-11; 119) hasta el NT (Mt 5:17-18; Jn 10:35), la Escritura reclama ser divina. Los reformados confesamos *Sola Scriptura*: la Escritura sola es nuestra regla de fe y práctica, no porque no usemos credenciales o confesiones, sino porque ninguna autoridad humana iguala a la Palabra de Dios.",
+        aplicacion:
+          "La suficiencia de la Escritura significa que no necesitas revelaciones extra para conocer a Dios. Si quieres saber cómo ser salvo, cómo adorar, cómo vivir, la Biblia es suficiente. No busques palabras proféticas, sueños o experiencias como autoridad. Cuando enfrentes decisiones, acude a la Escritura primero. Ama la Palabra, medita en ella de día y de noche.",
+        errores:
+          "La Iglesia Católica añade la tradición al mismo nivel de autoridad que la Escritura. Los carismáticos extremos añaden revelaciones privadas y profecías. Los liberales niegan la inspiración e inerrancia, viendo la Biblia como un libro humano. Otros afirman la inspiración pero niegan la suficiencia, buscando 'palabra directa de Dios' fuera de la Escritura.",
+      },
+      {
+        id: "doctrina-de-dios",
+        title: "Doctrina de Dios",
+        icon: "👑",
+        simple:
+          "Dios es el Creador, Sustentador y Soberano de todo. Existe eternamente en tres Personas: Padre, Hijo y Espíritu Santo. Es infinito en todos Sus atributos: santo, justo, amoroso, misericordioso, sabio, todopoderoso, omnisciente, omnipresente, inmutable y soberano sobre todas las cosas.",
+        fondo:
+          "La doctrina de Dios comienza en Génesis 1:1: 'En el principio, Dios'. La Escritura revela a un Dios que es Espíritu (Jn 4:24), eterno (Sal 90:2), inmutable (Mal 3:6; Stg 1:17), omnipotente (Gn 18:14), omnisciente (Sal 139:1-6), omnipresente (Sal 139:7-12), santo (Is 6:3; Ap 4:8), justo (Dt 32:4), amoroso (1 Jn 4:8), misericordioso (Ef 2:4-5), soberano (Ef 1:11). Es trino: un solo Dios en tres Personas distintas, coeternas y coiguales. El AT apunta a esto (Gn 1:26; Is 48:16; Sal 110:1) y el NT lo revela explícitamente (Mt 3:16-17; 28:19; 2 Co 13:14). La soberanía de Dios significa que Él obra todas las cosas según el consejo de Su voluntad (Ef 1:11), y nada ocurre fuera de Su control (Pr 16:33; Dn 4:34-35). Su santidad es Su atributo central: está separado del pecado y moralmente perfecto.",
+        aplicacion:
+          "Tu concepto de Dios determina tu vida espiritual. Un Dios pequeño produce una fe pequeña. Un Dios soberano produce confianza en medio de la tormenta. Un Dios santo produce reverencia y temor de ofenderlo. Un Dios amoroso produce seguridad y gratitud. Estudia Sus atributos en la Escritura. Adóralo por quién es, no solo por lo que hace. Ora a Él como Padre, en el nombre del Hijo, por el poder del Espíritu.",
+        errores:
+          "Muchos imaginan a Dios a su propia imagen: un anciano distante, un 'tierno abuelito' que nunca juzga. Otros niegan o distorsionan la Trinidad (testigos de Jehová, mormones, unitarios, modalistas). El deísmo niega la providencia y soberanía continuas de Dios. El teísmo abierto niega que Dios conozca el futuro. El proceso teísmo niega Su inmutabilidad.",
+      },
+      {
+        id: "doctrina-del-hombre",
+        title: "Doctrina del Hombre",
+        icon: "🧬",
+        simple:
+          "El ser humano fue creado por Dios a Su imagen, bueno y sin pecado. Pero Adán cayó en pecado, y con él toda la humanidad. Ahora todos nacemos con una naturaleza corrupta, inclinados al mal, separados de Dios, y necesitados de redención. El hombre no es básicamente bueno; está muerto en pecado.",
+        fondo:
+          "La antropología bíblica comienza con la creación del hombre a imagen de Dios (Gn 1:26-28). Esto significa que los seres humanos tienen dignidad, racionalidad, moralidad y capacidad de relacionarse con Dios. Pero la caída (Gn 3) trajo el pecado original (Ro 5:12-21): todos los descendientes de Adán nacen con una naturaleza caída y culpables delante de Dios. La depravación total (Ef 2:1-3; Ro 3:10-18) significa que el pecado afecta cada parte de nuestro ser: intelecto (2 Co 4:4), voluntad (Jn 6:44), emociones (Jer 17:9). El hombre natural no puede ni quiere venir a Dios. Sin embargo, la imagen de Dios no fue totalmente destruida (Stg 3:9) sino distorsionada. La solución no es reforma moral sino regeneración: un nuevo nacimiento por el Espíritu Santo.",
+        aplicacion:
+          "No minimices la gravedad del pecado en ti ni en otros. No confíes en la bondad natural humana. Reconoce que tu mayor problema no es tu entorno, tus circunstancias o tus traumas, sino tu corazón pecaminoso. Pero no te desesperes: donde abundó el pecado, sobreabundó la gracia. La imagen de Dios en el hombre también significa que toda persona merece dignidad y respeto, independientemente de su pecado.",
+        errores:
+          "El pelagianismo niega el pecado original y afirma que el hombre puede no pecar. El humanismo secular cree en la bondad innata del hombre. El marxismo y otras ideologías ven el mal como resultado de estructuras sociales, no del corazón. El perfeccionismo enseña que el cristiano puede alcanzar la ausencia de pecado en esta vida.",
+      },
+      {
+        id: "doctrina-de-cristo",
+        title: "Doctrina de Cristo",
+        icon: "✝️",
+        simple:
+          "Jesucristo es el Hijo de Dios, verdadero Dios y verdadero hombre. Fue prometido desde el AT, nació de una virgen, vivió perfectamente, murió como sustituto por los pecados de Su pueblo, resucitó físicamente, ascendió al cielo, y reina como Señor. Él es el centro de toda la Escritura y el único mediador entre Dios y los hombres.",
+        fondo:
+          "La cristología recorre toda la Escritura: desde la primera promesa (Gn 3:15), pasando por los sacrificios (Lv), el pacto davídico (2 S 7), los profetas (Is 7:14; 9:6-7; 53; Mi 5:2; Zac 9:9; Mal 3:1), hasta los evangelios y epístolas. Cristo es verdadero Dios (Jn 1:1; Col 2:9; He 1:8) y verdadero hombre (Lc 2:52; Jn 4:6; 19:28; He 2:14-17). La unión hipostática significa que Sus dos naturalezas están unidas en una sola persona sin mezcla, confusión o separación (Calcedonia, 451 d.C.). Su obra incluye: encarnación (Jn 1:14), vida activa de obediencia (Ro 5:19), muerte sustitutoria (2 Co 5:21), resurrección física (1 Co 15), ascensión (Hch 1:9-11), intercesión presente (He 7:25), y retorno futuro (Ap 19-22). Él es el cumplimiento de todas las promesas (2 Co 1:20) y el centro hermenéutico de toda la Escritura (Lc 24:27, 44-47).",
+        aplicacion:
+          "Conocer a Cristo no es solo información: es el centro de la vida cristiana. Todo en tu fe se sostiene en Él: tu salvación, tu oración (por Su mediación), tu adoración (por Su sacrificio), tu esperanza (por Su resurrección). No hay conocimiento de Dios fuera de Cristo (Jn 14:6). Predícate a Cristo cada día: no solo Su ejemplo, sino Su obra consumada a tu favor.",
+        errores:
+          "El arrianismo niega la deidad plena de Cristo (testigos de Jehová). El docetismo niega Su humanidad real. El nestorianismo separa Sus dos naturalezas. El eutiquianismo las mezcla. El socinianismo niega la expiación sustitutoria. El liberalismo teológico ve a Jesús solo como un maestro moral. Hoy también hay cristologías 'desde abajo' que niegan Su preexistencia o deidad.",
+      },
+      {
+        id: "doctrina-de-la-salvacion",
+        title: "Doctrina de la Salvación",
+        icon: "🔥",
+        simple:
+          "La salvación es obra soberana de Dios de principio a fin. Desde la eternidad, Dios eligió a Su pueblo en Cristo. En el tiempo, el Espíritu Santo llama, regenera, da fe y arrepentimiento, justifica, adopta, santifica y preserva hasta el fin. No es por obras humanas, sino por gracia mediante la fe en Cristo solo.",
+        fondo:
+          "La soteriología reformada sigue el *Ordo Salutis* (orden de la salvación): elección (Ef 1:4) → llamamiento eficaz (Ro 8:30) → regeneración (Jn 3:3-8) → fe y arrepentimiento (Ef 2:8; Hch 11:18) → justificación (Ro 3:21-26) → adopción (Ef 1:5; Gá 4:4-7) → santificación (1 Ts 4:3; He 12:14) → perseverancia (Jn 10:28-29; Fil 1:6) → glorificación (Ro 8:30). Es una cadena de oro que Dios forja desde la eternidad. Los Cinco Puntos del Calvinismo (TULIP) resumen estas doctrinas: Depravación Total, Elección Incondicional, Expiación Limitada (o particular), Gracia Irresistible (o eficaz), Perseverancia de los Santos. Pero más allá del TULIP, la salvación es la obra del Dios trino: el Padre elige, el Hijo redime, el Espíritu aplica. Todo es por gracia, todo es para la gloria de Dios.",
+        aplicacion:
+          "Si eres salvo, no fue por tu decisión, tu bondad o tu mérito. Fue por pura gracia de Dios. Esto te humilla y te da seguridad. Humilla: no tienes nada de qué presumir. Seguridad: lo que Dios comenzó, Él lo terminará. Vive agradecido. Si no eres salvo, hoy es el día de salvación: arrepiéntete y cree en el Señor Jesucristo.",
+        errores:
+          "El arminianismo enseña que la salvación depende en última instancia de la decisión humana. El pelagianismo la basa en el mérito humano. El universalismo enseña que todos se salvan sin fe. El 'easy-believism' enseña una fe sin arrepentimiento. El antinomianismo dice que la gracia hace la obediencia innecesaria. El legalismo añade obras humanas a la fe.",
+      },
+      {
+        id: "doctrina-de-la-iglesia",
+        title: "Doctrina de la Iglesia",
+        icon: "⛪",
+        simple:
+          "La iglesia no es un edificio ni una organización, sino el pueblo de Dios llamado por Él, reunido en asambleas locales, bajo el gobierno de Cristo, para adorar, predicar la Palabra, administrar los sacramentos (bautismo y cena del Señor), edificarse mutuamente y hacer discípulos a todas las naciones.",
+        fondo:
+          "La eclesiología bautista reformada confiesa que la iglesia es una asamblea local de creyentes bautizados (por inmersión después de la profesión de fe), unidos para adorar a Dios y llevar a cabo la Gran Comisión (Mt 28:18-20). Cristo es la única Cabeza de la iglesia (Ef 1:22-23; Col 1:18). El gobierno es congregacional con ancianos bíblicos y diáconos (1 Ti 3:1-13; Tit 1:5-9). Hay dos ordenanzas: el bautismo del creyente por inmersión (Hch 8:36-39; Ro 6:3-5) y la Cena del Señor (1 Co 11:23-34). La membresía implica compromiso, disciplina y amor mutuo (Mt 18:15-20; He 10:24-25). La iglesia persiste a través de la historia como el cuerpo de Cristo, columna y baluarte de la verdad (1 Ti 3:15). No es una institución jerárquica con autoridad central, sino un cuerpo orgánico con Cristo como Cabeza.",
+        aplicacion:
+          "La iglesia no es opcional para el cristiano. Eres miembro del cuerpo de Cristo, y necesitas una iglesia local donde: 1) la Palabra sea predicada fielmente, 2) los sacramentos sean administrados correctamente, 3) la disciplina sea ejercida, 4) puedas servir y ser servido. No te aísles. El cristianismo no es una religión individual.",
+        errores:
+          "El romanismo enseña una iglesia jerárquica con el Papa como cabeza visible. El congregacionalismo extremo niega cualquier autoridad pastoral. El elitismo espiritual (hermandades secretas, 'ungidos' especiales) divide el cuerpo. El igualitarismo radical niega la distinción bíblica entre ancianos/pastores y miembros. El bautismo infantil y el bautismo por aspersión se apartan del patrón bíblico. El cesacionismo extremo niega toda operación del Espíritu hoy; el continuismo desordenado la exagera.",
+      },
+      {
+        id: "ultimas-cosas",
+        title: "Últimas Cosas",
+        icon: "🌅",
+        simple:
+          "La historia no es un ciclo sin fin, sino que avanza hacia un propósito definido por Dios. Cristo volverá en gloria para resucitar a los muertos, juzgar a vivos y muertos, y establecer el cielo nuevo y la tierra nueva donde los redimidos vivirán eternamente con Dios. Los impíos recibirán el castigo eterno.",
+        fondo:
+          "La escatología bíblica comienza en el AT con las promesas del reino mesiánico (Is 2:2-4; 11:1-10; Dn 7:13-14; Zac 14) y se desarrolla en el NT con la enseñanza de Jesús (Mt 24-25; Mc 13; Lc 21), la resurrección (1 Co 15), la esperanza de la venida de Cristo (1 Ts 4:13-18; 2 Ts 2), y la consumación en Apocalipsis. El patrón es: el reino de Dios ya fue inaugurado en Cristo (ya) pero no consumado (todavía). Habrá resurrección tanto de justos como de impíos (Dn 12:2; Jn 5:28-29). El juicio final separará a las ovejas de los cabritos (Mt 25:31-46). Los creyentes serán glorificados y vivirán eternamente en la nueva creación (Ap 21-22), donde Dios enjugará toda lágrima, no habrá más muerte ni dolor. El infierno es un lugar real de castigo eterno y consciente para los impíos (Mt 25:46; Ap 20:11-15).",
+        aplicacion:
+          "No vivas como si este mundo fuera tu hogar. Eres peregrino, tu ciudadanía está en los cielos (Fil 3:20). La esperanza de la venida de Cristo no es para especular con fechas, sino para vivir en santidad y vigilancia (1 Ts 5:1-11). Anhela la nueva creación. Pero mientras tanto, trabaja fielmente en el mundo, amando al prójimo y proclamando el evangelio, sabiendo que tu trabajo en el Señor no es en vano.",
+        errores:
+          "El dispensacionalismo extremo divide la historia en períodos rígidos y enseña dos pueblos de Dios. El amilenialismo extremo espiritualiza todo. El preterismo extremo dice que todo se cumplió en el 70 d.C. Otros se enfocan en fechas y especulaciones (como el 'rapto secreto' antes de la tribulación). Universalismo: todos serán salvos. Aniquilacionismo: los impíos serán destruidos, no atormentados eternamente. También está el error de vivir solo para lo temporal.",
+      },
+    ],
+  },
 ];
 
 export default escuelaData;
