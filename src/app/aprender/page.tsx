@@ -8,6 +8,10 @@ import areasDiscernimiento from '@/data/discernimiento';
 import catecismoData from '@/data/catecismo';
 import bibliotecaData from '@/data/biblioteca';
 import devocionalesData from '@/data/devocionales';
+import mapasData from '@/data/mapas';
+import conexionesData from '@/data/conexiones';
+import temasTransversalesData from '@/data/temas-transversales';
+import promesasData from '@/data/promesas';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -623,7 +627,197 @@ export default function AprenderPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-surface-1 bg-dot-pattern">
+      <section className="py-16 md:py-24 bg-surface-1 bg-dot-pattern">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Geografía Bíblica
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Mapas y regiones bíblicas
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              Conocer la geografía ayuda a entender la historia. Estos son los
+              escenarios donde Dios actuó en la historia de la redención.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 min-w-0">
+            {mapasData.map((region) => (
+              <div key={region.region} className="bg-surface-card border border-border rounded-xl p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                  <h3 className="text-text font-semibold text-sm">{region.region}</h3>
+                </div>
+                <p className="text-text-3 text-xs leading-relaxed mb-3">
+                  {region.descripcion}
+                </p>
+                <div className="space-y-1.5">
+                  {region.lugares.map((l) => (
+                    <div key={l.nombre} className="text-xs">
+                      <span className="text-text font-medium">{l.nombre}</span>
+                      <span className="text-text-2"> — {l.relevancia}</span>
+                      {l.escritura && (
+                        <span className="text-gold ml-1 text-[10px]">({l.escritura})</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Conexiones
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Conexiones entre el AT y el NT
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              La Biblia no son dos libros inconexos. Cristo es el eje que une
+              ambos Testamentos. Todo el AT apunta a Él.
+            </p>
+          </div>
+
+          <div className="space-y-4 min-w-0">
+            {conexionesData.map((cx) => (
+              <div key={cx.titulo} className="bg-surface-card border border-border rounded-xl overflow-hidden">
+                <div className="flex flex-wrap items-center gap-2 p-4 pb-3 border-b border-border/50">
+                  <h3 className="text-text font-semibold text-sm">{cx.titulo}</h3>
+                  <span className={`text-[10px] px-2 py-0.5 rounded-full border ${
+                    cx.tipo === 'tipo-antitipo'
+                      ? 'border-amber-800/20 text-amber-400 bg-amber-900/20'
+                      : cx.tipo === 'profecia-cumplimiento'
+                        ? 'border-emerald-800/20 text-emerald-400 bg-emerald-900/20'
+                        : cx.tipo === 'tema-transversal'
+                          ? 'border-blue-800/20 text-blue-400 bg-blue-900/20'
+                          : 'border-purple-800/20 text-purple-400 bg-purple-900/20'
+                  }`}>
+                    {cx.tipo === 'tipo-antitipo' ? 'Tipo → Antitipo' :
+                     cx.tipo === 'profecia-cumplimiento' ? 'Profecía → Cumplimiento' :
+                     cx.tipo === 'tema-transversal' ? 'Tema transversal' : 'Paralelo'}
+                  </span>
+                </div>
+                <div className="grid sm:grid-cols-2 gap-0">
+                  <div className="p-4 bg-amber-950/10">
+                    <span className="text-[10px] uppercase tracking-wider text-amber-400 font-semibold block mb-1">Antiguo Testamento</span>
+                    <p className="text-text text-xs leading-relaxed">{cx.antiguo}</p>
+                  </div>
+                  <div className="p-4 bg-emerald-950/10">
+                    <span className="text-[10px] uppercase tracking-wider text-emerald-400 font-semibold block mb-1">Nuevo Testamento</span>
+                    <p className="text-text text-xs leading-relaxed">{cx.nuevo}</p>
+                  </div>
+                </div>
+                <div className="px-4 pb-4 pt-3">
+                  <p className="text-text-2 text-xs leading-relaxed">{cx.explicacion}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-surface-card">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Temas Transversales
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Temas que atraviesan toda la Biblia
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              Hilos de oro que recorren las Escrituras de principio a fin.
+              Conocerlos ayuda a leer la Biblia como una sola historia.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5 min-w-0">
+            {temasTransversalesData.map((tema) => (
+              <div key={tema.tema} className="bg-surface-1 border border-border rounded-xl p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-1 h-5 rounded-full bg-gold" />
+                  <h3 className="text-text font-semibold text-sm">{tema.tema}</h3>
+                </div>
+                <p className="text-text-3 text-xs leading-relaxed mb-3">{tema.resumen}</p>
+                <div className="mb-3">
+                  <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">Desarrollo bíblico</span>
+                  <ul className="mt-1 space-y-1">
+                    {tema.desarrollo.map((d, i) => (
+                      <li key={i} className="text-text text-xs leading-relaxed flex items-start gap-1.5">
+                        <span className="text-gold mt-0.5 flex-shrink-0">&bull;</span>
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-2">
+                  <span className="text-[10px] uppercase tracking-wider text-gold font-semibold">Culminación</span>
+                  <p className="text-text text-xs leading-relaxed mt-0.5">{tema.culminacion}</p>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {tema.escrituras.map((ref) => (
+                    <span key={ref} className="text-[10px] text-gold bg-gold/5 px-2 py-0.5 rounded border border-gold/10">
+                      {ref}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-surface-1 bg-dot-pattern">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Promesas y Cumplimientos
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Promesas del AT cumplidas en Cristo
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              Dios prometió y cumplió. Cada promesa del Antiguo Testamento
+              encuentra su "sí" y "amén" en Jesucristo.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs border-collapse min-w-[600px]">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-3 px-3 text-text-4 uppercase tracking-wider font-medium">Promesa</th>
+                  <th className="text-left py-3 px-3 text-text-4 uppercase tracking-wider font-medium">AT</th>
+                  <th className="text-left py-3 px-3 text-text-4 uppercase tracking-wider font-medium">Cumplimiento</th>
+                  <th className="text-left py-3 px-3 text-text-4 uppercase tracking-wider font-medium">NT</th>
+                </tr>
+              </thead>
+              <tbody>
+                {promesasData.map((p, i) => (
+                  <tr key={i} className="border-b border-border/50 hover:bg-surface-card/50 transition-colors">
+                    <td className="py-3 px-3 text-text font-medium">{p.promesa}</td>
+                    <td className="py-3 px-3 text-gold">{p.referenciaAT}</td>
+                    <td className="py-3 px-3 text-text-2">{p.cumplimiento}</td>
+                    <td className="py-3 px-3 text-gold">{p.referenciaNT}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-surface-card border-t border-border">
         <div className="max-w-3xl mx-auto px-5 text-center">
           <h2 className="font-serif text-2xl md:text-3xl text-text mb-4">
             ¿Por dónde empiezo?
