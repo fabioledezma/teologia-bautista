@@ -1,25 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { curiosidades } from '@/data/curiosidades'
 
-const DOS_HORAS = 2 * 60 * 60 * 1000
-
-function getIndice(): number {
-  return Math.floor(Date.now() / DOS_HORAS) % curiosidades.length
-}
-
 export default function CuriosidadBanner() {
-  const [indice, setIndice] = useState(getIndice)
-
-  useEffect(() => {
-    const sig = DOS_HORAS - (Date.now() % DOS_HORAS)
-    const timer = setTimeout(() => {
-      setIndice(getIndice())
-    }, sig)
-    return () => clearTimeout(timer)
-  }, [indice])
-
+  const indice = Math.floor(Math.random() * curiosidades.length)
   const c = curiosidades[indice]
 
   return (
