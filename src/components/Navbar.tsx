@@ -77,6 +77,7 @@ function DropdownMenu({
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     if (!open) return;
@@ -91,12 +92,21 @@ function DropdownMenu({
 
   const isGroupActive = group.items?.some((item) => isActiveFn(item.href));
 
+  const handleMouseEnter = () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timerRef.current = setTimeout(() => setOpen(false), 200);
+  };
+
   return (
     <div
       ref={ref}
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <button
         onClick={() => setOpen((p) => !p)}
@@ -114,23 +124,28 @@ function DropdownMenu({
       </button>
       {open && (
         <div
-          className="absolute top-full left-0 mt-1.5 bg-surface-card border border-border rounded-xl shadow-lg py-1.5 min-w-[180px] animate-fade-in-up"
-          style={{ animationDuration: '0.15s' }}
+          className="absolute top-full left-0 pt-1.5 min-w-[180px]"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          {group.items!.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => { setOpen(false); onNav(); }}
-              className={`block px-4 py-2.5 text-sm transition-colors ${
-                isActiveFn(item.href)
-                  ? 'text-gold bg-gold/5 font-semibold'
-                  : 'text-text hover:bg-surface-hover'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          <div className="bg-surface-card border border-border rounded-xl shadow-lg py-1.5 animate-fade-in-up"
+            style={{ animationDuration: '0.15s' }}
+          >
+            {group.items!.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => { setOpen(false); onNav(); }}
+                className={`block px-4 py-2.5 text-sm transition-colors ${
+                  isActiveFn(item.href)
+                    ? 'text-gold bg-gold/5 font-semibold'
+                    : 'text-text hover:bg-surface-hover'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </div>
