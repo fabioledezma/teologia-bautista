@@ -5,6 +5,7 @@ import escuelaData from '@/data/escuela';
 import historiaRedencion from '@/data/historia-redencion';
 import versiculosMalInterpretados from '@/data/versiculos-mal-interpretados';
 import areasDiscernimiento from '@/data/discernimiento';
+import testimonioData from '@/data/testimonio';
 import catecismoData from '@/data/catecismo';
 import bibliotecaData from '@/data/biblioteca';
 import devocionalesData from '@/data/devocionales';
@@ -388,6 +389,68 @@ export default function AprenderPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-4xl mx-auto px-5">
+          <div className="text-center mb-10">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Certeza
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              El testimonio del Espíritu y la autenticación de la Palabra
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-2xl mx-auto">
+              {testimonioData.introduccion}
+            </p>
+          </div>
+
+          <div className="space-y-5 min-w-0">
+            {testimonioData.puntos.map((punto) => (
+              <div key={punto.afirmacion} className="bg-surface-card border border-border rounded-xl p-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-[10px] font-bold text-gold">+</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-text font-semibold text-sm mb-0.5">
+                      {punto.afirmacion}
+                    </h3>
+                    <span className="text-[10px] text-gold uppercase tracking-wider">
+                      {punto.base}
+                    </span>
+                    <p className="text-text-2 text-xs leading-relaxed mt-2">
+                      {punto.explicacion}
+                    </p>
+                    <div className="flex items-center gap-1.5 mt-2">
+                      <svg className="w-3 h-3 text-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                      <span className="text-[10px] text-text-3">{punto.escritura}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 p-5 bg-gold/5 border border-gold/10 rounded-xl">
+            <span className="text-[10px] uppercase tracking-wider text-gold font-semibold block mb-3">
+              La Confesión Bautista de Fe 1689 declara
+            </span>
+            <div className="space-y-3">
+              {testimonioData.citas.map((cita, i) => (
+                <div key={i} className="pl-3 border-l-2 border-gold/30">
+                  <p className="text-text text-xs leading-relaxed italic">
+                    &ldquo;{cita.texto}&rdquo;
+                  </p>
+                  <p className="text-text-3 text-[10px] mt-1">{cita.fuente}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
