@@ -90,13 +90,13 @@ export default function HomePage() {
 
       <DoctrinasGrid />
 
-      <HerejiasSection />
-
-      <FacultySection />
-
       <ConfesionSection />
 
+      <HerejiasSection />
+
       <RecursosSection />
+
+      <FacultySection />
 
       <ChatBot />
     </>

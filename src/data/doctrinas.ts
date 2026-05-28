@@ -120,6 +120,42 @@ const doctrinas: Doctrina[] = [
     relacionadas: ["eleccion-incondicional"],
   },
   {
+    slug: "union-hipostatica",
+    icon: "✝️",
+    title: "La Unión Hipostática",
+    tag: "Cristología",
+    filter: "cristo",
+    summary:
+      "Jesucristo es una sola persona divina que posee dos naturalezas completas y distintas: verdadero Dios y verdadero hombre, unidas sin confusión, sin cambio, sin división y sin separación.",
+    keyVerse: {
+      text: "Y aquel Verbo fue hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad.",
+      ref: "Juan 1:14",
+    },
+    simple:
+      "La unión hipostática es la doctrina de que Jesucristo es una sola persona con dos naturalezas completas: divina y humana. No es 'mitad Dios y mitad hombre' (como un centauro es mitad hombre y mitad caballo), sino que es completamente Dios y completamente hombre simultáneamente. Su naturaleza divina no se mezcló con la humana para formar una tercera cosa, ni su naturaleza humana absorbió a la divina, ni viceversa. Las dos naturalezas permanecen distintas pero unidas en una sola persona: la persona del Hijo eterno de Dios.\n\nEsto significa que Jesús tenía hambre (humano) pero alimentó a 5.000 (divino). Se cansaba (humano) pero calmó la tormenta (divino). Lloró en la tumba de Lázaro (humano) pero lo resucitó (divino). Murió en la cruz (humano) pero Su sangre tenía poder eterno para salvar (divino). Cada naturaleza hace lo que le es propio, pero siempre en la misma persona.\n\nEs un misterio profundo que no podemos comprender plenamente, pero que debemos afirmar con precisión porque de esta doctrina depende nuestra salvación. Solo alguien que es verdadero Dios puede pagar el precio infinito del pecado, y solo alguien que es verdadero hombre puede representarnos y morir en nuestro lugar.",
+    fondo:
+      "La unión hipostática (del griego hypostasis, 'persona' o 'subsistencia') describe cómo las dos naturalezas de Cristo se unen en una sola persona. La definición clásica fue formulada en el Concilio de Calcedonia (451 d.C.): 'un mismo Cristo, Hijo, Señor, unigénito, conocido en dos naturalezas, sin confusión, sin cambio, sin división, sin separación'.\n\nEstos cuatro adverbios son cruciales:\n\nSin confusión (asygchytōs): Las naturalezas no se mezclan ni se fusionan. La divinidad no se 'diluye' en la humanidad ni viceversa. Cristo no es una tercera cosa que no es ni Dios ni hombre, sino ambas cosas enteras.\n\nSin cambio (atreptōs): La naturaleza divina no se transforma en humana ni la humana en divina. Dios sigue siendo Dios; el hombre sigue siendo hombre. La encarnación no altera la esencia de ninguna de las dos naturalezas.\n\nSin división (adiairetōs): Las dos naturalezas no están separadas ni funcionan independientemente. No hay un 'Jesús divino' y un 'Jesús humano' que operen por separado. Todo lo que Cristo hace, lo hace como una sola persona.\n\nSin separación (achōristōs): Las naturalezas no pueden separarse ni siquiera en la muerte. Cuando Cristo murió, solo Su cuerpo humano murió, pero Su persona divina no se separó de Su naturaleza humana. La unión es permanente.\n\nLa comunicación de propiedades (communicatio idiomatum) es la enseñanza de que los atributos de ambas naturalezas pueden predicarse de la persona de Cristo. Por eso podemos decir que 'Dios murió en la cruz' (Hechos 20:28) — no porque la deidad muriera, sino porque la persona que murió era Dios. Igualmente, 'el Hijo del Hombre descendió del cielo' (Juan 3:13) — no porque Su humanidad viniera del cielo, sino porque la persona que es Hijo del Hombre también es el Hijo de Dios.\n\nLa Confesión 1689, capítulo 8, afirma: 'Dos naturalezas enteras, perfectas y distintas, fueron inseparablemente unidas en una persona, sin conversión, composición o confusión, la cual persona es muy Dios y muy homb...",
+    historia:
+      "La doctrina de la unión hipostática no surgió de la especulación teológica, sino de la necesidad de defender la enseñanza bíblica contra herejías que distorsionaban quién es Cristo.\n\nEl primer gran desafío fue el arrianismo (siglo IV), que negaba la divinidad plena de Cristo. Arrio enseñaba que el Hijo era una criatura, 'hubo un tiempo en que el Hijo no era'. El Concilio de Nicea (325) respondió afirmando que el Hijo es homousios (de la misma esencia) con el Padre. Pero Nicea estableció la deidad de Cristo sin definir aún cómo se relaciona con Su humanidad.\n\nEl apolinarismo (siglo IV) fue el primer intento de explicar la unión. Apolinar enseñaba que Cristo tenía cuerpo humano y alma humana, pero que el Logos divino reemplazaba Su espíritu humano. Esto hacía a Cristo menos que completamente humano. El Concilio de Constantinopla (381) lo condenó: 'Lo que no fue asumido, no fue sanado' — si Cristo no asumió una mente humana completa, nuestra mente no puede ser redimida.\n\nEl nestorianismo (siglo V) cayó al otro extremo: Nestorio enseñaba que las dos naturalezas estaban tan separadas que Cristo era casi dos personas unidas moralmente, no ontológicamente. María sería 'Cristotokos' (madre de Cristo) pero no 'Theotokos' (madre de Dios). El Concilio de Éfeso (431) afirmó que María es Theotokos porque la persona que nació de ella era Dios, y condenó la división de Cristo en dos sujetos.\n\nEl eutiquianismo o monofisitismo (siglo V) enseñaba que las dos naturalezas se fusionaron en una sola naturaleza divino-humana. Eutiques decía que la humanidad de Cristo fue 'absorbida' por Su divinidad 'como una gota de miel en el mar'. El Concilio de Calcedonia (451) respondió con la definición clásica de 'dos naturalezas sin confusión, sin cambio, sin división, sin separación'.\n\nEl monotelismo (siglo VII) fue otro intento: enseñaba que Cristo tenía dos naturalezas pero una sola voluntad (divina). El Tercer Concilio de Constantinopla (681) lo condenó, afirmando que Cristo t...",
+    malentendidos:
+      "Quizás el malentendido más común es pensar que Jesús 'dejó de ser Dios' cuando se hizo hombre. Filipenses 2:7 dice que Cristo se 'despojó a sí mismo' (kenosis), pero esto no significa que dejara de tener atributos divinos. Significa que voluntariamente restringió el uso independiente y manifiesto de esos atributos. El niño en Belén seguía siendo el Dios que sostiene el universo.\n\nOtro error común es pensar que Jesús tenía 'superpoderes' como un héroe de cómic. No. Los milagros de Jesús no los hizo por Su naturaleza divina directamente, sino por el poder del Espíritu Santo operando a través de Su humanidad. Esto es importante porque muestra que Cristo vivió como el segundo Adán, dependiendo del Espíritu en fe y obediencia — exactamente como nosotros debemos vivir.\n\nTambién se malinterpreta la inmutabilidad de Cristo. Si Cristo cambió al encarnarse, ¿cómo puede ser inmutable? La respuesta es que la naturaleza divina no cambió; la Palabra eterna simplemente asumió una naturaleza humana adicional. La persona del Hijo no cambió en Su esencia divina, sino que comenzó a existir también en forma humana.\n\nFinalmente, algunos piensan que la unión hipostática significa que la humanidad de Cristo es omnipresente (como enseñan los luteranos en la Cena del Señor). Pero la humanidad de Cristo, aunque unida a la divinidad, no adquiere atributos divinos. Su cuerpo humano está en el cielo a la diestra del Padre, no físicamente presente en la Cena. La presencia de Cristo en la Cena es espiritual, no física.",
+    aplicacion:
+      "La unión hipostática no es una doctrina abstracta; es el fundamento de nuestra salvación. Considera:\n\nNuestra redención requería un Redentor que fuera Dios y hombre. Como hombre, podía representarnos y sufrir en nuestro lugar. Como Dios, Su sufrimiento tenía valor infinito y Su obediencia era perfecta. Si Cristo no fuera ambos, estaríamos perdidos.\n\nNuestra justificación depende de la unión hipostática. La justicia que se nos imputa es la justicia de uno que es Dios y hombre: perfectamente obediente como hombre, infinitamente valiosa como Dios. No hay otra base para nuestra aceptación delante de Dios.\n\nNuestra santificación se fundamenta en Cristo. Él vivió la vida que nosotros no podemos vivir, en dependencia del Espíritu, en perfecta obediencia al Padre. Su humanidad santificada nos muestra que es posible vivir para Dios, y Su Espíritu nos une a Él para que Su vida fluya en la nuestra.\n\nNuestra esperanza escatológica descansa en Su humanidad glorificada. Cristo resucitó con un cuerpo humano real, y ese cuerpo está ahora a la diestra de Dios. Su humanidad glorificada es la garantía y el modelo de nuestra propia resurrección futura.\n\nEn la oración, nos acercamos confiadamente porque tenemos un Sumo Sacerdote que 'puede compadecerse de nuestras debilidades' (Hebreos 4:15). Él entiende nuestro sufrimiento porque lo experimentó como hombre. Pero también puede salvarnos completamente porque Él es Dios.\n\nLa unión hipostática significa que cuando miramos a Jesús, estamos viendo a Dios en carne humana. No hay un Dios distante e inaccesible; hay un Dios que se hizo cercano, que tomó nuestra naturaleza, que caminó entre nosotros, que murió nuestra muerte y que resucitó para nuestra justificación.",
+    confesion: "Capítulo 8: De Cristo el Mediador",
+    escrituras: [
+      "Juan 1:1, 14",
+      "Filipenses 2:5-11",
+      "Colosenses 2:9",
+      "Hebreos 2:14-17",
+      "1 Timoteo 2:5",
+      "Romanos 1:3-4",
+      "Romanos 9:5",
+      "Hebreos 1:1-3",
+    ],
+    relacionadas: ["la-trinidad", "expiacion-limitada"],
+    svg: "cristologia-th",
+  },
+  {
     slug: "depravacion-total",
     icon: "✝️",
     title: "Depravación Total",
@@ -273,78 +309,6 @@ const doctrinas: Doctrina[] = [
     svg: "tulip",
   },
   {
-    slug: "perseverancia-santos",
-    icon: "🛡️",
-    title: "Perseverancia de los Santos",
-    tag: "TULIP — Quinto Punto",
-    filter: "salvacion",
-    summary:
-      "Aquellos que Dios verdaderamente salvó serán preservados por su poder y perseverarán en la fe hasta el final. Un verdadero cristiano no puede perder su salvación.",
-    keyVerse: {
-      text: "Y yo les doy vida eterna; y no perecerán jamás, ni nadie las arrebatará de mi mano.",
-      ref: "Juan 10:28",
-    },
-    simple:
-      "La perseverancia de los santos significa que los que Dios ha elegido, redimido y regenerado serán preservados por su poder y perseverarán en la fe hasta el fin. No perderán su salvación, no porque sean fuertes en sí mismos, sino porque Dios los guarda. Esto no significa que el cristiano nunca peque o que nunca tenga dudas. Significa que Dios no permitirá que ninguno de los suyos caiga finalmente de la gracia. Los que perseveran hasta el fin demuestran que eran verdaderos creyentes; los que se apartan demuestran que nunca lo fueron.",
-    fondo:
-      "La perseverancia de los santos se basa en la naturaleza de la salvación. Si la salvación es por gracia y no por obras, entonces no puede perderse por falta de obras. Si Dios nos escogió antes de la fundación del mundo, su propósito no puede ser frustrado. Si Cristo murió realmente por nosotros, su sangre no puede ser ineficaz. Si el Espíritu nos regeneró, la nueva vida no puede extinguirse.\n\nJesús lo prometió claramente: 'Todo lo que el Padre me da, vendrá a mí; y al que a mí viene, no le echo fuera... y esta es la voluntad del Padre, que todo aquel que ve al Hijo y cree en él, tenga vida eterna; y yo le resucitaré en el día postrero' (Jn 6:37-40). Pablo estaba seguro: 'Porque estoy convencido de que ni la muerte ni la vida, ni ángeles ni principados, ni lo presente ni lo por venir, ni potestades, ni lo alto ni lo profundo, ni ninguna otra cosa creada podrá separarnos del amor de Dios que es en Cristo Jesús Señor nuestro' (Ro 8:38-39).\n\nLa Confesión 1689, capítulo 17, afirma que 'los que Dios ha aceptado en el Amado, llamados eficazmente y santificados por su Espíritu, no pueden caer total ni finalmente del estado de gracia, sino que perseverarán hasta el fin y serán salvos eternamente'. Las razones que da son: la inmutabilidad del decreto de elección, la eficacia de la muerte de Cristo, la habitación constante del Espíritu Santo, y la naturaleza del pacto de gracia.\n\nEs importante distinguir entre la seguridad bíblica y la presunción. La seguridad nace de ver las evidencias de la gracia en nuestra vida: amor a Dios, deseo de santidad, obediencia a la Palabra, amor a los hermanos (1 Jn). La presunción es confiar en una profesión de fe sin frutos. Como dice 2 Corintios 13:5: 'Examinaos a vosotros mismos si estáis en la fe'.",
-    historia:
-      "Esta doctrina fue afirmada por Agustín, quien enseñó que Dios da a los elegidos el don de la perseverancia final. Los cánones de Dordt la defendieron contra los arminianos, que enseñaban que un verdadero creyente podía caer de la gracia y perderse. Los bautistas particulares siempre han sostenido esta doctrina. Los puritanos escribieron extensamente sobre la seguridad de la fe y la perseverancia. John Bunyan escribió El progreso del peregrino, una alegoría de la perseverancia del cristiano desde la Ciudad de Destrucción hasta la Ciudad Celestial. Spurgeon predicó con frecuencia sobre la seguridad que tienen los creyentes en Cristo.",
-    malentendidos:
-      "El malentendido más común es pensar que la perseverancia de los santos significa que una persona puede vivir en pecado deliberado y aún así ser salva. Esto es falso. La perseverancia no es la seguridad de que podemos pecar sin consecuencias, sino la seguridad de que Dios nos guardará de la apostasía final. El verdadero creyente que peca será disciplinado por Dios y restaurado al arrepentimiento (He 12:6-8; 1 Jn 1:9). Otro error es pensar que los que se apartan de la fe demuestran que perdieron su salvación. 1 Juan 2:19 responde: 'Salieron de nosotros, pero no eran de nosotros; porque si hubiesen sido de nosotros, habrían permanecido con nosotros; pero salieron para que se manifestase que no todos son de nosotros'. Su salida demuestra que nunca fueron verdaderamente salvos, no que perdieron su salvación.",
-    aplicacion:
-      "La perseverancia de los santos nos da gran consuelo y seguridad. Sabemos que nuestra salvación no depende de nuestra frágil constancia, sino del poderoso poder de Dios que nos guarda. Esto no nos lleva a la pereza espiritual, sino a la gratitud y al esfuerzo: 'ocupaos en vuestra salvación con temor y temblor, porque Dios es el que en vosotros produce así el querer como el hacer, por su buena voluntad' (Fil 2:12-13). Nos anima a seguir adelante en la carrera de la fe, sabiendo que el que comenzó la buena obra en nosotros la perfeccionará hasta el día de Jesucristo (Fil 1:6).",
-    confesion: "Capítulo 17: De la Perseverancia de los Santos",
-    escrituras: [
-      "Juan 10:27-29",
-      "Romanos 8:38-39",
-      "Filipenses 1:6",
-      "1 Pedro 1:5",
-      "Judas 24-25",
-      "1 Juan 2:19",
-    ],
-    relacionadas: [
-      "eleccion-incondicional",
-      "gracia-irresistible",
-      "regeneracion",
-    ],
-    svg: "tulip",
-  },
-  {
-    slug: "justificacion-por-fe",
-    icon: "⚖️",
-    title: "Justificación por Fe Sola",
-    tag: "Soteriología",
-    filter: "salvacion",
-    summary:
-      "Somos declarados justos delante de Dios solo por la fe en Jesucristo, no por nuestras obras. La justicia perfecta de Cristo nos es imputada.",
-    keyVerse: {
-      text: "Concluimos, pues, que el hombre es justificado por fe sin las obras de la ley.",
-      ref: "Romanos 3:28",
-    },
-    simple:
-      "La justificación es un acto legal de Dios en el cual Él declara justo al pecador que cree en Jesucristo. No es que el pecador se vuelva justo interiormente (eso es la santificación), sino que es declarado justo sobre la base de la justicia de Cristo que le es imputada (acreditada). Es como si Dios pusiera la cuenta del pecador en la columna del 'pagado' y la justicia de Cristo en la columna del 'acreditado'. La fe no es la base de nuestra justificación, sino el instrumento por el cual recibimos la justicia de Cristo.",
-    fondo:
-      "La justificación por fe sola es 'el artículo por el cual la iglesia se mantiene en pie' (articulus stantis et cadentis ecclesiae). Fue la doctrina central de la Reforma y distingue el evangelio bíblico de cualquier otro sistema religioso. El problema que la justificación resuelve es este: ¿Cómo puede un Dios santo aceptar a un pecador culpable? La respuesta es: por la imputación de la justicia de Cristo.\n\nLa palabra 'justificar' en el Nuevo Testamento (dikaioō) es un término forense o legal. Significa 'declarar justo', no 'hacer justo'. Esto se ve claramente en Proverbios 17:15: 'El que justifica al impío y el que condena al justo, ambos son abominación a Jehová'. Cuando Dios justifica al impío, lo declara justo. Pero ¿cómo puede Dios hacer esto sin violar su justicia? Porque la justicia de Cristo es imputada al pecador.\n\nPablo desarrolla esta doctrina en Romanos 3-5 y Gálatas. En Adán, el pecado fue imputado a la raza humana; en Cristo, la justicia es imputada a los creyentes (Ro 5:12-19). 2 Corintios 5:21 lo resume: 'Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él'.\n\nLa Confesión 1689, capítulo 11, enseña que la justificación es 'un acto de la gracia gratuita de Dios' que incluye 'el perdón de los pecados y la aceptación de los creyentes como justos delante de Dios, solo por la justicia de Cristo imputada y recibida por la fe sola'.\n\nLas buenas obras no son la causa ni la base de la justificación, sino su fruto necesario. Como dijo Calvino: 'Somos justificados solo por la fe, pero no por una fe que está sola'. La fe verdadera siempre produce buenas obras, pero las obras no son la raíz de la salvación, sino el fruto.",
-    historia:
-      "La doctrina fue oscurecida en la iglesia medieval, donde se enseñaba que la justificación era un proceso de volverse justo mediante la infusión de gracia a través de los sacramentos y las buenas obras. Lutero, mientras estudiaba Romanos, descubrió que la justicia de Dios no es una justicia activa que castiga, sino una justicia pasiva que se recibe por fe. Esto transformó su vida y desencadenó la Reforma. La justificación por fe sola fue afirmada en las confesiones luteranas y reformadas. El Concilio de Trento (1547) anatematizó la doctrina, afirmando que la justificación incluye la renovación interior y que la fe debe ser formada por el amor. La Confesión Bautista de 1689 sigue la tradición reformada en esta doctrina.",
-    malentendidos:
-      "El malentendido más común es pensar que 'solo por fe' significa que las buenas obras no son importantes. La Biblia dice claramente que la fe sin obras es muerta (St 2:17). Las obras son evidencia necesaria de la fe verdadera, pero no son la base de nuestra aceptación delante de Dios. Otro error es pensar que la justificación es un proceso continuo. La justificación es un acto único y completo: el pecador es declarado justo en el momento en que cree, y esa declaración nunca cambia. Finalmente, algunos confunden justificación con santificación. La justificación es lo que Dios hace por nosotros (declararnos justos); la santificación es lo que Dios hace en nosotros (hacernos santos).",
-    aplicacion:
-      "La justificación por fe sola nos da paz con Dios (Ro 5:1). Podemos estar seguros de que somos aceptados por Dios no por nuestros méritos, sino por la perfecta justicia de Cristo. Esto nos libera de la esclavitud del esfuerzo religioso y nos motiva a servir a Dios por gratitud, no por miedo. También nos humilla: no hay lugar para la jactancia en nuestra salvación. Todo es gracia. Finalmente, nos impulsa a vivir en santidad: no para ser salvos, sino porque somos salvos. Como dijo Pablo: '¿Perseveraremos en pecado para que la gracia abunde? ¡En ninguna manera!' (Ro 6:1-2).",
-    confesion: "Capítulo 11: De la Justificación",
-    escrituras: [
-      "Romanos 3:21-28",
-      "2 Corintios 5:21",
-      "Romanos 4:4-6",
-      "Gálatas 2:16",
-      "Filipenses 3:8-9",
-      "Efesios 2:8-9",
-    ],
-    relacionadas: ["regeneracion", "santificacion"],
-    svg: "solas",
-  },
-  {
     slug: "regeneracion",
     icon: "🕊️",
     title: "La Regeneración",
@@ -383,6 +347,40 @@ const doctrinas: Doctrina[] = [
     svg: "ordo",
   },
   {
+    slug: "justificacion-por-fe",
+    icon: "⚖️",
+    title: "Justificación por Fe Sola",
+    tag: "Soteriología",
+    filter: "salvacion",
+    summary:
+      "Somos declarados justos delante de Dios solo por la fe en Jesucristo, no por nuestras obras. La justicia perfecta de Cristo nos es imputada.",
+    keyVerse: {
+      text: "Concluimos, pues, que el hombre es justificado por fe sin las obras de la ley.",
+      ref: "Romanos 3:28",
+    },
+    simple:
+      "La justificación es un acto legal de Dios en el cual Él declara justo al pecador que cree en Jesucristo. No es que el pecador se vuelva justo interiormente (eso es la santificación), sino que es declarado justo sobre la base de la justicia de Cristo que le es imputada (acreditada). Es como si Dios pusiera la cuenta del pecador en la columna del 'pagado' y la justicia de Cristo en la columna del 'acreditado'. La fe no es la base de nuestra justificación, sino el instrumento por el cual recibimos la justicia de Cristo.",
+    fondo:
+      "La justificación por fe sola es 'el artículo por el cual la iglesia se mantiene en pie' (articulus stantis et cadentis ecclesiae). Fue la doctrina central de la Reforma y distingue el evangelio bíblico de cualquier otro sistema religioso. El problema que la justificación resuelve es este: ¿Cómo puede un Dios santo aceptar a un pecador culpable? La respuesta es: por la imputación de la justicia de Cristo.\n\nLa palabra 'justificar' en el Nuevo Testamento (dikaioō) es un término forense o legal. Significa 'declarar justo', no 'hacer justo'. Esto se ve claramente en Proverbios 17:15: 'El que justifica al impío y el que condena al justo, ambos son abominación a Jehová'. Cuando Dios justifica al impío, lo declara justo. Pero ¿cómo puede Dios hacer esto sin violar su justicia? Porque la justicia de Cristo es imputada al pecador.\n\nPablo desarrolla esta doctrina en Romanos 3-5 y Gálatas. En Adán, el pecado fue imputado a la raza humana; en Cristo, la justicia es imputada a los creyentes (Ro 5:12-19). 2 Corintios 5:21 lo resume: 'Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él'.\n\nLa Confesión 1689, capítulo 11, enseña que la justificación es 'un acto de la gracia gratuita de Dios' que incluye 'el perdón de los pecados y la aceptación de los creyentes como justos delante de Dios, solo por la justicia de Cristo imputada y recibida por la fe sola'.\n\nLas buenas obras no son la causa ni la base de la justificación, sino su fruto necesario. Como dijo Calvino: 'Somos justificados solo por la fe, pero no por una fe que está sola'. La fe verdadera siempre produce buenas obras, pero las obras no son la raíz de la salvación, sino el fruto.",
+    historia:
+      "La doctrina fue oscurecida en la iglesia medieval, donde se enseñaba que la justificación era un proceso de volverse justo mediante la infusión de gracia a través de los sacramentos y las buenas obras. Lutero, mientras estudiaba Romanos, descubrió que la justicia de Dios no es una justicia activa que castiga, sino una justicia pasiva que se recibe por fe. Esto transformó su vida y desencadenó la Reforma. La justificación por fe sola fue afirmada en las confesiones luteranas y reformadas. El Concilio de Trento (1547) anatematizó la doctrina, afirmando que la justificación incluye la renovación interior y que la fe debe ser formada por el amor. La Confesión Bautista de 1689 sigue la tradición reformada en esta doctrina.",
+    malentendidos:
+      "El malentendido más común es pensar que 'solo por fe' significa que las buenas obras no son importantes. La Biblia dice claramente que la fe sin obras es muerta (St 2:17). Las obras son evidencia necesaria de la fe verdadera, pero no son la base de nuestra aceptación delante de Dios. Otro error es pensar que la justificación es un proceso continuo. La justificación es un acto único y completo: el pecador es declarado justo en el momento en que cree, y esa declaración nunca cambia. Finalmente, algunos confunden justificación con santificación. La justificación es lo que Dios hace por nosotros (declararnos justos); la santificación es lo que Dios hace en nosotros (hacernos santos).",
+    aplicacion:
+      "La justificación por fe sola nos da paz con Dios (Ro 5:1). Podemos estar seguros de que somos aceptados por Dios no por nuestros méritos, sino por la perfecta justicia de Cristo. Esto nos libera de la esclavitud del esfuerzo religioso y nos motiva a servir a Dios por gratitud, no por miedo. También nos humilla: no hay lugar para la jactancia en nuestra salvación. Todo es gracia. Finalmente, nos impulsa a vivir en santidad: no para ser salvos, sino porque somos salvos. Como dijo Pablo: '¿Perseveraremos en pecado para que la gracia abunde? ¡En ninguna manera!' (Ro 6:1-2).",
+    confesion: "Capítulo 11: De la Justificación",
+    escrituras: [
+      "Romanos 3:21-28",
+      "2 Corintios 5:21",
+      "Romanos 4:4-6",
+      "Gálatas 2:16",
+      "Filipenses 3:8-9",
+      "Efesios 2:8-9",
+    ],
+    relacionadas: ["regeneracion", "santificacion"],
+    svg: "solas",
+  },
+  {
     slug: "santificacion",
     icon: "🔥",
     title: "La Santificación",
@@ -414,6 +412,44 @@ const doctrinas: Doctrina[] = [
       "Romanos 8:13",
     ],
     relacionadas: ["justificacion-por-fe", "regeneracion", "perseverancia-santos"],
+  },
+  {
+    slug: "perseverancia-santos",
+    icon: "🛡️",
+    title: "Perseverancia de los Santos",
+    tag: "TULIP — Quinto Punto",
+    filter: "salvacion",
+    summary:
+      "Aquellos que Dios verdaderamente salvó serán preservados por su poder y perseverarán en la fe hasta el final. Un verdadero cristiano no puede perder su salvación.",
+    keyVerse: {
+      text: "Y yo les doy vida eterna; y no perecerán jamás, ni nadie las arrebatará de mi mano.",
+      ref: "Juan 10:28",
+    },
+    simple:
+      "La perseverancia de los santos significa que los que Dios ha elegido, redimido y regenerado serán preservados por su poder y perseverarán en la fe hasta el fin. No perderán su salvación, no porque sean fuertes en sí mismos, sino porque Dios los guarda. Esto no significa que el cristiano nunca peque o que nunca tenga dudas. Significa que Dios no permitirá que ninguno de los suyos caiga finalmente de la gracia. Los que perseveran hasta el fin demuestran que eran verdaderos creyentes; los que se apartan demuestran que nunca lo fueron.",
+    fondo:
+      "La perseverancia de los santos se basa en la naturaleza de la salvación. Si la salvación es por gracia y no por obras, entonces no puede perderse por falta de obras. Si Dios nos escogió antes de la fundación del mundo, su propósito no puede ser frustrado. Si Cristo murió realmente por nosotros, su sangre no puede ser ineficaz. Si el Espíritu nos regeneró, la nueva vida no puede extinguirse.\n\nJesús lo prometió claramente: 'Todo lo que el Padre me da, vendrá a mí; y al que a mí viene, no le echo fuera... y esta es la voluntad del Padre, que todo aquel que ve al Hijo y cree en él, tenga vida eterna; y yo le resucitaré en el día postrero' (Jn 6:37-40). Pablo estaba seguro: 'Porque estoy convencido de que ni la muerte ni la vida, ni ángeles ni principados, ni lo presente ni lo por venir, ni potestades, ni lo alto ni lo profundo, ni ninguna otra cosa creada podrá separarnos del amor de Dios que es en Cristo Jesús Señor nuestro' (Ro 8:38-39).\n\nLa Confesión 1689, capítulo 17, afirma que 'los que Dios ha aceptado en el Amado, llamados eficazmente y santificados por su Espíritu, no pueden caer total ni finalmente del estado de gracia, sino que perseverarán hasta el fin y serán salvos eternamente'. Las razones que da son: la inmutabilidad del decreto de elección, la eficacia de la muerte de Cristo, la habitación constante del Espíritu Santo, y la naturaleza del pacto de gracia.\n\nEs importante distinguir entre la seguridad bíblica y la presunción. La seguridad nace de ver las evidencias de la gracia en nuestra vida: amor a Dios, deseo de santidad, obediencia a la Palabra, amor a los hermanos (1 Jn). La presunción es confiar en una profesión de fe sin frutos. Como dice 2 Corintios 13:5: 'Examinaos a vosotros mismos si estáis en la fe'.",
+    historia:
+      "Esta doctrina fue afirmada por Agustín, quien enseñó que Dios da a los elegidos el don de la perseverancia final. Los cánones de Dordt la defendieron contra los arminianos, que enseñaban que un verdadero creyente podía caer de la gracia y perderse. Los bautistas particulares siempre han sostenido esta doctrina. Los puritanos escribieron extensamente sobre la seguridad de la fe y la perseverancia. John Bunyan escribió El progreso del peregrino, una alegoría de la perseverancia del cristiano desde la Ciudad de Destrucción hasta la Ciudad Celestial. Spurgeon predicó con frecuencia sobre la seguridad que tienen los creyentes en Cristo.",
+    malentendidos:
+      "El malentendido más común es pensar que la perseverancia de los santos significa que una persona puede vivir en pecado deliberado y aún así ser salva. Esto es falso. La perseverancia no es la seguridad de que podemos pecar sin consecuencias, sino la seguridad de que Dios nos guardará de la apostasía final. El verdadero creyente que peca será disciplinado por Dios y restaurado al arrepentimiento (He 12:6-8; 1 Jn 1:9). Otro error es pensar que los que se apartan de la fe demuestran que perdieron su salvación. 1 Juan 2:19 responde: 'Salieron de nosotros, pero no eran de nosotros; porque si hubiesen sido de nosotros, habrían permanecido con nosotros; pero salieron para que se manifestase que no todos son de nosotros'. Su salida demuestra que nunca fueron verdaderamente salvos, no que perdieron su salvación.",
+    aplicacion:
+      "La perseverancia de los santos nos da gran consuelo y seguridad. Sabemos que nuestra salvación no depende de nuestra frágil constancia, sino del poderoso poder de Dios que nos guarda. Esto no nos lleva a la pereza espiritual, sino a la gratitud y al esfuerzo: 'ocupaos en vuestra salvación con temor y temblor, porque Dios es el que en vosotros produce así el querer como el hacer, por su buena voluntad' (Fil 2:12-13). Nos anima a seguir adelante en la carrera de la fe, sabiendo que el que comenzó la buena obra en nosotros la perfeccionará hasta el día de Jesucristo (Fil 1:6).",
+    confesion: "Capítulo 17: De la Perseverancia de los Santos",
+    escrituras: [
+      "Juan 10:27-29",
+      "Romanos 8:38-39",
+      "Filipenses 1:6",
+      "1 Pedro 1:5",
+      "Judas 24-25",
+      "1 Juan 2:19",
+    ],
+    relacionadas: [
+      "eleccion-incondicional",
+      "gracia-irresistible",
+      "regeneracion",
+    ],
+    svg: "tulip",
   },
   {
     slug: "bautismo-del-creyente",
@@ -516,42 +552,6 @@ const doctrinas: Doctrina[] = [
       "bautismo-del-creyente",
       "cena-del-senor",
     ],
-  },
-  {
-    slug: "union-hipostatica",
-    icon: "✝️",
-    title: "La Unión Hipostática",
-    tag: "Cristología",
-    filter: "cristo",
-    summary:
-      "Jesucristo es una sola persona divina que posee dos naturalezas completas y distintas: verdadero Dios y verdadero hombre, unidas sin confusión, sin cambio, sin división y sin separación.",
-    keyVerse: {
-      text: "Y aquel Verbo fue hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad.",
-      ref: "Juan 1:14",
-    },
-    simple:
-      "La unión hipostática es la doctrina de que Jesucristo es una sola persona con dos naturalezas completas: divina y humana. No es 'mitad Dios y mitad hombre' (como un centauro es mitad hombre y mitad caballo), sino que es completamente Dios y completamente hombre simultáneamente. Su naturaleza divina no se mezcló con la humana para formar una tercera cosa, ni su naturaleza humana absorbió a la divina, ni viceversa. Las dos naturalezas permanecen distintas pero unidas en una sola persona: la persona del Hijo eterno de Dios.\n\nEsto significa que Jesús tenía hambre (humano) pero alimentó a 5.000 (divino). Se cansaba (humano) pero calmó la tormenta (divino). Lloró en la tumba de Lázaro (humano) pero lo resucitó (divino). Murió en la cruz (humano) pero Su sangre tenía poder eterno para salvar (divino). Cada naturaleza hace lo que le es propio, pero siempre en la misma persona.\n\nEs un misterio profundo que no podemos comprender plenamente, pero que debemos afirmar con precisión porque de esta doctrina depende nuestra salvación. Solo alguien que es verdadero Dios puede pagar el precio infinito del pecado, y solo alguien que es verdadero hombre puede representarnos y morir en nuestro lugar.",
-    fondo:
-      "La unión hipostática (del griego hypostasis, 'persona' o 'subsistencia') describe cómo las dos naturalezas de Cristo se unen en una sola persona. La definición clásica fue formulada en el Concilio de Calcedonia (451 d.C.): 'un mismo Cristo, Hijo, Señor, unigénito, conocido en dos naturalezas, sin confusión, sin cambio, sin división, sin separación'.\n\nEstos cuatro adverbios son cruciales:\n\nSin confusión (asygchytōs): Las naturalezas no se mezclan ni se fusionan. La divinidad no se 'diluye' en la humanidad ni viceversa. Cristo no es una tercera cosa que no es ni Dios ni hombre, sino ambas cosas enteras.\n\nSin cambio (atreptōs): La naturaleza divina no se transforma en humana ni la humana en divina. Dios sigue siendo Dios; el hombre sigue siendo hombre. La encarnación no altera la esencia de ninguna de las dos naturalezas.\n\nSin división (adiairetōs): Las dos naturalezas no están separadas ni funcionan independientemente. No hay un 'Jesús divino' y un 'Jesús humano' que operen por separado. Todo lo que Cristo hace, lo hace como una sola persona.\n\nSin separación (achōristōs): Las naturalezas no pueden separarse ni siquiera en la muerte. Cuando Cristo murió, solo Su cuerpo humano murió, pero Su persona divina no se separó de Su naturaleza humana. La unión es permanente.\n\nLa comunicación de propiedades (communicatio idiomatum) es la enseñanza de que los atributos de ambas naturalezas pueden predicarse de la persona de Cristo. Por eso podemos decir que 'Dios murió en la cruz' (Hechos 20:28) — no porque la deidad muriera, sino porque la persona que murió era Dios. Igualmente, 'el Hijo del Hombre descendió del cielo' (Juan 3:13) — no porque Su humanidad viniera del cielo, sino porque la persona que es Hijo del Hombre también es el Hijo de Dios.\n\nLa Confesión 1689, capítulo 8, afirma: 'Dos naturalezas enteras, perfectas y distintas, fueron inseparablemente unidas en una persona, sin conversión, composición o confusión, la cual persona es muy Dios y muy hombre, no obstante un Cristo, el único Mediador entre Dios y los hombres'. La confesión enfatiza que 'cada naturaleza hace lo que le es propio' — la divinidad hace obras divinas, la humanidad hace obras humanas, pero siempre en la misma persona.\n\nDesde la perspectiva bautista reformada, la unión hipostática es la base de la suficiente obra de Cristo. Si Él no fuera verdaderamente Dios, Su muerte no tendría valor infinito. Si no fuera verdaderamente hombre, no podría representarnos ni sufrir en nuestro lugar. Solo el Dios-hombre puede ser mediador.",
-    historia:
-      "La doctrina de la unión hipostática no surgió de la especulación teológica, sino de la necesidad de defender la enseñanza bíblica contra herejías que distorsionaban quién es Cristo.\n\nEl primer gran desafío fue el arrianismo (siglo IV), que negaba la divinidad plena de Cristo. Arrio enseñaba que el Hijo era una criatura, 'hubo un tiempo en que el Hijo no era'. El Concilio de Nicea (325) respondió afirmando que el Hijo es homousios (de la misma esencia) con el Padre. Pero Nicea estableció la deidad de Cristo sin definir aún cómo se relaciona con Su humanidad.\n\nEl apolinarismo (siglo IV) fue el primer intento de explicar la unión. Apolinar enseñaba que Cristo tenía cuerpo humano y alma humana, pero que el Logos divino reemplazaba Su espíritu humano. Esto hacía a Cristo menos que completamente humano. El Concilio de Constantinopla (381) lo condenó: 'Lo que no fue asumido, no fue sanado' — si Cristo no asumió una mente humana completa, nuestra mente no puede ser redimida.\n\nEl nestorianismo (siglo V) cayó al otro extremo: Nestorio enseñaba que las dos naturalezas estaban tan separadas que Cristo era casi dos personas unidas moralmente, no ontológicamente. María sería 'Cristotokos' (madre de Cristo) pero no 'Theotokos' (madre de Dios). El Concilio de Éfeso (431) afirmó que María es Theotokos porque la persona que nació de ella era Dios, y condenó la división de Cristo en dos sujetos.\n\nEl eutiquianismo o monofisitismo (siglo V) enseñaba que las dos naturalezas se fusionaron en una sola naturaleza divino-humana. Eutiques decía que la humanidad de Cristo fue 'absorbida' por Su divinidad 'como una gota de miel en el mar'. El Concilio de Calcedonia (451) respondió con la definición clásica de 'dos naturalezas sin confusión, sin cambio, sin división, sin separación'.\n\nEl monotelismo (siglo VII) fue otro intento: enseñaba que Cristo tenía dos naturalezas pero una sola voluntad (divina). El Tercer Concilio de Constantinopla (681) lo condenó, afirmando que Cristo tiene dos voluntades (divina y humana) en armonía perfecta, porque la voluntad pertenece a la naturaleza, no a la persona.\n\nLa tradición reformada recibió y afirmó la definición de Calcedonia. Calvino escribió extensamente sobre la unión hipostática, enfatizando la comunicación de propiedades y la presencia real de Cristo en la Cena. Los teólogos reformados posteriores (Turretin, Owen, Hodge) desarrollaron la doctrina con precisión, siempre dentro del marco calcedonio. La Confesión 1689 refleja fielmente esta tradición.",
-    malentendidos:
-      "Quizás el malentendido más común es pensar que Jesús 'dejó de ser Dios' cuando se hizo hombre. Filipenses 2:7 dice que Cristo se 'despojó a sí mismo' (kenosis), pero esto no significa que dejara de tener atributos divinos. Significa que voluntariamente restringió el uso independiente y manifiesto de esos atributos. El niño en Belén seguía siendo el Dios que sostiene el universo.\n\nOtro error común es pensar que Jesús tenía 'superpoderes' como un héroe de cómic. No. Los milagros de Jesús no los hizo por Su naturaleza divina directamente, sino por el poder del Espíritu Santo operando a través de Su humanidad. Esto es importante porque muestra que Cristo vivió como el segundo Adán, dependiendo del Espíritu en fe y obediencia — exactamente como nosotros debemos vivir.\n\nTambién se malinterpreta la inmutabilidad de Cristo. Si Cristo cambió al encarnarse, ¿cómo puede ser inmutable? La respuesta es que la naturaleza divina no cambió; la Palabra eterna simplemente asumió una naturaleza humana adicional. La persona del Hijo no cambió en Su esencia divina, sino que comenzó a existir también en forma humana.\n\nFinalmente, algunos piensan que la unión hipostática significa que la humanidad de Cristo es omnipresente (como enseñan los luteranos en la Cena del Señor). Pero la humanidad de Cristo, aunque unida a la divinidad, no adquiere atributos divinos. Su cuerpo humano está en el cielo a la diestra del Padre, no físicamente presente en la Cena. La presencia de Cristo en la Cena es espiritual, no física.",
-    aplicacion:
-      "La unión hipostática no es una doctrina abstracta; es el fundamento de nuestra salvación. Considera:\n\nNuestra redención requería un Redentor que fuera Dios y hombre. Como hombre, podía representarnos y sufrir en nuestro lugar. Como Dios, Su sufrimiento tenía valor infinito y Su obediencia era perfecta. Si Cristo no fuera ambos, estaríamos perdidos.\n\nNuestra justificación depende de la unión hipostática. La justicia que se nos imputa es la justicia de uno que es Dios y hombre: perfectamente obediente como hombre, infinitamente valiosa como Dios. No hay otra base para nuestra aceptación delante de Dios.\n\nNuestra santificación se fundamenta en Cristo. Él vivió la vida que nosotros no podemos vivir, en dependencia del Espíritu, en perfecta obediencia al Padre. Su humanidad santificada nos muestra que es posible vivir para Dios, y Su Espíritu nos une a Él para que Su vida fluya en la nuestra.\n\nNuestra esperanza escatológica descansa en Su humanidad glorificada. Cristo resucitó con un cuerpo humano real, y ese cuerpo está ahora a la diestra de Dios. Su humanidad glorificada es la garantía y el modelo de nuestra propia resurrección futura.\n\nEn la oración, nos acercamos confiadamente porque tenemos un Sumo Sacerdote que 'puede compadecerse de nuestras debilidades' (Hebreos 4:15). Él entiende nuestro sufrimiento porque lo experimentó como hombre. Pero también puede salvarnos completamente porque Él es Dios.\n\nLa unión hipostática significa que cuando miramos a Jesús, estamos viendo a Dios en carne humana. No hay un Dios distante e inaccesible; hay un Dios que se hizo cercano, que tomó nuestra naturaleza, que caminó entre nosotros, que murió nuestra muerte y que resucitó para nuestra justificación.",
-    confesion: "Capítulo 8: De Cristo el Mediador",
-    escrituras: [
-      "Juan 1:1, 14",
-      "Filipenses 2:5-11",
-      "Colosenses 2:9",
-      "Hebreos 2:14-17",
-      "1 Timoteo 2:5",
-      "Romanos 1:3-4",
-      "Romanos 9:5",
-      "Hebreos 1:1-3",
-    ],
-    relacionadas: ["la-trinidad", "expiacion-limitada"],
-    svg: "cristologia-th",
   },
 ];
 
