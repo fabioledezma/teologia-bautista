@@ -7,6 +7,7 @@ import versiculosMalInterpretados from '@/data/versiculos-mal-interpretados';
 import areasDiscernimiento from '@/data/discernimiento';
 import catecismoData from '@/data/catecismo';
 import bibliotecaData from '@/data/biblioteca';
+import devocionalesData from '@/data/devocionales';
 
 function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number] }) {
   const [openLayer, setOpenLayer] = useState<string | null>(null);
@@ -109,6 +110,50 @@ function CatecismoItem({ entry }: { entry: (typeof catecismoData)[number] }) {
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
             <span className="text-[11px] text-text-3">{entry.escritura}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DevocionalCard({ devocional }: { devocional: (typeof devocionalesData)[number] }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full text-left p-5"
+      >
+        <span className="text-[10px] uppercase tracking-wider text-gold mb-2 block">
+          {devocional.tema}
+        </span>
+        <h3 className="text-text font-semibold text-sm leading-snug mb-2">
+          {devocional.titulo}
+        </h3>
+        <p className="text-text-3 text-xs leading-relaxed line-clamp-2">
+          {devocional.texto}
+        </p>
+        <div className="flex items-center gap-1.5 mt-3 text-[10px] text-gold">
+          <svg className={`w-3 h-3 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+          {open ? 'Cerrar meditación' : 'Leer meditación'}
+        </div>
+      </button>
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96' : 'max-h-0'}`}>
+        <div className="px-5 pb-5 pt-0 border-t border-border/50">
+          <p className="text-text text-xs leading-relaxed mt-3">
+            {devocional.meditacion}
+          </p>
+          <div className="mt-3 p-3 bg-gold/5 border border-gold/10 rounded-lg">
+            <span className="text-[10px] uppercase tracking-wider text-gold font-semibold block mb-1">
+              Oración
+            </span>
+            <p className="text-text text-xs leading-relaxed italic">
+              {devocional.oracion}
+            </p>
           </div>
         </div>
       </div>
@@ -550,6 +595,31 @@ export default function AprenderPage() {
               No hay recursos con esos filtros.
             </p>
           )}
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="max-w-5xl mx-auto px-5">
+          <div className="text-center mb-12">
+            <span className="text-[10px] uppercase tracking-[2px] text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+              Devocionales
+            </span>
+            <h2 className="font-serif text-3xl md:text-4xl text-text mt-4">
+              Devocionales doctrinales
+            </h2>
+            <div className="section-title-line mt-3 mb-3" />
+            <p className="text-text-3 text-sm max-w-xl mx-auto">
+              Breves meditaciones diarias para alimentar el alma con la sana
+              doctrina. Cada devocional incluye una porción bíblica, meditación
+              y oración.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 min-w-0">
+            {devocionalesData.map((dev) => (
+              <DevocionalCard key={dev.id} devocional={dev} />
+            ))}
+          </div>
         </div>
       </section>
 
