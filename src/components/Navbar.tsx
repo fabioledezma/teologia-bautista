@@ -110,12 +110,15 @@ export default function Navbar() {
           <FontSizeToggle />
         </div>
 
-        <button
-          ref={btnRef}
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 -mr-2 text-text hover:text-gold transition-colors active:scale-90"
-          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
-        >
+        <div className="flex md:hidden items-center gap-0.5">
+          <SearchDialog />
+          <FontSizeToggle />
+          <button
+            ref={btnRef}
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 -mr-2 text-text hover:text-gold transition-colors active:scale-90"
+            aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+          >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {isOpen ? (
               <path
@@ -134,12 +137,13 @@ export default function Navbar() {
             )}
           </svg>
         </button>
+        </div>
       </div>
 
       <div
         ref={menuRef}
         className={`md:hidden bg-surface-1 border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 py-3 space-y-0.5">

@@ -204,14 +204,14 @@ export default async function THDetailPage({
         </div>
 
         {/* Prev / Next navigation */}
-        <div className="mt-12 pt-8 border-t border-border flex items-center justify-between gap-4 flex-wrap">
+        <div className="mt-12 pt-8 border-t border-border flex items-center justify-between gap-2 sm:gap-4">
           {prev ? (
             <Link
               href={`/historia/teologia-historica/${prev.slug}`}
-              className="group flex items-center gap-2 text-xs text-text hover:text-gold transition-colors"
+              className="group flex items-center gap-1.5 sm:gap-2 text-xs text-text hover:text-gold transition-colors min-w-0 flex-1"
             >
               <svg
-                className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
+                className="w-4 h-4 flex-shrink-0 group-hover:-translate-x-1 transition-transform"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -219,30 +219,30 @@ export default async function THDetailPage({
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5m7-7l-7 7 7 7" />
               </svg>
-              <span>
+              <span className="min-w-0">
                 <span className="block text-[10px] uppercase tracking-wide text-text-3">
                   Anterior
                 </span>
-                {prev.title}
+                <span className="break-words">{prev.title}</span>
               </span>
             </Link>
           ) : (
-            <div />
+            <div className="flex-1" />
           )}
 
           {next ? (
             <Link
               href={`/historia/teologia-historica/${next.slug}`}
-              className="group flex items-center gap-2 text-xs text-text hover:text-gold transition-colors text-right"
+              className="group flex items-center gap-1.5 sm:gap-2 text-xs text-text hover:text-gold transition-colors text-right min-w-0 flex-1"
             >
-              <span>
+              <span className="min-w-0">
                 <span className="block text-[10px] uppercase tracking-wide text-text-3">
                   Siguiente
                 </span>
-                {next.title}
+                <span className="break-words">{next.title}</span>
               </span>
               <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1 transition-transform"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -254,9 +254,9 @@ export default async function THDetailPage({
           ) : (
             <Link
               href="/historia/teologia-historica"
-              className="inline-flex items-center gap-2 text-xs text-gold font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-xs text-gold font-semibold hover:underline min-w-0"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
               Completado — Volver al inicio

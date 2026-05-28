@@ -103,30 +103,30 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
         </section>
 
         {/* Navigation */}
-        <div className="flex justify-between items-center pt-8 border-t border-border">
+        <div className="flex justify-between items-center gap-2 pt-8 border-t border-border">
           {prev ? (
             <Link
               href={`/historia/expansion/${prev.slug}`}
-              className="group text-left"
+              className="group text-left min-w-0 flex-1"
             >
               <span className="text-[10px] uppercase tracking-wider text-text-3">Anterior</span>
-              <p className="text-xs text-gold font-semibold group-hover:underline mt-0.5 flex items-center gap-1">
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <p className="text-xs text-gold font-semibold group-hover:underline mt-0.5 flex items-center gap-1 break-words">
+                <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
                 {prev.title}
               </p>
             </Link>
-          ) : <div />}
+          ) : <div className="flex-1" />}
           {next ? (
             <Link
               href={`/historia/expansion/${next.slug}`}
-              className="group text-right"
+              className="group text-right min-w-0 flex-1"
             >
               <span className="text-[10px] uppercase tracking-wider text-text-3">Siguiente</span>
-              <p className="text-xs text-gold font-semibold group-hover:underline mt-0.5 flex items-center gap-1">
+              <p className="text-xs text-gold font-semibold group-hover:underline mt-0.5 flex items-center gap-1 justify-end break-words">
                 {next.title}
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </p>
@@ -134,10 +134,10 @@ export default async function ExpansionSectionPage({ params }: { params: Promise
           ) : (
             <Link
               href="/historia/expansion"
-              className="group text-right"
+              className="group text-right min-w-0 flex-1"
             >
               <span className="text-[10px] uppercase tracking-wider text-text-3">Completado</span>
-              <p className="text-xs text-gold font-semibold group-hover:underline mt-0.5">
+              <p className="text-xs text-gold font-semibold group-hover:underline mt-0.5 break-words">
                 Volver al inicio →
               </p>
             </Link>

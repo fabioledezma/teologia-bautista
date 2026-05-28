@@ -161,13 +161,13 @@ export default async function HermeneuticaPage({
       </Section>
 
       <Section title="Navegación entre módulos">
-        <div className="flex justify-between items-center gap-4">
+        <div className="flex justify-between items-center gap-2 sm:gap-4">
           {prev ? (
             <Link
               href={`/hermeneutica/${prev.slug}`}
-              className="flex items-center gap-2 text-xs text-text-2 bg-surface-card border border-border px-4 py-3 rounded-xl hover:border-gold hover:text-gold transition flex-1 group"
+              className="flex items-center gap-1.5 sm:gap-2 text-xs text-text-2 bg-surface-card border border-border px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl hover:border-gold hover:text-gold transition flex-1 min-w-0 group"
             >
-              <svg className="w-3.5 h-3.5 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-3.5 h-3.5 flex-shrink-0 group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
               <div className="min-w-0">
@@ -181,13 +181,13 @@ export default async function HermeneuticaPage({
           {next ? (
             <Link
               href={`/hermeneutica/${next.slug}`}
-              className="flex items-center gap-2 text-xs text-text-2 bg-surface-card border border-border px-4 py-3 rounded-xl hover:border-gold hover:text-gold transition flex-1 group text-right"
+              className="flex items-center gap-1.5 sm:gap-2 text-xs text-text-2 bg-surface-card border border-border px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl hover:border-gold hover:text-gold transition flex-1 min-w-0 group text-right"
             >
               <div className="min-w-0 flex-1">
                 <div className="text-[10px] text-text-3 uppercase tracking-wider mb-0.5">Siguiente</div>
                 <div className="truncate font-medium">{next.title}</div>
               </div>
-              <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="w-3.5 h-3.5 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
