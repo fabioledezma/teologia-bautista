@@ -40,8 +40,10 @@ export default function ChatBot() {
   const [history, setHistory] = useState<{ from: string; text: string; options?: Option[] }[]>([]);
   const [stepStack, setStepStack] = useState<string[]>(["inicio"]);
   const [showGreeting, setShowGreeting] = useState(true);
+  const [dismissed, setDismissed] = useState(false);
   const router = useRouter();
   const bottomRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
     const seen = sessionStorage.getItem("chatbot-greeting");
@@ -49,11 +51,25 @@ export default function ChatBot() {
   }, []);
 
   useEffect(() => {
+    if (showGreeting && !open && !dismissed) {
+      timerRef.current = setTimeout(() => {
+        setShowGreeting(false);
+        setDismissed(true);
+        sessionStorage.setItem("chatbot-greeting", "1");
+      }, 10000);
+    }
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [showGreeting, open, dismissed]);
+
+  useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [history]);
 
   const handleOpen = () => {
     setOpen(true);
+    setDismissed(true);
     if (history.length === 0) {
       setHistory([{ from: "bot", text: "¿Qué área te gustaría explorar?", options: inicioOptions }]);
     }
@@ -61,11 +77,14 @@ export default function ChatBot() {
 
   const inicioOptions: Option[] = [
     { label: "Doctrinas Esenciales", action: "menu-doctrinas" },
-    { label: "Errores/Herejías", action: "menu-herejias" },
+    { label: "Errores / Herejías", action: "menu-herejias" },
+    { label: "Escuela de Teología", action: "ir-escuela" },
+    { label: "Hermenéutica Bíblica", action: "ir-hermeneutica" },
     { label: "Expansión de la Iglesia", action: "menu-expansion" },
     { label: "Patrística y Padres Apostólicos", action: "menu-patristica" },
     { label: "Teología Histórica", action: "menu-teologia-historica" },
     { label: "Confesión 1689", action: "menu-confesion" },
+    { label: "Tests y Evaluaciones", action: "menu-tests" },
     { label: "Recursos Recomendados", action: "menu-recursos" },
     { label: "Facultad CBTS", action: "ir-facultad" },
     { label: "Historia de la Iglesia", action: "ir-historia" },
@@ -78,6 +97,7 @@ export default function ChatBot() {
 
   const goTo = (action: string) => {
     setShowGreeting(false);
+    setDismissed(true);
     sessionStorage.setItem("chatbot-greeting", "1");
 
     // --- Scroll / navigate actions ---
@@ -101,6 +121,26 @@ export default function ChatBot() {
       router.push("/historia");
       return;
     }
+    if (action === "ir-escuela") {
+      setOpen(false);
+      router.push("/aprender");
+      return;
+    }
+    if (action === "ir-hermeneutica") {
+      setOpen(false);
+      router.push("/hermeneutica");
+      return;
+    }
+    if (action === "ir-test-basico") {
+      setOpen(false);
+      router.push("/test");
+      return;
+    }
+    if (action === "ir-test-avanzado") {
+      setOpen(false);
+      router.push("/test/avanzado");
+      return;
+    }
 
     // --- Doctrina navigation ---
     if (action.startsWith("ir-doctrina-")) {
@@ -113,6 +153,19 @@ export default function ChatBot() {
     if (action.startsWith("ir-herejia-")) {
       setOpen(false);
       router.push(`/herejia/${action.replace("ir-herejia-", "")}`);
+      return;
+    }
+
+    // --- Menu: Tests ---
+    if (action === "menu-tests") {
+      pushBot(
+        "Elige un test para poner a prueba tu conocimiento:",
+        [
+          { label: "Test Bíblico Básico", action: "ir-test-basico" },
+          { label: "Test Teológico Avanzado", action: "ir-test-avanzado" },
+        ],
+        action
+      );
       return;
     }
 
@@ -278,11 +331,12 @@ export default function ChatBot() {
 
   return (
     <>
+      {/* Greeting popup */}
       {showGreeting && !open && (
         <div className="fixed bottom-6 right-6 z-50 animate-in slide-in-from-bottom-4 fade-in duration-700">
           <div className="bg-surface-card border border-gold/30 rounded-2xl p-4 shadow-2xl max-w-xs relative mb-3">
             <button
-              onClick={() => setShowGreeting(false)}
+              onClick={() => { setShowGreeting(false); setDismissed(true); sessionStorage.setItem("chatbot-greeting", "1"); }}
               className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-border text-text-2 text-xs flex items-center justify-center hover:bg-gold hover:text-black transition"
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -290,7 +344,7 @@ export default function ChatBot() {
               </svg>
             </button>
             <p className="text-sm text-text leading-relaxed break-words">
-              Si tienes preguntas sobre doctrinas, errores/herejías o historia cristiana, puedo ayudarte a encontrar respuestas.
+              Si tienes preguntas sobre doctrinas, errores/herejías, historia cristiana, hermenéutica o teología en general, puedo ayudarte a encontrar respuestas.
             </p>
             <button
               onClick={handleOpen}
@@ -302,10 +356,11 @@ export default function ChatBot() {
         </div>
       )}
 
+      {/* Floating button */}
       {!open && !showGreeting && (
         <button
           onClick={handleOpen}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gold text-black shadow-xl hover:bg-gold-dark transition hover:scale-105 active:scale-95 flex items-center justify-center"
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-gold text-black shadow-xl hover:bg-gold-dark transition hover:scale-105 active:scale-95 flex items-center justify-center chatbot-bounce"
           aria-label="Abrir guía"
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -314,6 +369,7 @@ export default function ChatBot() {
         </button>
       )}
 
+      {/* Chat panel */}
       {open && (
         <div className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-2rem)] h-[520px] max-h-[calc(100vh-6rem)] bg-surface-1 border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-8 fade-in duration-300">
           <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-surface-card rounded-t-2xl">

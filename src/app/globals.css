@@ -86,10 +86,29 @@ body {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes chatbot-bounce {
+  0%, 100% { transform: translateY(0); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  25% { transform: translateY(-8px); box-shadow: 0 14px 28px rgba(175,140,30,0.25); }
+  50% { transform: translateY(0); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  75% { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(175,140,30,0.2); }
+}
+
+@keyframes chatbot-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
 .animate-shimmer { background-size: 200% 200%; animation: shimmer 18s ease infinite; }
 .animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; }
+
+.chatbot-bounce {
+  animation: chatbot-bounce 2.8s ease-in-out infinite, chatbot-pulse 2.8s ease-in-out infinite;
+}
+.chatbot-bounce:hover {
+  animation: none;
+}
 
 .animate-stagger-1 { animation-delay: 0.1s; }
 .animate-stagger-2 { animation-delay: 0.2s; }
