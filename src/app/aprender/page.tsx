@@ -7,18 +7,17 @@ function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number
   const [openLayer, setOpenLayer] = useState<string | null>(null);
 
   const layers = [
-    { id: 'simple', label: 'Explicación Simple', icon: '🌱', content: tema.simple },
-    { id: 'fondo', label: 'Explicación Profunda', icon: '📜', content: tema.fondo },
-    { id: 'aplicacion', label: 'Aplicación Práctica', icon: '🛤️', content: tema.aplicacion },
-    { id: 'errores', label: 'Errores Comunes', icon: '⚠️', content: tema.errores },
+    { id: 'simple', label: 'Explicación Simple', content: tema.simple },
+    { id: 'fondo', label: 'Explicación Profunda', content: tema.fondo },
+    { id: 'aplicacion', label: 'Aplicación Práctica', content: tema.aplicacion },
+    { id: 'errores', label: 'Errores Comunes', content: tema.errores },
   ];
 
   return (
     <div className="bg-surface-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md">
       <div className="h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
       <div className="p-5">
-        <h3 className="text-text font-semibold text-base mb-3 flex items-center gap-2">
-          <span className="text-lg">{tema.icon}</span>
+        <h3 className="text-text font-semibold text-base mb-3">
           {tema.title}
         </h3>
 
@@ -33,7 +32,6 @@ function TemaCard({ tema }: { tema: (typeof escuelaData)[number]['temas'][number
                     : 'bg-surface text-text-2 border border-border hover:border-gold/30 hover:text-text'
                 }`}
               >
-                <span className="text-base flex-shrink-0">{layer.icon}</span>
                 <span className="flex-1">{layer.label}</span>
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${

@@ -1,7 +1,6 @@
 export interface TemaLeccion {
   id: string;
   title: string;
-  icon: string;
   simple: string;
   fondo: string;
   aplicacion: string;
@@ -29,7 +28,7 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "que-es-la-biblia",
         title: "¿Qué es la Biblia?",
-        icon: "📖",
+
         simple:
           "La Biblia es la Palabra de Dios escrita. Es el libro donde Dios habla a los seres humanos. No es un libro cualquiera: fue inspirada por Dios mismo, lo que significa que cada palabra fue guiada por Él para enseñarnos quién es, qué ha hecho y cómo debemos vivir.",
         fondo:
@@ -42,7 +41,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "quien-es-dios",
         title: "¿Quién es Dios?",
-        icon: "👑",
         simple:
           "Dios es el Creador y Soberano de todo lo que existe. No es un ser creado ni imaginado por los hombres. Él existe eternamente en tres Personas: Padre, Hijo y Espíritu Santo. Es santo, justo, amoroso, misericordioso, todopoderoso, omnisciente y soberano sobre todas las cosas.",
         fondo:
@@ -55,7 +53,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "quien-es-jesus",
         title: "¿Quién es Jesús?",
-        icon: "✝️",
         simple:
           "Jesús es el Hijo de Dios, la segunda Persona de la Trinidad. Él es Dios hecho hombre. Nació de una virgen, vivió una vida perfecta sin pecado, murió en la cruz para pagar por los pecados de Su pueblo, resucitó al tercer día, ascendió al cielo, y un día volverá para juzgar a vivos y muertos.",
         fondo:
@@ -68,7 +65,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "que-es-el-pecado",
         title: "¿Qué es el pecado?",
-        icon: "⚖️",
         simple:
           "El pecado es cualquier pensamiento, palabra o acción que desobedece la ley de Dios. Es rebelión contra Dios. Todos hemos pecado y merecemos el castigo de Dios. El pecado no es solo 'hacer cosas malas', sino una naturaleza corrupta que heredamos de Adán que nos hace inclinarnos naturalmente al mal.",
         fondo:
@@ -81,7 +77,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "que-es-el-evangelio",
         title: "¿Qué es el Evangelio?",
-        icon: "🕊️",
         simple:
           "Evangelio significa 'buenas noticias'. No son buenos consejos ni reglas para mejorar tu vida. Es la noticia de que Dios, en Su amor, envió a Su Hijo Jesús para vivir perfectamente, morir por pecadores y resucitar, para que todo el que se arrepienta y confíe en Él sea salvo del castigo del pecado y tenga vida eterna.",
         fondo:
@@ -94,7 +89,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "que-es-ser-salvo",
         title: "¿Qué significa ser salvo?",
-        icon: "🔥",
         simple:
           "Ser salvo significa ser rescatado del castigo del pecado (el infierno) y ser reconciliado con Dios. No es simplemente 'ir al cielo cuando mueras', aunque eso es parte. Es pasar de estar muerto en pecado a estar vivo en Cristo, de ser enemigo de Dios a ser hijo adoptado, de estar bajo condenación a estar libre de toda acusación.",
         fondo:
@@ -107,7 +101,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "que-es-la-fe",
         title: "¿Qué es la fe?",
-        icon: "🕯️",
         simple:
           "La fe no es un sentimiento ni un salto al vacío. Es confiar en Dios y en Su Palabra basándose en lo que Él ha revelado. Es estar seguro de lo que se espera y convencido de lo que no se ve (He 11:1). La fe salvadora no es solo creer que Dios existe, sino confiar personalmente en Cristo para salvación.",
         fondo:
@@ -120,7 +113,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "por-que-murio-cristo",
         title: "¿Por qué murió Cristo?",
-        icon: "🩸",
         simple:
           "Cristo murió para pagar por los pecados de Su pueblo. Él llevó el castigo que nosotros merecíamos. Murió no como un mártir ni como un ejemplo de amor, sino como un sustituto: Él ocupó nuestro lugar, recibió la ira de Dios que nosotros merecíamos, y satisfizo la justicia divina.",
         fondo:
@@ -133,7 +125,6 @@ const escuelaData: NivelEscuela[] = [
   {
     id: "que-es-arrepentimiento",
     title: "¿Qué es el arrepentimiento?",
-    icon: "💔",
     simple:
       "Arrepentimiento no es solo sentir tristeza por haber pecado. Es un cambio de mente y de corazón que lleva a cambiar de dirección. Es apartarse del pecado y volverse a Dios. No es simplemente 'pedir perdón', sino abandonar el pecado y correr hacia Cristo.",
     fondo:
@@ -156,7 +147,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "que-es-contexto",
         title: "¿Qué es el contexto y por qué importa?",
-        icon: "📐",
         simple:
           "Contexto es todo lo que rodea a un versículo: quién lo escribió, a quién, por qué, en qué situación, y qué dice antes y después. Sacar un versículo de su contexto es como tomar una frase suelta de una carta sin saber de qué habla la carta entera. El contexto es la regla más básica de la interpretación bíblica.",
         fondo:
@@ -169,7 +159,7 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "como-leer-capitulo",
         title: "Cómo leer un capítulo bíblico",
-        icon: "📖",
+
         simple:
           "Un capítulo bíblico no es una colección de versículos sueltos, sino una unidad de pensamiento. Para entenderlo bien, léelo completo de una vez, identifica el tema principal, nota las conexiones entre versículos, y pregúntate qué enseña sobre Dios, el hombre y la salvación.",
         fondo:
@@ -182,7 +172,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "como-interpretar-versiculo",
         title: "Cómo interpretar un versículo correctamente",
-        icon: "🔍",
         simple:
           "Para interpretar un versículo correctamente: 1) léelo en su pasaje completo, 2) considera quién lo escribió y a quién, 3) mira cómo se usa en el resto de la Escritura, 4) busca el significado claro y natural, y 5) aplica el principio de que la Escritura no se contradice a sí misma.",
         fondo:
@@ -195,7 +184,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "analogia-de-la-fe",
         title: "La Biblia se interpreta a sí misma",
-        icon: "⛓️",
         simple:
           "Este principio significa que ningún pasaje de la Biblia debe interpretarse de manera que contradiga a otro pasaje. La Escritura es coherente porque tiene un solo Autor: Dios. Cuando un pasaje es difícil de entender, debemos buscar luz en otros pasajes más claros que hablen del mismo tema.",
         fondo:
@@ -208,7 +196,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "descripcion-vs-mandato",
         title: "Descripción vs Mandato",
-        icon: "⚠️",
         simple:
           "No todo lo que la Biblia *describe* es algo que la Biblia *manda*. La Biblia registra muchas cosas: pecados, errores, malas decisiones, pero no todas son ejemplos a seguir. Debemos distinguir entre lo que la Biblia prescribe (ordena) y lo que meramente describe (registra).",
         fondo:
@@ -221,7 +208,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "como-evitar-falsas-doctrinas",
         title: "Cómo evitar falsas doctrinas",
-        icon: "🛡️",
         simple:
           "La mejor defensa contra el error es conocer bien la verdad. Cuando conoces la sana doctrina, reconoces la falsa con más facilidad. También necesitas: 1) estar firmemente arraigado en la Escritura, 2) conocer la historia de la iglesia para no repetir errores pasados, 3) estar en comunidad con creyentes maduros, y 4) examinarlo todo a la luz de la Palabra.",
         fondo:
@@ -234,7 +220,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "metodo-correcto",
         title: "Método correcto vs incorrecto",
-        icon: "⚖️",
         simple:
           "El método incorrecto comienza con un versículo aislado, le añade una opinión personal y construye una doctrina. El método correcto comienza con el texto en su contexto, considera el autor, la audiencia y toda la Escritura, y luego aplica correctamente. La diferencia es entre interpretar la Biblia o imponer nuestras ideas en ella.",
         fondo:
@@ -257,7 +242,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "doctrina-de-la-escritura",
         title: "Doctrina de la Escritura",
-        icon: "📜",
         simple:
           "La Biblia es la Palabra de Dios escrita. Es inspirada por Dios, inerrante en sus originales, suficiente para toda fe y práctica, clara en lo que enseña para la salvación, y ha sido preservada por Dios para Su iglesia. Es la autoridad máxima y final para todo lo que creemos y hacemos.",
         fondo:
@@ -270,7 +254,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "doctrina-de-dios",
         title: "Doctrina de Dios",
-        icon: "👑",
         simple:
           "Dios es el Creador, Sustentador y Soberano de todo. Existe eternamente en tres Personas: Padre, Hijo y Espíritu Santo. Es infinito en todos Sus atributos: santo, justo, amoroso, misericordioso, sabio, todopoderoso, omnisciente, omnipresente, inmutable y soberano sobre todas las cosas.",
         fondo:
@@ -283,7 +266,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "doctrina-del-hombre",
         title: "Doctrina del Hombre",
-        icon: "🧬",
         simple:
           "El ser humano fue creado por Dios a Su imagen, bueno y sin pecado. Pero Adán cayó en pecado, y con él toda la humanidad. Ahora todos nacemos con una naturaleza corrupta, inclinados al mal, separados de Dios, y necesitados de redención. El hombre no es básicamente bueno; está muerto en pecado.",
         fondo:
@@ -296,7 +278,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "doctrina-de-cristo",
         title: "Doctrina de Cristo",
-        icon: "✝️",
         simple:
           "Jesucristo es el Hijo de Dios, verdadero Dios y verdadero hombre. Fue prometido desde el AT, nació de una virgen, vivió perfectamente, murió como sustituto por los pecados de Su pueblo, resucitó físicamente, ascendió al cielo, y reina como Señor. Él es el centro de toda la Escritura y el único mediador entre Dios y los hombres.",
         fondo:
@@ -309,7 +290,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "doctrina-de-la-salvacion",
         title: "Doctrina de la Salvación",
-        icon: "🔥",
         simple:
           "La salvación es obra soberana de Dios de principio a fin. Desde la eternidad, Dios eligió a Su pueblo en Cristo. En el tiempo, el Espíritu Santo llama, regenera, da fe y arrepentimiento, justifica, adopta, santifica y preserva hasta el fin. No es por obras humanas, sino por gracia mediante la fe en Cristo solo.",
         fondo:
@@ -322,7 +302,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "doctrina-de-la-iglesia",
         title: "Doctrina de la Iglesia",
-        icon: "⛪",
         simple:
           "La iglesia no es un edificio ni una organización, sino el pueblo de Dios llamado por Él, reunido en asambleas locales, bajo el gobierno de Cristo, para adorar, predicar la Palabra, administrar los sacramentos (bautismo y cena del Señor), edificarse mutuamente y hacer discípulos a todas las naciones.",
         fondo:
@@ -335,7 +314,6 @@ const escuelaData: NivelEscuela[] = [
       {
         id: "ultimas-cosas",
         title: "Últimas Cosas",
-        icon: "🌅",
         simple:
           "La historia no es un ciclo sin fin, sino que avanza hacia un propósito definido por Dios. Cristo volverá en gloria para resucitar a los muertos, juzgar a vivos y muertos, y establecer el cielo nuevo y la tierra nueva donde los redimidos vivirán eternamente con Dios. Los impíos recibirán el castigo eterno.",
         fondo:
