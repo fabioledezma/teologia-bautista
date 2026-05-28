@@ -13,6 +13,7 @@ const links = [
   { label: 'Errores/Herejías', href: '/#errores' },
   { label: 'Historia', href: '/historia' },
   { label: 'Interpretación', href: '/hermeneutica' },
+  { label: 'Test', href: '/test' },
   { label: 'Recursos', href: '/#recursos' },
   { label: 'MDiv', href: '/#facultad' },
 ];
