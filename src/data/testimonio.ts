@@ -35,7 +35,7 @@ const testimonioData: {
       escritura: '1 Co 2:10-14; Jn 16:13-14; 1 Jn 2:20, 27',
     },
     {
-      afirmacion: 'El verdaderocreyente reconoce la voz de su Pastor',
+      afirmacion: 'El verdadero creyente reconoce la voz de su Pastor',
       base: 'Teología bíblica reformada',
       explicacion:
         'Las ovejas de Cristo reconocen Su voz. No necesitan que un tercero les certifique que la voz del Pastor es auténtica. El mismo Espíritu que inspiró la Escritura es el que ilumina al creyente para recibirla con fe. Esto no es un conocimiento meramente intelectual, sino una certeza espiritual y vivencial que produce gozo, sumisión y amor por la Palabra. El incrédulo puede leer la misma Escritura y no ver su gloria, porque falta el testimonio del Espíritu.',

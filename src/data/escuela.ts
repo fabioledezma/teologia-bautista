@@ -309,7 +309,7 @@ const escuelaData: NivelEscuela[] = [
         aplicacion:
           "La iglesia no es opcional para el cristiano. Eres miembro del cuerpo de Cristo, y necesitas una iglesia local donde: 1) la Palabra sea predicada fielmente, 2) los sacramentos sean administrados correctamente, 3) la disciplina sea ejercida, 4) puedas servir y ser servido. No te aísles. El cristianismo no es una religión individual.",
         errores:
-          "El romanismo enseña una iglesia jerárquica con el Papa como cabeza visible. El congregacionalismo extremo niega cualquier autoridad pastoral. El elitismo espiritual (hermandades secretas, 'ungidos' especiales) divide el cuerpo. El igualitarismo radical niega la distinción bíblica entre ancianos/pastores y miembros. El bautismo infantil y el bautismo por aspersión se apartan del patrón bíblico. El cesacionismo extremo niega toda operación del Espíritu hoy; el continuismo desordenado la exagera.",
+           "El romanismo enseña una iglesia jerárquica con el Papa como cabeza visible. El congregacionalismo extremo niega cualquier autoridad pastoral. El elitismo espiritual (hermandades secretas, 'ungidos' especiales) divide el cuerpo. El igualitarismo radical niega la distinción bíblica entre ancianos/pastores y miembros. El bautismo infantil y el bautismo por aspersión se apartan del patrón bíblico. El cesacionismo que niega toda obra del Espíritu Santo hoy y el continuismo que antepone experiencias a la Escritura son dos extremos que deben evitarse.",
       },
       {
         id: "ultimas-cosas",
